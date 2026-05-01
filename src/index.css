@@ -90,7 +90,7 @@
   }
 
   .container-content {
-    @apply max-w-3xl;
+    @apply max-w-4xl;
   }
 
   .container-wide {
