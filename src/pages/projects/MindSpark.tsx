@@ -1,296 +1,325 @@
 import { Link } from "react-router-dom";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import CaseStudySection from "@/components/CaseStudySection";
-import ImageBlock from "@/components/ImageBlock";
+import ProjectMeta from "@/components/ProjectMeta";
 import mindsparkHero from "@/assets/mindspark-hero.jpg";
 
 const MindSpark = () => {
   return (
     <Layout>
-      <div className="px-6 md:px-12 lg:px-16 py-16 md:py-24">
-        <article className="container-content">
+      <div className="px-6 md:px-12 lg:px-20 py-16 md:py-24">
+        <article className="container-wide">
           {/* Header */}
-          <div className="mb-12">
-            <Link to="/projects" className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-6 inline-block">
-              ← Back to projects
+          <header className="mb-10">
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-10"
+            >
+              <ArrowLeft size={14} /> All work
             </Link>
-            <p className="project-tag mb-3">Final Year Project · Interaction Design</p>
-            <h1 className="mb-4">MindSpark</h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-              An interactive cognitive testing system exploring how usability, accessibility, 
-              and context shape the experience of digital, self-administered Go / No-Go testing.
+
+            <div className="flex items-center gap-3 mb-6">
+              <span className="font-mono text-xs text-accent">01</span>
+              <span className="h-px w-8 bg-accent" aria-hidden />
+              <p className="project-tag">Final Year Project · UX Research &amp; Interaction</p>
+            </div>
+
+            <h1 className="mb-6 max-w-4xl">MindSpark</h1>
+            <p className="lead max-w-3xl">
+              Designing an Interactive Cognitive Testing System — understanding
+              factors of usability, accessibility, and context. A research-led
+              UX project that re-frames the digital Go/No-Go test as an
+              <em> interaction</em> problem, not just a measurement one.
             </p>
-          </div>
+          </header>
 
-          {/* Meta */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-12 py-6 section-divider border-b border-border">
-            <div>
-              <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-1">Role</p>
-              <p className="text-sm">Interaction Designer &amp; Researcher</p>
-            </div>
-            <div>
-              <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-1">Duration</p>
-              <p className="text-sm">Sept 2024 – May 2025</p>
-            </div>
-            <div>
-              <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-1">Tools</p>
-              <p className="text-sm">Figma, HTML/CSS/JS, Arduino</p>
-            </div>
-            <div>
-              <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground mb-1">Type</p>
-              <p className="text-sm">Academic / Research</p>
-            </div>
-          </div>
-
-          {/* Hero Image */}
-          <ImageBlock
-            src={mindsparkHero}
-            alt="MindSpark cognitive testing interface shown on a laptop"
-            caption="MindSpark — A redesigned digital Go / No-Go testing experience"
+          <ProjectMeta
+            items={[
+              { label: "Role", value: "Sole Designer, Researcher & Developer" },
+              { label: "Duration", value: "Sept 2025 – April 2026" },
+              { label: "Supervisor", value: "Dr. Lilian Genaro Motti" },
+              { label: "Stack", value: "Figma · HTML/CSS/JS · Arduino · FreeCAD" },
+            ]}
           />
 
-          {/* Summary */}
-          <CaseStudySection title="Summary">
-            <p className="text-base text-muted-foreground leading-relaxed">
-              MindSpark is my final year project, and it represents the most complete expression 
-              of my design thinking to date. At its core, the project asks: what happens when we 
-              treat cognitive testing not just as measurement, but as an interaction experience? 
-              How do interface choices, interaction methods, and surrounding context affect the 
-              way someone engages with a digital test?
+          <figure className="image-frame aspect-[16/10] my-12">
+            <img
+              src={mindsparkHero}
+              alt="MindSpark — interactive cognitive testing interface"
+              className="w-full h-full object-cover"
+              width={1600}
+              height={1000}
+            />
+          </figure>
+
+          {/* 01 Summary */}
+          <CaseStudySection title="Summary" num="01">
+            <p>
+              MindSpark is the most complete expression of my design practice
+              to date. It asks a deceptively simple question: <em>what happens
+              when we treat cognitive testing not as measurement, but as an
+              interaction experience?</em>
             </p>
-            <p className="text-base text-muted-foreground leading-relaxed mt-4">
-              The project centres on redesigning a self-administered Go / No-Go test — a standard 
-              cognitive assessment — through the lens of usability, accessibility, and 
-              human-centred design. It is not a clinical diagnostic tool. It is a design-led 
-              exploration of how thoughtful interaction design can improve the testing experience.
+            <p>
+              The project redesigns the Go/No-Go test — a standard attention
+              and inhibitory-control assessment — through the combined lens of
+              usability, accessibility, and context. It is <strong>not</strong>{" "}
+              a clinical diagnostic tool. It is a design-led exploration of
+              how interaction design choices can affect whether a digital
+              cognitive test is genuinely usable, equitable, and meaningful for
+              the people taking it.
+            </p>
+            <p>
+              The work spans an iterative three-stage prototyping process
+              (low-, mid-, and high-fidelity), real-world usability testing
+              with adults across a broad age range, and a custom
+              Arduino-based hardware prototype that explores voice as an
+              alternative interaction modality.
             </p>
           </CaseStudySection>
 
-          {/* Context & Problem */}
-          <CaseStudySection title="Context & Problem">
-            <p className="text-base text-muted-foreground leading-relaxed">
-              Traditional cognitive tests like the Go / No-Go task were designed for controlled 
-              laboratory settings with trained administrators. As these tests move to digital, 
-              self-administered formats, the interaction design becomes critical — yet it is 
-              often treated as an afterthought.
+          {/* 02 Context */}
+          <CaseStudySection title="Design context" num="02">
+            <p>
+              The Go/No-Go test measures attention and response inhibition:
+              participants react quickly to frequent &ldquo;Go&rdquo; signals
+              while withholding responses to less frequent &ldquo;No-Go&rdquo;
+              ones. As cognitive testing has shifted from clinical
+              administration to self-administered web and mobile formats, the
+              <strong> interface itself</strong> has quietly become part of
+              what is being measured.
             </p>
-            <p className="text-base text-muted-foreground leading-relaxed mt-4">
-              Poor instruction delivery, confusing feedback, inaccessible interfaces, and 
-              a lack of contextual awareness can all affect not only the user experience, 
-              but potentially the reliability of the results. MindSpark explores whether 
-              treating usability, accessibility, and context as core design variables — rather 
-              than secondary concerns — can lead to a more understandable, more engaging, and 
-              more responsible testing experience.
+            <p>
+              Literature shows that hesitation, low confidence, small touch
+              targets, dense text instructions, and unclear feedback can all
+              affect performance — independently of cognitive ability. In
+              other words, poor interaction design can distort test results
+              and misrepresent the people taking the test.
             </p>
-            <div className="bg-secondary rounded-sm p-6 mt-6">
-              <p className="text-sm font-medium mb-2">Key design variables explored:</p>
-              <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
-                <li>Usability — clarity of instructions, feedback, and interface structure</li>
-                <li>Accessibility — inclusive design for diverse users and needs</li>
-                <li>Context — environmental and situational factors that shape the experience</li>
-              </ul>
-            </div>
+            <blockquote className="pull-quote">
+              The most meaningful contributions to interaction design happen
+              when technology adapts to people, rather than requiring people
+              to adapt to technology.
+            </blockquote>
+            <p>
+              MindSpark is a response to that gap. It treats usability,
+              accessibility, and context not as secondary refinements but as
+              first-class design variables.
+            </p>
           </CaseStudySection>
 
-          {/* Goals */}
-          <CaseStudySection title="Goals">
-            <ul className="space-y-3 text-base text-muted-foreground">
-              <li className="flex gap-3">
-                <span className="text-accent font-semibold">01</span>
-                Redesign the Go / No-Go test as a usable, accessible digital experience
-              </li>
-              <li className="flex gap-3">
-                <span className="text-accent font-semibold">02</span>
-                Explore how interaction design choices affect the testing experience
-              </li>
-              <li className="flex gap-3">
-                <span className="text-accent font-semibold">03</span>
-                Incorporate contextual awareness — including an alertness check and practice stage
-              </li>
-              <li className="flex gap-3">
-                <span className="text-accent font-semibold">04</span>
-                Design results presentation that supports understanding, not just data display
-              </li>
-              <li className="flex gap-3">
-                <span className="text-accent font-semibold">05</span>
-                Consider multimodal interaction as a way to support different users and contexts
-              </li>
+          {/* 03 Role */}
+          <CaseStudySection title="My role" num="03">
+            <p>
+              MindSpark is a solo Final Year Project. I owned every part of
+              the work end-to-end:
+            </p>
+            <ul className="list-none space-y-2 pl-0">
+              {[
+                "User research, literature review and analysis of existing cognitive testing tools",
+                "Information architecture, user flows, and interaction design for the full app",
+                "Three iterative Figma prototypes (low-, mid-, hi-fi) — visuals, components, states",
+                "Front-end implementation of the Go/No-Go pathway in HTML/CSS/JavaScript",
+                "Hardware prototyping: Arduino + microphone sensor for the verbal-response modality",
+                "FreeCAD enclosure design for the physical prototype",
+                "Recruitment, ethics application, and facilitation of usability testing across all three iterations",
+                "Synthesis of qualitative feedback into actionable, evidence-based design changes",
+              ].map((item) => (
+                <li key={item} className="flex gap-3 text-sm md:text-base">
+                  <span className="font-mono text-xs text-accent mt-1.5">→</span>
+                  <span className="text-muted-foreground">{item}</span>
+                </li>
+              ))}
             </ul>
           </CaseStudySection>
 
-          {/* Process */}
-          <CaseStudySection title="Process">
-            <p className="text-base text-muted-foreground leading-relaxed">
-              The project followed a structured, iterative design process. I began with 
-              background research into cognitive testing, Go / No-Go tasks, and the existing 
-              landscape of digital assessment tools. This informed a clear understanding of 
-              the problem space and the design opportunities within it.
-            </p>
-            <p className="text-base text-muted-foreground leading-relaxed mt-4">
-              From research, I moved into concept development — sketching interaction flows, 
-              mapping the testing journey, and identifying key design moments where usability, 
-              accessibility, and context could be meaningfully addressed.
-            </p>
-            <div className="bg-secondary rounded-sm p-6 mt-6">
-              <p className="text-sm font-medium mb-3">Process stages:</p>
-              <div className="grid sm:grid-cols-2 gap-3 text-sm text-muted-foreground">
-                <div>• Background research &amp; literature review</div>
-                <div>• Competitive analysis of existing tools</div>
-                <div>• User journey mapping</div>
-                <div>• Concept sketching &amp; ideation</div>
-                <div>• Wireframing &amp; information architecture</div>
-                <div>• Interface design &amp; prototyping</div>
-                <div>• Multimodal interaction exploration</div>
-                <div>• Usability testing &amp; iteration</div>
-              </div>
-            </div>
-            <div className="mt-8 image-frame aspect-[16/10] flex items-center justify-center bg-secondary">
-              <p className="text-sm text-muted-foreground italic">Process documentation images — wireframes, sketches, user flows</p>
+          {/* 04 Research questions */}
+          <CaseStudySection title="Research questions" num="04">
+            <div className="space-y-6">
+              {[
+                {
+                  q: "RQ1",
+                  text: "How do current cognitive assessment tools function in evaluating cognitive abilities, and what design limitations do they exhibit?",
+                },
+                {
+                  q: "RQ2",
+                  text: "What design considerations can enhance the accessibility and usability of cognitive assessment tools?",
+                },
+                {
+                  q: "RQ3",
+                  text: "How can different modes of interaction be combined to create effective cognitive assessment experiences?",
+                },
+              ].map((r) => (
+                <div key={r.q} className="border-l-2 border-accent pl-5">
+                  <p className="font-mono text-xs text-accent mb-1">{r.q}</p>
+                  <p className="text-base md:text-lg leading-snug">{r.text}</p>
+                </div>
+              ))}
             </div>
           </CaseStudySection>
 
-          {/* Research & Discovery */}
-          <CaseStudySection title="Research & Discovery">
-            <p className="text-base text-muted-foreground leading-relaxed">
-              My research explored both the cognitive science behind Go / No-Go testing and 
-              the interaction design challenges of translating these tasks into self-administered 
-              digital formats. I examined existing digital cognitive testing tools, identifying 
-              common usability and accessibility shortcomings.
+          {/* 05 Process */}
+          <CaseStudySection title="Process" num="05">
+            <p>
+              The project followed an iterative, ISO 9241-210 human-centred
+              design process. Each prototyping stage was tested with real
+              participants, and feedback drove the next iteration — ensuring
+              decisions were evidence-led rather than assumption-led.
             </p>
-            <p className="text-base text-muted-foreground leading-relaxed mt-4">
-              Key findings included: most existing tools provide minimal instruction scaffolding, 
-              offer little contextual awareness, and present results in ways that are difficult 
-              for non-specialist users to interpret. These insights directly shaped the design 
-              direction for MindSpark.
-            </p>
+            <ol className="grid md:grid-cols-2 gap-4 mt-6 list-none pl-0">
+              {[
+                ["01", "Literature review", "Usability, accessibility, digital literacy, multimodal interaction, contextual influence on cognitive performance."],
+                ["02", "Analysis of the existing", "Heuristic review of digital Go/No-Go and cognitive assessment tools, identifying recurring design failures."],
+                ["03", "Sketching & wireframing", "Low-fidelity flows for instructions, practice, alertness check, results, settings."],
+                ["04", "Low-fi prototype + testing", "Figma prototype evaluated with 5–8 participants. Surfaced issues with readability, navigation conventions, and feedback clarity."],
+                ["05", "Mid-fi prototype + testing", "Refined visual identity, component library, overlays, and Go/No-Go setup. Tested with 8–12 participants."],
+                ["06", "Hi-fi prototype + testing", "Final visual polish, demonstration video for setup, multimodal verbal-response pathway. Tested with 12–15 participants."],
+                ["07", "Hardware prototype", "Arduino Uno + microphone sensor inside a FreeCAD-designed enclosure, communicating with the app via serial."],
+                ["08", "Synthesis", "Design recommendations and reflections on how interaction design shapes cognitive testing validity."],
+              ].map(([n, t, d]) => (
+                <li key={n} className="border-t border-foreground pt-4">
+                  <p className="font-mono text-xs text-accent mb-1">{n}</p>
+                  <h4 className="font-serif text-lg mb-1">{t}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{d}</p>
+                </li>
+              ))}
+            </ol>
           </CaseStudySection>
 
-          {/* Design Development */}
-          <CaseStudySection title="Design Development">
-            <p className="text-base text-muted-foreground leading-relaxed">
-              The design evolved through several key stages, each addressing specific aspects 
-              of the testing experience:
+          {/* 06 Key design decisions */}
+          <CaseStudySection title="Key design decisions" num="06">
+            <p>
+              Across iterations, four interaction design decisions shaped the
+              system most strongly:
             </p>
 
-            <div className="mt-8 space-y-8">
+            <div className="space-y-8 mt-6">
               <div>
-                <h3 className="text-base font-semibold mb-2">Alertness Check</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Before the official test, users complete a brief alertness check to capture 
-                  context. This acknowledges that testing doesn't happen in a vacuum — factors 
-                  like fatigue, time of day, and environment can affect performance and should 
-                  be part of how results are understood.
+                <h3 className="font-serif text-xl mb-2">Alertness check before each test</h3>
+                <p className="text-muted-foreground">
+                  A short pre-test capture of context (fatigue, time of day,
+                  environment) acknowledges that test results are not
+                  context-free. This re-frames cognitive performance as
+                  something to be <em>interpreted</em> rather than just
+                  scored — directly addressing a gap I identified in existing
+                  tools.
                 </p>
               </div>
-
               <div>
-                <h3 className="text-base font-semibold mb-2">Practice Stage</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  A dedicated practice stage helps users learn the rules and build confidence 
-                  before the scored test. This reduces anxiety, supports comprehension, and 
-                  ensures users understand the interaction before their responses are recorded.
+                <h3 className="font-serif text-xl mb-2">Practice stage with demonstrative feedback</h3>
+                <p className="text-muted-foreground">
+                  Drawing on findings that dense text instructions and absent
+                  feedback drive hesitation, the practice stage uses video
+                  demonstrations and trial-by-trial guidance. Participants
+                  reach the scored test understanding the rules, reducing
+                  design-induced anxiety.
                 </p>
               </div>
-
               <div>
-                <h3 className="text-base font-semibold mb-2">Main Test — Minimal Interface</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  During the actual test, the UI becomes intentionally minimal. Distractions 
-                  are removed to support clarity, readability, and responsive interaction. The 
-                  design prioritises the testing task above all else.
+                <h3 className="font-serif text-xl mb-2">Minimal main test surface</h3>
+                <p className="text-muted-foreground">
+                  During scored trials, the UI strips back to essentials.
+                  High-contrast stimuli, large touch targets (informed by
+                  Fitts&rsquo; Law), no decoration. The interface stops
+                  competing with the task.
                 </p>
               </div>
-
               <div>
-                <h3 className="text-base font-semibold mb-2">Results & Understanding</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  After the test, results are presented through breakdowns, progress features, 
-                  and context-linked insights — making them more understandable than a simple 
-                  score. The design moves away from treating the test as a one-off event and 
-                  toward a more interpretable, engaging experience.
+                <h3 className="font-serif text-xl mb-2">Multimodal verbal-response pathway</h3>
+                <p className="text-muted-foreground">
+                  An optional voice-input modality, prototyped with an Arduino
+                  microphone sensor in a FreeCAD-designed enclosure. This
+                  preserves the binary Go/No-Go demand while removing motor
+                  barriers — opening the test to users for whom touch
+                  interaction is uncomfortable or inaccessible.
                 </p>
               </div>
             </div>
-
-            <div className="mt-8 image-frame aspect-[16/10] flex items-center justify-center bg-secondary">
-              <p className="text-sm text-muted-foreground italic">Interface evolution — early wireframes to refined UI</p>
-            </div>
           </CaseStudySection>
 
-          {/* Multimodal Interaction */}
-          <CaseStudySection title="Multimodal Interaction">
-            <p className="text-base text-muted-foreground leading-relaxed">
-              MindSpark explores optional multimodal interaction as a way to support different 
-              users and contexts. The concept considers how different input and feedback methods — 
-              including digital and physical interaction — might affect the testing experience 
-              and make it more accessible or engaging for different populations.
+          {/* 07 What testing taught me */}
+          <CaseStudySection title="What user testing taught me" num="07">
+            <p>
+              Three rounds of testing surfaced consistent themes that shaped
+              every iteration:
             </p>
-            <p className="text-base text-muted-foreground leading-relaxed mt-4">
-              This aspect of the project treats the interaction method itself as a design variable, 
-              exploring how the way someone responds to a test might be just as important as the 
-              test content itself.
-            </p>
-          </CaseStudySection>
-
-          {/* Accessibility & Usability */}
-          <CaseStudySection title="Accessibility & Usability Decisions">
-            <p className="text-base text-muted-foreground leading-relaxed">
-              Accessibility and usability were not treated as separate concerns in MindSpark — 
-              they were woven into every design decision. Key considerations included:
-            </p>
-            <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>• Clear, high-contrast visual design throughout all stages</li>
-              <li>• Progressive instruction delivery rather than information overload</li>
-              <li>• Consistent interaction patterns to reduce cognitive load</li>
-              <li>• Meaningful feedback at every step</li>
-              <li>• Results designed for comprehension, not just data display</li>
-              <li>• Consideration of motor, cognitive, and environmental accessibility factors</li>
+            <ul className="space-y-4 mt-4">
+              {[
+                ["Readability is non-negotiable", "Type size, line length, and contrast emerged as the most-mentioned issues across all rounds — far more than visual style. Accessibility is the design."],
+                ["Mobile conventions matter", "Even when participants were comfortable with technology, deviations from familiar mobile patterns increased hesitation. Jakob's Law in practice."],
+                ["Colour must mean something", "Decorative colour created confusion; purposeful colour (state, success, warning) created confidence."],
+                ["Feedback shapes trust", "Where the original prototype offered silent transitions, participants doubted whether their input had registered. Even brief micro-feedback changed the felt quality of the test."],
+                ["The hardware prototype changed expectations", "Participants who tried the verbal-response modality reframed what 'taking a cognitive test' could feel like — less clinical, more accommodating."],
+              ].map(([t, d]) => (
+                <li key={t} className="border-l border-border pl-5">
+                  <p className="font-medium mb-1">{t}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{d}</p>
+                </li>
+              ))}
             </ul>
           </CaseStudySection>
 
-          {/* Outcome */}
-          <CaseStudySection title="Outcome">
-            <p className="text-base text-muted-foreground leading-relaxed">
-              MindSpark demonstrates that treating usability, accessibility, and context as 
-              core design variables — rather than secondary concerns — can lead to a 
-              fundamentally different kind of testing experience. The wider system concept 
-              moves cognitive testing away from a one-off, score-focused event and toward 
-              a more interpretable, engaging, and longitudinal experience.
+          {/* 08 Outcome */}
+          <CaseStudySection title="Outcome" num="08">
+            <p>
+              MindSpark demonstrates — across three tested iterations and a
+              working hardware prototype — that treating usability,
+              accessibility, and context as core design variables produces a
+              fundamentally different cognitive-testing experience.
             </p>
-            <div className="mt-8 image-frame aspect-[16/10] flex items-center justify-center bg-secondary">
-              <p className="text-sm text-muted-foreground italic">Final interface screens and system overview</p>
-            </div>
-          </CaseStudySection>
-
-          {/* Reflection */}
-          <CaseStudySection title="Reflection">
-            <p className="text-base text-muted-foreground leading-relaxed">
-              MindSpark has been the most significant project of my design education. It 
-              challenged me to think deeply about how interaction design can affect experiences 
-              that really matter — where the stakes of getting the design wrong extend beyond 
-              aesthetics into comprehension, fairness, and accessibility.
+            <p>
+              The final system moves digital cognitive testing away from a
+              one-off, score-focused event and toward something more
+              interpretable, more accessible, and more honest about the role
+              of the interface in the result.
             </p>
-            <p className="text-base text-muted-foreground leading-relaxed mt-4">
-              The project reinforced my belief that accessibility and usability are not separate 
-              disciplines but fundamental measures of design quality. It taught me to be more 
-              rigorous in my process, more thoughtful in my decisions, and more honest about 
-              what design can and cannot solve.
-            </p>
-            <p className="text-base text-muted-foreground leading-relaxed mt-4">
-              Most importantly, it confirmed the direction I want to take as a designer — 
-              working on projects where interaction design genuinely matters, where the focus 
-              is on people and their real needs, and where thoughtful design can make a 
-              measurable difference.
+            <p>
+              The project also produces a set of <strong>actionable interaction
+              design recommendations</strong> for future cognitive-testing
+              systems, grounded in real participant feedback rather than
+              assumption.
             </p>
           </CaseStudySection>
 
-          {/* Navigation */}
-          <div className="section-divider pt-8 flex justify-between items-center">
-            <Link to="/projects" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
-              ← All projects
+          {/* 09 Reflection */}
+          <CaseStudySection title="Reflection" num="09">
+            <p>
+              MindSpark taught me to think about design as a position, not
+              just a craft. Choosing to redesign a clinical-adjacent test
+              meant being explicit about what I was — and wasn&rsquo;t —
+              trying to change. The test itself is fixed; the experience
+              around it is the design problem.
+            </p>
+            <p>
+              It also reinforced that accessibility is not a downstream
+              concern. Almost every meaningful improvement across the three
+              iterations originated from accessibility thinking — readable
+              type, clearer feedback, alternative inputs, contextual
+              awareness. These improvements served everyone, not just users
+              with specific needs.
+            </p>
+            <p>
+              Most of all, the project clarified the kind of UX work I want
+              to do next: research-led, accountable to real users, and
+              focused on systems where design decisions have weight beyond
+              aesthetics.
+            </p>
+          </CaseStudySection>
+
+          {/* Footer nav */}
+          <div className="section-divider mt-12 pt-8 flex justify-between items-center">
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 text-sm font-medium hover:text-accent transition-colors"
+            >
+              <ArrowLeft size={14} /> All work
             </Link>
-            <Link to="/projects/mould-man" className="text-sm font-medium text-foreground hover:text-accent transition-colors">
-              Next: Mould Man →
+            <Link
+              to="/projects/mould-man"
+              className="inline-flex items-center gap-2 text-sm font-medium hover:text-accent transition-colors"
+            >
+              Next: Mould Man <ArrowUpRight size={14} />
             </Link>
           </div>
         </article>
