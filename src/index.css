@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,48 +6,45 @@
 
 @layer base {
   :root {
-    /* Warm paper / ink palette */
-    --background: 36 30% 96%;
-    --foreground: 220 18% 12%;
+    --background: 40 20% 97%;
+    --foreground: 220 15% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 18% 12%;
+    --card-foreground: 220 15% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 18% 12%;
+    --popover-foreground: 220 15% 13%;
 
-    --primary: 220 18% 12%;
-    --primary-foreground: 36 30% 96%;
+    --primary: 220 15% 13%;
+    --primary-foreground: 40 20% 97%;
 
-    --secondary: 36 18% 90%;
-    --secondary-foreground: 220 18% 12%;
+    --secondary: 40 10% 93%;
+    --secondary-foreground: 220 15% 13%;
 
-    --muted: 36 18% 92%;
-    --muted-foreground: 220 8% 38%;
+    --muted: 40 10% 93%;
+    --muted-foreground: 220 8% 42%;
 
-    /* Burnt sienna / terracotta accent — warmer, more distinctive */
-    --accent: 14 72% 48%;
-    --accent-foreground: 36 30% 96%;
-    --accent-soft: 14 60% 94%;
+    --accent: 174 42% 38%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 70% 50%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 30 12% 84%;
-    --input: 30 12% 84%;
-    --ring: 14 72% 48%;
+    --border: 220 10% 88%;
+    --input: 220 10% 88%;
+    --ring: 174 42% 38%;
 
-    --radius: 0.25rem;
+    --radius: 0.375rem;
 
-    --sidebar-background: 36 32% 94%;
-    --sidebar-foreground: 220 18% 12%;
-    --sidebar-primary: 220 18% 12%;
-    --sidebar-primary-foreground: 36 30% 96%;
-    --sidebar-accent: 36 18% 90%;
-    --sidebar-accent-foreground: 220 18% 12%;
-    --sidebar-border: 30 12% 84%;
-    --sidebar-ring: 14 72% 48%;
-    --sidebar-muted: 220 8% 38%;
+    --sidebar-background: 40 20% 97%;
+    --sidebar-foreground: 220 15% 13%;
+    --sidebar-primary: 220 15% 13%;
+    --sidebar-primary-foreground: 40 20% 97%;
+    --sidebar-accent: 40 10% 93%;
+    --sidebar-accent-foreground: 220 15% 13%;
+    --sidebar-border: 220 10% 88%;
+    --sidebar-ring: 174 42% 38%;
+    --sidebar-muted: 220 8% 42%;
   }
 }
 
@@ -59,37 +56,27 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
-    font-feature-settings: "ss01", "cv11";
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fraunces', 'Times New Roman', serif;
-    font-optical-sizing: auto;
-    @apply tracking-tight text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply tracking-tight;
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.05];
-    letter-spacing: -0.02em;
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl font-normal leading-[1.15];
-    letter-spacing: -0.015em;
+    @apply text-2xl md:text-3xl font-semibold leading-snug;
   }
 
   h3 {
-    @apply text-xl md:text-2xl font-normal leading-snug;
-    letter-spacing: -0.01em;
+    @apply text-lg md:text-xl font-semibold leading-snug;
   }
 
   p {
     @apply leading-relaxed;
-  }
-
-  ::selection {
-    background-color: hsl(var(--accent));
-    color: hsl(var(--accent-foreground));
   }
 
   :focus-visible {
@@ -98,14 +85,6 @@
 }
 
 @layer utilities {
-  .font-serif {
-    font-family: 'Fraunces', 'Times New Roman', serif;
-  }
-
-  .font-mono {
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
-  }
-
   .section-divider {
     @apply border-t border-border;
   }
@@ -115,41 +94,26 @@
   }
 
   .container-wide {
-    @apply max-w-5xl;
+    @apply max-w-4xl;
   }
 
   .case-study-section {
-    @apply py-12 md:py-16;
+    @apply py-10 md:py-12;
   }
 
   .case-study-heading {
-    @apply font-serif text-2xl md:text-3xl font-normal mb-6 tracking-tight text-foreground;
-    letter-spacing: -0.015em;
+    @apply text-xl md:text-2xl font-semibold mb-5 tracking-tight;
   }
 
   .image-frame {
-    @apply bg-muted rounded-sm overflow-hidden border border-border/60;
+    @apply bg-secondary rounded-md overflow-hidden border border-border/60;
+  }
+
+  .image-placeholder {
+    @apply bg-secondary rounded-md border border-dashed border-border flex items-center justify-center text-center p-6;
   }
 
   .project-tag {
-    @apply font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground;
-  }
-
-  .lead {
-    @apply text-lg md:text-xl text-muted-foreground leading-relaxed;
-  }
-
-  .marker-num {
-    @apply font-mono text-xs text-accent font-medium;
-  }
-
-  .pull-quote {
-    @apply font-serif text-2xl md:text-3xl leading-snug text-foreground border-l-2 border-accent pl-6 my-8;
-    letter-spacing: -0.01em;
-  }
-
-  .grain-bg {
-    background-image: radial-gradient(hsl(var(--foreground) / 0.025) 1px, transparent 1px);
-    background-size: 4px 4px;
+    @apply text-xs font-medium uppercase tracking-wider text-muted-foreground;
   }
 }
