@@ -189,34 +189,34 @@ const MouldMan = () => {
           </CaseStudySection>
 
           <CaseStudySection title="Key Design Decisions">
-            <div className="space-y-5">
+            <div className="divide-y divide-border border-y border-border">
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">Trust signals up front</h3>
-                <p className="text-sm">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">Trust signals up front</h3>
+                <p className="text-sm pb-4">
                   Reviews surfaced on the homepage, even for users not actively
                   searching for them — reassuring passive scanners and active
                   researchers alike.
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">Multiple, persistent contact paths</h3>
-                <p className="text-sm">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">Multiple, persistent contact paths</h3>
+                <p className="text-sm pb-4">
                   Phone, email, and form repeated across key pages. Customers
                   under time pressure needed instant access; anxious homeowners
                   needed reassurance contact was always one tap away.
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">Educational content as authority</h3>
-                <p className="text-sm">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">Educational content as authority</h3>
+                <p className="text-sm pb-4">
                   A dedicated information section explaining causes, prevention,
                   and the difference between surface and root treatment —
                   establishing expertise before contact.
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">Stakeholder-led pricing decision</h3>
-                <p className="text-sm">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">Stakeholder-led pricing decision</h3>
+                <p className="text-sm pb-4">
                   Research suggested visible pricing supports trust, but the
                   client&rsquo;s jobs vary too widely. We designed around{" "}
                   <em>quote requests</em> instead, mirroring competitor patterns.
