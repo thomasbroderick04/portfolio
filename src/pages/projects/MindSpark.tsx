@@ -137,7 +137,7 @@ const MindSpark = () => {
               decisions were evidence-led rather than assumption-led.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-3 mt-2">
+            <div className="mt-6 divide-y divide-border border-y border-border">
               {[
                 ["Literature review", "Usability, accessibility, digital literacy, multimodal interaction, contextual influence on performance."],
                 ["Analysis of existing tools", "Heuristic review of digital Go/No-Go and cognitive assessment apps."],
@@ -148,9 +148,9 @@ const MindSpark = () => {
                 ["Hardware prototype", "Arduino Uno + microphone sensor in a FreeCAD-designed enclosure."],
                 ["Synthesis", "Design recommendations and reflections."],
               ].map(([t, d]) => (
-                <div key={t} className="p-4 bg-secondary rounded-md">
-                  <p className="text-sm font-semibold text-foreground mb-1">{t}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{d}</p>
+                <div key={t} className="grid md:grid-cols-[220px_1fr] gap-2 md:gap-8 py-4">
+                  <p className="text-sm font-semibold text-foreground">{t}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{d}</p>
                 </div>
               ))}
             </div>
@@ -183,12 +183,12 @@ const MindSpark = () => {
               across iterations:
             </p>
 
-            <div className="space-y-5">
+            <div className="divide-y divide-border border-y border-border">
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">
                   Alertness check before each test
                 </h3>
-                <p className="text-sm">
+                <p className="text-sm pb-4">
                   A short pre-test capture of context (fatigue, time of day,
                   environment) re-frames cognitive performance as something to
                   be <em>interpreted</em> rather than just scored — directly
@@ -196,30 +196,30 @@ const MindSpark = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">
                   Practice stage with demonstrative feedback
                 </h3>
-                <p className="text-sm">
+                <p className="text-sm pb-4">
                   Drawing on findings that dense text instructions and absent
                   feedback drive hesitation, the practice stage uses video
                   demonstrations and trial-by-trial guidance.
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">
                   Minimal main test surface
                 </h3>
-                <p className="text-sm">
+                <p className="text-sm pb-4">
                   During scored trials, the UI strips back to essentials.
                   High-contrast stimuli, large touch targets (informed by
                   Fitts&rsquo; Law), no decoration.
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">
                   Multimodal verbal-response pathway
                 </h3>
-                <p className="text-sm">
+                <p className="text-sm pb-4">
                   An optional voice-input modality, prototyped with an Arduino
                   microphone sensor in a FreeCAD-designed enclosure. Preserves
                   the binary Go/No-Go demand while removing motor barriers.
