@@ -150,6 +150,15 @@ const MouldMan = () => {
               Three personas, three different motivations, one IA. Each had to
               find what they needed without fragmenting the site.
             </p>
+            <ImagePlaceholder
+              label="Journey maps & scenarios"
+              description="Documentation showing how each persona approaches the service differently before arriving at the same website structure."
+              items={[
+                "Journey map for Sarah showing discovery, anxiety, credibility checks, and contact decision.",
+                "Journey map for Mark showing urgency, service comparison, scheduling, and quote request.",
+                "Storyboard or scenario for Rachel showing how information supports communication with a landlord.",
+              ]}
+            />
             <div className="grid md:grid-cols-3 gap-3">
               {[
                 {
@@ -216,13 +225,21 @@ const MouldMan = () => {
             <ImagePlaceholder
               label="Final design — desktop"
               description="Full-page screenshots of the final Figma design on desktop: homepage, services page, FAQ section, and contact/booking page."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Desktop homepage showing hero, trust signals, reviews, and contact routes.",
+                "Desktop services or mould-information page showing educational content hierarchy.",
+                "Desktop contact/quote page showing form structure, labels, and confirmation state.",
+              ]}
             />
 
             <ImagePlaceholder
               label="Final design — mobile"
               description="Mobile mockups of the same key screens, showing how the responsive design adapts and prioritises content."
-              aspectRatio="aspect-[4/3]"
+              items={[
+                "Mobile homepage showing the first screen and primary CTA placement.",
+                "Mobile navigation/menu state showing access to services, information, FAQ, and contact.",
+                "Mobile quote/contact flow showing readable form fields and large tap targets.",
+              ]}
             />
           </CaseStudySection>
 
