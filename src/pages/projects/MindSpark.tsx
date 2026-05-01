@@ -230,19 +230,33 @@ const MindSpark = () => {
             <ImagePlaceholder
               label="Hi-fi screens"
               description="High-fidelity Figma screens of: alertness check, practice stage with demonstrative feedback, the minimal main test surface during a Go/No-Go trial, and the personalised results screen."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Final alertness check screens showing context questions before testing.",
+                "Practice screens showing the demonstration, feedback, and error-recovery states.",
+                "Main test screens showing Go, No-Go, waiting, and completed states.",
+                "Results screen showing how performance and context are communicated together.",
+              ]}
             />
 
             <ImagePlaceholder
               label="Hardware prototype"
               description="Photographs of the physical Arduino + microphone enclosure: (1) the assembled FreeCAD-designed enclosure, (2) wiring connected to the Arduino Uno, and (3) the verbal-response pathway in use during a test session."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "FreeCAD model or render of the enclosure before fabrication/assembly.",
+                "Close-up of the Arduino Uno, microphone sensor, wiring, and enclosure interior.",
+                "Photo of the completed physical prototype beside the digital interface.",
+                "Photo or still from testing showing a participant using the verbal-response pathway.",
+              ]}
             />
 
             <ImagePlaceholder
               label="Demo video"
               description="Short screen recording (or embedded video) showing the full Go/No-Go test flow end-to-end: alertness check → practice → test → results."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Screen recording of the complete digital test flow.",
+                "Clip or still showing the voice-input prototype responding during a trial.",
+                "Optional short caption explaining what the viewer should notice in the interaction.",
+              ]}
             />
           </CaseStudySection>
 
