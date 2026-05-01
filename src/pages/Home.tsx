@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import mindsparkHero from "@/assets/mindspark-hero.jpg";
 import mouldmanHero from "@/assets/mouldman-hero.jpg";
@@ -7,32 +7,26 @@ import placeholderHero from "@/assets/placeholder-project.jpg";
 
 const featuredProjects = [
   {
-    num: "01",
     title: "MindSpark",
-    type: "Final Year Project · Research-led UX",
-    year: "2025–26",
+    type: "Final Year Project",
     description:
-      "An interactive cognitive testing system that re-frames the digital Go/No-Go test as an interaction problem — where usability, accessibility, and context shape the validity of the result.",
+      "An interactive cognitive testing system exploring how usability, accessibility, and context shape the digital Go/No-Go testing experience.",
     image: mindsparkHero,
     path: "/projects/mindspark",
   },
   {
-    num: "02",
     title: "Mould Man",
-    type: "Client UX · Web",
-    year: "2025",
+    type: "Client Website · Group Project",
     description:
-      "A research-led website for an Irish mould-remediation service. Built around three evidence-based personas, with information architecture designed to translate health anxiety into trust and action.",
+      "A research-led website for an Irish mould-remediation service, built around evidence-based personas and a trust-first information architecture.",
     image: mouldmanHero,
     path: "/projects/mould-man",
   },
   {
-    num: "03",
     title: "Project Three",
     type: "In Development",
-    year: "2026",
     description:
-      "A forthcoming case study exploring interaction design within a new domain. Currently in research and definition.",
+      "A forthcoming case study currently in research and definition.",
     image: placeholderHero,
     path: "/projects/project-three",
   },
@@ -41,114 +35,75 @@ const featuredProjects = [
 const Home = () => {
   return (
     <Layout>
-      <div className="px-6 md:px-12 lg:px-20 py-16 md:py-24">
+      <div className="px-6 md:px-12 lg:px-16 py-16 md:py-24">
         {/* Hero */}
-        <section className="container-wide mb-24 md:mb-32">
-          <div className="flex items-center gap-3 mb-8">
-            <span className="h-px w-10 bg-accent" aria-hidden />
-            <p className="project-tag">Portfolio · Index</p>
-          </div>
-
-          <h1 className="mb-10 max-w-5xl">
-            UX &amp; interaction design for digital systems where{" "}
-            <em className="not-italic text-accent">usability</em>,{" "}
-            <em className="not-italic text-accent">accessibility</em>, and{" "}
-            <em className="not-italic text-accent">context</em> shape whether
-            the design actually works for the people using it.
+        <section className="container-content mb-20">
+          <p className="project-tag mb-4">UX &amp; Interaction Designer</p>
+          <h1 className="mb-6">
+            Hi, I&rsquo;m Thomas Broderick — a UX designer focused on usability,
+            accessibility, and human-centred design.
           </h1>
-
-          <div className="grid md:grid-cols-[1fr_auto] gap-8 md:gap-16 items-end max-w-4xl">
-            <p className="lead max-w-2xl">
-              I&rsquo;m Thomas Broderick — a final-year Digital Media Design
-              student at the University of Limerick. My practice sits at the
-              intersection of <span className="text-foreground">user research</span>,{" "}
-              <span className="text-foreground">interaction design</span>, and{" "}
-              <span className="text-foreground">accessible interface work</span>.
-              I design systems that adapt to people, rather than asking people
-              to adapt to systems.
-            </p>
-
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl">
+            I&rsquo;m a final-year Digital Media Design student at the University
+            of Limerick. My work covers user research, interaction design, and
+            accessible interface design — building digital products that adapt
+            to people, rather than the other way around.
+          </p>
+          <div className="flex flex-wrap gap-3">
             <Link
               to="/projects"
-              className="group inline-flex items-center gap-2 self-start text-sm font-medium pb-2 border-b border-foreground hover:border-accent hover:text-accent transition-colors whitespace-nowrap"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
             >
-              Selected work
-              <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              View Projects <ArrowRight size={15} />
+            </Link>
+            <Link
+              to="/about"
+              className="inline-flex items-center px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-md hover:bg-secondary transition-colors"
+            >
+              About me
             </Link>
           </div>
         </section>
 
         {/* Selected work */}
-        <section className="mb-24" aria-labelledby="work-heading">
-          <div className="flex items-baseline justify-between mb-12 pb-4 border-b border-border">
-            <div>
-              <p className="project-tag mb-2">Section Two</p>
-              <h2 id="work-heading" className="font-serif">Selected Work</h2>
-            </div>
-            <p className="font-mono text-xs text-muted-foreground hidden sm:block">
-              {featuredProjects.length} projects
-            </p>
+        <section>
+          <div className="flex items-baseline justify-between mb-8 pb-3 border-b border-border">
+            <h2 className="text-xl font-semibold">Selected Work</h2>
+            <Link to="/projects" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              All projects →
+            </Link>
           </div>
 
-          <div className="space-y-20 md:space-y-28">
-            {featuredProjects.map((project, idx) => (
+          <div className="space-y-12">
+            {featuredProjects.map((project) => (
               <Link
                 key={project.path}
                 to={project.path}
                 className="group block"
               >
-                <article className="grid md:grid-cols-12 gap-6 md:gap-10">
-                  <div className="md:col-span-7 image-frame aspect-[4/3] order-2 md:order-1">
-                    <img
-                      src={project.image}
-                      alt={`${project.title} — ${project.type}`}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
-                      loading={idx === 0 ? "eager" : "lazy"}
-                      width={1200}
-                      height={900}
-                    />
-                  </div>
-                  <div className="md:col-span-5 order-1 md:order-2 flex flex-col justify-center">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className="font-mono text-xs text-accent">{project.num}</span>
-                      <span className="h-px flex-1 bg-border" aria-hidden />
-                      <span className="font-mono text-xs text-muted-foreground">{project.year}</span>
-                    </div>
-                    <h3 className="font-serif text-3xl md:text-4xl mb-2 group-hover:text-accent transition-colors">
+                <div className="image-frame aspect-[16/9] mb-4">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} project preview`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    loading="lazy"
+                    width={1600}
+                    height={900}
+                  />
+                </div>
+                <div className="flex items-baseline justify-between gap-4">
+                  <div>
+                    <h3 className="text-lg font-semibold group-hover:text-accent transition-colors">
                       {project.title}
                     </h3>
-                    <p className="project-tag mb-4">{project.type}</p>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-muted-foreground mt-1 max-w-xl">
                       {project.description}
                     </p>
-                    <span className="inline-flex items-center gap-1 mt-6 text-sm font-medium text-foreground group-hover:text-accent transition-colors">
-                      Read case study
-                      <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </span>
                   </div>
-                </article>
+                  <span className="project-tag shrink-0 text-right">{project.type}</span>
+                </div>
               </Link>
             ))}
-          </div>
-        </section>
-
-        {/* Practice / Closing */}
-        <section className="container-wide section-divider pt-16">
-          <div className="grid md:grid-cols-[auto_1fr] gap-8 md:gap-16">
-            <p className="project-tag">Section Three</p>
-            <div>
-              <p className="font-serif text-2xl md:text-3xl leading-snug mb-6 max-w-2xl">
-                Good design is as much about understanding the people interacting
-                with a system as it is about the technology itself.
-              </p>
-              <Link
-                to="/about"
-                className="group inline-flex items-center gap-2 text-sm font-medium pb-2 border-b border-foreground hover:border-accent hover:text-accent transition-colors"
-              >
-                Read about my practice
-                <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
-            </div>
           </div>
         </section>
       </div>
