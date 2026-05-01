@@ -75,13 +75,16 @@ const MouldMan = () => {
             </p>
 
             <ImagePlaceholder
+              label="Raw customer review quotes"
+              description="Photo or screenshot of the raw quotes collected from real customer reviews across the Irish and international mould-remediation sector."
+            />
+            <ImagePlaceholder
               label="Thematic analysis board"
-              description="Photo or screenshot of the thematic-analysis board used during research: customer review quotes grouped under the four key themes (root-cause expertise, health anxiety, responsiveness, educational content)."
-              items={[
-                "Raw review quotes collected from customer and competitor sources.",
-                "Grouped theme board showing root-cause expertise, health anxiety, responsiveness, and educational content.",
-                "One annotated insight explaining how a research theme became a website requirement.",
-              ]}
+              description="Quotes grouped under the four key themes: root-cause expertise, health anxiety, responsiveness, and educational content."
+            />
+            <ImagePlaceholder
+              label="Insight → requirement"
+              description="One annotated insight showing how a research theme translated into a concrete website requirement."
             />
           </CaseStudySection>
 
@@ -125,23 +128,36 @@ const MouldMan = () => {
             </div>
 
             <ImagePlaceholder
-              label="Personas"
-              description="Three persona sheets shown together: Sarah O'Brien (Concerned Homeowner), Mark Flynn (Busy Landlord), and Rachel O'Connor (Health-Conscious Renter), with portraits, quotes, and goals."
-              items={[
-                "Persona sheet for Sarah O'Brien, focused on health anxiety and family safety.",
-                "Persona sheet for Mark Flynn, focused on speed, compliance, and property management.",
-                "Persona sheet for Rachel O'Connor, focused on evidence, landlord communication, and reassurance.",
-              ]}
+              label="Persona — Sarah O'Brien (Concerned Homeowner)"
+              description="Persona sheet for Sarah: portrait, quote, goals, frustrations, and behaviours — focused on health anxiety and family safety."
             />
-
             <ImagePlaceholder
-              label="Wireframes"
-              description="Annotated wireframes of the Mould Man homepage, services page, and contact/booking flow — ideally with handwritten or digital callouts explaining IA decisions."
-              items={[
-                "Homepage wireframe showing trust signals, services, reviews, and primary contact CTA.",
-                "Services/information page wireframe showing education-led content structure.",
-                "Contact/quote flow wireframe showing form fields, reassurance copy, and completion feedback.",
-              ]}
+              label="Persona — Mark Flynn (Busy Landlord)"
+              description="Persona sheet for Mark: focused on speed, compliance, and property management efficiency."
+            />
+            <ImagePlaceholder
+              label="Persona — Rachel O'Connor (Health-Conscious Renter)"
+              description="Persona sheet for Rachel: focused on evidence, landlord communication, and reassurance."
+            />
+            <ImagePlaceholder
+              label="Competitor IA analysis"
+              description="Comparative information-architecture diagram of CleanTech, ChemDryMidwest, XtremeCarpetCleaning, and DampMaster."
+            />
+            <ImagePlaceholder
+              label="Site map / IA diagram"
+              description="Final Mould Man site map showing top-level pages, sub-sections, and primary contact entry points."
+            />
+            <ImagePlaceholder
+              label="Wireframe — homepage"
+              description="Annotated homepage wireframe showing trust signals, services, reviews, and primary contact CTA."
+            />
+            <ImagePlaceholder
+              label="Wireframe — services / information page"
+              description="Annotated wireframe of the services and education-led information page."
+            />
+            <ImagePlaceholder
+              label="Wireframe — contact / quote flow"
+              description="Annotated wireframe of the quote/contact flow with form fields, reassurance copy, and confirmation state."
             />
           </CaseStudySection>
 
@@ -151,13 +167,16 @@ const MouldMan = () => {
               find what they needed without fragmenting the site.
             </p>
             <ImagePlaceholder
-              label="Journey maps & scenarios"
-              description="Documentation showing how each persona approaches the service differently before arriving at the same website structure."
-              items={[
-                "Journey map for Sarah showing discovery, anxiety, credibility checks, and contact decision.",
-                "Journey map for Mark showing urgency, service comparison, scheduling, and quote request.",
-                "Storyboard or scenario for Rachel showing how information supports communication with a landlord.",
-              ]}
+              label="Journey map — Sarah (Homeowner)"
+              description="Journey map for Sarah showing discovery, anxiety, credibility checks, and the contact decision."
+            />
+            <ImagePlaceholder
+              label="Journey map — Mark (Landlord)"
+              description="Journey map for Mark showing urgency, service comparison, scheduling, and quote request."
+            />
+            <ImagePlaceholder
+              label="Storyboard — Rachel (Renter)"
+              description="Storyboard or scenario for Rachel showing how Mould Man's content supports her communication with a landlord."
             />
             <div className="divide-y divide-border border-y border-border">
               {[
@@ -225,23 +244,37 @@ const MouldMan = () => {
             </div>
 
             <ImagePlaceholder
-              label="Final design — desktop"
-              description="Full-page screenshots of the final Figma design on desktop: homepage, services page, FAQ section, and contact/booking page."
-              items={[
-                "Desktop homepage showing hero, trust signals, reviews, and contact routes.",
-                "Desktop services or mould-information page showing educational content hierarchy.",
-                "Desktop contact/quote page showing form structure, labels, and confirmation state.",
-              ]}
+              label="Visual style — colour & typography"
+              description="Style tile showing the final colour palette, typography hierarchy, button states, and key UI components."
+            />
+            <ImagePlaceholder
+              label="Final desktop — homepage"
+              description="Final desktop homepage showing hero, trust signals, reviews, and contact routes."
+            />
+            <ImagePlaceholder
+              label="Final desktop — services / mould information"
+              description="Final desktop services or mould-information page showing the educational content hierarchy."
+            />
+            <ImagePlaceholder
+              label="Final desktop — FAQ"
+              description="Final desktop FAQ page showing question grouping and answer formatting."
+            />
+            <ImagePlaceholder
+              label="Final desktop — contact / quote"
+              description="Final desktop contact/quote page showing form structure, labels, and confirmation state."
             />
 
             <ImagePlaceholder
-              label="Final design — mobile"
-              description="Mobile mockups of the same key screens, showing how the responsive design adapts and prioritises content."
-              items={[
-                "Mobile homepage showing the first screen and primary CTA placement.",
-                "Mobile navigation/menu state showing access to services, information, FAQ, and contact.",
-                "Mobile quote/contact flow showing readable form fields and large tap targets.",
-              ]}
+              label="Final mobile — homepage"
+              description="Mobile homepage showing the first screen and primary CTA placement."
+            />
+            <ImagePlaceholder
+              label="Final mobile — navigation"
+              description="Mobile navigation/menu state showing access to services, information, FAQ, and contact."
+            />
+            <ImagePlaceholder
+              label="Final mobile — quote / contact flow"
+              description="Mobile quote/contact flow showing readable form fields and large tap targets."
             />
           </CaseStudySection>
 
@@ -258,13 +291,16 @@ const MouldMan = () => {
               <li>Forms with clear labels, errors, and success feedback</li>
             </ul>
             <ImagePlaceholder
-              label="Accessibility checks"
-              description="Documentation showing that accessibility decisions were evaluated rather than only stated."
-              items={[
-                "Contrast-check screenshots for the final colour palette and CTA states.",
-                "Annotated form screen showing labels, helper text, errors, and success feedback.",
-                "Mobile tap-target check or responsive screenshot showing spacing around key actions.",
-              ]}
+              label="Contrast checks"
+              description="Contrast-check screenshots for the final colour palette and CTA states (e.g. WebAIM contrast results)."
+            />
+            <ImagePlaceholder
+              label="Form accessibility"
+              description="Annotated form screen showing labels, helper text, error states, and success feedback."
+            />
+            <ImagePlaceholder
+              label="Mobile tap-target check"
+              description="Responsive screenshot or annotated mobile screen showing spacing and tap-target size around key actions."
             />
           </CaseStudySection>
 
@@ -279,13 +315,16 @@ const MouldMan = () => {
             </p>
 
             <ImagePlaceholder
-              label="Usability testing results"
-              description="Photo of testing session in progress, or a clean summary table of usability test findings (task, completion time, observed issues, design changes made)."
-              items={[
-                "Photo or screenshot from a prototype test session, anonymised if needed.",
-                "Findings table with task, success, time/hesitation, issue, and resulting design change.",
-                "Before/after screenshot showing at least one navigation, CTA, or FAQ revision after testing.",
-              ]}
+              label="Test session"
+              description="Photo or screenshot from a prototype test session, anonymised if needed."
+            />
+            <ImagePlaceholder
+              label="Findings table"
+              description="Findings table with task, success, time/hesitation, observed issue, and the resulting design change."
+            />
+            <ImagePlaceholder
+              label="Before / after — design revision"
+              description="Before/after screenshot showing at least one navigation, CTA, or FAQ revision made after testing."
             />
           </CaseStudySection>
 
