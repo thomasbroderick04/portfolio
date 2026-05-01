@@ -3,10 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Linkedin, Mail, ArrowUp } from "lucide-react";
 
 const primaryNav = [
-  { label: "Index", path: "/", num: "01" },
-  { label: "Selected Work", path: "/projects", num: "02" },
-  { label: "Practice", path: "/about", num: "03" },
-  { label: "Contact", path: "/contact", num: "04" },
+  { label: "Home", path: "/" },
+  { label: "Projects", path: "/projects" },
+  { label: "About", path: "/about" },
+  { label: "Contact", path: "/contact" },
 ];
 
 const projectItems = [
