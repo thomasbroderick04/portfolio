@@ -10,9 +10,9 @@ const primaryNav = [
 ];
 
 const projectItems = [
-  { label: "MindSpark", path: "/projects/mindspark", year: "26" },
-  { label: "Mould Man", path: "/projects/mould-man", year: "25" },
-  { label: "Project Three", path: "/projects/project-three", year: "—" },
+  { label: "MindSpark", path: "/projects/mindspark" },
+  { label: "Mould Man", path: "/projects/mould-man" },
+  { label: "Project Three", path: "/projects/project-three" },
 ];
 
 interface LayoutProps {
@@ -38,7 +38,6 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Skip link */}
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-primary focus:text-primary-foreground focus:px-3 focus:py-2 focus:rounded text-sm"
@@ -47,11 +46,11 @@ const Layout = ({ children }: LayoutProps) => {
       </a>
 
       {/* Mobile header */}
-      <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
-        <div className="flex items-center justify-between px-5 py-4">
+      <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div className="flex items-center justify-between px-6 py-4">
           <Link
             to="/"
-            className="font-serif text-lg leading-none"
+            className="text-base font-semibold tracking-tight"
             onClick={() => setMobileOpen(false)}
           >
             Thomas Broderick
@@ -66,58 +65,58 @@ const Layout = ({ children }: LayoutProps) => {
           </button>
         </div>
         {mobileOpen && (
-          <nav className="px-5 pb-6 border-b border-border" aria-label="Main navigation">
+          <nav className="px-6 pb-6 border-b border-border" aria-label="Main navigation">
             <ul className="space-y-1">
               {primaryNav.map((item) => (
                 <li key={item.path}>
                   <Link
                     to={item.path}
                     onClick={() => setMobileOpen(false)}
-                    className={`flex items-baseline gap-3 py-2 text-sm transition-colors ${
-                      isActive(item.path) ? "text-foreground font-medium" : "text-muted-foreground hover:text-foreground"
+                    className={`block py-2 text-sm transition-colors ${
+                      isActive(item.path)
+                        ? "text-foreground font-medium"
+                        : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
-                    <span className="font-mono text-[10px] text-muted-foreground">{item.num}</span>
                     {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
-            <div className="mt-5 pt-5 border-t border-border">
-              <p className="project-tag mb-3">Projects</p>
+            <div className="mt-4 pt-4 border-t border-border">
+              <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Projects</p>
               <ul className="space-y-1">
                 {projectItems.map((item) => (
                   <li key={item.path}>
                     <Link
                       to={item.path}
                       onClick={() => setMobileOpen(false)}
-                      className={`flex items-baseline justify-between py-1.5 text-sm transition-colors ${
+                      className={`block py-1.5 text-sm transition-colors ${
                         location.pathname === item.path
                           ? "text-foreground font-medium"
                           : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
-                      <span>{item.label}</span>
-                      <span className="font-mono text-[10px] text-muted-foreground">'{item.year}</span>
+                      {item.label}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="mt-5 pt-5 border-t border-border flex gap-4">
+            <div className="mt-4 pt-4 border-t border-border flex gap-4">
               <a
                 href="https://www.linkedin.com/in/thomas-broderick-22071253/"
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="LinkedIn"
-                className="text-muted-foreground hover:text-accent transition-colors"
+                className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Linkedin size={18} />
               </a>
               <a
                 href="mailto:thomas.broderick.work@gmail.com"
                 aria-label="Email"
-                className="text-muted-foreground hover:text-accent transition-colors"
+                className="text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail size={18} />
               </a>
@@ -127,67 +126,44 @@ const Layout = ({ children }: LayoutProps) => {
       </header>
 
       {/* Desktop sidebar */}
-      <aside className="hidden lg:flex flex-col fixed top-0 left-0 bottom-0 w-72 xl:w-80 border-r border-border bg-sidebar z-40 px-10 py-12">
-        {/* Identity block */}
-        <div className="mb-10">
-          <Link to="/" className="block group">
-            <p className="project-tag mb-2">Portfolio · 2026</p>
-            <h2 className="font-serif text-2xl leading-tight tracking-tight group-hover:text-accent transition-colors">
-              Thomas
-              <br />
-              Broderick
-            </h2>
-          </Link>
-          <p className="mt-3 text-xs text-muted-foreground leading-relaxed">
-            UX &amp; Interaction Designer
-            <br />
-            Limerick, Ireland
-          </p>
-        </div>
+      <aside className="hidden lg:flex flex-col fixed top-0 left-0 bottom-0 w-64 border-r border-border bg-background z-40 px-8 py-10">
+        <Link to="/" className="block mb-12">
+          <p className="text-base font-semibold tracking-tight">Thomas Broderick</p>
+          <p className="text-xs text-muted-foreground mt-1">UX &amp; Interaction Designer</p>
+        </Link>
 
-        {/* Primary nav */}
         <nav className="flex-1" aria-label="Main navigation">
-          <ul className="space-y-1 mb-10">
+          <ul className="space-y-1 mb-8">
             {primaryNav.map((item) => (
               <li key={item.path}>
                 <Link
                   to={item.path}
-                  className={`group flex items-baseline gap-3 py-1.5 text-sm transition-colors ${
+                  className={`block py-1.5 text-sm transition-colors ${
                     isActive(item.path)
                       ? "text-foreground font-medium"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
-                  <span className={`font-mono text-[10px] ${isActive(item.path) ? "text-accent" : "text-muted-foreground/70"}`}>
-                    {item.num}
-                  </span>
-                  <span className="relative">
-                    {item.label}
-                    {isActive(item.path) && (
-                      <span className="absolute -bottom-0.5 left-0 right-0 h-px bg-accent" aria-hidden />
-                    )}
-                  </span>
+                  {item.label}
                 </Link>
               </li>
             ))}
           </ul>
 
-          {/* Project list */}
           <div className="border-t border-border pt-6">
-            <p className="project-tag mb-4">Case Studies</p>
-            <ul className="space-y-1.5">
+            <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3">Projects</p>
+            <ul className="space-y-1">
               {projectItems.map((item) => (
                 <li key={item.path}>
                   <Link
                     to={item.path}
-                    className={`flex items-baseline justify-between gap-3 py-1 text-sm transition-colors ${
+                    className={`block py-1.5 text-sm transition-colors ${
                       location.pathname === item.path
                         ? "text-foreground font-medium"
                         : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
-                    <span>{item.label}</span>
-                    <span className="font-mono text-[10px] text-muted-foreground/70">'{item.year}</span>
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -195,7 +171,6 @@ const Layout = ({ children }: LayoutProps) => {
           </div>
         </nav>
 
-        {/* Footer block */}
         <div className="mt-auto pt-6 border-t border-border">
           <div className="flex items-center gap-4 mb-3">
             <a
@@ -203,38 +178,34 @@ const Layout = ({ children }: LayoutProps) => {
               target="_blank"
               rel="noreferrer noopener"
               aria-label="LinkedIn profile"
-              className="text-muted-foreground hover:text-accent transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Linkedin size={16} />
             </a>
             <a
               href="mailto:thomas.broderick.work@gmail.com"
               aria-label="Email"
-              className="text-muted-foreground hover:text-accent transition-colors"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Mail size={16} />
             </a>
           </div>
-          <p className="font-mono text-[10px] text-muted-foreground/70 uppercase tracking-widest">
-            Available · Graduate &amp; Freelance
-          </p>
+          <p className="text-xs text-muted-foreground">Limerick, Ireland</p>
         </div>
       </aside>
 
-      {/* Main */}
       <main
-        className="lg:ml-72 xl:ml-80 min-h-screen pt-16 lg:pt-0"
+        className="lg:ml-64 min-h-screen pt-16 lg:pt-0"
         id="main-content"
         role="main"
       >
         {children}
       </main>
 
-      {/* Scroll to top */}
       {showTop && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-6 right-6 z-50 p-3 bg-primary text-primary-foreground rounded-full shadow-lg hover:bg-accent transition-colors"
+          className="fixed bottom-6 right-6 z-50 p-3 bg-primary text-primary-foreground rounded-full shadow-md hover:opacity-90 transition-opacity"
           aria-label="Scroll to top"
         >
           <ArrowUp size={16} />
