@@ -330,13 +330,16 @@ const MindSpark = () => {
             </p>
 
             <ImagePlaceholder
-              label="Final system overview"
-              description="A composed marketing-style image of the final MindSpark system: the mobile app shown on a phone alongside the physical Arduino microphone enclosure, ideally in a clean lifestyle setting."
-              items={[
-                "Final app screen displayed on a phone, tablet, or laptop mockup.",
-                "Physical microphone enclosure positioned beside the interface.",
-                "A small caption naming the final system components: digital test, alertness check, results, and verbal-response prototype.",
-              ]}
+              label="Final system — composed overview"
+              description="A composed image of the final MindSpark system: the mobile app on a phone alongside the physical Arduino microphone enclosure."
+            />
+            <ImagePlaceholder
+              label="Final app on device"
+              description="Final app screen displayed on a phone, tablet, or laptop mockup."
+            />
+            <ImagePlaceholder
+              label="Final hardware in context"
+              description="Physical microphone enclosure positioned beside the interface, with components labelled."
             />
           </CaseStudySection>
 
