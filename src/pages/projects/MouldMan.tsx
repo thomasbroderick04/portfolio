@@ -77,7 +77,11 @@ const MouldMan = () => {
             <ImagePlaceholder
               label="Thematic analysis board"
               description="Photo or screenshot of the thematic-analysis board used during research: customer review quotes grouped under the four key themes (root-cause expertise, health anxiety, responsiveness, educational content)."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Raw review quotes collected from customer and competitor sources.",
+                "Grouped theme board showing root-cause expertise, health anxiety, responsiveness, and educational content.",
+                "One annotated insight explaining how a research theme became a website requirement.",
+              ]}
             />
           </CaseStudySection>
 
@@ -123,13 +127,21 @@ const MouldMan = () => {
             <ImagePlaceholder
               label="Personas"
               description="Three persona sheets shown together: Sarah O'Brien (Concerned Homeowner), Mark Flynn (Busy Landlord), and Rachel O'Connor (Health-Conscious Renter), with portraits, quotes, and goals."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Persona sheet for Sarah O'Brien, focused on health anxiety and family safety.",
+                "Persona sheet for Mark Flynn, focused on speed, compliance, and property management.",
+                "Persona sheet for Rachel O'Connor, focused on evidence, landlord communication, and reassurance.",
+              ]}
             />
 
             <ImagePlaceholder
               label="Wireframes"
               description="Annotated wireframes of the Mould Man homepage, services page, and contact/booking flow — ideally with handwritten or digital callouts explaining IA decisions."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Homepage wireframe showing trust signals, services, reviews, and primary contact CTA.",
+                "Services/information page wireframe showing education-led content structure.",
+                "Contact/quote flow wireframe showing form fields, reassurance copy, and completion feedback.",
+              ]}
             />
           </CaseStudySection>
 
