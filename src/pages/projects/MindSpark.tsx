@@ -286,13 +286,16 @@ const MindSpark = () => {
           {/* What testing taught me */}
           <CaseStudySection title="What User Testing Taught Me">
             <ImagePlaceholder
-              label="Testing sessions & notes"
-              description="Evidence from usability testing rounds, placed before the findings so the reader can see how observations became design decisions."
-              items={[
-                "Photo of a moderated test session or the test setup, with participant details anonymised.",
-                "Screenshot/photo of observation notes, affinity mapping, or issue prioritisation.",
-                "A compact before/after example showing one participant issue and the design change it caused.",
-              ]}
+              label="Test session in progress"
+              description="Photo of a moderated usability test session or the test setup, with participant identity anonymised."
+            />
+            <ImagePlaceholder
+              label="Observation notes & affinity mapping"
+              description="Photo or screenshot of raw observation notes, sticky-note affinity mapping, or issue prioritisation grid from a testing round."
+            />
+            <ImagePlaceholder
+              label="Before / after — design change driven by testing"
+              description="One concrete before/after example showing a participant issue and the specific design change made in response."
             />
 
             <ul className="space-y-3">
