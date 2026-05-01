@@ -255,6 +255,15 @@ const MouldMan = () => {
               <li>Semantic structure, headings, and meaningful link text</li>
               <li>Forms with clear labels, errors, and success feedback</li>
             </ul>
+            <ImagePlaceholder
+              label="Accessibility checks"
+              description="Documentation showing that accessibility decisions were evaluated rather than only stated."
+              items={[
+                "Contrast-check screenshots for the final colour palette and CTA states.",
+                "Annotated form screen showing labels, helper text, errors, and success feedback.",
+                "Mobile tap-target check or responsive screenshot showing spacing around key actions.",
+              ]}
+            />
           </CaseStudySection>
 
           <CaseStudySection title="Usability Testing">
@@ -270,7 +279,11 @@ const MouldMan = () => {
             <ImagePlaceholder
               label="Usability testing results"
               description="Photo of testing session in progress, or a clean summary table of usability test findings (task, completion time, observed issues, design changes made)."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Photo or screenshot from a prototype test session, anonymised if needed.",
+                "Findings table with task, success, time/hesitation, issue, and resulting design change.",
+                "Before/after screenshot showing at least one navigation, CTA, or FAQ revision after testing.",
+              ]}
             />
           </CaseStudySection>
 
