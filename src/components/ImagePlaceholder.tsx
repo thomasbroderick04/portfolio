@@ -16,8 +16,32 @@ const ImagePlaceholder = ({
   items,
 }: ImagePlaceholderProps) => {
   return (
-    <figure className={`image-placeholder ${aspectRatio} my-6`}>
-      <div className="w-full max-w-xl">
+    <figure className={`my-8 overflow-hidden rounded-md border-2 border-dashed border-border bg-secondary/60 ${aspectRatio}`}>
+      {/* Visual image area */}
+      <div className="relative flex aspect-[16/9] w-full items-center justify-center border-b-2 border-dashed border-border bg-secondary">
+        <div className="flex flex-col items-center gap-3 text-muted-foreground">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <polyline points="21 15 16 10 5 21" />
+          </svg>
+          <p className="project-tag">Image placeholder</p>
+        </div>
+      </div>
+
+      {/* Caption / instructions */}
+      <figcaption className="p-6 md:p-8">
         <p className="project-tag mb-2">Photo documentation</p>
         <h3 className="text-base font-semibold text-foreground mb-2">{label}</h3>
         <p className="text-sm text-muted-foreground leading-relaxed">
@@ -33,7 +57,7 @@ const ImagePlaceholder = ({
             ))}
           </ul>
         )}
-      </div>
+      </figcaption>
     </figure>
   );
 };
