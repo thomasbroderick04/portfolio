@@ -262,6 +262,16 @@ const MindSpark = () => {
 
           {/* What testing taught me */}
           <CaseStudySection title="What User Testing Taught Me">
+            <ImagePlaceholder
+              label="Testing sessions & notes"
+              description="Evidence from usability testing rounds, placed before the findings so the reader can see how observations became design decisions."
+              items={[
+                "Photo of a moderated test session or the test setup, with participant details anonymised.",
+                "Screenshot/photo of observation notes, affinity mapping, or issue prioritisation.",
+                "A compact before/after example showing one participant issue and the design change it caused.",
+              ]}
+            />
+
             <ul className="space-y-3">
               {[
                 ["Readability is non-negotiable", "Type size, line length, and contrast were the most-mentioned issues across all rounds — far more than visual style."],
@@ -296,7 +306,11 @@ const MindSpark = () => {
             <ImagePlaceholder
               label="Final system overview"
               description="A composed marketing-style image of the final MindSpark system: the mobile app shown on a phone alongside the physical Arduino microphone enclosure, ideally in a clean lifestyle setting."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Final app screen displayed on a phone, tablet, or laptop mockup.",
+                "Physical microphone enclosure positioned beside the interface.",
+                "A small caption naming the final system components: digital test, alertness check, results, and verbal-response prototype.",
+              ]}
             />
           </CaseStudySection>
 
