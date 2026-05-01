@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 
@@ -33,14 +34,36 @@ const ProjectThree = () => {
           <ImagePlaceholder
             label="Hero image"
             description="A representative hero image for this project — final visual once the work is complete."
-            aspectRatio="aspect-[16/9]"
+            items={[
+              "One strong final image that clearly shows the finished interface, artefact, or experience.",
+              "A short caption explaining the project domain and why this image represents the work.",
+            ]}
           />
 
-          <p className="mt-8 text-base text-muted-foreground leading-relaxed">
-            Once finalised, this case study will follow the same structure as
-            the others: summary, context, role, process, design decisions,
-            visual documentation, testing, outcome, and reflection.
-          </p>
+          <CaseStudySection title="Process Documentation">
+            <p>
+              Once the project is finalised, this section should show the work
+              developing over time rather than only showing the finished result.
+            </p>
+            <ImagePlaceholder
+              label="Research & early thinking"
+              description="Use this space for material that explains the problem before the design solution appears."
+              items={[
+                "Research notes, interview snippets, observations, or desk-research screenshots.",
+                "Early sketches, maps, or problem-framing diagrams.",
+                "A short annotation explaining what this evidence changed in the project direction.",
+              ]}
+            />
+            <ImagePlaceholder
+              label="Wireframes, prototypes & iterations"
+              description="Use this space to show how the design changed through decisions, testing, and critique."
+              items={[
+                "Low-fidelity wireframes or structural explorations.",
+                "Mid/high-fidelity screens showing key interaction states.",
+                "Before/after examples that explain one or two important design revisions.",
+              ]}
+            />
+          </CaseStudySection>
 
           <div className="section-divider mt-10 pt-6 flex justify-between text-sm">
             <Link to="/projects/mould-man" className="font-medium hover:text-accent transition-colors">
