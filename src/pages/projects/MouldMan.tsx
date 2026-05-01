@@ -106,7 +106,7 @@ const MouldMan = () => {
               specification second — applying a deliberately evidence-led
               approach.
             </p>
-            <div className="grid sm:grid-cols-2 gap-3">
+            <div className="mt-6 divide-y divide-border border-y border-border">
               {[
                 ["User research", "Thematic analysis of real customer reviews."],
                 ["Personas & scenarios", "Three evidence-based personas: Sarah (Homeowner), Mark (Landlord), Rachel (Renter)."],
@@ -117,9 +117,9 @@ const MouldMan = () => {
                 ["Visual design", "Colour, typography, spacing, components."],
                 ["Prototype & testing", "Figma interactive prototype tested with users."],
               ].map(([t, d]) => (
-                <div key={t} className="p-4 bg-secondary rounded-md">
-                  <p className="text-sm font-semibold text-foreground mb-1">{t}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{d}</p>
+                <div key={t} className="grid md:grid-cols-[220px_1fr] gap-2 md:gap-8 py-4">
+                  <p className="text-sm font-semibold text-foreground">{t}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{d}</p>
                 </div>
               ))}
             </div>
@@ -159,7 +159,7 @@ const MouldMan = () => {
                 "Storyboard or scenario for Rachel showing how information supports communication with a landlord.",
               ]}
             />
-            <div className="grid md:grid-cols-3 gap-3">
+            <div className="divide-y divide-border border-y border-border">
               {[
                 {
                   name: "Sarah O'Brien",
@@ -177,10 +177,12 @@ const MouldMan = () => {
                   drive: "Validation & evidence to escalate to landlord",
                 },
               ].map((p) => (
-                <div key={p.name} className="p-4 bg-secondary rounded-md">
-                  <p className="text-sm font-semibold text-foreground">{p.name}</p>
-                  <p className="text-xs text-muted-foreground mb-2">{p.role}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{p.drive}</p>
+                <div key={p.name} className="grid md:grid-cols-[220px_1fr] gap-2 md:gap-8 py-4">
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{p.name}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{p.role}</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{p.drive}</p>
                 </div>
               ))}
             </div>
