@@ -85,13 +85,16 @@ const MindSpark = () => {
             </p>
 
             <ImagePlaceholder
-              label="Existing tool analysis"
-              description="Side-by-side screenshots of existing digital cognitive testing tools (e.g. Cambridge Brain Sciences, Lumosity, BrainCheck), with annotations highlighting recurring usability and accessibility shortcomings."
-              items={[
-                "Screenshots of 3–5 existing cognitive testing interfaces.",
-                "Annotations calling out instruction clarity, feedback, touch targets, colour use, and accessibility issues.",
-                "A short comparison table showing what each tool handles well and where interaction friction appears.",
-              ]}
+              label="Existing tool — Cambridge Brain Sciences"
+              description="Annotated screenshot of the Cambridge Brain Sciences Go/No-Go interface highlighting instruction density, button affordance, and feedback issues."
+            />
+            <ImagePlaceholder
+              label="Existing tool — Lumosity / BrainCheck"
+              description="Annotated screenshot of a consumer cognitive testing app highlighting touch-target sizing, colour use, and onboarding clarity."
+            />
+            <ImagePlaceholder
+              label="Comparison table"
+              description="Side-by-side comparison table of 3–5 existing cognitive testing tools across instruction clarity, feedback, accessibility, and contextual awareness."
             />
           </CaseStudySection>
 
@@ -156,23 +159,36 @@ const MindSpark = () => {
             </div>
 
             <ImagePlaceholder
-              label="Sketches & wireframes"
-              description="Original hand-drawn sketches and low-fidelity Figma wireframes showing the proposed application structure, including the home screen, test categories, Go/No-Go introduction, alertness questions, and practice pathway."
-              items={[
-                "Hand sketches of the first app structure and test flow.",
-                "Low-fidelity Figma wireframes for onboarding, instructions, alertness check, practice, test, and results.",
-                "One annotated flow diagram showing how a user moves through the full Go/No-Go experience.",
-              ]}
+              label="Hand-drawn sketches — first app structure"
+              description="Original pen-and-paper sketches showing the initial app structure, screen inventory, and proposed Go/No-Go flow."
             />
-
             <ImagePlaceholder
-              label="Iteration board"
-              description="Side-by-side comparison of low-, mid-, and high-fidelity Go/No-Go test screens, showing how visual identity, button states, and feedback evolved across iterations."
-              items={[
-                "Low-, mid-, and high-fidelity versions of the same key screens placed beside each other.",
-                "Short callouts explaining what changed after each testing round.",
-                "Evidence of revised typography, spacing, button states, feedback, and colour meaning.",
-              ]}
+              label="Hand-drawn sketches — Go/No-Go interaction"
+              description="Sketched ideas for the test screen itself: stimulus placement, button vs. tap area, and feedback states."
+            />
+            <ImagePlaceholder
+              label="Low-fi wireframe — onboarding & instructions"
+              description="Low-fidelity Figma wireframe of the onboarding screen and Go/No-Go instructions page."
+            />
+            <ImagePlaceholder
+              label="Low-fi wireframe — alertness check"
+              description="Low-fidelity wireframe of the pre-test alertness/context capture screen."
+            />
+            <ImagePlaceholder
+              label="Low-fi wireframe — practice & test"
+              description="Low-fidelity wireframes for the practice stage and the main scored test surface."
+            />
+            <ImagePlaceholder
+              label="Low-fi wireframe — results"
+              description="Low-fidelity wireframe of the results screen pairing performance with captured context."
+            />
+            <ImagePlaceholder
+              label="Annotated user flow diagram"
+              description="One full flow diagram showing how a user moves through onboarding → instructions → alertness check → practice → test → results."
+            />
+            <ImagePlaceholder
+              label="Iteration board — low → mid → high fidelity"
+              description="Side-by-side comparison of the same key Go/No-Go screens at low, mid, and high fidelity, with short callouts explaining what changed after each testing round."
             />
           </CaseStudySection>
 
@@ -228,35 +244,42 @@ const MindSpark = () => {
             </div>
 
             <ImagePlaceholder
-              label="Hi-fi screens"
-              description="High-fidelity Figma screens of: alertness check, practice stage with demonstrative feedback, the minimal main test surface during a Go/No-Go trial, and the personalised results screen."
-              items={[
-                "Final alertness check screens showing context questions before testing.",
-                "Practice screens showing the demonstration, feedback, and error-recovery states.",
-                "Main test screens showing Go, No-Go, waiting, and completed states.",
-                "Results screen showing how performance and context are communicated together.",
-              ]}
+              label="Hi-fi screen — alertness check"
+              description="Final high-fidelity Figma screen of the pre-test alertness/context questions."
+            />
+            <ImagePlaceholder
+              label="Hi-fi screen — practice with demonstration"
+              description="Final high-fidelity practice screen showing video demonstration, trial-by-trial guidance, and feedback states."
+            />
+            <ImagePlaceholder
+              label="Hi-fi screen — main Go/No-Go test"
+              description="Final high-fidelity main test surface during a Go and a No-Go trial, including waiting and completed states."
+            />
+            <ImagePlaceholder
+              label="Hi-fi screen — results"
+              description="Final high-fidelity results screen showing how performance and the captured alertness context are presented together."
             />
 
             <ImagePlaceholder
-              label="Hardware prototype"
-              description="Photographs of the physical Arduino + microphone enclosure: (1) the assembled FreeCAD-designed enclosure, (2) wiring connected to the Arduino Uno, and (3) the verbal-response pathway in use during a test session."
-              items={[
-                "FreeCAD model or render of the enclosure before fabrication/assembly.",
-                "Close-up of the Arduino Uno, microphone sensor, wiring, and enclosure interior.",
-                "Photo of the completed physical prototype beside the digital interface.",
-                "Photo or still from testing showing a participant using the verbal-response pathway.",
-              ]}
+              label="Hardware — FreeCAD enclosure model"
+              description="FreeCAD render or screenshot of the microphone enclosure design before fabrication."
+            />
+            <ImagePlaceholder
+              label="Hardware — Arduino + microphone wiring"
+              description="Close-up photo of the Arduino Uno, microphone sensor, wiring, and enclosure interior."
+            />
+            <ImagePlaceholder
+              label="Hardware — assembled prototype"
+              description="Photo of the completed physical prototype shown alongside the digital interface."
+            />
+            <ImagePlaceholder
+              label="Hardware — verbal-response pathway in use"
+              description="Photo or video still of a participant using the voice-input modality during a test session."
             />
 
             <ImagePlaceholder
-              label="Demo video"
-              description="Short screen recording (or embedded video) showing the full Go/No-Go test flow end-to-end: alertness check → practice → test → results."
-              items={[
-                "Screen recording of the complete digital test flow.",
-                "Clip or still showing the voice-input prototype responding during a trial.",
-                "Optional short caption explaining what the viewer should notice in the interaction.",
-              ]}
+              label="Demo video — full test flow"
+              description="Embedded screen recording showing the complete Go/No-Go flow end-to-end: alertness check → practice → test → results."
             />
           </CaseStudySection>
 
