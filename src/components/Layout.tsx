@@ -45,9 +45,8 @@ const Layout = ({ children }: LayoutProps) => {
         Skip to content
       </a>
 
-      {/* Mobile header */}
-      <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="flex items-center justify-between px-6 py-4">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+        <div className="flex items-center justify-between px-6 md:px-12 lg:px-16 py-4">
           <Link
             to="/"
             className="text-base font-semibold tracking-tight"
@@ -55,9 +54,42 @@ const Layout = ({ children }: LayoutProps) => {
           >
             Thomas Broderick
           </Link>
+          <nav className="hidden lg:flex items-center gap-7" aria-label="Main navigation">
+            {primaryNav.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`text-sm transition-colors ${
+                  isActive(item.path)
+                    ? "text-foreground font-medium"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+          <div className="hidden lg:flex items-center gap-4">
+            <a
+              href="https://www.linkedin.com/in/thomas-broderick-22071253/"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="LinkedIn profile"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Linkedin size={17} />
+            </a>
+            <a
+              href="mailto:thomas.broderick.work@gmail.com"
+              aria-label="Email"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Mail size={17} />
+            </a>
+          </div>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="p-2 -mr-2 text-foreground"
+            className="lg:hidden p-2 -mr-2 text-foreground"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
@@ -125,77 +157,8 @@ const Layout = ({ children }: LayoutProps) => {
         )}
       </header>
 
-      {/* Desktop sidebar */}
-      <aside className="hidden lg:flex flex-col fixed top-0 left-0 bottom-0 w-64 border-r border-border bg-background z-40 px-8 py-10">
-        <Link to="/" className="block mb-12">
-          <p className="text-base font-semibold tracking-tight">Thomas Broderick</p>
-          <p className="text-xs text-muted-foreground mt-1">UX &amp; Interaction Designer</p>
-        </Link>
-
-        <nav className="flex-1" aria-label="Main navigation">
-          <ul className="space-y-1 mb-8">
-            {primaryNav.map((item) => (
-              <li key={item.path}>
-                <Link
-                  to={item.path}
-                  className={`block py-1.5 text-sm transition-colors ${
-                    isActive(item.path)
-                      ? "text-foreground font-medium"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-
-          <div className="border-t border-border pt-6">
-            <p className="text-xs uppercase tracking-wider text-muted-foreground mb-3">Projects</p>
-            <ul className="space-y-1">
-              {projectItems.map((item) => (
-                <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    className={`block py-1.5 text-sm transition-colors ${
-                      location.pathname === item.path
-                        ? "text-foreground font-medium"
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </nav>
-
-        <div className="mt-auto pt-6 border-t border-border">
-          <div className="flex items-center gap-4 mb-3">
-            <a
-              href="https://www.linkedin.com/in/thomas-broderick-22071253/"
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="LinkedIn profile"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Linkedin size={16} />
-            </a>
-            <a
-              href="mailto:thomas.broderick.work@gmail.com"
-              aria-label="Email"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <Mail size={16} />
-            </a>
-          </div>
-          <p className="text-xs text-muted-foreground">Limerick, Ireland</p>
-        </div>
-      </aside>
-
       <main
-        className="lg:ml-64 min-h-screen pt-16 lg:pt-0"
+        className="min-h-screen pt-16"
         id="main-content"
         role="main"
       >
