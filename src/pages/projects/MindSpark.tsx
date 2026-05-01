@@ -87,7 +87,11 @@ const MindSpark = () => {
             <ImagePlaceholder
               label="Existing tool analysis"
               description="Side-by-side screenshots of existing digital cognitive testing tools (e.g. Cambridge Brain Sciences, Lumosity, BrainCheck), with annotations highlighting recurring usability and accessibility shortcomings."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Screenshots of 3–5 existing cognitive testing interfaces.",
+                "Annotations calling out instruction clarity, feedback, touch targets, colour use, and accessibility issues.",
+                "A short comparison table showing what each tool handles well and where interaction friction appears.",
+              ]}
             />
           </CaseStudySection>
 
@@ -154,13 +158,21 @@ const MindSpark = () => {
             <ImagePlaceholder
               label="Sketches & wireframes"
               description="Original hand-drawn sketches and low-fidelity Figma wireframes showing the proposed application structure, including the home screen, test categories, Go/No-Go introduction, alertness questions, and practice pathway."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Hand sketches of the first app structure and test flow.",
+                "Low-fidelity Figma wireframes for onboarding, instructions, alertness check, practice, test, and results.",
+                "One annotated flow diagram showing how a user moves through the full Go/No-Go experience.",
+              ]}
             />
 
             <ImagePlaceholder
               label="Iteration board"
               description="Side-by-side comparison of low-, mid-, and high-fidelity Go/No-Go test screens, showing how visual identity, button states, and feedback evolved across iterations."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Low-, mid-, and high-fidelity versions of the same key screens placed beside each other.",
+                "Short callouts explaining what changed after each testing round.",
+                "Evidence of revised typography, spacing, button states, feedback, and colour meaning.",
+              ]}
             />
           </CaseStudySection>
 
