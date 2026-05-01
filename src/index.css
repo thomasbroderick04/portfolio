@@ -98,11 +98,11 @@
   }
 
   .case-study-section {
-    @apply py-10 md:py-12;
+    @apply py-12 md:py-14;
   }
 
   .case-study-heading {
-    @apply text-xl md:text-2xl font-semibold mb-5 tracking-tight;
+    @apply text-2xl md:text-3xl font-semibold mb-6 tracking-tight;
   }
 
   .image-frame {
@@ -110,7 +110,7 @@
   }
 
   .image-placeholder {
-    @apply bg-secondary rounded-md border border-dashed border-border flex items-center justify-center text-center p-6;
+    @apply bg-secondary rounded-md border border-dashed border-border flex items-start justify-start text-left p-6 md:p-8;
   }
 
   .project-tag {
