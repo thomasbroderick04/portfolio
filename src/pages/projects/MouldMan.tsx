@@ -75,13 +75,16 @@ const MouldMan = () => {
             </p>
 
             <ImagePlaceholder
+              label="Raw customer review quotes"
+              description="Photo or screenshot of the raw quotes collected from real customer reviews across the Irish and international mould-remediation sector."
+            />
+            <ImagePlaceholder
               label="Thematic analysis board"
-              description="Photo or screenshot of the thematic-analysis board used during research: customer review quotes grouped under the four key themes (root-cause expertise, health anxiety, responsiveness, educational content)."
-              items={[
-                "Raw review quotes collected from customer and competitor sources.",
-                "Grouped theme board showing root-cause expertise, health anxiety, responsiveness, and educational content.",
-                "One annotated insight explaining how a research theme became a website requirement.",
-              ]}
+              description="Quotes grouped under the four key themes: root-cause expertise, health anxiety, responsiveness, and educational content."
+            />
+            <ImagePlaceholder
+              label="Insight → requirement"
+              description="One annotated insight showing how a research theme translated into a concrete website requirement."
             />
           </CaseStudySection>
 
@@ -125,23 +128,36 @@ const MouldMan = () => {
             </div>
 
             <ImagePlaceholder
-              label="Personas"
-              description="Three persona sheets shown together: Sarah O'Brien (Concerned Homeowner), Mark Flynn (Busy Landlord), and Rachel O'Connor (Health-Conscious Renter), with portraits, quotes, and goals."
-              items={[
-                "Persona sheet for Sarah O'Brien, focused on health anxiety and family safety.",
-                "Persona sheet for Mark Flynn, focused on speed, compliance, and property management.",
-                "Persona sheet for Rachel O'Connor, focused on evidence, landlord communication, and reassurance.",
-              ]}
+              label="Persona — Sarah O'Brien (Concerned Homeowner)"
+              description="Persona sheet for Sarah: portrait, quote, goals, frustrations, and behaviours — focused on health anxiety and family safety."
             />
-
             <ImagePlaceholder
-              label="Wireframes"
-              description="Annotated wireframes of the Mould Man homepage, services page, and contact/booking flow — ideally with handwritten or digital callouts explaining IA decisions."
-              items={[
-                "Homepage wireframe showing trust signals, services, reviews, and primary contact CTA.",
-                "Services/information page wireframe showing education-led content structure.",
-                "Contact/quote flow wireframe showing form fields, reassurance copy, and completion feedback.",
-              ]}
+              label="Persona — Mark Flynn (Busy Landlord)"
+              description="Persona sheet for Mark: focused on speed, compliance, and property management efficiency."
+            />
+            <ImagePlaceholder
+              label="Persona — Rachel O'Connor (Health-Conscious Renter)"
+              description="Persona sheet for Rachel: focused on evidence, landlord communication, and reassurance."
+            />
+            <ImagePlaceholder
+              label="Competitor IA analysis"
+              description="Comparative information-architecture diagram of CleanTech, ChemDryMidwest, XtremeCarpetCleaning, and DampMaster."
+            />
+            <ImagePlaceholder
+              label="Site map / IA diagram"
+              description="Final Mould Man site map showing top-level pages, sub-sections, and primary contact entry points."
+            />
+            <ImagePlaceholder
+              label="Wireframe — homepage"
+              description="Annotated homepage wireframe showing trust signals, services, reviews, and primary contact CTA."
+            />
+            <ImagePlaceholder
+              label="Wireframe — services / information page"
+              description="Annotated wireframe of the services and education-led information page."
+            />
+            <ImagePlaceholder
+              label="Wireframe — contact / quote flow"
+              description="Annotated wireframe of the quote/contact flow with form fields, reassurance copy, and confirmation state."
             />
           </CaseStudySection>
 
