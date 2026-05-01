@@ -87,7 +87,11 @@ const MindSpark = () => {
             <ImagePlaceholder
               label="Existing tool analysis"
               description="Side-by-side screenshots of existing digital cognitive testing tools (e.g. Cambridge Brain Sciences, Lumosity, BrainCheck), with annotations highlighting recurring usability and accessibility shortcomings."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Screenshots of 3–5 existing cognitive testing interfaces.",
+                "Annotations calling out instruction clarity, feedback, touch targets, colour use, and accessibility issues.",
+                "A short comparison table showing what each tool handles well and where interaction friction appears.",
+              ]}
             />
           </CaseStudySection>
 
@@ -133,7 +137,7 @@ const MindSpark = () => {
               decisions were evidence-led rather than assumption-led.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-3 mt-2">
+            <div className="mt-6 divide-y divide-border border-y border-border">
               {[
                 ["Literature review", "Usability, accessibility, digital literacy, multimodal interaction, contextual influence on performance."],
                 ["Analysis of existing tools", "Heuristic review of digital Go/No-Go and cognitive assessment apps."],
@@ -144,9 +148,9 @@ const MindSpark = () => {
                 ["Hardware prototype", "Arduino Uno + microphone sensor in a FreeCAD-designed enclosure."],
                 ["Synthesis", "Design recommendations and reflections."],
               ].map(([t, d]) => (
-                <div key={t} className="p-4 bg-secondary rounded-md">
-                  <p className="text-sm font-semibold text-foreground mb-1">{t}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{d}</p>
+                <div key={t} className="grid md:grid-cols-[220px_1fr] gap-2 md:gap-8 py-4">
+                  <p className="text-sm font-semibold text-foreground">{t}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{d}</p>
                 </div>
               ))}
             </div>
@@ -154,13 +158,21 @@ const MindSpark = () => {
             <ImagePlaceholder
               label="Sketches & wireframes"
               description="Original hand-drawn sketches and low-fidelity Figma wireframes showing the proposed application structure, including the home screen, test categories, Go/No-Go introduction, alertness questions, and practice pathway."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Hand sketches of the first app structure and test flow.",
+                "Low-fidelity Figma wireframes for onboarding, instructions, alertness check, practice, test, and results.",
+                "One annotated flow diagram showing how a user moves through the full Go/No-Go experience.",
+              ]}
             />
 
             <ImagePlaceholder
               label="Iteration board"
               description="Side-by-side comparison of low-, mid-, and high-fidelity Go/No-Go test screens, showing how visual identity, button states, and feedback evolved across iterations."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Low-, mid-, and high-fidelity versions of the same key screens placed beside each other.",
+                "Short callouts explaining what changed after each testing round.",
+                "Evidence of revised typography, spacing, button states, feedback, and colour meaning.",
+              ]}
             />
           </CaseStudySection>
 
@@ -171,12 +183,12 @@ const MindSpark = () => {
               across iterations:
             </p>
 
-            <div className="space-y-5">
+            <div className="divide-y divide-border border-y border-border">
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">
                   Alertness check before each test
                 </h3>
-                <p className="text-sm">
+                <p className="text-sm pb-4">
                   A short pre-test capture of context (fatigue, time of day,
                   environment) re-frames cognitive performance as something to
                   be <em>interpreted</em> rather than just scored — directly
@@ -184,30 +196,30 @@ const MindSpark = () => {
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">
                   Practice stage with demonstrative feedback
                 </h3>
-                <p className="text-sm">
+                <p className="text-sm pb-4">
                   Drawing on findings that dense text instructions and absent
                   feedback drive hesitation, the practice stage uses video
                   demonstrations and trial-by-trial guidance.
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">
                   Minimal main test surface
                 </h3>
-                <p className="text-sm">
+                <p className="text-sm pb-4">
                   During scored trials, the UI strips back to essentials.
                   High-contrast stimuli, large touch targets (informed by
                   Fitts&rsquo; Law), no decoration.
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">
                   Multimodal verbal-response pathway
                 </h3>
-                <p className="text-sm">
+                <p className="text-sm pb-4">
                   An optional voice-input modality, prototyped with an Arduino
                   microphone sensor in a FreeCAD-designed enclosure. Preserves
                   the binary Go/No-Go demand while removing motor barriers.
@@ -218,24 +230,48 @@ const MindSpark = () => {
             <ImagePlaceholder
               label="Hi-fi screens"
               description="High-fidelity Figma screens of: alertness check, practice stage with demonstrative feedback, the minimal main test surface during a Go/No-Go trial, and the personalised results screen."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Final alertness check screens showing context questions before testing.",
+                "Practice screens showing the demonstration, feedback, and error-recovery states.",
+                "Main test screens showing Go, No-Go, waiting, and completed states.",
+                "Results screen showing how performance and context are communicated together.",
+              ]}
             />
 
             <ImagePlaceholder
               label="Hardware prototype"
               description="Photographs of the physical Arduino + microphone enclosure: (1) the assembled FreeCAD-designed enclosure, (2) wiring connected to the Arduino Uno, and (3) the verbal-response pathway in use during a test session."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "FreeCAD model or render of the enclosure before fabrication/assembly.",
+                "Close-up of the Arduino Uno, microphone sensor, wiring, and enclosure interior.",
+                "Photo of the completed physical prototype beside the digital interface.",
+                "Photo or still from testing showing a participant using the verbal-response pathway.",
+              ]}
             />
 
             <ImagePlaceholder
               label="Demo video"
               description="Short screen recording (or embedded video) showing the full Go/No-Go test flow end-to-end: alertness check → practice → test → results."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Screen recording of the complete digital test flow.",
+                "Clip or still showing the voice-input prototype responding during a trial.",
+                "Optional short caption explaining what the viewer should notice in the interaction.",
+              ]}
             />
           </CaseStudySection>
 
           {/* What testing taught me */}
           <CaseStudySection title="What User Testing Taught Me">
+            <ImagePlaceholder
+              label="Testing sessions & notes"
+              description="Evidence from usability testing rounds, placed before the findings so the reader can see how observations became design decisions."
+              items={[
+                "Photo of a moderated test session or the test setup, with participant details anonymised.",
+                "Screenshot/photo of observation notes, affinity mapping, or issue prioritisation.",
+                "A compact before/after example showing one participant issue and the design change it caused.",
+              ]}
+            />
+
             <ul className="space-y-3">
               {[
                 ["Readability is non-negotiable", "Type size, line length, and contrast were the most-mentioned issues across all rounds — far more than visual style."],
@@ -270,7 +306,11 @@ const MindSpark = () => {
             <ImagePlaceholder
               label="Final system overview"
               description="A composed marketing-style image of the final MindSpark system: the mobile app shown on a phone alongside the physical Arduino microphone enclosure, ideally in a clean lifestyle setting."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Final app screen displayed on a phone, tablet, or laptop mockup.",
+                "Physical microphone enclosure positioned beside the interface.",
+                "A small caption naming the final system components: digital test, alertness check, results, and verbal-response prototype.",
+              ]}
             />
           </CaseStudySection>
 

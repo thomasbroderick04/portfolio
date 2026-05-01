@@ -35,7 +35,7 @@ const About = () => {
 
           <section className="mb-12">
             <h2 className="case-study-heading">How I work</h2>
-            <div className="grid sm:grid-cols-2 gap-5">
+            <div className="divide-y divide-border border-y border-border">
               {[
                 {
                   title: "Research before assumption",
@@ -54,8 +54,8 @@ const About = () => {
                   text: "Interfaces don't exist in a vacuum. Time pressure, fatigue, and environment are part of the design problem.",
                 },
               ].map((value) => (
-                <div key={value.title} className="p-5 bg-secondary rounded-md">
-                  <h3 className="text-sm font-semibold mb-2 text-foreground">{value.title}</h3>
+                <div key={value.title} className="grid md:grid-cols-[220px_1fr] gap-2 md:gap-8 py-4">
+                  <h3 className="text-sm font-semibold text-foreground">{value.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{value.text}</p>
                 </div>
               ))}

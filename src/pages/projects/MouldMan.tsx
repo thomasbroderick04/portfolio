@@ -77,7 +77,11 @@ const MouldMan = () => {
             <ImagePlaceholder
               label="Thematic analysis board"
               description="Photo or screenshot of the thematic-analysis board used during research: customer review quotes grouped under the four key themes (root-cause expertise, health anxiety, responsiveness, educational content)."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Raw review quotes collected from customer and competitor sources.",
+                "Grouped theme board showing root-cause expertise, health anxiety, responsiveness, and educational content.",
+                "One annotated insight explaining how a research theme became a website requirement.",
+              ]}
             />
           </CaseStudySection>
 
@@ -102,7 +106,7 @@ const MouldMan = () => {
               specification second — applying a deliberately evidence-led
               approach.
             </p>
-            <div className="grid sm:grid-cols-2 gap-3">
+            <div className="mt-6 divide-y divide-border border-y border-border">
               {[
                 ["User research", "Thematic analysis of real customer reviews."],
                 ["Personas & scenarios", "Three evidence-based personas: Sarah (Homeowner), Mark (Landlord), Rachel (Renter)."],
@@ -113,9 +117,9 @@ const MouldMan = () => {
                 ["Visual design", "Colour, typography, spacing, components."],
                 ["Prototype & testing", "Figma interactive prototype tested with users."],
               ].map(([t, d]) => (
-                <div key={t} className="p-4 bg-secondary rounded-md">
-                  <p className="text-sm font-semibold text-foreground mb-1">{t}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{d}</p>
+                <div key={t} className="grid md:grid-cols-[220px_1fr] gap-2 md:gap-8 py-4">
+                  <p className="text-sm font-semibold text-foreground">{t}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{d}</p>
                 </div>
               ))}
             </div>
@@ -123,13 +127,21 @@ const MouldMan = () => {
             <ImagePlaceholder
               label="Personas"
               description="Three persona sheets shown together: Sarah O'Brien (Concerned Homeowner), Mark Flynn (Busy Landlord), and Rachel O'Connor (Health-Conscious Renter), with portraits, quotes, and goals."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Persona sheet for Sarah O'Brien, focused on health anxiety and family safety.",
+                "Persona sheet for Mark Flynn, focused on speed, compliance, and property management.",
+                "Persona sheet for Rachel O'Connor, focused on evidence, landlord communication, and reassurance.",
+              ]}
             />
 
             <ImagePlaceholder
               label="Wireframes"
               description="Annotated wireframes of the Mould Man homepage, services page, and contact/booking flow — ideally with handwritten or digital callouts explaining IA decisions."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Homepage wireframe showing trust signals, services, reviews, and primary contact CTA.",
+                "Services/information page wireframe showing education-led content structure.",
+                "Contact/quote flow wireframe showing form fields, reassurance copy, and completion feedback.",
+              ]}
             />
           </CaseStudySection>
 
@@ -138,7 +150,16 @@ const MouldMan = () => {
               Three personas, three different motivations, one IA. Each had to
               find what they needed without fragmenting the site.
             </p>
-            <div className="grid md:grid-cols-3 gap-3">
+            <ImagePlaceholder
+              label="Journey maps & scenarios"
+              description="Documentation showing how each persona approaches the service differently before arriving at the same website structure."
+              items={[
+                "Journey map for Sarah showing discovery, anxiety, credibility checks, and contact decision.",
+                "Journey map for Mark showing urgency, service comparison, scheduling, and quote request.",
+                "Storyboard or scenario for Rachel showing how information supports communication with a landlord.",
+              ]}
+            />
+            <div className="divide-y divide-border border-y border-border">
               {[
                 {
                   name: "Sarah O'Brien",
@@ -156,44 +177,46 @@ const MouldMan = () => {
                   drive: "Validation & evidence to escalate to landlord",
                 },
               ].map((p) => (
-                <div key={p.name} className="p-4 bg-secondary rounded-md">
-                  <p className="text-sm font-semibold text-foreground">{p.name}</p>
-                  <p className="text-xs text-muted-foreground mb-2">{p.role}</p>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{p.drive}</p>
+                <div key={p.name} className="grid md:grid-cols-[220px_1fr] gap-2 md:gap-8 py-4">
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{p.name}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{p.role}</p>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{p.drive}</p>
                 </div>
               ))}
             </div>
           </CaseStudySection>
 
           <CaseStudySection title="Key Design Decisions">
-            <div className="space-y-5">
+            <div className="divide-y divide-border border-y border-border">
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">Trust signals up front</h3>
-                <p className="text-sm">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">Trust signals up front</h3>
+                <p className="text-sm pb-4">
                   Reviews surfaced on the homepage, even for users not actively
                   searching for them — reassuring passive scanners and active
                   researchers alike.
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">Multiple, persistent contact paths</h3>
-                <p className="text-sm">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">Multiple, persistent contact paths</h3>
+                <p className="text-sm pb-4">
                   Phone, email, and form repeated across key pages. Customers
                   under time pressure needed instant access; anxious homeowners
                   needed reassurance contact was always one tap away.
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">Educational content as authority</h3>
-                <p className="text-sm">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">Educational content as authority</h3>
+                <p className="text-sm pb-4">
                   A dedicated information section explaining causes, prevention,
                   and the difference between surface and root treatment —
                   establishing expertise before contact.
                 </p>
               </div>
               <div>
-                <h3 className="text-base font-semibold text-foreground mb-1">Stakeholder-led pricing decision</h3>
-                <p className="text-sm">
+                <h3 className="text-base font-semibold text-foreground pt-4 mb-1">Stakeholder-led pricing decision</h3>
+                <p className="text-sm pb-4">
                   Research suggested visible pricing supports trust, but the
                   client&rsquo;s jobs vary too widely. We designed around{" "}
                   <em>quote requests</em> instead, mirroring competitor patterns.
@@ -204,13 +227,21 @@ const MouldMan = () => {
             <ImagePlaceholder
               label="Final design — desktop"
               description="Full-page screenshots of the final Figma design on desktop: homepage, services page, FAQ section, and contact/booking page."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Desktop homepage showing hero, trust signals, reviews, and contact routes.",
+                "Desktop services or mould-information page showing educational content hierarchy.",
+                "Desktop contact/quote page showing form structure, labels, and confirmation state.",
+              ]}
             />
 
             <ImagePlaceholder
               label="Final design — mobile"
               description="Mobile mockups of the same key screens, showing how the responsive design adapts and prioritises content."
-              aspectRatio="aspect-[4/3]"
+              items={[
+                "Mobile homepage showing the first screen and primary CTA placement.",
+                "Mobile navigation/menu state showing access to services, information, FAQ, and contact.",
+                "Mobile quote/contact flow showing readable form fields and large tap targets.",
+              ]}
             />
           </CaseStudySection>
 
@@ -226,6 +257,15 @@ const MouldMan = () => {
               <li>Semantic structure, headings, and meaningful link text</li>
               <li>Forms with clear labels, errors, and success feedback</li>
             </ul>
+            <ImagePlaceholder
+              label="Accessibility checks"
+              description="Documentation showing that accessibility decisions were evaluated rather than only stated."
+              items={[
+                "Contrast-check screenshots for the final colour palette and CTA states.",
+                "Annotated form screen showing labels, helper text, errors, and success feedback.",
+                "Mobile tap-target check or responsive screenshot showing spacing around key actions.",
+              ]}
+            />
           </CaseStudySection>
 
           <CaseStudySection title="Usability Testing">
@@ -241,7 +281,11 @@ const MouldMan = () => {
             <ImagePlaceholder
               label="Usability testing results"
               description="Photo of testing session in progress, or a clean summary table of usability test findings (task, completion time, observed issues, design changes made)."
-              aspectRatio="aspect-[16/9]"
+              items={[
+                "Photo or screenshot from a prototype test session, anonymised if needed.",
+                "Findings table with task, success, time/hesitation, issue, and resulting design change.",
+                "Before/after screenshot showing at least one navigation, CTA, or FAQ revision after testing.",
+              ]}
             />
           </CaseStudySection>
 
