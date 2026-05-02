@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
-import mouldmanHero from "@/assets/mouldman-hero.jpg";
+import mouldmanHero from "@/assets/mouldman-hero-devices.png";
 import personaRachel from "@/assets/mouldman-persona-rachel.png";
+import servicesPage from "@/assets/mouldman-services-page.png";
+import informationPage from "@/assets/mouldman-information-page.png";
+import usabilityTask1 from "@/assets/mouldman-usability-task1.png";
 import journeyMark from "@/assets/mouldman-journey-mark.png";
 import storyboardSarah from "@/assets/mouldman-storyboard-sarah.png";
 import siteFlow from "@/assets/mouldman-site-flow.jpg";
@@ -66,14 +69,16 @@ const MouldMan = () => {
             ]}
           />
 
-          <figure className="image-frame aspect-[16/9] my-8">
-            <img
-              src={mouldmanHero}
-              alt="Mould Man — responsive client website preview"
-              className="w-full h-full object-cover"
-              width={1600}
-              height={900}
-            />
+          <figure className="my-8">
+            <div className="rounded-md overflow-hidden border border-border bg-secondary/40">
+              <img
+                src={mouldmanHero}
+                alt="Mould Man — final responsive website shown on laptop and mobile"
+                className="w-full h-auto object-contain"
+                width={1600}
+                height={900}
+              />
+            </div>
           </figure>
 
           {/* ---------- 1. OVERVIEW ---------- */}
