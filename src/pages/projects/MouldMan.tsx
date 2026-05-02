@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
-import mouldmanHero from "@/assets/mouldman-hero.jpg";
+import mouldmanHero from "@/assets/mouldman-hero-devices.png";
 import personaRachel from "@/assets/mouldman-persona-rachel.png";
+import servicesPage from "@/assets/mouldman-services-page.png";
+import informationPage from "@/assets/mouldman-information-page.png";
+import usabilityTask1 from "@/assets/mouldman-usability-task1.png";
 import journeyMark from "@/assets/mouldman-journey-mark.png";
 import storyboardSarah from "@/assets/mouldman-storyboard-sarah.png";
 import siteFlow from "@/assets/mouldman-site-flow.jpg";
@@ -66,14 +69,16 @@ const MouldMan = () => {
             ]}
           />
 
-          <figure className="image-frame aspect-[16/9] my-8">
-            <img
-              src={mouldmanHero}
-              alt="Mould Man — responsive client website preview"
-              className="w-full h-full object-cover"
-              width={1600}
-              height={900}
-            />
+          <figure className="my-8">
+            <div className="rounded-md overflow-hidden border border-border bg-secondary/40">
+              <img
+                src={mouldmanHero}
+                alt="Mould Man — final responsive website shown on laptop and mobile"
+                className="w-full h-auto object-contain"
+                width={1600}
+                height={900}
+              />
+            </div>
           </figure>
 
           {/* ---------- 1. OVERVIEW ---------- */}
@@ -325,8 +330,20 @@ const MouldMan = () => {
 
             <DocImage
               src={finalResponsive}
-              alt="Final Mould Man homepage shown on desktop and mobile devices"
-              caption="Final homepage — desktop and mobile. Trust signals, clear CTAs, and contact details surfaced immediately."
+              alt="Final Mould Man homepage — full-width desktop view"
+              caption="Final homepage — full desktop layout with trust signals, primary CTA, and contact details surfaced immediately."
+            />
+
+            <DocImage
+              src={servicesPage}
+              alt="Services page of the live Mould Man website"
+              caption="Services page — clear scope of work, transparent process, and reassurance that every job starts with a professional survey."
+            />
+
+            <DocImage
+              src={informationPage}
+              alt="Information / blog hub of the live Mould Man website"
+              caption="Information hub — educational articles on damp proofing, mould prevention, and home protection. Authority before sales."
             />
 
             <DocImage
@@ -395,6 +412,26 @@ const MouldMan = () => {
                 structure.
               </li>
             </ul>
+
+            <div className="mt-8">
+              <h3 className="text-base font-semibold text-foreground mb-2">Usability testing findings — Task 1: Book a Survey</h3>
+              <p>
+                Five participants completed the booking task on the prototype.
+                Average time-on-task was under 18 seconds, and every
+                participant completed it without assistance. The qualitative
+                feedback — confusion around the &ldquo;property location&rdquo;
+                label, requests for a &ldquo;text now&rdquo; option, and
+                appreciation of the before/after photos and FAQ visibility —
+                fed directly into the next round of revisions to labels, CTAs,
+                and supporting content.
+              </p>
+            </div>
+
+            <DocImage
+              src={usabilityTask1}
+              alt="Usability testing findings table for Task 1 — Book a Survey from the home page"
+              caption="Usability testing findings — Task 1 (Book a Survey): per-participant likes, dislikes, suggestions, and time-on-task."
+            />
           </CaseStudySection>
 
           {/* ---------- 9. REFLECTION ---------- */}
