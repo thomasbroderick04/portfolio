@@ -11,7 +11,7 @@ import journeyMark from "@/assets/mouldman-journey-mark.png";
 import storyboardSarah from "@/assets/mouldman-storyboard-sarah.png";
 import siteFlow from "@/assets/mouldman-site-flow.jpg";
 import wireframes from "@/assets/mouldman-wireframes.png";
-import finalResponsive from "@/assets/mouldman-final-responsive.png";
+
 import testimonials from "@/assets/mouldman-testimonials.png";
 import bookingForm from "@/assets/mouldman-booking-form.png";
 import mobileHomeAbout from "@/assets/mouldman-mobile-home-about.png";
@@ -329,12 +329,6 @@ const MouldMan = () => {
             </p>
 
             <DocImage
-              src={finalResponsive}
-              alt="Final Mould Man homepage — full-width desktop view"
-              caption="Final homepage — full desktop layout with trust signals, primary CTA, and contact details surfaced immediately."
-            />
-
-            <DocImage
               src={servicesPage}
               alt="Services page of the live Mould Man website"
               caption="Services page — clear scope of work, transparent process, and reassurance that every job starts with a professional survey."
@@ -414,23 +408,23 @@ const MouldMan = () => {
             </ul>
 
             <div className="mt-8">
-              <h3 className="text-base font-semibold text-foreground mb-2">Usability testing findings — Task 1: Book a Survey</h3>
+              <h3 className="text-base font-semibold text-foreground mb-2">Usability testing findings</h3>
               <p>
-                Five participants completed the booking task on the prototype.
-                Average time-on-task was under 18 seconds, and every
-                participant completed it without assistance. The qualitative
-                feedback — confusion around the &ldquo;property location&rdquo;
-                label, requests for a &ldquo;text now&rdquo; option, and
-                appreciation of the before/after photos and FAQ visibility —
-                fed directly into the next round of revisions to labels, CTAs,
-                and supporting content.
+                Participants worked through several tasks on the prototype —
+                booking a survey, locating service information, finding
+                educational content, and contacting the business. For each
+                task we recorded likes, dislikes, suggestions, and
+                time-on-task, then translated the patterns into concrete
+                revisions: clearer form labels, an added &ldquo;text now&rdquo;
+                contact option, stronger visibility of the FAQ and
+                before/after content, and tightened navigation labels.
               </p>
             </div>
 
             <DocImage
               src={usabilityTask1}
-              alt="Usability testing findings table for Task 1 — Book a Survey from the home page"
-              caption="Usability testing findings — Task 1 (Book a Survey): per-participant likes, dislikes, suggestions, and time-on-task."
+              alt="Usability testing findings table — example task from the prototype evaluation"
+              caption="Example usability findings table (one of several tasks tested) — per-participant likes, dislikes, suggestions, and time-on-task."
             />
           </CaseStudySection>
 
