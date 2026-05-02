@@ -330,8 +330,20 @@ const MouldMan = () => {
 
             <DocImage
               src={finalResponsive}
-              alt="Final Mould Man homepage shown on desktop and mobile devices"
-              caption="Final homepage — desktop and mobile. Trust signals, clear CTAs, and contact details surfaced immediately."
+              alt="Final Mould Man homepage — full-width desktop view"
+              caption="Final homepage — full desktop layout with trust signals, primary CTA, and contact details surfaced immediately."
+            />
+
+            <DocImage
+              src={servicesPage}
+              alt="Services page of the live Mould Man website"
+              caption="Services page — clear scope of work, transparent process, and reassurance that every job starts with a professional survey."
+            />
+
+            <DocImage
+              src={informationPage}
+              alt="Information / blog hub of the live Mould Man website"
+              caption="Information hub — educational articles on damp proofing, mould prevention, and home protection. Authority before sales."
             />
 
             <DocImage
