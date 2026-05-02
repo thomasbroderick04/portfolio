@@ -412,6 +412,26 @@ const MouldMan = () => {
                 structure.
               </li>
             </ul>
+
+            <div className="mt-8">
+              <h3 className="text-base font-semibold text-foreground mb-2">Usability testing findings — Task 1: Book a Survey</h3>
+              <p>
+                Five participants completed the booking task on the prototype.
+                Average time-on-task was under 18 seconds, and every
+                participant completed it without assistance. The qualitative
+                feedback — confusion around the &ldquo;property location&rdquo;
+                label, requests for a &ldquo;text now&rdquo; option, and
+                appreciation of the before/after photos and FAQ visibility —
+                fed directly into the next round of revisions to labels, CTAs,
+                and supporting content.
+              </p>
+            </div>
+
+            <DocImage
+              src={usabilityTask1}
+              alt="Usability testing findings table for Task 1 — Book a Survey from the home page"
+              caption="Usability testing findings — Task 1 (Book a Survey): per-participant likes, dislikes, suggestions, and time-on-task."
+            />
           </CaseStudySection>
 
           {/* ---------- 9. REFLECTION ---------- */}
