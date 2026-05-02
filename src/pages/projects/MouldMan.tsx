@@ -4,6 +4,39 @@ import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import mouldmanHero from "@/assets/mouldman-hero.jpg";
+import personaRachel from "@/assets/mouldman-persona-rachel.png";
+import journeyMark from "@/assets/mouldman-journey-mark.png";
+import storyboardSarah from "@/assets/mouldman-storyboard-sarah.png";
+import siteFlow from "@/assets/mouldman-site-flow.jpg";
+import wireframes from "@/assets/mouldman-wireframes.png";
+import finalResponsive from "@/assets/mouldman-final-responsive.png";
+import testimonials from "@/assets/mouldman-testimonials.png";
+import bookingForm from "@/assets/mouldman-booking-form.png";
+import mobileHomeAbout from "@/assets/mouldman-mobile-home-about.png";
+import mobileInformation from "@/assets/mouldman-mobile-information.png";
+
+interface DocImageProps {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+/** Document/screenshot figure — uses object-contain so nothing gets cropped. */
+const DocImage = ({ src, alt, caption }: DocImageProps) => (
+  <figure className="my-8">
+    <div className="rounded-md border border-border bg-secondary/40 p-3 md:p-4">
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        className="w-full h-auto max-h-[80vh] object-contain mx-auto"
+      />
+    </div>
+    <figcaption className="mt-3 text-xs text-muted-foreground text-center">
+      {caption}
+    </figcaption>
+  </figure>
+);
 
 const MouldMan = () => {
   return (
@@ -114,19 +147,6 @@ const MouldMan = () => {
                 </p>
               </div>
             </div>
-
-            <ImagePlaceholder
-              label="Raw customer review quotes"
-              description="Screenshot of the raw customer quotes pulled from competitor websites and review platforms (Dampdoctor, TrustIndex, etc.)."
-            />
-            <ImagePlaceholder
-              label="Thematic analysis board"
-              description="Quotes grouped under the four themes: root-cause resolution, health anxiety, responsiveness, and educational content."
-            />
-            <ImagePlaceholder
-              label="Theme → design implication"
-              description="One annotated example showing how a theme translated into a concrete website requirement (e.g. health anxiety → reviews surfaced on the homepage)."
-            />
           </CaseStudySection>
 
           {/* ---------- 3. PERSONAS ---------- */}
@@ -181,17 +201,10 @@ const MouldMan = () => {
               </div>
             </div>
 
-            <ImagePlaceholder
-              label="Persona sheet — Sarah O'Brien"
-              description="Full persona sheet for Sarah: portrait, quote, goals, frustrations, and behaviours — the Concerned Homeowner."
-            />
-            <ImagePlaceholder
-              label="Persona sheet — Mark Flynn"
-              description="Full persona sheet for Mark: portrait, quote, goals, frustrations, and behaviours — the Busy Landlord."
-            />
-            <ImagePlaceholder
-              label="Persona sheet — Rachel O'Connor"
-              description="Full persona sheet for Rachel: portrait, quote, goals, frustrations, and behaviours — the Health-Conscious Renter."
+            <DocImage
+              src={personaRachel}
+              alt="Persona sheet for Rachel O'Connor — the Health-Conscious Renter"
+              caption="Example persona sheet — Rachel O'Connor (representative of the format used for all three personas)."
             />
           </CaseStudySection>
 
@@ -205,17 +218,10 @@ const MouldMan = () => {
               content.
             </p>
 
-            <ImagePlaceholder
-              label="Journey map — Sarah (Concerned Homeowner)"
-              description="Journey map showing Sarah's stages: discovery, anxiety, credibility checks, evaluation, and the contact decision — with pain points and opportunities at each stage."
-            />
-            <ImagePlaceholder
-              label="Journey map — Mark (Busy Landlord)"
-              description="Journey map for Mark: urgency between tenancies, service comparison, scheduling, quote request, and follow-up."
-            />
-            <ImagePlaceholder
-              label="Journey map — Rachel (Health-Conscious Renter)"
-              description="Journey map for Rachel: searching for evidence, gathering authoritative content, and using the site to support a landlord dispute."
+            <DocImage
+              src={journeyMark}
+              alt="Customer journey map for Mark Flynn, the busy landlord"
+              caption="Customer journey map — Mark Flynn (Busy Landlord): awareness → consideration → decision → service → loyalty."
             />
 
             <div className="mt-8">
@@ -228,17 +234,10 @@ const MouldMan = () => {
               </p>
             </div>
 
-            <ImagePlaceholder
-              label="Storyboard — Sarah's emergency mould scenario"
-              description="Storyboard panels showing Sarah discovering mould in a child's room, searching online, finding Mould Man, and booking an inspection."
-            />
-            <ImagePlaceholder
-              label="Storyboard — Mark's between-tenancy turnaround"
-              description="Storyboard panels showing Mark needing fast turnaround between tenants and using the quote flow."
-            />
-            <ImagePlaceholder
-              label="Storyboard — Rachel's rental-dispute scenario"
-              description="Storyboard panels showing Rachel using Mould Man's educational content as evidence in a dispute with her landlord."
+            <DocImage
+              src={storyboardSarah}
+              alt="Storyboard showing Sarah's emergency mould scenario from discovery to inspection"
+              caption="Storyboard — Sarah's scenario: discovering mould, searching online, finding Mould Man, booking, and the technician's visit."
             />
           </CaseStudySection>
 
@@ -254,9 +253,10 @@ const MouldMan = () => {
               actively needs.
             </p>
 
-            <ImagePlaceholder
-              label="Site flow diagram"
-              description="The full Mould Man site-flow diagram showing the sitemap, primary navigation, sub-pages, and contact entry points across the site."
+            <DocImage
+              src={siteFlow}
+              alt="Site flow diagram showing primary navigation paths through the Mould Man website"
+              caption="Site flow diagram — primary user paths from Home and About through Booking, Info, and Feedback."
             />
 
             <div className="mt-6 divide-y divide-border border-y border-border">
@@ -307,33 +307,65 @@ const MouldMan = () => {
               </div>
             </div>
 
-            <ImagePlaceholder
-              label="Wireframe — Home page"
-              description="Annotated home-page wireframe showing hero, trust signals, services preview, reviews, and the primary contact CTA."
-            />
-            <ImagePlaceholder
-              label="Wireframe — Services page"
-              description="Annotated services-page wireframe showing service breakdown, root-cause vs. surface treatment, and what to expect."
-            />
-            <ImagePlaceholder
-              label="Wireframe — About page"
-              description="Annotated About-page wireframe showing Steve's background, credentials, and trust-building content."
-            />
-            <ImagePlaceholder
-              label="Wireframe — Information / educational page"
-              description="Annotated information-page wireframe showing the educational content hierarchy: causes, prevention, health, FAQs."
-            />
-            <ImagePlaceholder
-              label="Wireframe — Booking & Feedback page"
-              description="Annotated wireframe of the Book-an-Inspection form with reassurance copy and the thank-you / confirmation state."
-            />
-            <ImagePlaceholder
-              label="Mobile prototype — key screens"
-              description="Selected mobile-prototype screens showing how the site adapts: navigation, home hero, information hub, and booking form."
+            <DocImage
+              src={wireframes}
+              alt="Wireframes for the Mould Man website — Home, About, Services, and Booking pages"
+              caption="Mid-fidelity wireframes — Home, About, Services, and Booking pages laid out side-by-side."
             />
           </CaseStudySection>
 
-          {/* ---------- 6. RESEARCH AS A DESIGN TOOL ---------- */}
+          {/* ---------- 6. FINAL DESIGN ---------- */}
+          <CaseStudySection title="Final Design — The Live Website">
+            <p>
+              The high-fidelity design carries every research decision through
+              to the surface: a calm, trustworthy navy palette, prominent
+              contact details in the top bar, a single primary CTA
+              (&ldquo;Book A Survey&rdquo;), and educational content
+              positioned as a first-class part of the IA.
+            </p>
+
+            <DocImage
+              src={finalResponsive}
+              alt="Final Mould Man homepage shown on desktop and mobile devices"
+              caption="Final homepage — desktop and mobile. Trust signals, clear CTAs, and contact details surfaced immediately."
+            />
+
+            <DocImage
+              src={testimonials}
+              alt="Testimonials section of the live Mould Man website"
+              caption="Testimonials section — addressing the 'health anxiety / need for reassurance' theme directly on the homepage."
+            />
+
+            <DocImage
+              src={bookingForm}
+              alt="Book Your Free Survey form on the live Mould Man website"
+              caption="Booking page — clear labels, reassurance copy, and an 'urgent help' panel for high-anxiety users."
+            />
+          </CaseStudySection>
+
+          {/* ---------- 7. MOBILE PROTOTYPE ---------- */}
+          <CaseStudySection title="Mobile Prototype">
+            <p>
+              Most users arrive on mobile — often in the moment they discover
+              mould — so the prototype was designed mobile-first. Navigation
+              collapses into a clear menu, the primary CTA stays anchored,
+              and the educational content remains scannable on small screens.
+            </p>
+
+            <DocImage
+              src={mobileHomeAbout}
+              alt="Mobile prototype screens for the Mould Man Home and About pages"
+              caption="Mobile prototype — navigation drawer, Home page, and About page."
+            />
+
+            <DocImage
+              src={mobileInformation}
+              alt="Mobile prototype screens for the Mould Man Information section and an article page"
+              caption="Mobile prototype — Information hub and article view, with breadcrumbs and a clear back link."
+            />
+          </CaseStudySection>
+
+          {/* ---------- 8. RESEARCH AS A DESIGN TOOL ---------- */}
           <CaseStudySection title="Research as a Design Tool">
             <p>
               Across both assignments, research wasn&rsquo;t a phase that
@@ -344,11 +376,6 @@ const MouldMan = () => {
               <li>
                 <strong>Thematic analysis</strong> shaped the IA: each top-level
                 page maps to a theme or persona need.
-              </li>
-              <li>
-                <strong>Competitor IA analysis</strong> (CleanTech, ChemDryMidwest,
-                XtremeCarpetCleaning, DampMaster) informed our navigation
-                labels and content patterns.
               </li>
               <li>
                 <strong>Persona evidence</strong> resolved internal disagreements —
@@ -369,22 +396,9 @@ const MouldMan = () => {
                 structure.
               </li>
             </ul>
-
-            <ImagePlaceholder
-              label="Competitor IA comparison"
-              description="Side-by-side IA comparison of CleanTech.ie, Chemdrymidwest.ie, XtremeCarpetCleaning.ie, and DampMaster.ie — with the patterns we adopted highlighted."
-            />
-            <ImagePlaceholder
-              label="Usability testing — findings table"
-              description="Findings table from the prototype tests showing task, success, time, observed issue, and the resulting design change."
-            />
-            <ImagePlaceholder
-              label="Before / after — design revision from testing"
-              description="A before/after screenshot showing one navigation, CTA, or FAQ revision made directly in response to user-testing findings."
-            />
           </CaseStudySection>
 
-          {/* ---------- 7. REFLECTION ---------- */}
+          {/* ---------- 9. REFLECTION ---------- */}
           <CaseStudySection title="Reflection">
             <p>
               Mould Man taught me how much UX gets done <em>before</em> the
