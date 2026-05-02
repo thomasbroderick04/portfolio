@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import mouldmanHero from "@/assets/mouldman-hero.jpg";
 import personaRachel from "@/assets/mouldman-persona-rachel.png";
 import journeyMark from "@/assets/mouldman-journey-mark.png";
