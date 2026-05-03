@@ -107,10 +107,29 @@ const MouldMan = () => {
           {/* ---------- 2. USER RESEARCH ---------- */}
           <CaseStudySection title="User Research — What Customers Actually Want">
             <p>
-              Before sketching anything, we ran a thematic analysis of
-              customer reviews from existing Irish and international
-              mould-removal services. Four themes consistently surfaced — and
-              every one of them drove a concrete design decision later.
+              Mould isn&rsquo;t a neutral subject. By the time someone is
+              searching for a remediation service they&rsquo;re usually
+              already worried — about their family&rsquo;s health, the value
+              of their property, or a tenancy dispute. Designing for that
+              emotional state meant our first job wasn&rsquo;t to design at
+              all; it was to listen.
+            </p>
+            <p>
+              We carried out a structured <strong>thematic analysis</strong> of
+              real customer reviews drawn from Irish and international
+              mould-removal services, plus a small set of stakeholder
+              interviews with the client. Reviews were coded line-by-line,
+              clustered into candidate themes, and then refined through team
+              discussion until four dominant themes held together across the
+              dataset. Crucially, we kept a traceable link between every
+              theme and the underlying quotes — which meant later, when the
+              team disagreed on a layout or a label, we could resolve the
+              argument by going back to the evidence rather than to opinion.
+            </p>
+            <p>
+              The four themes below are the ones that survived that process,
+              and every single one of them maps onto a concrete decision in
+              the final IA, copy, or interaction design.
             </p>
 
             <div className="mt-6 divide-y divide-border border-y border-border">
@@ -122,6 +141,12 @@ const MouldMan = () => {
                   someone who diagnoses <em>why</em> the mould is there and
                   explains it in plain language.
                 </p>
+                <p className="text-sm mt-2 text-foreground">
+                  <strong>→ Design response:</strong> a Services page that
+                  leads with diagnosis and process rather than price, and a
+                  Booking flow that frames every job as starting with a
+                  professional survey.
+                </p>
               </div>
               <div className="py-5">
                 <p className="project-tag mb-1">Theme 2</p>
@@ -130,6 +155,12 @@ const MouldMan = () => {
                   Reviews are full of fear — for children, asthma sufferers,
                   elderly relatives. People need credibility signals before
                   they&rsquo;ll even pick up the phone.
+                </p>
+                <p className="text-sm mt-2 text-foreground">
+                  <strong>→ Design response:</strong> testimonials and
+                  before/after evidence on the homepage, a calm navy
+                  palette, and reassurance copy alongside the booking form
+                  rather than hard sales language.
                 </p>
               </div>
               <div className="py-5">
@@ -140,6 +171,12 @@ const MouldMan = () => {
                   common complaint. Speed and visibility of contact matter
                   more than polish.
                 </p>
+                <p className="text-sm mt-2 text-foreground">
+                  <strong>→ Design response:</strong> phone number anchored
+                  in the top bar on every page, a persistent
+                  &ldquo;urgent help&rdquo; card, and a single, unmissable
+                  primary CTA (&ldquo;Book A Survey&rdquo;).
+                </p>
               </div>
               <div className="py-5">
                 <p className="project-tag mb-1">Theme 4</p>
@@ -149,11 +186,23 @@ const MouldMan = () => {
                   causes, prevention, and what to expect — over those that
                   simply sell.
                 </p>
+                <p className="text-sm mt-2 text-foreground">
+                  <strong>→ Design response:</strong> a top-level
+                  Information hub treated as a first-class part of the IA,
+                  with articles on causes, prevention and health — usable
+                  as evidence by renters and as reassurance by homeowners.
+                </p>
               </div>
             </div>
+
+            <p className="mt-6">
+              These four themes — not aesthetics, not trends — became the
+              real brief. From this point on, every IA decision, every page
+              that earned its place in the sitemap, and every piece of
+              reassurance copy can be traced back to one of them.
+            </p>
           </CaseStudySection>
 
-          {/* ---------- 3. PERSONAS ---------- */}
           <CaseStudySection title="Personas — Three Very Different Customers">
             <p>
               The themes pointed clearly to three distinct user types. Each
@@ -318,7 +367,121 @@ const MouldMan = () => {
             />
           </CaseStudySection>
 
-          {/* ---------- 6. FINAL DESIGN ---------- */}
+          {/* ---------- 6. USABILITY TESTING ---------- */}
+          <CaseStudySection title="Usability Testing — Validating the Prototype">
+            <p>
+              Before treating the design as finished, we put the interactive
+              prototype in front of real users. The goal wasn&rsquo;t to
+              prove it worked — it was to find the parts that didn&rsquo;t,
+              while there was still time to fix them.
+            </p>
+
+            <div className="mt-4">
+              <h3 className="text-base font-semibold text-foreground mb-2">Method</h3>
+              <p>
+                We followed a structured approach informed by the Nielsen
+                Norman Group&rsquo;s guidance on moderated usability
+                testing. Five participants were recruited to mirror our
+                target audience: <strong>three renters, one homeowner, and
+                one landlord</strong> — a deliberate match to the three
+                personas. Sessions ran 10–15 minutes each, individually, in
+                a quiet environment.
+              </p>
+              <p className="mt-3">
+                Each participant was given written instructions and asked
+                to read them aloud before starting, to remove
+                misinterpretation as a variable. We used the{" "}
+                <strong>think-aloud protocol</strong> throughout, so we
+                could capture not just <em>what</em> users did but{" "}
+                <em>why</em> — the hesitations, the misread labels, the
+                moments of reassurance. Two tasks were chosen because
+                together they cover the website&rsquo;s core value:
+              </p>
+              <ul className="mt-3 space-y-1.5 text-sm pl-5 list-disc marker:text-muted-foreground">
+                <li>
+                  <strong>Task 1 — Book a survey from the homepage.</strong>{" "}
+                  Tests the primary conversion flow and the trust signals around it.
+                </li>
+                <li>
+                  <strong>Task 2 — View the Services and Information pages.</strong>{" "}
+                  Tests whether the educational IA actually supports the
+                  &ldquo;research before contact&rdquo; behaviour the themes predicted.
+                </li>
+              </ul>
+              <p className="mt-3">
+                For each task we recorded likes, dislikes, suggestions, and
+                time-on-task as a basic efficiency metric.
+              </p>
+            </div>
+
+            <DocImage
+              src={usabilityTask1}
+              alt="Usability testing findings table for Task 1 — Book a Survey"
+              caption="Findings table — Task 1 (Book a Survey). Per-participant likes, dislikes, suggestions, and time-on-task; equivalent data was captured for Task 2."
+            />
+
+            <div className="mt-2">
+              <h3 className="text-base font-semibold text-foreground mb-2">What we found</h3>
+              <p>
+                Task completion was high and times were short across both
+                tasks (most under 20 seconds), suggesting the IA and primary
+                flow were broadly intuitive. The richer signal came from the
+                qualitative feedback, which clustered into a small number of
+                consistent patterns:
+              </p>
+              <ul className="mt-3 space-y-1.5 text-sm pl-5 list-disc marker:text-muted-foreground">
+                <li>
+                  <strong>Trust signals worked.</strong> Multiple
+                  participants spontaneously called out the before/after
+                  photos and the FAQs as reasons they felt comfortable
+                  progressing — direct validation of the &ldquo;need for
+                  reassurance&rdquo; theme.
+                </li>
+                <li>
+                  <strong>Form language was ambiguous.</strong> One
+                  participant didn&rsquo;t understand &ldquo;Property
+                  Location&rdquo; on the booking form and suggested
+                  &ldquo;Address&rdquo;.
+                </li>
+                <li>
+                  <strong>Contact options weren&rsquo;t flexible enough.</strong>{" "}
+                  A participant wanted to text rather than call — useful
+                  for users who feel anxious about phone conversations.
+                </li>
+                <li>
+                  <strong>Services pages were too text-heavy.</strong>{" "}
+                  Participants asked for icons, bullet points, and shorter
+                  blocks — the educational content was right, the density
+                  was wrong.
+                </li>
+                <li>
+                  <strong>Information hub needed search.</strong> One
+                  participant tried to search the article library and
+                  couldn&rsquo;t — a clear gap as the content scales.
+                </li>
+              </ul>
+            </div>
+
+            <div className="mt-6">
+              <h3 className="text-base font-semibold text-foreground mb-2">What we changed</h3>
+              <p>Each pattern translated into a specific revision before the final design:</p>
+              <ul className="mt-3 space-y-1.5 text-sm pl-5 list-disc marker:text-muted-foreground">
+                <li>Renamed &ldquo;Property Location&rdquo; → &ldquo;Address&rdquo; on the booking form.</li>
+                <li>Added a &ldquo;Text Now&rdquo; option alongside the existing call action.</li>
+                <li>Broke up dense Services copy with icons, bullets, and tighter sectioning.</li>
+                <li>Promoted FAQs and before/after content nearer the top of the booking journey.</li>
+                <li>Logged the search-the-Info-hub feedback as the next iteration to ship once the article library grows.</li>
+              </ul>
+              <p className="mt-3">
+                The testing effectively closed the research loop — the same
+                themes that had shaped the IA were now being checked by the
+                people they were designed for, and the design was tightened
+                where their behaviour disagreed with our assumptions.
+              </p>
+            </div>
+          </CaseStudySection>
+
+          {/* ---------- 7. FINAL DESIGN ---------- */}
           <CaseStudySection title="Final Design — The Live Website">
             <p>
               The high-fidelity design carries every research decision through
@@ -407,25 +570,6 @@ const MouldMan = () => {
               </li>
             </ul>
 
-            <div className="mt-8">
-              <h3 className="text-base font-semibold text-foreground mb-2">Usability testing findings</h3>
-              <p>
-                Participants worked through several tasks on the prototype —
-                booking a survey, locating service information, finding
-                educational content, and contacting the business. For each
-                task we recorded likes, dislikes, suggestions, and
-                time-on-task, then translated the patterns into concrete
-                revisions: clearer form labels, an added &ldquo;text now&rdquo;
-                contact option, stronger visibility of the FAQ and
-                before/after content, and tightened navigation labels.
-              </p>
-            </div>
-
-            <DocImage
-              src={usabilityTask1}
-              alt="Usability testing findings table — example task from the prototype evaluation"
-              caption="Example usability findings table (one of several tasks tested) — per-participant likes, dislikes, suggestions, and time-on-task."
-            />
           </CaseStudySection>
 
           {/* ---------- 9. REFLECTION ---------- */}
