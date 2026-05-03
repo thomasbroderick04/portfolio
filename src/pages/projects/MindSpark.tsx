@@ -14,6 +14,14 @@ import progressHifi from "@/assets/mindspark-progress-hifi.png";
 import progressMidfi from "@/assets/mindspark-progress-midfi.png";
 import iterationBoard from "@/assets/mindspark-iteration-board.png";
 import hardwareConcept from "@/assets/mindspark-hardware-concept.png";
+import systemOverview from "@/assets/mindspark-system-overview.png";
+import hifiPages from "@/assets/mindspark-hifi-pages.png";
+import verbalTest from "@/assets/mindspark-verbal-test.png";
+import arduinoMic from "@/assets/mindspark-arduino-mic.jpg";
+import arduinoLive from "@/assets/mindspark-arduino-live.jpg";
+import enclosureParts from "@/assets/mindspark-enclosure-parts.jpg";
+import enclosureAssembled from "@/assets/mindspark-enclosure-assembled.jpg";
+import freecadModel from "@/assets/mindspark-freecad.png";
 
 interface DocImageProps {
   src: string;
@@ -308,6 +316,12 @@ const MindSpark = () => {
               alt="High-fidelity Figma screens showing the full Go/No-Go pathway: introduction, test options, alertness questions, and practice"
               caption="Final high-fidelity flow — onboarding, setup, alertness check, and guided practice."
             />
+
+            <DocImage
+              src={hifiPages}
+              alt="High-fidelity MindSpark home, test categories, settings, and notifications pages"
+              caption="Core supporting pages — home, test categories, settings, and notifications — designed around clarity, hierarchy, and contextual cues."
+            />
           </CaseStudySection>
 
           {/* Key Design Decisions */}
@@ -393,9 +407,9 @@ const MindSpark = () => {
             </div>
 
             <DocImage
-              src={iterationBoard}
-              alt="Overview board showing every wireframe screen of the MindSpark application across all sections"
-              caption="Full system overview — every screen of the MindSpark prototype, from splash and sign-up through home, settings, test categories, progress, and both Go/No-Go pathways."
+              src={systemOverview}
+              alt="Full system overview of every MindSpark screen — splash, sign-up, home, settings, notifications, test categories, progress, and both touch and verbal Go/No-Go pathways with components"
+              caption="Full system overview — every screen of the MindSpark prototype, from splash and sign-up through home, settings, test categories, progress, both Go/No-Go pathways, and the component library."
             />
 
             <DocImage
@@ -472,9 +486,40 @@ const MindSpark = () => {
               caption="Concept illustrations of the proposed physical microphone enclosure, Arduino connection, and the verbal-response pathway."
             />
 
-            <ImagePlaceholder
-              label="Assembled physical prototype"
-              description="Photo of the completed 3D-printed enclosure and microphone stand alongside the live interface (to be added once the photo is ready)."
+            <DocImage
+              src={verbalTest}
+              alt="High-fidelity Go/No-Go verbal-response test screens showing countdown, stimulus prompts, microphone button, and feedback states"
+              caption="Verbal-response Go/No-Go pathway — countdown, stimulus, microphone input, and supportive feedback states."
+            />
+
+            <DocImage
+              src={arduinoMic}
+              alt="Arduino Uno R3 board next to a microphone sound sensor module wired with jumper cables"
+              caption="Hardware setup — Arduino Uno R3 paired with a microphone sound sensor for verbal-response detection."
+            />
+
+            <DocImage
+              src={arduinoLive}
+              alt="Live verbal-response Go/No-Go test running in the browser with the Arduino microphone setup detecting voice input"
+              caption="Live verbal-response prototype — the Arduino microphone bridges to the browser-based Go/No-Go test in near real time."
+            />
+
+            <DocImage
+              src={freecadModel}
+              alt="FreeCAD 3D model of the MindSpark microphone enclosure showing Arduino supports, microphone access pocket, and wire access cutout"
+              caption="FreeCAD model of the enclosure — designed around Arduino mounting, microphone access, and wire routing."
+            />
+
+            <DocImage
+              src={enclosureParts}
+              alt="3D-printed green MindSpark microphone stand and box enclosure shown side by side"
+              caption="3D-printed enclosure and adjustable microphone stand."
+            />
+
+            <DocImage
+              src={enclosureAssembled}
+              alt="Assembled MindSpark 3D-printed enclosure and microphone stand in front of a laptop running the Go/No-Go test"
+              caption="Final assembled prototype — physical enclosure and stand alongside the live Go/No-Go interface."
             />
           </CaseStudySection>
 
