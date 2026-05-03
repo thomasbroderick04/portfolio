@@ -141,6 +141,12 @@ const MouldMan = () => {
                   someone who diagnoses <em>why</em> the mould is there and
                   explains it in plain language.
                 </p>
+                <p className="text-sm mt-2 text-foreground">
+                  <strong>→ Design response:</strong> a Services page that
+                  leads with diagnosis and process rather than price, and a
+                  Booking flow that frames every job as starting with a
+                  professional survey.
+                </p>
               </div>
               <div className="py-5">
                 <p className="project-tag mb-1">Theme 2</p>
@@ -149,6 +155,12 @@ const MouldMan = () => {
                   Reviews are full of fear — for children, asthma sufferers,
                   elderly relatives. People need credibility signals before
                   they&rsquo;ll even pick up the phone.
+                </p>
+                <p className="text-sm mt-2 text-foreground">
+                  <strong>→ Design response:</strong> testimonials and
+                  before/after evidence on the homepage, a calm navy
+                  palette, and reassurance copy alongside the booking form
+                  rather than hard sales language.
                 </p>
               </div>
               <div className="py-5">
@@ -159,6 +171,12 @@ const MouldMan = () => {
                   common complaint. Speed and visibility of contact matter
                   more than polish.
                 </p>
+                <p className="text-sm mt-2 text-foreground">
+                  <strong>→ Design response:</strong> phone number anchored
+                  in the top bar on every page, a persistent
+                  &ldquo;urgent help&rdquo; card, and a single, unmissable
+                  primary CTA (&ldquo;Book A Survey&rdquo;).
+                </p>
               </div>
               <div className="py-5">
                 <p className="project-tag mb-1">Theme 4</p>
@@ -168,11 +186,23 @@ const MouldMan = () => {
                   causes, prevention, and what to expect — over those that
                   simply sell.
                 </p>
+                <p className="text-sm mt-2 text-foreground">
+                  <strong>→ Design response:</strong> a top-level
+                  Information hub treated as a first-class part of the IA,
+                  with articles on causes, prevention and health — usable
+                  as evidence by renters and as reassurance by homeowners.
+                </p>
               </div>
             </div>
+
+            <p className="mt-6">
+              These four themes — not aesthetics, not trends — became the
+              real brief. From this point on, every IA decision, every page
+              that earned its place in the sitemap, and every piece of
+              reassurance copy can be traced back to one of them.
+            </p>
           </CaseStudySection>
 
-          {/* ---------- 3. PERSONAS ---------- */}
           <CaseStudySection title="Personas — Three Very Different Customers">
             <p>
               The themes pointed clearly to three distinct user types. Each
