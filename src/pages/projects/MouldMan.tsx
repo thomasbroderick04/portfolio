@@ -107,10 +107,29 @@ const MouldMan = () => {
           {/* ---------- 2. USER RESEARCH ---------- */}
           <CaseStudySection title="User Research — What Customers Actually Want">
             <p>
-              Before sketching anything, we ran a thematic analysis of
-              customer reviews from existing Irish and international
-              mould-removal services. Four themes consistently surfaced — and
-              every one of them drove a concrete design decision later.
+              Mould isn&rsquo;t a neutral subject. By the time someone is
+              searching for a remediation service they&rsquo;re usually
+              already worried — about their family&rsquo;s health, the value
+              of their property, or a tenancy dispute. Designing for that
+              emotional state meant our first job wasn&rsquo;t to design at
+              all; it was to listen.
+            </p>
+            <p>
+              We carried out a structured <strong>thematic analysis</strong> of
+              real customer reviews drawn from Irish and international
+              mould-removal services, plus a small set of stakeholder
+              interviews with the client. Reviews were coded line-by-line,
+              clustered into candidate themes, and then refined through team
+              discussion until four dominant themes held together across the
+              dataset. Crucially, we kept a traceable link between every
+              theme and the underlying quotes — which meant later, when the
+              team disagreed on a layout or a label, we could resolve the
+              argument by going back to the evidence rather than to opinion.
+            </p>
+            <p>
+              The four themes below are the ones that survived that process,
+              and every single one of them maps onto a concrete decision in
+              the final IA, copy, or interaction design.
             </p>
 
             <div className="mt-6 divide-y divide-border border-y border-border">
