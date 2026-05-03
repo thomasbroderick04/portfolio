@@ -22,6 +22,7 @@ import arduinoLive from "@/assets/mindspark-arduino-live.jpg";
 import enclosureParts from "@/assets/mindspark-enclosure-parts.jpg";
 import enclosureAssembled from "@/assets/mindspark-enclosure-assembled.jpg";
 import freecadModel from "@/assets/mindspark-freecad.png";
+import jsCode from "@/assets/mindspark-javascript-code.png";
 
 interface DocImageProps {
   src: string;
@@ -490,6 +491,12 @@ const MindSpark = () => {
               src={verbalTest}
               alt="High-fidelity Go/No-Go verbal-response test screens showing countdown, stimulus prompts, microphone button, and feedback states"
               caption="Verbal-response Go/No-Go pathway — countdown, stimulus, microphone input, and supportive feedback states."
+            />
+
+            <DocImage
+              src={jsCode}
+              alt="VS Code editor showing the MindSpark Go/No-Go app.js JavaScript file controlling stimulus timing, response handling, scoring, and audio playback"
+              caption="JavaScript implementation — app.js controls stimulus timing, response handling, scoring, audio playback, and trial flow for the coded Go/No-Go pathway."
             />
 
             <DocImage
