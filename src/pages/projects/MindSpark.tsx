@@ -494,6 +494,12 @@ const MindSpark = () => {
             />
 
             <DocImage
+              src={jsCode}
+              alt="VS Code editor showing the MindSpark Go/No-Go app.js JavaScript file controlling stimulus timing, response handling, scoring, and audio playback"
+              caption="JavaScript implementation — app.js controls stimulus timing, response handling, scoring, audio playback, and trial flow for the coded Go/No-Go pathway."
+            />
+
+            <DocImage
               src={arduinoMic}
               alt="Arduino Uno R3 board next to a microphone sound sensor module wired with jumper cables"
               caption="Hardware setup — Arduino Uno R3 paired with a microphone sound sensor for verbal-response detection."
