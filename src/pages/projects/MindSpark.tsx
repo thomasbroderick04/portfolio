@@ -21,7 +21,7 @@ import arduinoMic from "@/assets/mindspark-arduino-mic.jpg";
 import arduinoLive from "@/assets/mindspark-arduino-live.jpg";
 import enclosureParts from "@/assets/mindspark-enclosure-parts.jpg";
 import enclosureAssembled from "@/assets/mindspark-enclosure-assembled.jpg";
-import freecadModel from "@/assets/mindspark-freecad.png";
+import jsCode from "@/assets/mindspark-javascript-code.png";
 
 interface DocImageProps {
   src: string;
