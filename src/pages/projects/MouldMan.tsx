@@ -570,25 +570,6 @@ const MouldMan = () => {
               </li>
             </ul>
 
-            <div className="mt-8">
-              <h3 className="text-base font-semibold text-foreground mb-2">Usability testing findings</h3>
-              <p>
-                Participants worked through several tasks on the prototype —
-                booking a survey, locating service information, finding
-                educational content, and contacting the business. For each
-                task we recorded likes, dislikes, suggestions, and
-                time-on-task, then translated the patterns into concrete
-                revisions: clearer form labels, an added &ldquo;text now&rdquo;
-                contact option, stronger visibility of the FAQ and
-                before/after content, and tightened navigation labels.
-              </p>
-            </div>
-
-            <DocImage
-              src={usabilityTask1}
-              alt="Usability testing findings table — example task from the prototype evaluation"
-              caption="Example usability findings table (one of several tasks tested) — per-participant likes, dislikes, suggestions, and time-on-task."
-            />
           </CaseStudySection>
 
           {/* ---------- 9. REFLECTION ---------- */}
