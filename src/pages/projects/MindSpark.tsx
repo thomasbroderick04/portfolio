@@ -291,6 +291,12 @@ const MindSpark = () => {
               caption="Early structured wireframes — Go/No-Go test options, alertness questions, and practice flow."
             />
 
+            <DocImage
+              src={hardwareConcept}
+              alt="Concept illustration of the MindSpark physical microphone enclosure, Arduino Uno, wired microphone sensor, and laptop showing the Go/No-Go test"
+              caption="Concept illustrations of the proposed physical microphone enclosure, Arduino connection, and the verbal-response pathway."
+            />
+
             <p>
               The value of this stage was system thinking rather than visual
               polish. It allowed me to define the test as a sequence of
@@ -480,12 +486,6 @@ const MindSpark = () => {
               used a stable box enclosure and adjustable stand system that
               positioned the microphone more comfortably for different users.
             </p>
-
-            <DocImage
-              src={hardwareConcept}
-              alt="Concept illustration of the MindSpark physical microphone enclosure, Arduino Uno, wired microphone sensor, and laptop showing the Go/No-Go test"
-              caption="Concept illustrations of the proposed physical microphone enclosure, Arduino connection, and the verbal-response pathway."
-            />
 
             <DocImage
               src={verbalTest}
