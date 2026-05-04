@@ -507,7 +507,7 @@ const ProjectThree = () => {
 
           <div className="section-divider mt-10 pt-6 flex justify-between text-sm">
             <Link to="/projects/mould-man" className="font-medium hover:text-accent transition-colors">
-              ← Previous: Mould Man
+              ← Previous: MouldMan
             </Link>
             <Link to="/projects" className="font-medium hover:text-accent transition-colors">
               All projects →

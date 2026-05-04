@@ -15,7 +15,7 @@ const featuredProjects = [
     path: "/projects/mindspark",
   },
   {
-    title: "Mould Man",
+    title: "MouldMan",
     type: "Client Website · Group Project",
     description:
       "A research-led website for an Irish mould-remediation service. Built around three evidence-based personas with an IA designed to convert health anxiety into trust.",
