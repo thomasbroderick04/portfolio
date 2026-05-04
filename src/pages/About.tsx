@@ -75,45 +75,60 @@ const About = () => {
           {/* Design statement */}
           <section className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed mb-16">
             <p>
-              I&rsquo;m Thomas Broderick, a final-year B.Sc. Digital Media
-              Design student at the University of Limerick. My practice sits at
-              the intersection of <span className="text-foreground">usability research</span>,
-              accessibility, and interaction design — designing digital
-              products that adapt to people, rather than asking people to adapt
-              to them.
+              My name is Thomas Broderick, and I am a final-year B.Sc. Digital
+              Media Design student at the University of Limerick. My practice
+              sits at the intersection of <span className="text-foreground">UX research</span>,
+              accessibility, and interaction design. I&rsquo;m interested in
+              designing digital products that are more understandable,
+              inclusive, and responsive to the real conditions people use them
+              in.
             </p>
             <p>
-              What drives me is a conviction that the interface is never
-              neutral. My final-year project, <em>MindSpark</em>, made that
-              tangible: a redesign of a digital cognitive test where I could
-              show, through three rounds of moderated usability testing, that
-              hesitation, low confidence, and dense instructions weren&rsquo;t
-              measuring cognition — they were measuring poor design. That
-              experience anchored my belief that <span className="text-foreground">usability research isn&rsquo;t a phase
-              of a project; it&rsquo;s the foundation a project stands on</span>.
+              What drives me as a designer is the belief that interfaces are
+              never neutral. A screen does more than display information. It
+              affects how easily users understand what they are seeing and how
+              confidently they can interact with it. When an interface is
+              unclear or inaccessible, the problem is often placed on the
+              user. I am more interested in questioning the design.
             </p>
             <p>
-              I work across the full UX process: user interviews, thematic
-              analysis, personas and journey maps, information architecture,
-              wireframing, prototyping, accessible interface design, and
-              iterative usability testing. I follow ISO 9241-210&rsquo;s
-              human-centred design cycle in practice — testing each stage with
-              real participants and letting findings, not assumptions, drive
-              the next iteration.
+              That became especially clear through my college projects.
+              Through moderated usability testing, prototyping, and iterative
+              design, I saw that hesitation, low confidence, and misunderstood
+              instructions were not simply user errors. In many cases, they
+              were signals of poor design. That experience strengthened my
+              belief that <span className="text-foreground">usability research is not just a phase of a project,
+              but the foundation it should stand on</span>.
             </p>
             <p>
-              The themes that motivate me are accessibility, contextual
-              awareness, and the ethics of measurement. I&rsquo;m drawn to
-              projects where design decisions carry real weight for the people
-              using them — healthcare, civic technology, education, and
-              service design — and to research-led environments where evidence
-              is taken as seriously as craft.
+              The themes that motivate my work are usability, accessibility,
+              context, and the ethics of design decisions. I&rsquo;m drawn to
+              projects where relatively small interface choices can have
+              meaningful consequences: whether someone understands a task,
+              feels confident completing it, can access it comfortably, or is
+              fairly represented by the outcome. For me, good design is not
+              only about making something look refined. It is about making
+              interactions feel clear, respectful, and appropriate for the
+              people using them.
             </p>
             <p>
-              Looking forward, I want to grow as a UX designer in a team that
-              treats research, accessibility, and iteration as core practice
-              rather than overhead — building products that are honest about
-              who they&rsquo;re for, and rigorous about how they got there.
+              My approach is research-led and iterative. I prefer to begin
+              with questions rather than assumptions. I use interviews,
+              observation, testing, and reflection to understand what users
+              require from a design. Accessibility is a priority from the
+              beginning of my design process, rather than a final adjustment,
+              and I also place strong importance on context. Factors such as
+              fatigue, time pressure, confidence, and environment can all
+              shape how a person experiences and uses a digital product.
+            </p>
+            <p>
+              Looking ahead, I want to grow as a UX and interaction designer
+              creating accessible and thoughtful digital experiences shaped by
+              research and designed around real user needs. I am especially
+              interested in designing clear, trustworthy digital services and
+              experiences, particularly where systems are complex, people rely
+              on them in real moments of need, and design has a direct impact
+              on confidence, understanding, and support.
             </p>
           </section>
 
