@@ -428,17 +428,17 @@ const ProjectThree = () => {
               <DocImage
                 src={userTest1}
                 alt="User testing session — participant interacting with the People screen on an iPhone prototype"
-                caption="Session 1 — participant navigating the People/chat screen."
+                caption=""
               />
               <DocImage
                 src={userTest2}
-                alt="User testing session — participant tapping the Modules screen showing module list and mascot"
-                caption="Session 2 — participant exploring the Modules screen."
+                alt="User testing session — participant tapping the Modules screen"
+                caption=""
               />
               <DocImage
                 src={userTest3}
-                alt="User testing session — participant using the home screen with Performance, Education Videos, Chat, and Focus shortcuts"
-                caption="Session 2 — participant using the redesigned home screen with clearer shortcuts."
+                alt="User testing session — participant using the redesigned home screen"
+                caption=""
               />
             </div>
           </CaseStudySection>
