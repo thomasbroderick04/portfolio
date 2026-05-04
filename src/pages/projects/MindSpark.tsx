@@ -463,28 +463,42 @@ const MindSpark = () => {
           {/* Multimodal Prototype */}
           <CaseStudySection title="Building the Multimodal Prototype">
             <p>
-              Alongside the Figma work, I built a functional verbal-response
-              pathway. Although MindSpark was designed as a mobile
-              self-administered concept, the verbal-response prototype was
-              developed on laptop as a proof-of-concept so I could reliably
-              test how external Arduino hardware would connect to the
-              browser-based Go/No-Go system in real time through serial
-              communication, Node.js, and WebSockets.
+              Alongside the Figma prototype, I developed a functional
+              verbal-response pathway to test how MindSpark could support an
+              alternative method of interaction. Although the overall concept
+              was designed as a mobile, self-administered experience, the
+              multimodal prototype was built and tested on a laptop as a
+              proof of concept. This allowed me to reliably connect the
+              browser-based Go/No-Go system to external Arduino hardware and
+              test how sound input could trigger responses in real time.
             </p>
             <p>
-              This used an Arduino Uno with a microphone sensor connected to
-              a laptop, with a Node.js bridge enabling the browser-based
-              Go/No-Go prototype to respond to sound input in near real time.
-              It let me move beyond theoretical accessibility ideas and gave
-              me direct experience of how design decisions affect technical
-              implementation — timing, state management, signal detection,
-              and interaction feedback.
+              The technical setup used an Arduino Uno with a microphone
+              sensor connected to the laptop. A Node.js bridge then passed
+              serial data from the Arduino to the browser using WebSockets,
+              allowing the Go/No-Go prototype to respond to sound input
+              during the test. The code development was carried out on the
+              laptop and managed through GitHub, which I used as the primary
+              code repository. This meant I could track code versions
+              carefully as the prototype developed and return to earlier
+              versions when needed.
             </p>
             <p>
-              To support the physical setup, I designed an enclosure in
-              FreeCAD and iterated it through 3D printing. The final hardware
-              used a stable box enclosure and adjustable stand system that
-              positioned the microphone more comfortably for different users.
+              This part of the project helped me move beyond theoretical
+              accessibility ideas and understand how interaction design
+              decisions can directly affect technical implementation. Small
+              choices around timing, feedback, response detection, and
+              screen states all had technical consequences. Developing the
+              prototype gave me a better understanding of these constraints
+              and showed me the value of considering technical feasibility
+              earlier in the design process.
+            </p>
+            <p>
+              To support the physical setup, I also designed an enclosure in
+              FreeCAD and iterated it through 3D printing. The final
+              hardware used a stable box enclosure and adjustable stand
+              system, which positioned the microphone more comfortably for
+              different users during testing.
             </p>
 
             <DocImage
