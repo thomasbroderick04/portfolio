@@ -576,23 +576,54 @@ const MouldMan = () => {
           {/* ---------- 9. REFLECTION ---------- */}
           <CaseStudySection title="Reflection">
             <p>
-              MouldMan taught me how much UX gets done <em>before</em> the
-              first wireframe. The thematic analysis and persona work
-              determined nearly every meaningful design decision that
-              followed — and made it possible to defend those decisions to
-              the team and the client with evidence rather than opinion.
+              MouldMan changed how I think about the relationship between
+              research, design, and trust. Working on a real service for a
+              real client meant the design had to do more than look
+              professional — it had to reassure people who were anxious,
+              answer questions before they were asked, and translate a
+              technical remediation process into something that felt
+              approachable. That responsibility shaped almost every decision,
+              from tone of voice and IA to the placement of CTAs and the
+              structure of the FAQ.
             </p>
             <p>
-              Working with a real client also sharpened how I balance
-              evidence with constraint. The pricing decision is a good
-              example: data suggested one direction, the client&rsquo;s
-              reality required another, and the design had to honour both.
+              The thematic analysis and persona work showed me how much UX
+              gets done before a single wireframe is drawn. The three
+              personas didn&rsquo;t just describe users — they became the
+              criteria we used to test ideas. Whenever the team disagreed on
+              navigation, layout, or copy, we returned to which persona it
+              served and what evidence supported it. That made the design
+              process more disciplined and reduced opinion-led decisions.
             </p>
             <p>
-              Designing for three very different personas under one IA
-              reinforced something I keep returning to: good information
-              architecture isn&rsquo;t about hierarchy alone — it&rsquo;s
-              about respecting different routes through the same content.
+              Working with Steve also taught me how to balance evidence with
+              real-world constraint. Research pointed toward visible pricing
+              to build trust, but the variability of remediation jobs made
+              fixed prices impossible. The compromise — quote requests
+              wrapped in strong reassurance copy and clear next steps —
+              honoured both the data and the client&rsquo;s reality. That
+              kind of negotiation between user needs and business
+              constraints is something I&rsquo;ll carry into every future
+              project.
+            </p>
+            <p>
+              Designing for three very different personas under a single IA
+              also reinforced something I keep returning to: good
+              information architecture isn&rsquo;t about hierarchy alone.
+              It&rsquo;s about respecting that different users take
+              different routes through the same content, and that the
+              structure has to support all of them without privileging one.
+              MouldMan made that idea concrete for me in a way no theoretical
+              exercise could.
+            </p>
+            <p>
+              Finally, the project sharpened how I work in a team. Splitting
+              ownership of pages, holding shared standards for typography,
+              spacing, and tone, and resolving disagreements through
+              evidence rather than preference made the final site feel
+              coherent despite multiple hands shaping it. That experience
+              gave me more confidence in collaborative UX work and in
+              advocating for research-led decisions inside a group.
             </p>
           </CaseStudySection>
 
