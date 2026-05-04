@@ -71,7 +71,7 @@ const Projects = () => {
                   <h2 className="text-2xl font-semibold mb-1 group-hover:text-accent transition-colors">
                     {project.title}
                   </h2>
-                  <p className="text-sm text-muted-foreground mb-3">{project.type}</p>
+                  {project.type && <p className="text-sm text-muted-foreground mb-3">{project.type}</p>}
                   <p className="text-base text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>
