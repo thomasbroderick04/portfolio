@@ -130,7 +130,7 @@ const MouldMan = () => {
             <p>
               The four themes below are the ones that survived that process,
               and every single one of them maps onto a concrete decision in
-              the final IA, copy, or interaction design.
+              the final Information Architecture (IA), copy, or interaction design.
             </p>
 
             <div className="mt-6 divide-y divide-border border-y border-border">
