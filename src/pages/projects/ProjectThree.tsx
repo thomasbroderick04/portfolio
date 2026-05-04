@@ -23,6 +23,8 @@ import hifiPeopleMessages from "@/assets/learnbetter-hifi-people-messages.png";
 import hifiAiChat from "@/assets/learnbetter-hifi-ai-chat.png";
 import hifiStudyLive from "@/assets/learnbetter-hifi-study-live.png";
 import hifiEntertainment from "@/assets/learnbetter-hifi-entertainment.png";
+import hifiFocus from "@/assets/learnbetter-hifi-focus.png";
+import hifiHelpCenter from "@/assets/learnbetter-hifi-help-center.png";
 
 interface DocImageProps {
   src: string;
@@ -447,6 +449,16 @@ const ProjectThree = () => {
               src={hifiEntertainment}
               alt="High-fidelity Entertainment screen — recommended study music, new songs and albums, and a song list with a music player"
               caption="Entertainment — focus and study music to support concentration during longer remote study sessions."
+            />
+            <DocImage
+              src={hifiFocus}
+              alt="High-fidelity Focus Mode screens — set app limits for SnapCharlie, YouTube, and Netflix, schedule a focus window, and a confirmation state"
+              caption="Focus Mode — students set app limits and a study schedule to block distractions, with a slide-to-activate control and a clear confirmation state."
+            />
+            <DocImage
+              src={hifiHelpCenter}
+              alt="High-fidelity Help Center screens — search, popular articles, topic categories, and Help & Support links"
+              caption="Help Center — searchable support with popular articles, account and privacy topics, troubleshooting, safety, and community guidelines."
             />
           </CaseStudySection>
 
