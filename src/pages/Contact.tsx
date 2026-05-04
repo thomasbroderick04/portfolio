@@ -1,4 +1,5 @@
-import { Mail, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
+import LinkedInIcon from "@/components/LinkedInIcon";
 import Layout from "@/components/Layout";
 
 const Contact = () => {
@@ -17,26 +18,26 @@ const Contact = () => {
 
           <div className="space-y-3 mb-12">
             <a
-              href="mailto:thomas.broderick.work@gmail.com"
+              href="mailto:tommybroderick@outlook.com"
               className="flex items-center gap-4 px-5 py-4 bg-secondary rounded-md hover:bg-border/60 transition-colors"
             >
               <Mail size={20} className="text-muted-foreground shrink-0" />
               <div>
                 <p className="text-xs text-muted-foreground">Email</p>
-                <p className="text-sm font-medium">thomas.broderick.work@gmail.com</p>
+                <p className="text-sm font-medium">tommybroderick@outlook.com</p>
               </div>
             </a>
 
             <a
-              href="https://www.linkedin.com/in/thomas-broderick-22071253/"
+              href="https://www.linkedin.com/in/thomas-b-532674367/"
               target="_blank"
               rel="noreferrer noopener"
               className="flex items-center gap-4 px-5 py-4 bg-secondary rounded-md hover:bg-border/60 transition-colors"
             >
-              <Linkedin size={20} className="text-muted-foreground shrink-0" />
+              <LinkedInIcon size={20} className="text-[#0A66C2] shrink-0" />
               <div>
                 <p className="text-xs text-muted-foreground">LinkedIn</p>
-                <p className="text-sm font-medium">in/thomas-broderick</p>
+                <p className="text-sm font-medium">in/thomas-b-532674367</p>
               </div>
             </a>
           </div>

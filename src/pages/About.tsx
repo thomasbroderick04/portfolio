@@ -161,7 +161,7 @@ const About = () => {
                   key={group.title}
                   className="rounded-lg border border-border bg-card p-5"
                 >
-                  <h3 className="text-sm font-semibold text-foreground mb-3 uppercase tracking-wider">
+                  <h3 className="text-base font-semibold text-foreground mb-3">
                     {group.title}
                   </h3>
                   <ul className="space-y-1.5 text-sm text-muted-foreground">

@@ -7,7 +7,7 @@ import learnbetterHero from "@/assets/learnbetter-hero.png";
 const projects = [
   {
     title: "MindSpark",
-    type: "Final Year Project",
+    type: "",
     discipline: "UX Research · Interaction · Multimodal",
     year: "2025–26",
     description:
@@ -17,7 +17,7 @@ const projects = [
   },
   {
     title: "MouldMan",
-    type: "Client Website · Group Project",
+    type: "",
     discipline: "UX Research · IA · Visual Design",
     year: "2025",
     description:
@@ -27,7 +27,7 @@ const projects = [
   },
   {
     title: "LearnBetter",
-    type: "Group Project · First Year",
+    type: "",
     discipline: "UX Research · Concept · Sketching",
     year: "2022",
     description:
@@ -71,7 +71,7 @@ const Projects = () => {
                   <h2 className="text-2xl font-semibold mb-1 group-hover:text-accent transition-colors">
                     {project.title}
                   </h2>
-                  <p className="text-sm text-muted-foreground mb-3">{project.type}</p>
+                  {project.type && <p className="text-sm text-muted-foreground mb-3">{project.type}</p>}
                   <p className="text-base text-muted-foreground leading-relaxed">
                     {project.description}
                   </p>

@@ -8,7 +8,7 @@ import learnbetterHero from "@/assets/learnbetter-hero.png";
 const featuredProjects = [
   {
     title: "MindSpark",
-    type: "Final Year Project",
+    type: "",
     description:
       "An interactive cognitive testing system. Redesigning the digital Go/No-Go test as an interaction problem — usability, accessibility, and context as core design variables.",
     image: mindsparkHero,
@@ -16,7 +16,7 @@ const featuredProjects = [
   },
   {
     title: "MouldMan",
-    type: "Client Website · Group Project",
+    type: "",
     description:
       "A research-led website for an Irish mould-remediation service. Built around three evidence-based personas with an IA designed to convert health anxiety into trust.",
     image: mouldmanHero,
@@ -24,7 +24,7 @@ const featuredProjects = [
   },
   {
     title: "LearnBetter",
-    type: "Group Project · First Year",
+    type: "",
     description:
       "A student e-learning companion designed to support focus, organisation, and connection in remote learning. My contribution focused on problem framing, personas, HMW, and the sketches that became the Progress and Education Video features.",
     image: learnbetterHero,
@@ -68,7 +68,7 @@ const Home = () => {
         {/* Selected work */}
         <section>
           <div className="flex items-baseline justify-between mb-8 pb-3 border-b border-border">
-            <h2 className="text-xl font-semibold">Selected Work</h2>
+            <h2 className="text-xl font-semibold">My Projects</h2>
             <Link to="/projects" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               All projects →
             </Link>
@@ -100,7 +100,7 @@ const Home = () => {
                       {project.description}
                     </p>
                   </div>
-                  <span className="project-tag shrink-0 text-right">{project.type}</span>
+                  {project.type && <span className="project-tag shrink-0 text-right">{project.type}</span>}
                 </div>
               </Link>
             ))}

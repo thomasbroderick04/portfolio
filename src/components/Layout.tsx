@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Menu, X, Mail, ArrowUp } from "lucide-react";
+import LinkedInIcon from "@/components/LinkedInIcon";
 
 const primaryNav = [
   { label: "Home", path: "/" },
@@ -71,16 +72,16 @@ const Layout = ({ children }: LayoutProps) => {
           </nav>
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="https://www.linkedin.com/in/thomas-broderick-22071253/"
+              href="https://www.linkedin.com/in/thomas-b-532674367/"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="LinkedIn profile"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <Linkedin size={17} />
+              <LinkedInIcon size={17} />
             </a>
             <a
-              href="mailto:thomas.broderick.work@gmail.com"
+              href="mailto:tommybroderick@outlook.com"
               aria-label="Email"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
@@ -137,16 +138,16 @@ const Layout = ({ children }: LayoutProps) => {
             </div>
             <div className="mt-4 pt-4 border-t border-border flex gap-4">
               <a
-                href="https://www.linkedin.com/in/thomas-broderick-22071253/"
+                href="https://www.linkedin.com/in/thomas-b-532674367/"
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="LinkedIn"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                <Linkedin size={18} />
+                <LinkedInIcon size={18} />
               </a>
               <a
-                href="mailto:thomas.broderick.work@gmail.com"
+                href="mailto:tommybroderick@outlook.com"
                 aria-label="Email"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >

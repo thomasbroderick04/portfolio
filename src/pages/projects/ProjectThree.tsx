@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FileText, Figma } from "lucide-react";
+// icons removed
 import Layout from "@/components/Layout";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
@@ -73,8 +73,8 @@ const ProjectThree = () => {
           <ProjectMeta
             items={[
               { label: "Role", value: "UX Research · Concept · Sketching (group of 4)" },
-              { label: "Year", value: "2022 — First Year" },
-              { label: "Domain", value: "Education · Remote Learning" },
+              { label: "Duration", value: "Jan 2023 – May 2023" },
+              { label: "Module", value: "CS4052 – Foundations of Interaction Design" },
               { label: "Tools", value: "Figma · Paper Prototyping · Mural" },
             ]}
           />
@@ -514,7 +514,7 @@ const ProjectThree = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
               >
-                <FileText size={15} /> Official Report
+                Official Report
               </a>
               <a
                 href="https://www.figma.com/design/341EgzaSujfL9woXsG4VdH/LearnBetter?node-id=0-1&p=f&t=XvsJTVhqb2cfIoJV-0"
@@ -522,7 +522,7 @@ const ProjectThree = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-md hover:bg-secondary transition-colors"
               >
-                <Figma size={15} /> Figma
+                Figma
               </a>
             </div>
           </CaseStudySection>
