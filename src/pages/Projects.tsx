@@ -17,7 +17,7 @@ const projects = [
   },
   {
     title: "MouldMan",
-    type: "Client Website · Group Project",
+    type: "",
     discipline: "UX Research · IA · Visual Design",
     year: "2025",
     description:
@@ -27,7 +27,7 @@ const projects = [
   },
   {
     title: "LearnBetter",
-    type: "Group Project · First Year",
+    type: "",
     discipline: "UX Research · Concept · Sketching",
     year: "2022",
     description:
