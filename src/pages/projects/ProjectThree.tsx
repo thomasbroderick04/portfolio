@@ -13,6 +13,16 @@ import hifiOverview from "@/assets/learnbetter-hifi-overview.png";
 import userTest1 from "@/assets/learnbetter-usertest-1.jpg";
 import userTest2 from "@/assets/learnbetter-usertest-2.jpg";
 import userTest3 from "@/assets/learnbetter-usertest-3.jpg";
+import hmwStatements from "@/assets/learnbetter-hmw-statements.png";
+import storyboard from "@/assets/learnbetter-storyboard.png";
+import hifiOnboarding from "@/assets/learnbetter-hifi-onboarding.png";
+import hifiModule from "@/assets/learnbetter-hifi-module.png";
+import hifiProgress from "@/assets/learnbetter-hifi-progress.png";
+import hifiEducationVideos from "@/assets/learnbetter-hifi-education-videos.png";
+import hifiPeopleMessages from "@/assets/learnbetter-hifi-people-messages.png";
+import hifiAiChat from "@/assets/learnbetter-hifi-ai-chat.png";
+import hifiStudyLive from "@/assets/learnbetter-hifi-study-live.png";
+import hifiEntertainment from "@/assets/learnbetter-hifi-entertainment.png";
 
 interface DocImageProps {
   src: string;
@@ -231,9 +241,10 @@ const ProjectThree = () => {
               engagement.
             </p>
 
-            <ImagePlaceholder
-              label="HMW question list"
-              description="A list of my HMW questions, showing how they translated the problem into design opportunities."
+            <DocImage
+              src={hmwStatements}
+              alt="My HMW (How Might We) statements list — twelve questions covering engagement, accessibility, support, feedback, and active participation"
+              caption="My HMW statements — translating the problem into clear design opportunities around engagement, accessibility, targeted support, feedback, and keeping students on task."
             />
           </CaseStudySection>
 
@@ -272,6 +283,12 @@ const ProjectThree = () => {
               src={sketchDashboard}
               alt="Hand-drawn sketch of LearnGenie loading screen and dashboard concept with Progress, Education Videos, Entertainment, Help, and Weekly Goal"
               caption="Early sketch — my dashboard concept showing Progress, Education Videos, Entertainment, Help, and Weekly Goal. Several of these ideas (Progress, Education Videos, Help) carried directly into the final app."
+            />
+
+            <DocImage
+              src={storyboard}
+              alt="Six-panel hand-drawn storyboard following a student using StudyGenie to complete lessons and unlock a 45-minute break"
+              caption="My storyboard — a student moves from distraction, to receiving a notification, to using the dashboard's Progress and Education Video features, and finally unlocking a 45-minute break after completing all lessons."
             />
           </CaseStudySection>
 
@@ -391,21 +408,45 @@ const ProjectThree = () => {
               remote-learning experience around that material.
             </p>
 
-            <ImagePlaceholder
-              label="Final dashboard and module screens"
-              description="Final hi-fi screens of the dashboard and module navigation — to be added when supplied."
+            <DocImage
+              src={hifiOnboarding}
+              alt="High-fidelity LearnBetter onboarding flow — splash screen with graduation cap logo, sign in screen, and sign up form with university field"
+              caption="Onboarding flow — splash, sign in, and sign up screens establishing the LearnBetter identity and student account setup."
             />
-            <ImagePlaceholder
-              label="Final performance / progress screens"
-              description="Final hi-fi screens for the Performance and Progress features (built from my early sketch work) — to be added."
+            <DocImage
+              src={hifiModule}
+              alt="High-fidelity module screens — My Module grid, CS4052 module page with class forum and lectures, and class forum chat threads"
+              caption="Module navigation — students move from a module grid, into a module page with the lecturer, class forum, and lecture list, and into the forum and chat threads themselves."
             />
-            <ImagePlaceholder
-              label="Final chat, forum, and group learning screens"
-              description="Final hi-fi screens covering peer chat, class forum, lecturer contact, and live group learning — to be added."
+            <DocImage
+              src={hifiProgress}
+              alt="High-fidelity Performance and Module Progress screens with weekly study graph, lectures and assignments completed, and per-module breakdown"
+              caption="Performance and Progress — built directly from my early sketch work, surfacing study hours, lectures watched, assignments completed, and per-module progress."
             />
-            <ImagePlaceholder
-              label="Final focus, music, settings and help screens"
-              description="Final hi-fi screens covering focus tools, music, settings/profile, and help and support — to be added."
+            <DocImage
+              src={hifiEducationVideos}
+              alt="High-fidelity Education Videos screens — module list, topic list for CS4082, and an HTML video lesson with Help and Progress shortcuts"
+              caption="Education Videos — also carried forward from my sketches: students browse modules, drill into topics, and watch lessons with Help and Progress always one tap away."
+            />
+            <DocImage
+              src={hifiPeopleMessages}
+              alt="High-fidelity People, Messages, and class forum chat screens with lecturer, teaching assistant, and class list contacts"
+              caption="People, Messages, and class forum — making it easier for students to reach lecturers, TAs, and peers without switching apps."
+            />
+            <DocImage
+              src={hifiAiChat}
+              alt="High-fidelity Ask Me Anything AI chat screen with example questions, plus lecturer and class forum conversation screens"
+              caption="Ask Me Anything — an AI study assistant for quick definitional questions, sitting alongside the lecturer and class forum chats."
+            />
+            <DocImage
+              src={hifiStudyLive}
+              alt="High-fidelity Study Live screens — live group study room landing page and a list of public and private study rooms to join"
+              caption="Study Live — live group study rooms designed to recreate the social structure of in-person study and reduce the isolation of remote learning."
+            />
+            <DocImage
+              src={hifiEntertainment}
+              alt="High-fidelity Entertainment screen — recommended study music, new songs and albums, and a song list with a music player"
+              caption="Entertainment — focus and study music to support concentration during longer remote study sessions."
             />
           </CaseStudySection>
 
