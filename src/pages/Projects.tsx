@@ -16,7 +16,7 @@ const projects = [
     path: "/projects/mindspark",
   },
   {
-    title: "Mould Man",
+    title: "MouldMan",
     type: "Client Website · Group Project",
     discipline: "UX Research · IA · Visual Design",
     year: "2025",

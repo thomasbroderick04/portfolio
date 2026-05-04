@@ -11,7 +11,7 @@ const primaryNav = [
 
 const projectItems = [
   { label: "MindSpark", path: "/projects/mindspark" },
-  { label: "Mould Man", path: "/projects/mould-man" },
+  { label: "MouldMan", path: "/projects/mould-man" },
   { label: "Project Three", path: "/projects/project-three" },
 ];
 

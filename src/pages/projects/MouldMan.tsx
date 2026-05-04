@@ -53,7 +53,7 @@ const MouldMan = () => {
           </Link>
 
           <p className="project-tag mb-3">Client Website · CS4088 · Group of 4</p>
-          <h1 className="mb-5">Mould Man</h1>
+          <h1 className="mb-5">MouldMan</h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
             A research-led UX project for an Irish mould-remediation service —
             translating real customer anxieties into an information
@@ -73,7 +73,7 @@ const MouldMan = () => {
             <div className="rounded-md overflow-hidden border border-border bg-secondary/40">
               <img
                 src={mouldmanHero}
-                alt="Mould Man — final responsive website shown on laptop and mobile"
+                alt="MouldMan — final responsive website shown on laptop and mobile"
                 className="w-full h-auto object-contain"
                 width={1600}
                 height={900}
@@ -84,7 +84,7 @@ const MouldMan = () => {
           {/* ---------- 1. OVERVIEW ---------- */}
           <CaseStudySection title="Overview">
             <p>
-              Mould Man is a real Irish mould-remediation service run by our
+              MouldMan is a real Irish mould-remediation service run by our
               client, Steve. The brief was to design a website that
               doesn&rsquo;t just present services, but actively builds trust
               with customers facing health anxiety, property concerns, or
@@ -282,7 +282,7 @@ const MouldMan = () => {
               <p>
                 Storyboards turned each journey into a concrete narrative —
                 the scenario in which each persona would actually arrive at
-                Mould Man, what they&rsquo;d need on screen, and what would
+                MouldMan, what they&rsquo;d need on screen, and what would
                 push them to act.
               </p>
             </div>
@@ -290,7 +290,7 @@ const MouldMan = () => {
             <DocImage
               src={storyboardSarah}
               alt="Storyboard showing Sarah's emergency mould scenario from discovery to inspection"
-              caption="Storyboard — Sarah's scenario: discovering mould, searching online, finding Mould Man, booking, and the technician's visit."
+              caption="Storyboard — Sarah's scenario: discovering mould, searching online, finding MouldMan, booking, and the technician's visit."
             />
           </CaseStudySection>
 
@@ -308,7 +308,7 @@ const MouldMan = () => {
 
             <DocImage
               src={siteFlow}
-              alt="Site flow diagram showing primary navigation paths through the Mould Man website"
+              alt="Site flow diagram showing primary navigation paths through the MouldMan website"
               caption="Site flow diagram — primary user paths from Home and About through Booking, Info, and Feedback."
             />
 
@@ -362,7 +362,7 @@ const MouldMan = () => {
 
             <DocImage
               src={wireframes}
-              alt="Wireframes for the Mould Man website — Home, About, Services, and Booking pages"
+              alt="Wireframes for the MouldMan website — Home, About, Services, and Booking pages"
               caption="Mid-fidelity wireframes — Home, About, Services, and Booking pages laid out side-by-side."
             />
           </CaseStudySection>
@@ -493,25 +493,25 @@ const MouldMan = () => {
 
             <DocImage
               src={servicesPage}
-              alt="Services page of the live Mould Man website"
+              alt="Services page of the live MouldMan website"
               caption="Services page — clear scope of work, transparent process, and reassurance that every job starts with a professional survey."
             />
 
             <DocImage
               src={informationPage}
-              alt="Information / blog hub of the live Mould Man website"
+              alt="Information / blog hub of the live MouldMan website"
               caption="Information hub — educational articles on damp proofing, mould prevention, and home protection. Authority before sales."
             />
 
             <DocImage
               src={testimonials}
-              alt="Testimonials section of the live Mould Man website"
+              alt="Testimonials section of the live MouldMan website"
               caption="Testimonials section — addressing the 'health anxiety / need for reassurance' theme directly on the homepage."
             />
 
             <DocImage
               src={bookingForm}
-              alt="Book Your Free Survey form on the live Mould Man website"
+              alt="Book Your Free Survey form on the live MouldMan website"
               caption="Booking page — clear labels, reassurance copy, and an 'urgent help' panel for high-anxiety users."
             />
           </CaseStudySection>
@@ -527,13 +527,13 @@ const MouldMan = () => {
 
             <DocImage
               src={mobileHomeAbout}
-              alt="Mobile prototype screens for the Mould Man Home and About pages"
+              alt="Mobile prototype screens for the MouldMan Home and About pages"
               caption="Mobile prototype — navigation drawer, Home page, and About page."
             />
 
             <DocImage
               src={mobileInformation}
-              alt="Mobile prototype screens for the Mould Man Information section and an article page"
+              alt="Mobile prototype screens for the MouldMan Information section and an article page"
               caption="Mobile prototype — Information hub and article view, with breadcrumbs and a clear back link."
             />
           </CaseStudySection>
@@ -575,7 +575,7 @@ const MouldMan = () => {
           {/* ---------- 9. REFLECTION ---------- */}
           <CaseStudySection title="Reflection">
             <p>
-              Mould Man taught me how much UX gets done <em>before</em> the
+              MouldMan taught me how much UX gets done <em>before</em> the
               first wireframe. The thematic analysis and persona work
               determined nearly every meaningful design decision that
               followed — and made it possible to defend those decisions to

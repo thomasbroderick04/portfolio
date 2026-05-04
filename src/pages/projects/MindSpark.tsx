@@ -591,7 +591,7 @@ const MindSpark = () => {
               ← All projects
             </Link>
             <Link to="/projects/mould-man" className="font-medium hover:text-accent transition-colors">
-              Next: Mould Man →
+              Next: MouldMan →
             </Link>
           </div>
         </article>
