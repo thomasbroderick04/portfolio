@@ -10,7 +10,7 @@ import informationPage from "@/assets/mouldman-information-page.png";
 import usabilityTask1 from "@/assets/mouldman-usability-task1.png";
 import journeyMark from "@/assets/mouldman-journey-mark.png";
 import storyboardSarah from "@/assets/mouldman-storyboard-sarah.png";
-import siteFlow from "@/assets/mouldman-site-flow.jpg";
+import siteFlow from "@/assets/mouldman-site-flow.png";
 import wireframes from "@/assets/mouldman-wireframes.png";
 
 import testimonials from "@/assets/mouldman-testimonials.png";
@@ -310,7 +310,7 @@ const MouldMan = () => {
             <DocImage
               src={siteFlow}
               alt="Site flow diagram showing primary navigation paths through the MouldMan website"
-              caption="Site flow diagram — primary user paths from Home and About through Booking, Info, and Feedback."
+              caption="Site flow diagram — mapping how each persona moves from the top-level pages (Home, About, Services, Information, Book) into key actions like booking an inspection, submitting contact details, reading information, and reaching the feedback page."
             />
 
             <div className="mt-6 divide-y divide-border border-y border-border">
@@ -364,7 +364,7 @@ const MouldMan = () => {
             <DocImage
               src={wireframes}
               alt="Wireframes for the MouldMan website — Home, About, Services, and Booking pages"
-              caption="Mid-fidelity wireframes — Home, About, Services, and Booking pages laid out side-by-side."
+              caption="Mid-fidelity wireframes — Home, About, Services, Booking, and Information pages laid out side-by-side, showing layout structure, content hierarchy, and shared components across the site."
             />
           </CaseStudySection>
 
