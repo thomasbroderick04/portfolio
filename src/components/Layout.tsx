@@ -71,7 +71,7 @@ const Layout = ({ children }: LayoutProps) => {
           </nav>
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="https://www.linkedin.com/in/thomas-broderick-22071253/"
+              href="https://www.linkedin.com/in/thomas-b-532674367/"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="LinkedIn profile"
@@ -80,7 +80,7 @@ const Layout = ({ children }: LayoutProps) => {
               <Linkedin size={17} />
             </a>
             <a
-              href="mailto:thomas.broderick.work@gmail.com"
+              href="mailto:tommybroderick@outlook.com"
               aria-label="Email"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
@@ -137,7 +137,7 @@ const Layout = ({ children }: LayoutProps) => {
             </div>
             <div className="mt-4 pt-4 border-t border-border flex gap-4">
               <a
-                href="https://www.linkedin.com/in/thomas-broderick-22071253/"
+                href="https://www.linkedin.com/in/thomas-b-532674367/"
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="LinkedIn"
@@ -146,7 +146,7 @@ const Layout = ({ children }: LayoutProps) => {
                 <Linkedin size={18} />
               </a>
               <a
-                href="mailto:thomas.broderick.work@gmail.com"
+                href="mailto:tommybroderick@outlook.com"
                 aria-label="Email"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FileText, Figma, Github } from "lucide-react";
+// icons removed
 import Layout from "@/components/Layout";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
@@ -72,7 +72,6 @@ const MindSpark = () => {
             items={[
               { label: "Role", value: "Sole Designer, Researcher & Developer" },
               { label: "Duration", value: "Sept 2025 – April 2026" },
-              { label: "Supervisor", value: "Dr. Lilian Genaro Motti" },
               { label: "Tools", value: "Figma · HTML/CSS/JS · Arduino · FreeCAD" },
             ]}
           />
@@ -615,7 +614,7 @@ const MindSpark = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
               >
-                <FileText size={15} /> Official Report
+                Official Report
               </a>
               <a
                 href="https://www.figma.com/design/2IiUGF681jgSsJCI0N8fL2/MindSpark---FYP---22071253?t=c5A4NlZ1q6mbWld4-0"
@@ -623,7 +622,7 @@ const MindSpark = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-md hover:bg-secondary transition-colors"
               >
-                <Figma size={15} /> Figma
+                Figma
               </a>
               <a
                 href="https://github.com/thomasbroderick04/22071253_MindSpark_FYP/tree/main"
@@ -631,7 +630,7 @@ const MindSpark = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-md hover:bg-secondary transition-colors"
               >
-                <Github size={15} /> GitHub Repository
+                GitHub Repository
               </a>
             </div>
           </CaseStudySection>
