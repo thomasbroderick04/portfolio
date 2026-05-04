@@ -3,14 +3,14 @@ import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
 import mindsparkHero from "@/assets/mindspark-hero.jpg";
 import mouldmanHero from "@/assets/mouldman-hero.jpg";
-import placeholderHero from "@/assets/placeholder-project.jpg";
+import learnbetterHero from "@/assets/learnbetter-hero.png";
 
 const featuredProjects = [
   {
     title: "MindSpark",
     type: "Final Year Project",
     description:
-      "An interactive cognitive testing system exploring how usability, accessibility, and context shape the digital Go/No-Go testing experience.",
+      "An interactive cognitive testing system. Redesigning the digital Go/No-Go test as an interaction problem — usability, accessibility, and context as core design variables.",
     image: mindsparkHero,
     path: "/projects/mindspark",
   },
@@ -18,16 +18,16 @@ const featuredProjects = [
     title: "Mould Man",
     type: "Client Website · Group Project",
     description:
-      "A research-led website for an Irish mould-remediation service, built around evidence-based personas and a trust-first information architecture.",
+      "A research-led website for an Irish mould-remediation service. Built around three evidence-based personas with an IA designed to convert health anxiety into trust.",
     image: mouldmanHero,
     path: "/projects/mould-man",
   },
   {
-    title: "Project Three",
-    type: "In Development",
+    title: "LearnBetter",
+    type: "Group Project · First Year",
     description:
-      "A forthcoming case study currently in research and definition.",
-    image: placeholderHero,
+      "A student e-learning companion designed to support focus, organisation, and connection in remote learning. My contribution focused on problem framing, personas, HMW, and the sketches that became the Progress and Education Video features.",
+    image: learnbetterHero,
     path: "/projects/project-three",
   },
 ];
