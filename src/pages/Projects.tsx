@@ -7,7 +7,7 @@ import learnbetterHero from "@/assets/learnbetter-hero.png";
 const projects = [
   {
     title: "MindSpark",
-    type: "Final Year Project",
+    type: "",
     discipline: "UX Research · Interaction · Multimodal",
     year: "2025–26",
     description:
