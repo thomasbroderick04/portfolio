@@ -78,7 +78,7 @@ const Layout = ({ children }: LayoutProps) => {
               aria-label="LinkedIn profile"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <Linkedin size={17} />
+              <LinkedInIcon size={17} />
             </a>
             <a
               href="mailto:tommybroderick@outlook.com"
@@ -144,7 +144,7 @@ const Layout = ({ children }: LayoutProps) => {
                 aria-label="LinkedIn"
                 className="text-muted-foreground hover:text-foreground transition-colors"
               >
-                <Linkedin size={18} />
+                <LinkedInIcon size={18} />
               </a>
               <a
                 href="mailto:tommybroderick@outlook.com"

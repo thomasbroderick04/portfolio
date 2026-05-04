@@ -34,7 +34,7 @@ const Contact = () => {
               rel="noreferrer noopener"
               className="flex items-center gap-4 px-5 py-4 bg-secondary rounded-md hover:bg-border/60 transition-colors"
             >
-              <Linkedin size={20} className="text-muted-foreground shrink-0" />
+              <LinkedInIcon size={20} className="text-[#0A66C2] shrink-0" />
               <div>
                 <p className="text-xs text-muted-foreground">LinkedIn</p>
                 <p className="text-sm font-medium">in/thomas-broderick</p>
