@@ -64,8 +64,8 @@ const MouldMan = () => {
           <ProjectMeta
             items={[
               { label: "Role", value: "UX Designer (team of 4)" },
-              { label: "Duration", value: "Sept – Dec 2025" },
-              { label: "Module", value: "CS4088 — UX Design" },
+              { label: "Duration", value: "Jan 2026 – May 2026" },
+              { label: "Module", value: "CS4088 — User Experience in Practice" },
               { label: "Tools", value: "Figma · Thematic Analysis" },
             ]}
           />
