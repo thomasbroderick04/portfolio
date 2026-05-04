@@ -85,8 +85,8 @@ const MouldMan = () => {
           {/* ---------- 1. OVERVIEW ---------- */}
           <CaseStudySection title="Overview">
             <p>
-              MouldMan is a real Irish mould-remediation service run by our
-              client, Steve. The brief was to design a website that
+              MouldMan is a mould-remediation service based in Limerick,
+              Ireland, run by our client, Steve. The brief was to design a website that
               doesn&rsquo;t just present services, but actively builds trust
               with customers facing health anxiety, property concerns, or
               rental disputes.
