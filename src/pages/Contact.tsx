@@ -1,4 +1,5 @@
-import { Mail, Linkedin } from "lucide-react";
+import { Mail } from "lucide-react";
+import LinkedInIcon from "@/components/LinkedInIcon";
 import Layout from "@/components/Layout";
 
 const Contact = () => {

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Menu, X, Mail, ArrowUp } from "lucide-react";
+import LinkedInIcon from "@/components/LinkedInIcon";
 
 const primaryNav = [
   { label: "Home", path: "/" },
