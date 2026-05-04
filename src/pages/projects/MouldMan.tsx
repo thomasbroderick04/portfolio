@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FileText, Figma } from "lucide-react";
 import Layout from "@/components/Layout";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
@@ -593,6 +594,35 @@ const MouldMan = () => {
               architecture isn&rsquo;t about hierarchy alone — it&rsquo;s
               about respecting different routes through the same content.
             </p>
+          </CaseStudySection>
+
+          <CaseStudySection title="Project Links">
+            <div className="flex flex-wrap gap-3 not-prose">
+              <a
+                href="https://drive.google.com/file/d/1EKVERXX_2CRYpdCRF8DOIjJX08OjlUD-/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
+              >
+                <FileText size={15} /> Report 1
+              </a>
+              <a
+                href="https://drive.google.com/file/d/173n-zfY4X8oIXepk5kYSrLVM7IXmZj5L/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
+              >
+                <FileText size={15} /> Report 2
+              </a>
+              <a
+                href="https://www.figma.com/design/08dryDTbDbK1PxdI55bBY0/CS4088-Design-Specification---Thomas-Broderick--Yvonne-Morrissey--Samuel-Hellqvist--Zoe-Flannery?node-id=0-1&p=f&t=c5A4NlZ1q6mbWld4-0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-md hover:bg-secondary transition-colors"
+              >
+                <Figma size={15} /> Figma
+              </a>
+            </div>
           </CaseStudySection>
 
           <div className="section-divider mt-10 pt-6 flex justify-between text-sm">

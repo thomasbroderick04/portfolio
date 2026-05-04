@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FileText, Figma } from "lucide-react";
 import Layout from "@/components/Layout";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
@@ -503,6 +504,27 @@ const ProjectThree = () => {
               should be represented accurately — not understated, but not
               overclaimed either.
             </p>
+          </CaseStudySection>
+
+          <CaseStudySection title="Project Links">
+            <div className="flex flex-wrap gap-3 not-prose">
+              <a
+                href="https://drive.google.com/file/d/1IsQ7xpy9nJJbuQrM3S4M1fcnfo-HFXH3/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
+              >
+                <FileText size={15} /> Official Report
+              </a>
+              <a
+                href="https://www.figma.com/design/341EgzaSujfL9woXsG4VdH/LearnBetter?node-id=0-1&p=f&t=XvsJTVhqb2cfIoJV-0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-md hover:bg-secondary transition-colors"
+              >
+                <Figma size={15} /> Figma
+              </a>
+            </div>
           </CaseStudySection>
 
           <div className="section-divider mt-10 pt-6 flex justify-between text-sm">
