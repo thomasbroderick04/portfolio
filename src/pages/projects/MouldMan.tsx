@@ -684,7 +684,7 @@ const MouldMan = () => {
               ← Previous: MindSpark
             </Link>
             <Link to="/projects/project-three" className="font-medium hover:text-accent transition-colors">
-              Next: Project Three →
+              Next: LearnBetter →
             </Link>
           </div>
         </article>
