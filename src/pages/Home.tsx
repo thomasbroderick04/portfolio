@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Layout from "@/components/Layout";
-import mindsparkHero from "@/assets/mindspark-hero.jpg";
-import mouldmanHero from "@/assets/mouldman-hero.jpg";
+import mindsparkHero from "@/assets/mindspark-hero-devices.png";
+import mouldmanHero from "@/assets/mouldman-hero-devices.png";
 import learnbetterHero from "@/assets/learnbetter-hero.png";
 
 const featuredProjects = [
