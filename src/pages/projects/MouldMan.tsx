@@ -63,7 +63,7 @@ const MouldMan = () => {
 
           <ProjectMeta
             items={[
-              { label: "Role", value: "UX Designer (team of 4)" },
+              { label: "Role", value: "UX Designer & Lead Visual/Prototype Implementer (team of 4)" },
               { label: "Duration", value: "Jan 2026 – May 2026" },
               { label: "Module", value: "CS4088 — User Experience in Practice" },
               { label: "Tools", value: "Figma · Thematic Analysis" },
@@ -100,8 +100,15 @@ const MouldMan = () => {
             <p>
               Within a team of four (Yvonne Morrissey, Samuel Hellqvist, Zoe
               Flannery, and myself), I contributed to the thematic analysis,
-              persona development, information architecture, visual design,
-              and usability testing synthesis.
+              persona development, information architecture, and usability
+              testing synthesis. Beyond that shared work, I was{" "}
+              <strong>solely responsible for implementing the visual
+              design of the website in Figma</strong> — building out the
+              full high-fidelity prototype, establishing the type scale,
+              colour system, component library, spacing, and interaction
+              states, and translating the team&rsquo;s wireframes and IA
+              decisions into the final clickable interface that was tested
+              with users and delivered to the client.
             </p>
           </CaseStudySection>
 
@@ -617,13 +624,29 @@ const MouldMan = () => {
               exercise could.
             </p>
             <p>
+              The project also gave me real ownership over visual
+              implementation. While the research, IA, and content decisions
+              were genuinely shared across the team, I was the one who took
+              those agreed directions and built the entire high-fidelity
+              prototype in Figma — the type scale, colour system, component
+              library, page layouts, states, and interactions. That meant
+              every visual and interactive detail in the final website
+              passed through my hands, and I was responsible for making sure
+              the implementation stayed faithful to the research, the
+              personas, and the accessibility standards we&rsquo;d set. It
+              was the part of the project where I had the most direct
+              creative control, and it&rsquo;s where I learned the most
+              about translating UX decisions into a coherent, working
+              interface.
+            </p>
+            <p>
               Finally, the project sharpened how I work in a team. Splitting
-              ownership of pages, holding shared standards for typography,
-              spacing, and tone, and resolving disagreements through
-              evidence rather than preference made the final site feel
-              coherent despite multiple hands shaping it. That experience
-              gave me more confidence in collaborative UX work and in
-              advocating for research-led decisions inside a group.
+              ownership of research and content, holding shared standards
+              for typography, spacing, and tone, and resolving disagreements
+              through evidence rather than preference made the final site
+              feel coherent despite multiple hands shaping it. That
+              experience gave me more confidence in collaborative UX work
+              and in advocating for research-led decisions inside a group.
             </p>
           </CaseStudySection>
 
