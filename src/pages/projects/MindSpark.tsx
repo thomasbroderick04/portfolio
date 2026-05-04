@@ -134,10 +134,17 @@ const MindSpark = () => {
               feedback, small touch targets, or confusing interaction design
               can distort performance independently of cognitive ability.
             </p>
-            <p className="text-foreground italic">
-              What happens when cognitive testing is treated not just as
-              measurement, but as an interaction experience?
-            </p>
+            <div className="space-y-3 mt-4">
+              <p>
+                <strong>RQ1:</strong> How do current cognitive assessment tools function in evaluating cognitive abilities, and what design limitations do they exhibit?
+              </p>
+              <p>
+                <strong>RQ2:</strong> What design considerations can enhance the accessibility and usability of cognitive assessment tools?
+              </p>
+              <p>
+                <strong>RQ3:</strong> How can different modes of interaction be combined to create effective cognitive assessment experiences?
+              </p>
+            </div>
           </CaseStudySection>
 
           {/* Role */}
