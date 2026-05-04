@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
-import mindsparkHero from "@/assets/mindspark-hero.jpg";
-import mouldmanHero from "@/assets/mouldman-hero.jpg";
-import placeholderHero from "@/assets/placeholder-project.jpg";
+import mindsparkHero from "@/assets/mindspark-hero-devices.png";
+import mouldmanHero from "@/assets/mouldman-hero-devices.png";
+import learnbetterHero from "@/assets/learnbetter-hero.png";
 
 const projects = [
   {
@@ -32,7 +32,7 @@ const projects = [
     year: "2022",
     description:
       "A student e-learning companion designed to support focus, organisation, and connection in remote learning. My contribution focused on problem framing, personas, HMW, and the sketches that became the Progress and Education Video features.",
-    image: placeholderHero,
+    image: learnbetterHero,
     path: "/projects/project-three",
   },
 ];
