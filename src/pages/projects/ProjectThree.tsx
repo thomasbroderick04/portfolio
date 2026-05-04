@@ -4,6 +4,7 @@ import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 
+import heroImage from "@/assets/learnbetter-hero.png";
 import affinityCluster from "@/assets/learnbetter-affinity-cluster.png";
 import brainstormingProblem from "@/assets/learnbetter-brainstorming-problem.png";
 import brainstormingSolution from "@/assets/learnbetter-brainstorming-solution.png";
@@ -77,13 +78,14 @@ const ProjectThree = () => {
             ]}
           />
 
-          <ImagePlaceholder
-            label="Hero image — final LearnBetter dashboard"
-            description="Final polished hero showing the home/dashboard screen with 2–3 supporting screens such as progress, chat, and focus."
-            items={[
-              "Replace with the final composed hero image once available.",
-            ]}
-          />
+          <figure className="my-8">
+            <img
+              src={heroImage}
+              alt="LearnBetter app hero showing the splash screen and module dashboard"
+              className="w-full h-auto"
+              loading="eager"
+            />
+          </figure>
 
           {/* Overview */}
           <CaseStudySection title="Overview">
