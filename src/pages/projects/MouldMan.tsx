@@ -63,7 +63,7 @@ const MouldMan = () => {
 
           <ProjectMeta
             items={[
-              { label: "Role", value: "UX Designer (team of 4)" },
+              { label: "Role", value: "UX Designer & Lead Visual/Prototype Implementer (team of 4)" },
               { label: "Duration", value: "Jan 2026 – May 2026" },
               { label: "Module", value: "CS4088 — User Experience in Practice" },
               { label: "Tools", value: "Figma · Thematic Analysis" },
@@ -100,8 +100,15 @@ const MouldMan = () => {
             <p>
               Within a team of four (Yvonne Morrissey, Samuel Hellqvist, Zoe
               Flannery, and myself), I contributed to the thematic analysis,
-              persona development, information architecture, visual design,
-              and usability testing synthesis.
+              persona development, information architecture, and usability
+              testing synthesis. Beyond that shared work, I was{" "}
+              <strong>solely responsible for implementing the visual
+              design of the website in Figma</strong> — building out the
+              full high-fidelity prototype, establishing the type scale,
+              colour system, component library, spacing, and interaction
+              states, and translating the team&rsquo;s wireframes and IA
+              decisions into the final clickable interface that was tested
+              with users and delivered to the client.
             </p>
           </CaseStudySection>
 
