@@ -9,9 +9,10 @@ const Contact = () => {
           <p className="project-tag mb-4">Contact</p>
           <h1 className="mb-6">Let&rsquo;s talk.</h1>
           <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-xl">
-            I&rsquo;m open to graduate UX roles, internships, freelance work,
-            and collaborations — particularly in healthcare, civic tech, or
-            accessibility-focused product work.
+            I&rsquo;m open to graduate UX roles, internships, freelance work, and collaborations &mdash; particularly in customer experience technology, accessibility-focused product design, AI-supported digital services, and interaction design that makes complex systems easier for people to use.
+          </p>
+          <p className="text-base text-muted-foreground leading-relaxed mb-10 max-w-xl">
+            I&rsquo;m especially interested in work that improves how people navigate digital products, service journeys, and support experiences across different contexts.
           </p>
 
           <div className="space-y-3 mb-12">
