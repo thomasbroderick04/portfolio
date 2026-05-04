@@ -410,35 +410,21 @@ const ProjectThree = () => {
               through iteration driven by structured testing.
             </p>
 
-            <ImagePlaceholder
-              label="User test protocol documents (low-fidelity & high-fidelity)"
-              description="Add screenshots of the two protocol documents I authored — the low-fidelity protocol covering music, chat, and performance flows, and the high-fidelity protocol covering all six feature flows plus the ten-question post-test questionnaire."
-              items={[
-                "ThomasBroderickUserTestProtocolLowFidelity — three feature task flows",
-                "User_Test_Protocol_High_Fidelity — six feature task flows + 10-question questionnaire",
-              ]}
-            />
-
-            <ImagePlaceholder
-              label="High-fidelity user test notes & findings"
-              description="Add a screenshot of the per-feature notes document (NotesHighFidelityUserTest) showing the observations and 'potential improvements' synthesised for each of the six feature flows."
-            />
-
             <div className="grid md:grid-cols-3 gap-4 my-8">
               <DocImage
                 src={userTest1}
                 alt="User testing session — participant interacting with the People screen on an iPhone prototype"
-                caption=""
+                caption="Session 1 — participant navigating the People/chat screen."
               />
               <DocImage
                 src={userTest2}
-                alt="User testing session — participant tapping the Modules screen"
-                caption=""
+                alt="User testing session — participant tapping the Modules screen showing module list and mascot"
+                caption="Session 2 — participant exploring the Modules screen."
               />
               <DocImage
                 src={userTest3}
-                alt="User testing session — participant using the redesigned home screen"
-                caption=""
+                alt="User testing session — participant using the home screen with Performance, Education Videos, Chat, and Focus shortcuts"
+                caption="Session 2 — participant using the redesigned home screen with clearer shortcuts."
               />
             </div>
           </CaseStudySection>
