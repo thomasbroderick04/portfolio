@@ -398,7 +398,7 @@ const MouldMan = () => {
                 moments of reassurance. Two tasks were chosen because
                 together they cover the website&rsquo;s core value:
               </p>
-              <ul className="mt-3 space-y-1.5 text-sm pl-5 list-disc marker:text-muted-foreground">
+              <ul className="mt-3 space-y-2 text-base pl-5 list-disc marker:text-muted-foreground">
                 <li>
                   <strong>Task 1 — Book a survey from the homepage.</strong>{" "}
                   Tests the primary conversion flow and the trust signals around it.
@@ -430,7 +430,7 @@ const MouldMan = () => {
                 qualitative feedback, which clustered into a small number of
                 consistent patterns:
               </p>
-              <ul className="mt-3 space-y-1.5 text-sm pl-5 list-disc marker:text-muted-foreground">
+              <ul className="mt-3 space-y-2 text-base pl-5 list-disc marker:text-muted-foreground">
                 <li>
                   <strong>Trust signals worked.</strong> Multiple
                   participants spontaneously called out the before/after
@@ -466,7 +466,7 @@ const MouldMan = () => {
             <div className="mt-6">
               <h3 className="text-base font-semibold text-foreground mb-2">What we changed</h3>
               <p>Each pattern translated into a specific revision before the final design:</p>
-              <ul className="mt-3 space-y-1.5 text-sm pl-5 list-disc marker:text-muted-foreground">
+              <ul className="mt-3 space-y-2 text-base pl-5 list-disc marker:text-muted-foreground">
                 <li>Renamed &ldquo;Property Location&rdquo; → &ldquo;Address&rdquo; on the booking form.</li>
                 <li>Added a &ldquo;Text Now&rdquo; option alongside the existing call action.</li>
                 <li>Broke up dense Services copy with icons, bullets, and tighter sectioning.</li>
@@ -546,7 +546,7 @@ const MouldMan = () => {
               ended once wireframing began — it stayed live as a
               decision-making tool throughout the project.
             </p>
-            <ul className="space-y-1.5 text-sm pl-5 list-disc marker:text-muted-foreground">
+            <ul className="space-y-2 text-base pl-5 list-disc marker:text-muted-foreground">
               <li>
                 <strong>Thematic analysis</strong> shaped the IA: each top-level
                 page maps to a theme or persona need.
