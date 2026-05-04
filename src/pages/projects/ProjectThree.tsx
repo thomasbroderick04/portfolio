@@ -173,6 +173,8 @@ const ProjectThree = () => {
               <li>Persona development, especially personas centred on time management, study organisation, procrastination, stress, and balancing study with other commitments.</li>
               <li>Sketching early app ideas, including progress tracking, education video access, and dashboard layouts.</li>
               <li>Storyboard work focused on study structure, completed work, remaining work, and reducing procrastination.</li>
+              <li>Authoring the user test protocols for both the low-fidelity and high-fidelity prototypes — defining the task flows, scripting the step-by-step instructions for each feature, and writing the post-test questionnaire used to gather qualitative feedback.</li>
+              <li>Running and documenting user testing sessions on the high-fidelity prototype — observing participants across all six feature flows, recording behaviour and pain points, and synthesising the findings into "potential improvements" that fed back into the next iteration.</li>
             </ul>
             <p>
               These ideas were not left at the rough concept stage. My early
