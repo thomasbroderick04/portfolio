@@ -566,22 +566,28 @@ const MindSpark = () => {
               time I fully understood how interface design can influence
               something as sensitive as interpretation, confidence, and
               perceived performance. The project pushed me to think much
-              more seriously about how a system feels to use, what burdens
+              more seriously about how a system feels to use, what demands
               it places on people, and what unintended effects design
               decisions can create.
             </p>
             <p>
               It also reinforced that accessibility is not a layer added at
               the end. Many of the most important design decisions began as
-              accessibility questions — and the answers ended up improving
-              the experience more broadly, not just for a narrow user group.
+              accessibility questions, and the answers improved the
+              experience more broadly rather than only addressing the needs
+              of a narrow user group.
             </p>
             <p>
               Finally, building the coded pathway and hardware prototype
-              showed me that even small interaction choices can create
-              technical consequences. That experience made me better at
-              thinking through feasibility earlier and gave me more
-              confidence in working across design and development boundaries.
+              gave me a much better understanding of how design decisions
+              can shape technical implementation. It showed me that even
+              small interaction choices can create technical constraints,
+              dependencies, and trade-offs. That experience made me more
+              aware of feasibility earlier in the process and gave me more
+              confidence in communicating with technical teams, asking
+              better questions, and bringing their input into the design
+              process sooner so that the final outcome takes all relevant
+              factors into account.
             </p>
           </CaseStudySection>
 
