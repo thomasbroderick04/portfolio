@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FileText, Figma, Github } from "lucide-react";
 import Layout from "@/components/Layout";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
@@ -603,6 +604,36 @@ const MindSpark = () => {
               process sooner so that the final outcome takes all relevant
               factors into account.
             </p>
+          </CaseStudySection>
+
+          {/* Project links */}
+          <CaseStudySection title="Project Links">
+            <div className="flex flex-wrap gap-3 not-prose">
+              <a
+                href="https://drive.google.com/file/d/1BEWxv461Gl1tzZD5GrNmQImSpTAdbcsZ/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
+              >
+                <FileText size={15} /> Official Report
+              </a>
+              <a
+                href="https://www.figma.com/design/2IiUGF681jgSsJCI0N8fL2/MindSpark---FYP---22071253?t=c5A4NlZ1q6mbWld4-0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-md hover:bg-secondary transition-colors"
+              >
+                <Figma size={15} /> Figma
+              </a>
+              <a
+                href="https://github.com/thomasbroderick04/22071253_MindSpark_FYP/tree/main"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-md hover:bg-secondary transition-colors"
+              >
+                <Github size={15} /> GitHub Repository
+              </a>
+            </div>
           </CaseStudySection>
 
           {/* Footer nav */}
