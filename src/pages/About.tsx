@@ -174,24 +174,6 @@ const About = () => {
             </div>
           </section>
 
-          {/* Looking forward — closing block */}
-          <section className="mb-12 rounded-lg border border-border bg-secondary/60 p-6 md:p-8">
-            <h2 className="text-xl md:text-2xl font-semibold mb-3 tracking-tight">
-              Looking forward
-            </h2>
-            <p className="text-base text-muted-foreground leading-relaxed mb-5">
-              I&rsquo;m looking for graduate UX roles where research,
-              accessibility, and craft are taken seriously — particularly in
-              healthcare, civic technology, or product work where design
-              decisions have real weight. Open to remote and relocation.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
-            >
-              Get in touch →
-            </Link>
-          </section>
         </article>
       </div>
     </Layout>
