@@ -341,35 +341,88 @@ const ProjectThree = () => {
           {/* User testing */}
           <CaseStudySection title="User testing and iteration">
             <p>
+              I personally authored the user test protocols for both the
+              low-fidelity and high-fidelity prototypes. Rather than testing
+              ad-hoc, I scripted explicit task flows so that every participant
+              was guided through the same set of feature interactions in the
+              same order. For the low-fidelity paper prototype, the protocol
+              focused on three core flows: locating and using the music
+              feature, starting a one-on-one chat, and interrogating the
+              academic-progress feature for a specific module. For the
+              high-fidelity prototype, the protocol expanded to six full
+              feature flows — account creation and settings, educational
+              content per module, distraction limiting, performance tracking
+              and asking the module head a question, music, and peer
+              communication — followed by a ten-question post-test
+              questionnaire I wrote to capture qualitative reactions on
+              clarity, efficiency, missing functionality, visual support, and
+              redundancy.
+            </p>
+            <p>
+              I also ran and documented the high-fidelity sessions myself,
+              taking structured notes per feature: what the participant did
+              successfully, where they hesitated, and what they explicitly
+              flagged as a friction point. From those notes I synthesised a
+              set of "potential improvements" for each feature — for example,
+              offering a shorter sign-up path and an in-app tutorial for
+              account settings (Feature 1), clearer guidance on which module
+              to choose (Feature 2), more customisation options for the
+              distraction limiter (Feature 3), and more detailed per-module
+              feedback in the performance view (Feature 4). Those
+              improvements were not abstract observations; they were the
+              direct input that informed the iteration loop between
+              fidelities.
+            </p>
+            <p>
               <strong>Low-fidelity testing.</strong> The participant could
               complete the tasks successfully and understood what each button
               was meant to do, but three areas still needed improvement: the
-              performance feature needed to be more individualised by module and
-              provide more information; the feature name “Lock/Restrict app on
-              device” was too long and wordy; and the chat feature needed a
-              screen where users could choose whom to communicate with. Even in
-              the rough version the structure was broadly understandable, but
-              content and feature clarity still needed development. With the
-              help of my sketches and storyboards, this fed directly into the
-              plan for the medium-fidelity prototype.
+              performance feature needed to be more individualised by module
+              and provide more information; the feature name “Lock/Restrict
+              app on device” was too long and wordy; and the chat feature
+              needed a screen where users could choose whom to communicate
+              with. Even in the rough version the structure was broadly
+              understandable, but content and feature clarity still needed
+              development. With the help of my sketches and storyboards, this
+              fed directly into the plan for the medium-fidelity prototype.
             </p>
             <p>
-              <strong>Medium-fidelity testing.</strong> The participant liked
-              the general design and colour scheme and found the app easy to
-              navigate overall, but several specific problems appeared: the path
-              to account settings was not clear, the profile picture did not
-              look clickable enough, the shortcuts were not visible enough to be
+              <strong>Medium / high-fidelity testing.</strong> The participant
+              liked the general design and colour scheme and found the app
+              easy to navigate overall. The post-test questionnaire confirmed
+              the interface read as intuitive, the button styling and iconography
+              supported wayfinding, and no features were perceived as
+              redundant. Specific issues did still surface: the path to
+              account settings was not clear, the profile picture did not look
+              clickable enough, the shortcuts were not visible enough to be
               used, and some features (especially module information such as
-              lecture videos and slides) were too hard to reach quickly.
+              lecture videos and slides) were too hard to reach quickly. The
+              participant also suggested a personalisation step for choosing
+              an academic institution.
             </p>
             <p>
               Those findings led directly into the high-fidelity refinements.
-              The account settings path was improved by making the profile area
-              more obviously interactive, shortcut visibility was improved, and
-              a direct module button was added on the home screen to make
-              module information easier to reach. The app did not just become
-              more polished visually — it became more usable through iteration.
+              The account settings path was improved by making the profile
+              area more obviously interactive, shortcut visibility was
+              improved, and a direct module button was added on the home
+              screen to make module information easier to reach. The app did
+              not just become more polished visually — it became more usable
+              through iteration driven by structured testing.
             </p>
+
+            <ImagePlaceholder
+              label="User test protocol documents (low-fidelity & high-fidelity)"
+              description="Add screenshots of the two protocol documents I authored — the low-fidelity protocol covering music, chat, and performance flows, and the high-fidelity protocol covering all six feature flows plus the ten-question post-test questionnaire."
+              items={[
+                "ThomasBroderickUserTestProtocolLowFidelity — three feature task flows",
+                "User_Test_Protocol_High_Fidelity — six feature task flows + 10-question questionnaire",
+              ]}
+            />
+
+            <ImagePlaceholder
+              label="High-fidelity user test notes & findings"
+              description="Add a screenshot of the per-feature notes document (NotesHighFidelityUserTest) showing the observations and 'potential improvements' synthesised for each of the six feature flows."
+            />
 
             <div className="grid md:grid-cols-3 gap-4 my-8">
               <DocImage
