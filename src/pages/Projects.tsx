@@ -26,12 +26,12 @@ const projects = [
     path: "/projects/mould-man",
   },
   {
-    title: "Project Three",
-    type: "In Development",
-    discipline: "TBC",
-    year: "2026",
+    title: "LearnBetter",
+    type: "Group Project · First Year",
+    discipline: "UX Research · Concept · Sketching",
+    year: "2022",
     description:
-      "A forthcoming case study currently in research and definition.",
+      "A student e-learning companion designed to support focus, organisation, and connection in remote learning. My contribution focused on problem framing, personas, HMW, and the sketches that became the Progress and Education Video features.",
     image: placeholderHero,
     path: "/projects/project-three",
   },
