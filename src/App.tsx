@@ -20,7 +20,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+          <BrowserRouter basename="/interaction-space">
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
