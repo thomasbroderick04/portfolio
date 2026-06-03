@@ -43,7 +43,7 @@ const Home = () => {
             Hi, I&rsquo;m Thomas Broderick — a UX designer focused on usability,
             accessibility, and human-centred design.
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-4xl">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-6xl">
             I am a final-year Digital Media Design student at the University of
             Limerick, specialising in user research, interaction design, and
             accessible interface design. My work focuses on designing digital
