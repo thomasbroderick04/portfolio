@@ -151,7 +151,7 @@ const MouldMan = () => {
                   explains it in plain language.
                 </p>
                 <p className="text-sm mt-2 text-foreground">
-                  <strong>➜ Design response:</strong> a Services page that
+                  <strong>→ Design response:</strong> a Services page that
                   leads with diagnosis and process rather than price, and a
                   Booking flow that frames every job as starting with a
                   professional survey.
@@ -170,7 +170,7 @@ const MouldMan = () => {
                   confident making contact.
                 </p>
                 <p className="text-sm mt-2 text-foreground">
-                  <strong>➜ Design response:</strong> testimonials and
+                  <strong>→ Design response:</strong> testimonials and
                   before/after evidence on the homepage, a calm navy palette,
                   and reassurance copy alongside the booking form rather than
                   hard sales language.
@@ -188,7 +188,7 @@ const MouldMan = () => {
                   polish.
                 </p>
                 <p className="text-sm mt-2 text-foreground">
-                  <strong>➜ Design response:</strong> phone number anchored in
+                  <strong>→ Design response:</strong> phone number anchored in
                   the top bar on every page, a persistent “urgent help” card,
                   and a single, unmissable primary CTA (“Book A Survey”).
                 </p>
@@ -204,7 +204,7 @@ const MouldMan = () => {
                   mould, how to prevent it, and what to expect from the service.
                 </p>
                 <p className="text-sm mt-2 text-foreground">
-                  <strong>➜ Design response:</strong> A dedicated top-level
+                  <strong>→ Design response:</strong> A dedicated top-level
                   Information Hub was treated as a central part of the
                   information architecture, with articles on causes, prevention,
                   and health. It was designed to give renters useful supporting
