@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-// icons removed
 import Layout from "@/components/Layout";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
+
 import mouldmanHero from "@/assets/mouldman-hero-devices.png";
 import personaRachel from "@/assets/mouldman-persona-rachel.png";
 import servicesPage from "@/assets/mouldman-services-page.png";
@@ -12,7 +12,6 @@ import journeyMark from "@/assets/mouldman-journey-mark.png";
 import storyboardSarah from "@/assets/mouldman-storyboard-sarah.png";
 import siteFlow from "@/assets/mouldman-site-flow.png";
 import wireframes from "@/assets/mouldman-wireframes.png";
-
 import testimonials from "@/assets/mouldman-testimonials.png";
 import bookingForm from "@/assets/mouldman-booking-form.png";
 import mobileHomeAbout from "@/assets/mouldman-mobile-home-about.png";
@@ -24,7 +23,6 @@ interface DocImageProps {
   caption: string;
 }
 
-/** Document/screenshot figure — uses object-contain so nothing gets cropped. */
 const DocImage = ({ src, alt, caption }: DocImageProps) => (
   <figure className="my-8">
     <div className="rounded-md border border-border bg-secondary/40 p-3 md:p-4">
@@ -48,25 +46,30 @@ const MouldMan = () => {
         <article className="container-content">
           <Link
             to="/projects"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-8 inline-block"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-16 inline-block"
           >
             ← Back to projects
           </Link>
 
-          <p className="project-tag mb-3">Client Website · CS4088 · Group of 4</p>
           <h1 className="mb-5">MouldMan</h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            A research-led UX project for an Irish mould-remediation service —
-            translating real customer anxieties into an information
-            architecture that builds trust and makes contact effortless.
+            A research-led UX project for an Irish mould-remediation service,
+            translating real customer anxieties into an information architecture
+            that builds trust and makes contact effortless.
           </p>
 
           <ProjectMeta
             items={[
-              { label: "Role", value: "UX Designer & Lead Visual/Prototype Implementer (team of 4)" },
+              {
+                label: "Role",
+                value: "UX Designer & Lead Visual/Prototype Implementer (group of 4)",
+              },
               { label: "Duration", value: "Jan 2026 – May 2026" },
-              { label: "Module", value: "CS4088 — User Experience in Practice" },
-              { label: "Tools", value: "Figma · Thematic Analysis" },
+              {
+                label: "Module",
+                value: "CS4088 — User Experience in Practice",
+              },
+              { label: "Tools", value: "Figma" },
             ]}
           />
 
@@ -82,338 +85,373 @@ const MouldMan = () => {
             </div>
           </figure>
 
-          {/* ---------- 1. OVERVIEW ---------- */}
           <CaseStudySection title="Overview">
             <p>
-              MouldMan is a mould-remediation service based in Limerick,
-              Ireland, run by our client, Steve. The brief was to design a website that
-              doesn&rsquo;t just present services, but actively builds trust
-              with customers facing health anxiety, property concerns, or
-              rental disputes.
+              Mould Man is a real Irish mould-remediation service run by a
+              client we partnered with in a final year module. Our objective was
+              to design a website that not only presents the company’s services
+              clearly, but also builds trust with customers who may be dealing
+              with health concerns, property damage, or disputes with landlords.
             </p>
             <p>
               The project ran across two assignments: a Requirements Gathering
-              phase grounded in thematic analysis of real customer reviews,
-              and a Design Specification phase that produced a fully
-              accessible interactive prototype tested with users.
+              phase grounded in thematic analysis of real customer reviews, and
+              a Design Specification phase that produced a fully accessible
+              interactive prototype tested with users.
             </p>
             <p>
-              Within a team of four (Yvonne Morrissey, Samuel Hellqvist, Zoe
-              Flannery, and myself), I contributed to the thematic analysis,
+              Within a group of four, I contributed to the thematic analysis,
               persona development, information architecture, and usability
-              testing synthesis. Beyond that shared work, I was{" "}
-              <strong>solely responsible for implementing the visual
-              design of the website in Figma</strong> — building out the
-              full high-fidelity prototype, establishing the type scale,
-              colour system, component library, spacing, and interaction
-              states, and translating the team&rsquo;s wireframes and IA
-              decisions into the final clickable interface that was tested
-              with users and delivered to the client.
+              testing synthesis. Beyond that shared work, I was solely
+              responsible for implementing the visual design of the website in
+              Figma, building out the full high-fidelity prototype, establishing
+              the type scale, colour system, component library, spacing, and
+              interaction states, and translating the group’s wireframes and
+              Information Architecture (IA) decisions into the final clickable
+              interface that was tested with users and delivered to the client.
             </p>
           </CaseStudySection>
 
-          {/* ---------- 2. USER RESEARCH ---------- */}
           <CaseStudySection title="User Research — What Customers Actually Want">
             <p>
-              Mould isn&rsquo;t a neutral subject. By the time someone is
-              searching for a remediation service they&rsquo;re usually
-              already worried — about their family&rsquo;s health, the value
-              of their property, or a tenancy dispute. Designing for that
-              emotional state meant our first job wasn&rsquo;t to design at
-              all; it was to listen.
+              Mould growth is a stressful problem to deal with. By the time
+              someone is looking for a remediation service, they are often
+              already worried about their health, their home, or a dispute with
+              a landlord or tenant. That meant the project had to begin with
+              understanding those concerns properly before moving into design.
             </p>
             <p>
-              We carried out a structured <strong>thematic analysis</strong> of
-              real customer reviews drawn from Irish and international
-              mould-removal services, plus a small set of stakeholder
-              interviews with the client. Reviews were coded line-by-line,
-              clustered into candidate themes, and then refined through team
-              discussion until four dominant themes held together across the
-              dataset. Crucially, we kept a traceable link between every
-              theme and the underlying quotes — which meant later, when the
-              team disagreed on a layout or a label, we could resolve the
-              argument by going back to the evidence rather than to opinion.
+              We carried out a structured thematic analysis of real customer
+              reviews from Irish and international mould-removal services,
+              alongside a small number of stakeholder interviews with our
+              client. Reviews were coded line by line, grouped into recurring
+              patterns, and refined through a group discussion until four clear
+              themes consistently emerged across the dataset. We also kept a
+              direct link between each theme and the original quotes it was
+              based on. This became important later, because if the group
+              disagreed on how the website should present information or what
+              language it should use, we could go back to the review data and
+              justify the decision.
             </p>
             <p>
-              The four themes below are the ones that survived that process,
-              and every single one of them maps onto a concrete decision in
-              the final Information Architecture (IA), copy, or interaction design.
+              The four themes below were the clearest outcomes of that process,
+              and each one informed specific decisions in the final structure,
+              wording, or interaction design of the website.
             </p>
 
             <div className="mt-6 divide-y divide-border border-y border-border">
               <div className="py-5">
                 <p className="project-tag mb-1">Theme 1</p>
-                <h3 className="text-base font-semibold text-foreground mb-1">Root-cause resolution &amp; diagnostic communication</h3>
+                <h3 className="text-base font-semibold text-foreground mb-1">
+                  Root-cause resolution &amp; diagnostic communication
+                </h3>
                 <p className="text-sm">
-                  Customers don&rsquo;t want surface cleaning — they want
-                  someone who diagnoses <em>why</em> the mould is there and
+                  Customers <em>do not</em> want surface cleaning; they want a
+                  service who diagnoses <em>why</em> the mould is there and
                   explains it in plain language.
                 </p>
                 <p className="text-sm mt-2 text-foreground">
-                  <strong>→ Design response:</strong> a Services page that
+                  <strong>➜ Design response:</strong> a Services page that
                   leads with diagnosis and process rather than price, and a
                   Booking flow that frames every job as starting with a
                   professional survey.
                 </p>
               </div>
+
               <div className="py-5">
                 <p className="project-tag mb-1">Theme 2</p>
-                <h3 className="text-base font-semibold text-foreground mb-1">Health risks, safety anxiety &amp; the need for reassurance</h3>
+                <h3 className="text-base font-semibold text-foreground mb-1">
+                  Health risks, safety anxiety &amp; the need for reassurance
+                </h3>
                 <p className="text-sm">
-                  Reviews are full of fear — for children, asthma sufferers,
-                  elderly relatives. People need credibility signals before
-                  they&rsquo;ll even pick up the phone.
+                  Many reviews reflected worry about health, especially when
+                  children, asthma, or older relatives were involved. That made
+                  trust and credibility essential before users would feel
+                  confident making contact.
                 </p>
                 <p className="text-sm mt-2 text-foreground">
-                  <strong>→ Design response:</strong> testimonials and
-                  before/after evidence on the homepage, a calm navy
-                  palette, and reassurance copy alongside the booking form
-                  rather than hard sales language.
+                  <strong>➜ Design response:</strong> testimonials and
+                  before/after evidence on the homepage, a calm navy palette,
+                  and reassurance copy alongside the booking form rather than
+                  hard sales language.
                 </p>
               </div>
+
               <div className="py-5">
                 <p className="project-tag mb-1">Theme 3</p>
-                <h3 className="text-base font-semibold text-foreground mb-1">Responsiveness &amp; ease of contact</h3>
+                <h3 className="text-base font-semibold text-foreground mb-1">
+                  Responsiveness &amp; ease of contact
+                </h3>
                 <p className="text-sm">
-                  Slow replies and hidden contact details were the most
-                  common complaint. Speed and visibility of contact matter
-                  more than polish.
+                  Slow replies and hidden contact details were the most common
+                  complaint. Speed and visibility of contact matter more than
+                  polish.
                 </p>
                 <p className="text-sm mt-2 text-foreground">
-                  <strong>→ Design response:</strong> phone number anchored
-                  in the top bar on every page, a persistent
-                  &ldquo;urgent help&rdquo; card, and a single, unmissable
-                  primary CTA (&ldquo;Book A Survey&rdquo;).
+                  <strong>➜ Design response:</strong> phone number anchored in
+                  the top bar on every page, a persistent “urgent help” card,
+                  and a single, unmissable primary CTA (“Book A Survey”).
                 </p>
               </div>
+
               <div className="py-5">
                 <p className="project-tag mb-1">Theme 4</p>
-                <h3 className="text-base font-semibold text-foreground mb-1">Educational &amp; informative content</h3>
+                <h3 className="text-base font-semibold text-foreground mb-1">
+                  Educational &amp; informative content
+                </h3>
                 <p className="text-sm">
-                  Customers reward sites that <em>teach</em> — explaining
-                  causes, prevention, and what to expect — over those that
-                  simply sell.
+                  Customers valued websites that clearly explained the causes of
+                  mould, how to prevent it, and what to expect from the service.
                 </p>
                 <p className="text-sm mt-2 text-foreground">
-                  <strong>→ Design response:</strong> a top-level
-                  Information hub treated as a first-class part of the IA,
-                  with articles on causes, prevention and health — usable
-                  as evidence by renters and as reassurance by homeowners.
+                  <strong>➜ Design response:</strong> A dedicated top-level
+                  Information Hub was treated as a central part of the
+                  information architecture, with articles on causes, prevention,
+                  and health. It was designed to give renters useful supporting
+                  information, while also reassuring homeowners by clearly
+                  explaining the problem.
                 </p>
               </div>
             </div>
 
             <p className="mt-6">
-              These four themes — not aesthetics, not trends — became the
-              real brief. From this point on, every IA decision, every page
-              that earned its place in the sitemap, and every piece of
-              reassurance copy can be traced back to one of them.
+              These four themes became the foundation of the project. From that
+              point on, decisions about the site structure, page content, and
+              reassuring language were shaped by them.
             </p>
           </CaseStudySection>
 
           <CaseStudySection title="Personas — Three Very Different Customers">
             <p>
-              The themes pointed clearly to three distinct user types. Each
-              persona was built directly from the review data — quotes,
-              behaviours, and pain points all traceable back to evidence.
+              The themes revealed three clear user types, and these became the
+              basis for our personas. Each one was grounded in recurring
+              concerns, behaviours, and needs found in the customer reviews.
             </p>
 
             <div className="mt-6 space-y-6">
               <div className="border border-border rounded-md p-6 bg-card">
                 <p className="project-tag mb-1">Persona 1</p>
-                <h3 className="text-lg font-semibold text-foreground mb-1">Sarah O&rsquo;Brien — The Concerned Homeowner</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-1">
+                  Sarah O’Brien — The Concerned Homeowner
+                </h3>
                 <p className="text-sm italic text-muted-foreground mb-3">
-                  &ldquo;I just want to know my home is safe for my kids.&rdquo;
+                  “I just want to know my home is safe for my kids.”
                 </p>
                 <p className="text-sm">
                   A young mother dealing with visible mould in a family home.
-                  Anxious about her children&rsquo;s health, wants long-term
+                  Anxious about her children’s health, wants long-term
                   prevention rather than a quick fix, and needs reassurance
-                  before she&rsquo;ll even fill out a form.
+                  before she will fill out a form.
                 </p>
               </div>
 
               <div className="border border-border rounded-md p-6 bg-card">
                 <p className="project-tag mb-1">Persona 2</p>
-                <h3 className="text-lg font-semibold text-foreground mb-1">Mark Flynn — The Busy Landlord / Property Manager</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-1">
+                  Mark Flynn — The Busy Landlord / Property Manager
+                </h3>
                 <p className="text-sm italic text-muted-foreground mb-3">
-                  &ldquo;I need it done properly the first time.&rdquo;
+                  “I need it done properly the first time.”
                 </p>
                 <p className="text-sm">
                   Manages multiple rental properties. Driven by efficiency,
-                  compliance, and avoiding repeat callouts. Wants speed,
-                  clear scope, and a professional service he can rely on
-                  between tenancies.
+                  compliance, and avoiding repeat callouts. Wants speed, clear
+                  scope, and a professional service he can rely on between
+                  tenancies.
                 </p>
               </div>
 
               <div className="border border-border rounded-md p-6 bg-card">
                 <p className="project-tag mb-1">Persona 3</p>
-                <h3 className="text-lg font-semibold text-foreground mb-1">Rachel O&rsquo;Connor — The Health-Conscious Renter</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-1">
+                  Rachel O’Connor — The Health-Conscious Renter
+                </h3>
                 <p className="text-sm italic text-muted-foreground mb-3">
-                  &ldquo;I need proof that this is a real health issue.&rdquo;
+                  “I need proof that this is a real health issue.”
                 </p>
                 <p className="text-sm">
                   A renter using the site as evidence in a dispute with her
-                  landlord. Needs downloadable information, clear
-                  explanations of causes vs. surface mould, and authoritative
-                  educational content she can cite.
+                  landlord. Needs downloadable information, clear explanations
+                  of causes vs. surface mould, and authoritative educational
+                  content she can cite.
                 </p>
               </div>
             </div>
 
             <DocImage
               src={personaRachel}
-              alt="Persona sheet for Rachel O'Connor — the Health-Conscious Renter"
+              alt="Persona sheet for Rachel O’Connor — the Health-Conscious Renter"
               caption="Example persona sheet — Rachel O'Connor (representative of the format used for all three personas)."
             />
           </CaseStudySection>
 
-          {/* ---------- 4. JOURNEY MAPS & STORYBOARDS ---------- */}
           <CaseStudySection title="Customer Journey Maps &amp; Storyboards">
             <p>
-              For each persona we mapped the full journey — from the moment
-              they noticed mould, through searching online, evaluating
-              services, and finally making contact. Pain points and
-              opportunities at each stage fed directly into the IA and page
-              content.
+              For each persona, we mapped the full journey from first noticing a
+              mould problem, to searching for help online, comparing services,
+              and deciding whether to make contact. The pain points and needs
+              identified at each stage directly informed the structure of the
+              site and the content included on its pages.
             </p>
 
             <DocImage
               src={journeyMark}
               alt="Customer journey map for Mark Flynn, the busy landlord"
-              caption="Customer journey map — Mark Flynn (Busy Landlord): awareness → consideration → decision → service → loyalty."
+              caption="Customer journey map for Mark Flynn (Busy Landlord): awareness → consideration → decision → service → loyalty."
             />
 
             <div className="mt-8">
-              <h3 className="text-base font-semibold text-foreground mb-2">Storyboards</h3>
+              <h3 className="text-base font-semibold text-foreground mb-2">
+                Storyboards
+              </h3>
               <p>
-                Storyboards turned each journey into a concrete narrative —
-                the scenario in which each persona would actually arrive at
-                MouldMan, what they&rsquo;d need on screen, and what would
-                push them to act.
+                Storyboards turned each journey into a concrete user scenario.
+                They helped us show how each persona would arrive at the
+                MouldMan website, what they would need to see, and what would
+                encourage them to make contact.
               </p>
             </div>
 
             <DocImage
               src={storyboardSarah}
-              alt="Storyboard showing Sarah's emergency mould scenario from discovery to inspection"
-              caption="Storyboard — Sarah's scenario: discovering mould, searching online, finding MouldMan, booking, and the technician's visit."
+              alt="Storyboard showing Sarah’s emergency mould scenario from discovery to inspection"
+              caption="Storyboard showing the persona Sarah's scenario: discovering mould, searching online, finding MouldMan, booking, and the technician's visit."
             />
           </CaseStudySection>
 
-          {/* ---------- 5. SITE FLOWS & WIREFRAMES ---------- */}
           <CaseStudySection title="Site Flows &amp; Wireframes">
             <p>
-              From the personas and journeys we defined the site&rsquo;s
-              backbone: <strong>Home</strong>, <strong>Services</strong>,{" "}
+              From the personas and journeys we defined the site’s backbone:{" "}
+              <strong>Home</strong>, <strong>Services</strong>,{" "}
               <strong>About</strong>, an <strong>Information</strong> hub, a{" "}
-              <strong>Booking &amp; Feedback</strong> page, and persistent
-              <strong> Contact</strong> entry points. Every top-level page
-              exists because it answers something at least one persona
-              actively needs.
+              <strong>Booking &amp; Feedback</strong> page, and persistent{" "}
+              <strong>Contact</strong> entry points. Every top-level page exists
+              because it answers something at least one persona actively needs.
             </p>
 
             <DocImage
               src={siteFlow}
               alt="Site flow diagram showing primary navigation paths through the MouldMan website"
-              caption="Site flow diagram — mapping how each persona moves from the top-level pages (Home, About, Services, Information, Book) into key actions like booking an inspection, submitting contact details, reading information, and reaching the feedback page."
+              caption="Site flow diagram mapping how each persona moves from the top-level pages (Home, About, Services, Information, Book) into key actions such as booking an inspection, submitting contact details, reading information, and reaching the feedback page."
             />
 
             <div className="mt-6 divide-y divide-border border-y border-border">
               <div className="py-4">
-                <h3 className="text-base font-semibold text-foreground mb-1">Home</h3>
+                <h3 className="text-base font-semibold text-foreground mb-1">
+                  Home
+                </h3>
                 <p className="text-sm">
-                  Trust signals up front — reviews, credentials, and a clear
-                  primary CTA. Designed for both passive scanners and active
-                  researchers.
+                  Trust signals up front showing reviews, credentials, and a
+                  clear primary CTA. Designed for both passive scanners and
+                  active researchers.
                 </p>
               </div>
+
               <div className="py-4">
-                <h3 className="text-base font-semibold text-foreground mb-1">Services</h3>
+                <h3 className="text-base font-semibold text-foreground mb-1">
+                  Services
+                </h3>
                 <p className="text-sm">
-                  Clear scope of work, the difference between surface and
-                  root treatment, and what a customer can expect on the day.
+                  Clear scope of work, the difference between surface and root
+                  treatment, and what a customer can expect on the day.
                 </p>
               </div>
+
               <div className="py-4">
-                <h3 className="text-base font-semibold text-foreground mb-1">About</h3>
+                <h3 className="text-base font-semibold text-foreground mb-1">
+                  About
+                </h3>
                 <p className="text-sm">
-                  Steve&rsquo;s background and credentials — important for
-                  Sarah and Rachel, who both need to feel they&rsquo;re
-                  dealing with a credible expert.
+                  The service’s background and credentials; important for Sarah
+                  and Rachel, who both need to feel they are dealing with a
+                  credible expert.
                 </p>
               </div>
+
               <div className="py-4">
-                <h3 className="text-base font-semibold text-foreground mb-1">Information</h3>
+                <h3 className="text-base font-semibold text-foreground mb-1">
+                  Information
+                </h3>
                 <p className="text-sm">
                   Educational hub: causes of mould, prevention, health
-                  considerations, FAQs. Establishes authority before any
-                  sales conversation begins.
+                  considerations, FAQs. Establishes authority before any sales
+                  conversation begins.
                 </p>
               </div>
+
               <div className="py-4">
-                <h3 className="text-base font-semibold text-foreground mb-1">Booking &amp; Feedback</h3>
+                <h3 className="text-base font-semibold text-foreground mb-1">
+                  Booking &amp; Feedback
+                </h3>
                 <p className="text-sm">
-                  Inspection booking form with reassurance copy, clear
-                  labels, and an explicit thank-you / confirmation state.
+                  Inspection booking form designed with reassuring supporting
+                  text, clear field labels, and a distinct confirmation screen
+                  so users knew their request had been submitted successfully.
                 </p>
               </div>
+
               <div className="py-4">
-                <h3 className="text-base font-semibold text-foreground mb-1">Contact</h3>
+                <h3 className="text-base font-semibold text-foreground mb-1">
+                  Contact
+                </h3>
                 <p className="text-sm">
-                  Phone, email, and form repeated across key pages — never
-                  more than one tap away.
+                  Phone, email, and booking options were repeated across key
+                  pages so that contact was always quick and easy to access.
                 </p>
               </div>
             </div>
 
             <DocImage
               src={wireframes}
-              alt="Wireframes for the MouldMan website — Home, About, Services, and Booking pages"
-              caption="Mid-fidelity wireframes — Home, About, Services, Booking, and Information pages laid out side-by-side, showing layout structure, content hierarchy, and shared components across the site."
+              alt="Wireframes for the MouldMan website — Home, About, Services, Booking, and Information pages"
+              caption="Early wireframes showing Home, About, Services, Booking, and Information pages laid out side-by-side, showing layout structure, content hierarchy, and shared components across the site."
             />
           </CaseStudySection>
 
-          {/* ---------- 6. USABILITY TESTING ---------- */}
           <CaseStudySection title="Usability Testing — Validating the Prototype">
             <p>
-              Before treating the design as finished, we put the interactive
-              prototype in front of real users. The goal wasn&rsquo;t to
-              prove it worked — it was to find the parts that didn&rsquo;t,
-              while there was still time to fix them.
+              Before considering the design complete, we tested the interactive
+              prototype with real users. The aim was not to confirm that
+              everything worked, but to identify what was still unclear,
+              ineffective, or missing while there was still time to improve it.
             </p>
 
             <div className="mt-4">
-              <h3 className="text-base font-semibold text-foreground mb-2">Method</h3>
+              <h3 className="text-base font-semibold text-foreground mb-2">
+                Method
+              </h3>
               <p>
-                We followed a structured approach informed by the Nielsen
-                Norman Group&rsquo;s guidance on moderated usability
-                testing. Five participants were recruited to mirror our
-                target audience: <strong>three renters, one homeowner, and
-                one landlord</strong> — a deliberate match to the three
-                personas. Sessions ran 10–15 minutes each, individually, in
-                a quiet environment.
+                We followed a structured approach informed by the Nielsen Norman
+                Group’s guidance on moderated usability testing. Five
+                participants were recruited to mirror our target audience: three
+                renters, one homeowner, and one landlord. This was a deliberate
+                match to the three personas. Sessions ran 10–15 minutes each,
+                individually, in a quiet environment.
               </p>
               <p className="mt-3">
-                Each participant was given written instructions and asked
-                to read them aloud before starting, to remove
-                misinterpretation as a variable. We used the{" "}
-                <strong>think-aloud protocol</strong> throughout, so we
-                could capture not just <em>what</em> users did but{" "}
-                <em>why</em> — the hesitations, the misread labels, the
-                moments of reassurance. Two tasks were chosen because
-                together they cover the website&rsquo;s core value:
+                Each participant was given written instructions and asked to
+                read them aloud before starting, so differences in performance
+                were less likely to come from misunderstanding the task. We used
+                a think-aloud protocol throughout the sessions so we could
+                capture not only what users did, but how they understood the
+                website while using it. This made it easier to identify
+                hesitation, misunderstood labels, and moments where the design
+                gave users confidence. Two tasks were selected because,
+                together, they tested what the website most needed to do:
               </p>
               <ul className="mt-3 space-y-2 text-base pl-5 list-disc marker:text-muted-foreground">
                 <li>
                   <strong>Task 1 — Book a survey from the homepage.</strong>{" "}
-                  Tests the primary conversion flow and the trust signals around it.
+                  Tests the primary conversion flow and the trust signals around
+                  it.
                 </li>
                 <li>
-                  <strong>Task 2 — View the Services and Information pages.</strong>{" "}
-                  Tests whether the educational IA actually supports the
-                  &ldquo;research before contact&rdquo; behaviour the themes predicted.
+                  <strong>
+                    Task 2 — View the Services and Information pages.
+                  </strong>{" "}
+                  Tests whether the information architecture supports users who
+                  want to understand their mould issue before making contact
+                  with the service.
                 </li>
               </ul>
               <p className="mt-3">
@@ -429,224 +467,223 @@ const MouldMan = () => {
             />
 
             <div className="mt-2">
-              <h3 className="text-base font-semibold text-foreground mb-2">What we found</h3>
+              <h3 className="text-base font-semibold text-foreground mb-2">
+                What we found
+              </h3>
               <p>
-                Task completion was high and times were short across both
-                tasks (most under 20 seconds), suggesting the IA and primary
-                flow were broadly intuitive. The richer signal came from the
-                qualitative feedback, which clustered into a small number of
-                consistent patterns:
+                Task completion was high and times were short across both tasks
+                (most under 20 seconds), suggesting the IA and primary flow were
+                broadly intuitive. The richer signal came from the qualitative
+                feedback, which clustered into a small number of consistent
+                patterns:
               </p>
               <ul className="mt-3 space-y-2 text-base pl-5 list-disc marker:text-muted-foreground">
                 <li>
-                  <strong>Trust signals worked.</strong> Multiple
-                  participants spontaneously called out the before/after
-                  photos and the FAQs as reasons they felt comfortable
-                  progressing — direct validation of the &ldquo;need for
-                  reassurance&rdquo; theme.
+                  <strong>Trust signals worked.</strong> Multiple participants
+                  spontaneously called out the before/after photos and the FAQs
+                  as reasons they felt comfortable progressing.
                 </li>
                 <li>
-                  <strong>Form language was ambiguous.</strong> One
-                  participant didn&rsquo;t understand &ldquo;Property
-                  Location&rdquo; on the booking form and suggested
-                  &ldquo;Address&rdquo;.
+                  <strong>Form language was ambiguous.</strong> One participant
+                  did not understand “Property Location” on the booking form and
+                  suggested “Address”.
                 </li>
                 <li>
-                  <strong>Contact options weren&rsquo;t flexible enough.</strong>{" "}
-                  A participant wanted to text rather than call — useful
-                  for users who feel anxious about phone conversations.
+                  <strong>Contact options were not flexible enough.</strong> A
+                  participant wanted to text rather than call. This is useful for
+                  users who feel anxious about phone conversations.
                 </li>
                 <li>
                   <strong>Services pages were too text-heavy.</strong>{" "}
-                  Participants asked for icons, bullet points, and shorter
-                  blocks — the educational content was right, the density
-                  was wrong.
+                  Participants found the educational content useful, but felt it
+                  needed to be broken up more clearly with icons, bullet points,
+                  and shorter sections.
                 </li>
                 <li>
                   <strong>Information hub needed search.</strong> One
-                  participant tried to search the article library and
-                  couldn&rsquo;t — a clear gap as the content scales.
+                  participant expected to be able to search the article library
+                  and could not, which highlighted a clear gap as the amount of
+                  content grows.
                 </li>
               </ul>
             </div>
 
             <div className="mt-6">
-              <h3 className="text-base font-semibold text-foreground mb-2">What we changed</h3>
-              <p>Each pattern translated into a specific revision before the final design:</p>
+              <h3 className="text-base font-semibold text-foreground mb-2">
+                What we changed
+              </h3>
+              <p>
+                Each pattern translated into a specific revision before the
+                final design:
+              </p>
               <ul className="mt-3 space-y-2 text-base pl-5 list-disc marker:text-muted-foreground">
-                <li>Renamed &ldquo;Property Location&rdquo; → &ldquo;Address&rdquo; on the booking form.</li>
-                <li>Added a &ldquo;Text Now&rdquo; option alongside the existing call action.</li>
-                <li>Broke up dense Services copy with icons, bullets, and tighter sectioning.</li>
-                <li>Promoted FAQs and before/after content nearer the top of the booking journey.</li>
-                <li>Logged the search-the-Info-hub feedback as the next iteration to ship once the article library grows.</li>
+                <li>
+                  Renamed “Property Location” → “Address” on the booking form.
+                </li>
+                <li>
+                  Added a “Text Now” option alongside the existing call action.
+                </li>
+                <li>
+                  The dense ‘Services’ content was restructured with icons,
+                  bullet points, and clearer sectioning to improve readability.
+                </li>
+                <li>
+                  We identified search as a clear improvement to add in the next
+                  iteration as the article library grows.
+                </li>
               </ul>
               <p className="mt-3">
-                The testing effectively closed the research loop — the same
-                themes that had shaped the IA were now being checked by the
-                people they were designed for, and the design was tightened
-                where their behaviour disagreed with our assumptions.
+                User testing let us check whether the research-based design
+                decisions were effectively working in practice. Where users
+                interacted with the design differently than expected, we refined
+                it.
               </p>
             </div>
           </CaseStudySection>
 
-          {/* ---------- 7. FINAL DESIGN ---------- */}
-          <CaseStudySection title="Final Design — The Live Website">
+          <CaseStudySection title="Final Design — MouldMan Website">
             <p>
-              The high-fidelity design carries every research decision through
-              to the surface: a calm, trustworthy navy palette, prominent
-              contact details in the top bar, a single primary CTA
-              (&ldquo;Book A Survey&rdquo;), and educational content
-              positioned as a first-class part of the IA.
+              The high-fidelity design translates the research findings into the
+              final interface through a calm, trustworthy navy colour palette,
+              prominent contact details in the top bar, a single clear primary
+              CTA (“Book A Survey”), and educational content treated as a
+              central part of the information architecture.
             </p>
 
             <DocImage
               src={servicesPage}
-              alt="Services page of the live MouldMan website"
-              caption="Services page — clear scope of work, transparent process, and reassurance that every job starts with a professional survey."
+              alt="Services page of the final MouldMan website"
+              caption="Services page showing a clear scope of work, transparent process, and reassurance that every job starts with a professional survey."
             />
 
             <DocImage
               src={informationPage}
-              alt="Information / blog hub of the live MouldMan website"
-              caption="Information hub — educational articles on damp proofing, mould prevention, and home protection. Authority before sales."
+              alt="Information section of the final MouldMan website"
+              caption="Information hub showing educational articles on damp proofing, mould prevention, and home protection."
             />
 
             <DocImage
               src={testimonials}
-              alt="Testimonials section of the live MouldMan website"
-              caption="Testimonials section — addressing the 'health anxiety / need for reassurance' theme directly on the homepage."
+              alt="Testimonials section of the final MouldMan website"
+              caption="Testimonials section showing addressing the 'health anxiety / need for reassurance' theme directly on the homepage."
             />
 
             <DocImage
               src={bookingForm}
-              alt="Book Your Free Survey form on the live MouldMan website"
-              caption="Booking page — clear labels, reassurance copy, and an 'urgent help' panel for high-anxiety users."
+              alt="Booking page of the final MouldMan website"
+              caption="Booking page designed with clear labels, supportive wording, and an “urgent help” panel for users needing immediate support."
             />
           </CaseStudySection>
 
-          {/* ---------- 7. MOBILE PROTOTYPE ---------- */}
           <CaseStudySection title="Mobile Prototype">
             <p>
-              Most users arrive on mobile — often in the moment they discover
-              mould — so the prototype was designed mobile-first. Navigation
-              collapses into a clear menu, the primary CTA stays anchored,
-              and the educational content remains scannable on small screens.
+              Most users arrive on mobile often in the moment they discover
+              mould, so the prototype was designed mobile-first. Navigation
+              collapses into a clear menu, the primary CTA stays anchored, and
+              the educational content remains scannable on small screens.
             </p>
 
             <DocImage
               src={mobileHomeAbout}
               alt="Mobile prototype screens for the MouldMan Home and About pages"
-              caption="Mobile prototype — navigation drawer, Home page, and About page."
+              caption="Mobile prototype showing the navigation drawer, Home page, and About page."
             />
 
             <DocImage
               src={mobileInformation}
-              alt="Mobile prototype screens for the MouldMan Information section and an article page"
-              caption="Mobile prototype — Information hub and article view, with breadcrumbs and a clear back link."
+              alt="Mobile prototype screens for the MouldMan Information section and article page"
+              caption="Mobile prototype showing the Information section and article page, with the user's location clearly shown and a clear back link."
             />
           </CaseStudySection>
 
-          {/* ---------- 8. RESEARCH AS A DESIGN TOOL ---------- */}
           <CaseStudySection title="Research as a Design Tool">
             <p>
-              Across both assignments, research wasn&rsquo;t a phase that
-              ended once wireframing began — it stayed live as a
-              decision-making tool throughout the project.
+              Across both assignments, research continued to shape decisions
+              long after wireframing began.
             </p>
             <ul className="space-y-2 text-base pl-5 list-disc marker:text-muted-foreground">
               <li>
-                <strong>Thematic analysis</strong> shaped the IA: each top-level
-                page maps to a theme or persona need.
+                <strong>Thematic analysis:</strong> Each top-level page
+                responded to a theme or persona need identified in the research.
               </li>
               <li>
-                <strong>Persona evidence</strong> resolved internal disagreements —
-                when the team disagreed on a layout, we returned to which
-                persona&rsquo;s need it served.
+                <strong>Persona evidence:</strong> When the group disagreed, we
+                returned to the research to judge which direction best supported
+                user needs.
               </li>
               <li>
-                <strong>Stakeholder constraints vs. evidence</strong>: research
-                pointed to visible pricing for trust, but the client&rsquo;s
-                jobs vary too widely. We honoured both by designing around
-                quote requests with strong reassurance copy.
+                <strong>Stakeholder constraints vs. evidence:</strong> Research
+                pointed to visible pricing for trust, but the client’s jobs vary
+                too widely. We honoured both by designing around quote requests
+                and clear reassurance instead.
               </li>
               <li>
-                <strong>Usability testing</strong> closed the loop: the prototype
-                was evaluated with users completing two tasks (submit an
-                enquiry; find services and information), and findings drove
-                revisions to navigation labels, CTA placement, and FAQ
-                structure.
+                <strong>Usability testing:</strong> The prototype was evaluated
+                with users completing two tasks (submit an enquiry; find
+                services and information), and findings drove revisions to
+                navigation labels, CTA placement, and FAQ structure.
               </li>
             </ul>
-
           </CaseStudySection>
 
-          {/* ---------- 9. REFLECTION ---------- */}
           <CaseStudySection title="Reflection">
             <p>
               MouldMan changed how I think about the relationship between
-              research, design, and trust. Working on a real service for a
-              real client meant the design had to do more than look
-              professional — it had to reassure people who were anxious,
-              answer questions before they were asked, and translate a
-              technical remediation process into something that felt
-              approachable. That responsibility shaped almost every decision,
-              from tone of voice and IA to the placement of CTAs and the
-              structure of the FAQ.
+              research, design, and trust. Working on a real service for a real
+              client meant the design had to do more than look professional; it
+              also had to reassure users who were anxious, answer questions
+              before they were asked, and translate a technical remediation
+              process into something that felt approachable. That responsibility
+              influenced almost every design decision, from the tone of the
+              content and the site structure to the placement of calls to action
+              and the organisation of the FAQ.
             </p>
             <p>
-              The thematic analysis and persona work showed me how much UX
-              gets done before a single wireframe is drawn. The three
-              personas didn&rsquo;t just describe users — they became the
-              criteria we used to test ideas. Whenever the team disagreed on
-              navigation, layout, or copy, we returned to which persona it
-              served and what evidence supported it. That made the design
-              process more disciplined and reduced opinion-led decisions.
+              The thematic analysis and persona work showed me how much UX gets
+              completed before a single wireframe is drawn. The three personas
+              did merely describe users. They became the criteria we used to
+              test ideas. Whenever the group disagreed on navigational or
+              layout-related elements, we returned to which persona it served
+              and what evidence supported it. That made the design process more
+              disciplined and reduced opinion-led decisions.
             </p>
             <p>
-              Working with Steve also taught me how to balance evidence with
-              real-world constraint. Research pointed toward visible pricing
-              to build trust, but the variability of remediation jobs made
-              fixed prices impossible. The compromise — quote requests
-              wrapped in strong reassurance copy and clear next steps —
-              honoured both the data and the client&rsquo;s reality. That
-              kind of negotiation between user needs and business
-              constraints is something I&rsquo;ll carry into every future
-              project.
+              Working with a client also taught me how to apply research
+              evidence within real-world constraints. The research showed that
+              visible pricing could help build trust, but the variability of
+              mould remediation work meant fixed prices were not realistic. In
+              response, we designed a quote request flow that was supported by
+              clear explanations, reassuring language, and obvious next steps.
+              This taught me that good design often involves balancing user
+              needs with practical business constraints.
             </p>
             <p>
-              Designing for three very different personas under a single IA
-              also reinforced something I keep returning to: good
-              information architecture isn&rsquo;t about hierarchy alone.
-              It&rsquo;s about respecting that different users take
-              different routes through the same content, and that the
-              structure has to support all of them without privileging one.
-              MouldMan made that idea concrete for me in a way no theoretical
-              exercise could.
+              Designing for three very different personas within one
+              information architecture reinforced an important lesson for me.
+              Good information architecture is <em>not</em> only about
+              hierarchy. It also has to support the various ways in which
+              different users move through the same content. Working on this
+              website therefore turned that idea from being theory-based into a
+              practical and visible outcome.
             </p>
             <p>
-              The project also gave me real ownership over visual
-              implementation. While the research, IA, and content decisions
-              were genuinely shared across the team, I was the one who took
-              those agreed directions and built the entire high-fidelity
-              prototype in Figma — the type scale, colour system, component
-              library, page layouts, states, and interactions. That meant
-              every visual and interactive detail in the final website
-              passed through my hands, and I was responsible for making sure
-              the implementation stayed faithful to the research, the
-              personas, and the accessibility standards we&rsquo;d set. It
-              was the part of the project where I had the most direct
-              creative control, and it&rsquo;s where I learned the most
-              about translating UX decisions into a coherent, working
+              The project also gave me clear ownership of the visual
+              implementation. While the research, information architecture, and
+              content decisions were shared across the group, I was responsible
+              for building the full high-fidelity prototype in Figma. This meant
+              I was responsible for translating our agreed decisions into a
+              coherent interface that stayed aligned with the research, the
+              personas, and the accessibility standards we had set. It was the
+              part of the project where I had the most direct creative control,
+              and where I learned most about turning UX decisions into a working
               interface.
             </p>
             <p>
-              Finally, the project sharpened how I work in a team. Splitting
-              ownership of research and content, holding shared standards
-              for typography, spacing, and tone, and resolving disagreements
-              through evidence rather than preference made the final site
-              feel coherent despite multiple hands shaping it. That
-              experience gave me more confidence in collaborative UX work
-              and in advocating for research-led decisions inside a group.
+              Finally, the project strengthened how I work in a team. When
+              disagreements came up, we returned to the research to guide
+              decisions rather than relying on personal preference. That
+              experience gave me more confidence in collaborative UX work and in
+              arguing for research-led decisions within a team.
             </p>
           </CaseStudySection>
 
@@ -680,10 +717,16 @@ const MouldMan = () => {
           </CaseStudySection>
 
           <div className="section-divider mt-10 pt-6 flex justify-between text-sm">
-            <Link to="/projects/mindspark" className="font-medium hover:text-accent transition-colors">
+            <Link
+              to="/projects/mindspark"
+              className="font-medium hover:text-accent transition-colors"
+            >
               ← Previous: MindSpark
             </Link>
-            <Link to="/projects/project-three" className="font-medium hover:text-accent transition-colors">
+            <Link
+              to="/projects/project-three"
+              className="font-medium hover:text-accent transition-colors"
+            >
               Next: LearnBetter →
             </Link>
           </div>
