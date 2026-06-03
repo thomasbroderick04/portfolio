@@ -10,7 +10,7 @@ const featuredProjects = [
     title: "MindSpark",
     type: "",
     description:
-      "An interactive cognitive testing system. Redesigning the digital Go/No-Go test as an interaction problem — usability, accessibility, and context as core design variables.",
+      "An interactive cognitive testing system. Redesigning the digital Go/No-Go test as an interaction problem, with usability, accessibility, and context as central design variables.",
     image: mindsparkHero,
     path: "/projects/mindspark",
   },
@@ -44,10 +44,12 @@ const Home = () => {
             accessibility, and human-centred design.
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl">
-            I&rsquo;m a final-year Digital Media Design student at the University
-            of Limerick. My work covers user research, interaction design, and
-            accessible interface design — building digital products that adapt
-            to people, rather than the other way around.
+            I am a final-year Digital Media Design student at the University of
+            Limerick, specialising in user research, interaction design, and
+            accessible interface design. My work focuses on designing digital
+            products that are clear, usable, and responsive to the people using
+            them, rather than expecting users to adapt to the limitations of the
+            interface.
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
