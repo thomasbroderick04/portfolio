@@ -43,7 +43,7 @@ const Home = () => {
             Hi, I&rsquo;m Thomas Broderick — a UX designer focused on usability,
             accessibility, and human-centred design.
           </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-2xl">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-4xl">
             I am a final-year Digital Media Design student at the University of
             Limerick, specialising in user research, interaction design, and
             accessible interface design. My work focuses on designing digital
@@ -71,7 +71,10 @@ const Home = () => {
         <section>
           <div className="flex items-baseline justify-between mb-8 pb-3 border-b border-border">
             <h2 className="text-xl font-semibold">My Projects</h2>
-            <Link to="/projects" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              to="/projects"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
               All projects →
             </Link>
           </div>
@@ -102,7 +105,11 @@ const Home = () => {
                       {project.description}
                     </p>
                   </div>
-                  {project.type && <span className="project-tag shrink-0 text-right">{project.type}</span>}
+                  {project.type && (
+                    <span className="project-tag shrink-0 text-right">
+                      {project.type}
+                    </span>
+                  )}
                 </div>
               </Link>
             ))}
