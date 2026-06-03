@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-// icons removed
 import Layout from "@/components/Layout";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 import heroImage from "@/assets/learnbetter-hero.png";
 import affinityCluster from "@/assets/learnbetter-affinity-cluster.png";
@@ -51,6 +49,22 @@ const DocImage = ({ src, alt, caption }: DocImageProps) => (
   </figure>
 );
 
+const SmallDocImage = ({ src, alt, caption }: DocImageProps) => (
+  <figure>
+    <div className="rounded-md border border-border bg-secondary/40 p-3">
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        className="w-full h-auto object-contain mx-auto"
+      />
+    </div>
+    <figcaption className="mt-3 text-xs text-muted-foreground text-center">
+      {caption}
+    </figcaption>
+  </figure>
+);
+
 const ProjectThree = () => {
   return (
     <Layout>
@@ -58,12 +72,11 @@ const ProjectThree = () => {
         <article className="container-content">
           <Link
             to="/projects"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-8 inline-block"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-16 inline-block"
           >
             ← Back to projects
           </Link>
 
-          <p className="project-tag mb-3">Group Project · UX Research · Interaction Design</p>
           <h1 className="mb-5">LearnBetter</h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
             Designing a student e-learning companion to support focus,
@@ -72,9 +85,15 @@ const ProjectThree = () => {
 
           <ProjectMeta
             items={[
-              { label: "Role", value: "UX Research · Concept · Sketching (group of 4)" },
+              {
+                label: "Role",
+                value: "UX Research · Concept · Sketching (group of 4)",
+              },
               { label: "Duration", value: "Jan 2023 – May 2023" },
-              { label: "Module", value: "CS4052 – Foundations of Interaction Design" },
+              {
+                label: "Module",
+                value: "CS4052 – Foundations of Interaction Design",
+              },
               { label: "Tools", value: "Figma · Paper Prototyping · Mural" },
             ]}
           />
@@ -91,34 +110,35 @@ const ProjectThree = () => {
           {/* Overview */}
           <CaseStudySection title="Overview">
             <p>
-              LearnBetter was a group design project undertaken in a group of
-              four in my first year of college that explored how a mobile app
-              could support students who are studying remotely. The project was
-              based on a familiar problem: when students learn from home, it
-              becomes easier to lose structure in the day, easier to get
-              distracted, and harder to feel motivated or connected to others.
-              Instead of relying on separate tools for lectures, communication,
-              productivity, and support, LearnBetter aimed to bring these needs
-              together into one system.
+              LearnBetter was a design project undertaken in a group of four in
+              my first year of college that explored how a mobile app could
+              support students who are studying remotely. The project was based
+              on a familiar problem: when students learn from home, it becomes
+              easier to lose structure in the day, easier to get distracted, and
+              harder to feel motivated or connected to others. Instead of relying
+              on separate tools for lectures, communication, productivity, and
+              support, LearnBetter aimed to bring these needs together into one
+              system.
             </p>
             <p>
               The final concept was a student e-learning companion that included
               module access, lecture materials, performance tracking, chat, live
               group learning, focus tools, music, settings, and help resources.
-              The goal was not just to let students access course content, but
-              to create a more supportive study environment around it — helping
-              students stay on top of work, stay concentrated while studying
-              remotely, and feel less isolated in the process.
+              The goal was not only to let students access course content, but
+              to create a more supportive study environment around it and
+              therefore help students stay on top of work, stay concentrated
+              while studying remotely, and feel less isolated in the process.
             </p>
             <p>
               This was a group project, so the final prototype was shared work.
               My own contribution was strongest in the earlier UX and concept
-              stages — particularly around problem framing, HMW thinking,
+              stages, particularly around problem framing, HMW thinking,
               personas, sketches, storyboard work, and feature ideas related to
               progress tracking, educational support, and keeping students on
               task. Several of those ideas carried through into the final
               prototype, especially the Progress feature, the Education Videos
-              feature, and part of the Help/Support direction.
+              feature, and elements of the support section that were first
+              developed in my sketches.
             </p>
           </CaseStudySection>
 
@@ -127,12 +147,12 @@ const ProjectThree = () => {
             <p>
               The project began with the recognition that remote study often
               lacks the structure students get more naturally in physical
-              learning environments. In-person learning creates boundaries: a
-              place to go, a lecture to attend, and a clearer distinction
-              between study time and everything else. Remote learning removes a
-              lot of that structure, which means students often end up studying
-              in the same space where they relax, use social media, or deal with
-              other responsibilities.
+              learning environments. In-person learning naturally creates
+              structure. There is a place to go, a lecture to attend, and a
+              clearer separation between study time and the rest of daily life.
+              Remote learning removes a lot of that structure, which means
+              students often end up studying in the same space where they relax,
+              use social media, or deal with other responsibilities.
             </p>
             <p>
               As a group, we explored those problems and shaped them into a
@@ -140,51 +160,87 @@ const ProjectThree = () => {
               studying remotely because they do not have an authority figure
               supervising them and have no physical boundaries between study
               time and off time, which makes it difficult to stay motivated and
-              concentrated. The goal and KPI we defined centred on creating an
-              app that helps students stay focused while eliminating
-              distractions.
+              concentrated. The goal and KPI we defined therefore centred on
+              creating an application that helps students stay focused while
+              eliminating distractions.
             </p>
-            <p>That framing gave the project a much clearer foundation. Rather than designing a vague “student app,” the team was designing around specific needs: helping students keep track of coursework, reducing distraction, supporting concentration, making academic help easier to access, and creating a more productive remote-learning experience overall.</p>
+            <p>
+              That framing gave the project a much clearer foundation. Rather
+              than designing a vague “student app,” my group was designing
+              around specific needs, which were helping students keep track of
+              coursework, reducing distraction, supporting concentration, making
+              academic help easier to access, and creating a more productive
+              remote-learning experience overall.
+            </p>
 
             <DocImage
               src={brainstormingProblem}
               alt="Brainstorming mural showing problem areas around distraction, motivation, and remote study"
-              caption="Problem brainstorming — each group member mapped issues students face in remote study, from distraction and isolation to weak time management and poor connectivity."
+              caption="Problem brainstorming: Each group member mapped issues students face in remote study, from distraction and isolation to weak time management and poor connectivity."
             />
+
             <DocImage
               src={affinityCluster}
               alt="Affinity cluster grouping ideas under Type, Accessibility, Activities, Issues, and Appearance"
-              caption="Affinity cluster — grouping the brainstormed ideas into themes such as accessibility, activities, and the underlying issues the product would need to solve."
+              caption="Affinity cluster: Grouping the brainstormed ideas into themes such as accessibility, activities, and the underlying issues the product would need to solve."
             />
           </CaseStudySection>
 
           {/* My role */}
           <CaseStudySection title="My Role">
             <p>
-              Because this was a group project, I want to be accurate about my
-              role. My contribution was strongest in the <strong>define</strong>{" "}
-              and <strong>early concept</strong> stages, where I helped shape
-              how the problem was understood and what kinds of features the
-              product should include. Specifically, I contributed to:
+              Because this was a group project, my contribution was strongest in
+              the defining and early concept stages, where I helped shape how
+              the problem was understood and what kinds of features the product
+              should include. Specifically, I contributed to:
             </p>
+
             <ul className="list-disc pl-6 space-y-2">
-              <li>Early brainstorming and problem framing around keeping students on task.</li>
-              <li>The HMW stage — writing questions focused on engagement, accessibility, targeted support, feedback, active participation, and easier access to the virtual learning environment.</li>
-              <li>Persona development, especially personas centred on time management, study organisation, procrastination, stress, and balancing study with other commitments.</li>
-              <li>Sketching early app ideas, including progress tracking, education video access, and dashboard layouts.</li>
-              <li>Storyboard work focused on study structure, completed work, remaining work, and reducing procrastination.</li>
-              <li>Authoring the user test protocols for both the low-fidelity and high-fidelity prototypes — defining the task flows, scripting the step-by-step instructions for each feature, and writing the post-test questionnaire used to gather qualitative feedback.</li>
-              <li>Running and documenting user testing sessions on the high-fidelity prototype — observing participants across all six feature flows, recording behaviour and pain points, and synthesising the findings into "potential improvements" that fed back into the next iteration.</li>
+              <li>
+                Early brainstorming and problem framing around keeping students
+                on task.
+              </li>
+              <li>
+                The HMW stage — writing questions focused on engagement,
+                accessibility, targeted support, feedback, active participation,
+                and easier access to the virtual learning environment.
+              </li>
+              <li>
+                Persona development, especially personas centred on time
+                management, study organisation, procrastination, stress, and
+                balancing study with other commitments.
+              </li>
+              <li>
+                Sketching early app ideas, including progress tracking,
+                education video access, and dashboard layouts.
+              </li>
+              <li>
+                Storyboard work focused on study structure, completed work,
+                remaining work, and reducing procrastination.
+              </li>
+              <li>
+                Authoring the user test protocols for both the low-fidelity and
+                high-fidelity prototypes — defining the task flows, scripting
+                the step-by-step instructions for each feature, and writing the
+                post-test questionnaire used to gather qualitative feedback.
+              </li>
+              <li>
+                Running and documenting user testing sessions on the
+                high-fidelity prototype — observing participants across all six
+                feature flows, recording behaviour and pain points, and
+                synthesising the findings into "potential improvements" that
+                fed back into the next iteration.
+              </li>
             </ul>
+
             <p>
               These ideas were not left at the rough concept stage. My early
-              sketches directly informed the next stages of development: the{" "}
-              <strong>Progress</strong> feature and{" "}
-              <strong>Education Video</strong> feature were both carried forward
-              from my concepts, and elements of my Help feature helped shape the
-              Support feature in the medium-fidelity prototype. The direction
-              for the medium-fidelity prototype was developed from my sketches
-              and storyboards following the first round of testing.
+              sketches directly informed the next stages of development. The
+              Progress feature and Education Video feature were both carried
+              forward from my concepts, and elements of my Help feature helped
+              shape the Support feature in the medium-fidelity prototype. The
+              direction for the medium-fidelity prototype was developed from my
+              sketches and storyboards following the first round of testing.
             </p>
           </CaseStudySection>
 
@@ -193,33 +249,32 @@ const ProjectThree = () => {
             <p>
               The first stage focused on understanding what students actually
               struggle with in remote learning. We used brainstorming and
-              affinity clustering to get beyond a surface-level idea of “online
-              learning is hard” and identify what specifically was making it
-              difficult. The group used a Mural board to document both the
-              problems and the kinds of features the prototype might need.
+              affinity clustering to get beyond a surface-level idea of online
+              learning and identify what specifically was making it difficult.
+              The group used a Mural board to document both the problems and the
+              kinds of features the prototype might need.
             </p>
             <p>
-              The problem was not simply that students needed access to content
-              — it was that remote learning made it harder to concentrate, harder
-              to stay motivated, and harder to keep track of work. My role in
-              this stage was mainly around the “staying on task” side of the
-              problem: my affinity cluster focused on ways to ensure students in
-              virtual learning could be effectively kept on task with their
-              studies. That focus later fed into my HMW questions, storyboard,
-              and progress-related ideas.
+              The problem was not limited to access to content. Remote learning
+              also made it harder for students to concentrate, stay motivated,
+              and keep track of their work. At this stage, my contribution
+              focused mainly on the issue of staying on task. My affinity
+              cluster explored how virtual learning could better support student
+              focus, and that direction later informed my HMW questions,
+              storyboard, and other design ideas.
             </p>
 
             <DocImage
               src={brainstormingSolution}
               alt="Solution brainstorming board with proposed features grouped by team member"
-              caption="Solution brainstorming — moving from problem space into possible features, including focus tools, interactive learning, mental health support, and time-management aids."
+              caption="Solution brainstorming: Moving from problem space into possible features, including focus tools, interactive learning, mental health support, and time-management aids."
             />
           </CaseStudySection>
 
           {/* Define */}
           <CaseStudySection title="Define — making the problem more solvable">
             <p>
-              <strong>Personas.</strong> The group used personas to create more
+              <strong>Personas:</strong> The group used personas to create more
               realistic user scenarios and avoid designing in a generic way. My
               persona work focused especially on students dealing with social
               anxiety, time management, study organisation, procrastination, and
@@ -227,31 +282,31 @@ const ProjectThree = () => {
               and study organisation, with needs such as connecting with peers
               without feeling intimidated, tracking coursework, and having a
               flexible learning environment. <em>Michael</em> focused on time
-              management, procrastination, stress, realistic study planning,
-              and tools to help students stay on track and motivated while
-              balancing academic and work responsibilities.
+              management, procrastination, stress, realistic study planning, and
+              tools to help students stay on track and motivated while balancing
+              academic and work responsibilities.
             </p>
             <p>
-              <strong>HMW questions.</strong> The HMW exercise turned the broad
-              challenge into clearer design opportunities. My own HMW questions
-              focused on making virtual learning more interactive and engaging,
-              making the platform simple to navigate, providing targeted support
-              and resources, improving accessibility, rewarding students for
-              staying on task, providing meaningful educational feedback,
-              encouraging active participation, and making learning easier to
-              access and more enjoyable.
+              <strong>‘How Might We’ (HMW) Questions:</strong> A HMW exercise
+              turned the broad challenge into clearer design opportunities. My
+              own HMW questions focused on making virtual learning more
+              interactive and engaging, making the platform simple to navigate,
+              providing targeted support and resources, improving accessibility,
+              rewarding students for staying on task, providing meaningful
+              educational feedback, encouraging active participation, and making
+              learning easier to access and more enjoyable.
             </p>
             <p>
               That stage matters because it shows the project was not only
-              driven by visual ideas — it was being driven by a set of design
+              driven by visual ideas. It was being driven by a set of design
               questions about usability, support, motivation, and student
               engagement.
             </p>
 
             <DocImage
               src={hmwStatements}
-              alt="My HMW (How Might We) statements list — twelve questions covering engagement, accessibility, support, feedback, and active participation"
-              caption="My HMW statements — translating the problem into clear design opportunities around engagement, accessibility, targeted support, feedback, and keeping students on task."
+              alt="My HMW statements list — twelve questions covering engagement, accessibility, support, feedback, and active participation"
+              caption="My HMW statements translating the problem into clear design opportunities around engagement, accessibility, targeted support, feedback, and keeping students on task."
             />
           </CaseStudySection>
 
@@ -259,22 +314,24 @@ const ProjectThree = () => {
           <CaseStudySection title="Exploring ideas through sketches and storyboards">
             <p>
               Once the problem had been defined more clearly, the project moved
-              into sketching and storyboarding. My sketch contribution included
-              interface ideas for a progress feature where students could see
-              how much time they had spent studying and how many lectures and
-              assignments they had completed, a possible lecture interface, home
-              page layouts, and other directions such as a study clock and
+              into sketching and storyboarding. All group members contributed
+              sketches. My particular sketch contribution included interface
+              ideas for a progress feature where students could see how much
+              time they had spent studying and how many lectures and assignments
+              they had completed, a possible lecture interface, home page
+              layouts, and other directions such as a study clock and
               wearable-device ideas. I also sketched a dashboard page, a
               microphone idea for quick study-related questions, and a motion
               detector concept to prevent students from getting up and getting
               distracted.
             </p>
             <p>
-              Even though not every idea made it into the final app, this stage
-              defined what kind of learning companion LearnBetter could become.
-              The Education Video feature and the Progress feature were taken
-              from my sketch work, and a combination of my collaborator’s
-              Support feature and my Help feature was also included.
+              Even though not every idea made it into the final design, this
+              stage defined what kind of learning companion the application
+              could become. The Education Video feature and the Progress feature
+              were taken from my sketch work, and a combination of my
+              collaborator’s Support feature and my Help feature was also
+              included.
             </p>
             <p>
               Storyboards developed the ideas further by showing how the app
@@ -282,20 +339,20 @@ const ProjectThree = () => {
               student completing a quiz, receiving a notification that work had
               been completed, seeing the remaining work still left to do, and
               then receiving a 45-minute study break after everything was
-              finished — intended to create structure in the student’s study
-              routine and prevent procrastination.
+              finished. This was intended to create structure in the student’s
+              study routine and prevent procrastination.
             </p>
 
             <DocImage
               src={sketchDashboard}
               alt="Hand-drawn sketch of LearnGenie loading screen and dashboard concept with Progress, Education Videos, Entertainment, Help, and Weekly Goal"
-              caption="Early sketch — my dashboard concept showing Progress, Education Videos, Entertainment, Help, and Weekly Goal. Several of these ideas (Progress, Education Videos, Help) carried directly into the final app."
+              caption="Early sketch of my dashboard concept showing Progress, Education Videos, Entertainment, Help, and Weekly Goal. Several of these ideas (Progress, Education Videos, Help) carried directly into the final application."
             />
 
             <DocImage
               src={storyboard}
               alt="Six-panel hand-drawn storyboard following a student using StudyGenie to complete lessons and unlock a 45-minute break"
-              caption="My storyboard — a student moves from distraction, to receiving a notification, to using the dashboard's Progress and Education Video features, and finally unlocking a 45-minute break after completing all lessons."
+              caption="My storyboard, showing how a student moves from distraction, to receiving a notification, to using the dashboard's Progress and Education Video features, and finally unlocking a 45-minute break after completing all lessons."
             />
           </CaseStudySection>
 
@@ -303,128 +360,125 @@ const ProjectThree = () => {
           <CaseStudySection title="From concept to prototype">
             <p>
               The low-fidelity prototype was made as a paper prototype and used
-              to explore the app structure quickly and begin early user testing.
-              It was created from paper phone screens showing what appeared when
-              different feature buttons were pressed — the point being to get a
-              rough sense of what the app might look like and identify areas
-              that needed improvement before going further.
+              to explore the app’s structure quickly and begin early user
+              testing. It was created from paper phone screens showing what
+              appeared when different feature buttons were pressed, with the
+              point being to get a rough sense of what the application might
+              look like, and identify areas that needed improvement before going
+              further.
             </p>
 
             <DocImage
               src={lofiPrototype}
               alt="Low-fidelity paper prototype with home, welcome, chat, music, and performance screens hand-drawn"
-              caption="Low-fidelity paper prototype — six hand-drawn screens covering home, welcome, chat, music, performance, and the supporting actions students could take."
+              caption="Low-fidelity paper prototype with six hand-drawn screens covering home, welcome, chat, music, performance, and the supporting actions students could take."
             />
 
             <p>
               The medium-fidelity prototype marked the point where the project
               moved from early concepts into a more structured and coherent
               design. After further group brainstorming, the layout, features,
-              and direction were developed in greater detail, with Figma used
+              and direction were developed in greater detail, and Figma was used
               as the main collaborative prototyping tool. The LearnBetter name
               and logo were developed from our group sketches and storyboards,
               the Education Videos feature was carried forward from my own
               concept work, and the group learning feature was informed by my
-              collaborator’s ideas. Feature labels were also refined for
-              clarity — including renaming <em>Support</em> to{" "}
-              <em>Settings</em> and <em>Lock/Restrict App on Device</em> to{" "}
-              <em>Focus</em>.
+              collaborator’s ideas. Feature labels were also refined for clarity
+              including renaming <em>Support</em> to <em>Settings</em> and{" "}
+              <em>Lock/Restrict App on Device</em> to <em>Focus</em>.
             </p>
 
             <DocImage
               src={hifiOverview}
               alt="High-fidelity Figma overview board showing the full LearnBetter app structure across many connected mobile screens"
-              caption="High-fidelity Figma overview — the refined app structure connecting modules, performance, education videos, chat, group learning, music, focus, and settings into one system."
+              caption="High-fidelity Figma overview showing the refined app structure, connecting modules, performance, education videos, chat, group learning, music, focus, and settings into one system."
             />
           </CaseStudySection>
 
           {/* User testing */}
           <CaseStudySection title="User testing and iteration">
             <p>
-              I personally authored the user test protocols for both the
-              low-fidelity and high-fidelity prototypes. Rather than testing
-              ad-hoc, I scripted explicit task flows so that every participant
-              was guided through the same set of feature interactions in the
-              same order. For the low-fidelity paper prototype, the protocol
-              focused on three core flows: locating and using the music
-              feature, starting a one-on-one chat, and interrogating the
-              academic-progress feature for a specific module. For the
-              high-fidelity prototype, the protocol expanded to six full
-              feature flows — account creation and settings, educational
-              content per module, distraction limiting, performance tracking
-              and asking the module head a question, music, and peer
-              communication — followed by a ten-question post-test
-              questionnaire I wrote to capture qualitative reactions on
-              clarity, efficiency, missing functionality, visual support, and
-              redundancy.
+              I wrote the user testing protocols for both the low-fidelity and
+              high-fidelity prototypes. Rather than testing informally, I
+              designed structured task flows so each participant completed the
+              same interactions in the same order, making the findings more
+              consistent and comparable. For the low-fidelity paper prototype,
+              this focused on three key tasks, including users engaging with the
+              music feature, starting a one-to-one chat, and checking academic
+              progress for a specific module. For the high-fidelity prototype, I
+              expanded the protocol to six flows: account creation and settings,
+              educational content by module, distraction limiting, performance
+              tracking and contacting the module head, music, and peer
+              communication. I also created a ten-question post-test
+              questionnaire to gather qualitative feedback on clarity,
+              efficiency, missing functionality, visual support, and redundancy.
             </p>
             <p>
-              I also ran and documented the high-fidelity sessions myself,
-              taking structured notes per feature: what the participant did
-              successfully, where they hesitated, and what they explicitly
-              flagged as a friction point. From those notes I synthesised a
-              set of "potential improvements" for each feature — for example,
-              offering a shorter sign-up path and an in-app tutorial for
-              account settings (Feature 1), clearer guidance on which module
-              to choose (Feature 2), more customisation options for the
-              distraction limiter (Feature 3), and more detailed per-module
-              feedback in the performance view (Feature 4). Those
-              improvements were not abstract observations; they were the
-              direct input that informed the iteration loop between
-              fidelities.
+              I also ran and documented the high-fidelity testing sessions
+              myself, using structured notes for each feature. I tracked what
+              participants completed successfully, where they hesitated, and
+              what they explicitly identified as a friction point. From this, I
+              developed a set of targeted improvements for each feature. These
+              included a shorter sign-up flow and an in-app tutorial for account
+              settings (Feature 1), clearer guidance on module selection
+              (Feature 2), more customisation options for the distraction
+              limiter (Feature 3), and more detailed module-level feedback in
+              the performance view (Feature 4). These improvements were
+              grounded directly in user behaviour and participant feedback, and
+              they fed straight into the next iteration of the prototype rather
+              than remaining as general observations.
             </p>
             <p>
-              <strong>Low-fidelity testing.</strong> The participant could
+              <strong>Low-fidelity Testing:</strong> The participants could
               complete the tasks successfully and understood what each button
               was meant to do, but three areas still needed improvement: the
-              performance feature needed to be more individualised by module
-              and provide more information; the feature name “Lock/Restrict
-              app on device” was too long and wordy; and the chat feature
-              needed a screen where users could choose whom to communicate
-              with. Even in the rough version the structure was broadly
-              understandable, but content and feature clarity still needed
-              development. With the help of my sketches and storyboards, this
-              fed directly into the plan for the medium-fidelity prototype.
+              performance feature needed to be more individualised by module and
+              provide more information; the feature name “Lock/Restrict app on
+              device” was too long and wordy; and the chat feature needed a
+              screen where users could choose whom to communicate with. Even in
+              the rough version the structure was broadly understandable, but
+              content and feature clarity still needed development. With the
+              help of my sketches and storyboards, this fed directly into the
+              plan for the medium-fidelity prototype.
             </p>
             <p>
-              <strong>Medium / high-fidelity testing.</strong> The participant
-              liked the general design and colour scheme and found the app
-              easy to navigate overall. The post-test questionnaire confirmed
-              the interface read as intuitive, the button styling and iconography
-              supported wayfinding, and no features were perceived as
-              redundant. Specific issues did still surface: the path to
-              account settings was not clear, the profile picture did not look
-              clickable enough, the shortcuts were not visible enough to be
-              used, and some features (especially module information such as
-              lecture videos and slides) were too hard to reach quickly. The
-              participant also suggested a personalisation step for choosing
-              an academic institution.
+              <strong>Medium / High-Fidelity testing.</strong> The participants
+              liked the general design and colour scheme and found the app easy
+              to navigate overall. The post-test questionnaire confirmed the
+              interface read as intuitive, the button styling and iconography
+              supported wayfinding, and no features were perceived as redundant.
+              Specific issues did still surface: the path to account settings
+              was not clear, the profile picture did not look clickable enough,
+              the shortcuts were not visible enough to be used, and some
+              features (especially module information such as lecture videos and
+              slides) were too hard to reach quickly. The participants also
+              suggested a personalisation step for choosing an academic
+              institution.
             </p>
             <p>
               Those findings led directly into the high-fidelity refinements.
-              The account settings path was improved by making the profile
-              area more obviously interactive, shortcut visibility was
-              improved, and a direct module button was added on the home
-              screen to make module information easier to reach. The app did
-              not just become more polished visually — it became more usable
-              through iteration driven by structured testing.
+              The account settings path was improved by making the profile area
+              more obviously interactive, shortcut visibility was improved, and
+              a direct module button was added on the home screen to make module
+              information easier to reach. The application therefore became more
+              usable through testing in iterations.
             </p>
 
             <div className="grid md:grid-cols-3 gap-4 my-8">
-              <DocImage
+              <SmallDocImage
                 src={userTest1}
-                alt="User testing session — participant interacting with the People screen on an iPhone prototype"
-                caption="Session 1 — participant navigating the People/chat screen."
+                alt="User testing session with participant navigating the People/chat screen"
+                caption="Session 1 with participant navigating the People/chat screen."
               />
-              <DocImage
+              <SmallDocImage
                 src={userTest2}
-                alt="User testing session — participant tapping the Modules screen showing module list and mascot"
-                caption="Session 2 — participant exploring the Modules screen."
+                alt="User testing session with participant exploring the Modules screen"
+                caption="Session 2 with participant exploring the Modules screen."
               />
-              <DocImage
+              <SmallDocImage
                 src={userTest3}
-                alt="User testing session — participant using the home screen with Performance, Education Videos, Chat, and Focus shortcuts"
-                caption="Session 2 — participant using the redesigned home screen with clearer shortcuts."
+                alt="User testing session with participant using the redesigned home screen with clearer shortcuts"
+                caption="Session 2 with participant using the redesigned home screen with clearer shortcuts."
               />
             </div>
           </CaseStudySection>
@@ -432,77 +486,84 @@ const ProjectThree = () => {
           {/* Final prototype */}
           <CaseStudySection title="Final prototype">
             <p>
-              The final high-fidelity version brought the different strands of
-              the project together into a more polished mobile app concept. At
-              this stage, LearnBetter functioned as a broader student e-learning
-              companion rather than just a lectures app — covering sign in / sign
-              up, dashboard, modules and lectures, performance tracking,
-              education videos, chat, AI chat, class forum and lecturer contact,
-              live group learning, focus tools, music, settings/profile, and
-              help and support.
+              The final high-fidelity prototype brought the different strands of
+              the project together into a more polished and complete concept. By
+              this stage, LearnBetter had become a broader student e-learning
+              companion. The prototype included key academic features such as
+              modules, lectures, performance tracking, educational videos, class
+              forums, lecturer contact, and live group learning, alongside
+              support features such as focus tools, music, chat, AI chat,
+              settings, profile, and help and support.
             </p>
             <p>
-              Looking across the screens, the app was clearly trying to solve
-              several connected parts of remote study at once. Progress screens
-              made workload and performance more visible. Lecture and education
-              video screens gave easier access to learning materials. Chat,
-              forum, and group study screens addressed connection and academic
-              help. Music and focus sections supported concentration. Settings
-              and help added another layer of support and customisation. This is
-              where the project became strongest as a concept: it did not only
-              say “here is course material” — it tried to support the wider
-              remote-learning experience around that material.
+              Across the screens, the application was trying to address several
+              connected parts of remote study at the same time. The progress
+              screens made workload and performance easier to track. The lecture
+              and educational video screens improved access to learning
+              materials. Chat, forum, and group study features supported
+              communication, collaboration, and academic help. The music and
+              focus tools were aimed at concentration, while the settings and
+              help sections added support and customisation.
             </p>
 
             <DocImage
               src={hifiOnboarding}
-              alt="High-fidelity LearnBetter onboarding flow — splash screen with graduation cap logo, sign in screen, and sign up form with university field"
-              caption="Onboarding flow — splash, sign in, and sign up screens establishing the LearnBetter identity and student account setup."
+              alt="High-fidelity LearnBetter onboarding flow showing splash, sign in, and sign up screens"
+              caption="Onboarding flow showing splash, sign in, and sign up screens establishing the LearnBetter identity and student account setup."
             />
+
             <DocImage
               src={hifiModule}
-              alt="High-fidelity module screens — My Module grid, CS4052 module page with class forum and lectures, and class forum chat threads"
-              caption="Module navigation — students move from a module grid, into a module page with the lecturer, class forum, and lecture list, and into the forum and chat threads themselves."
+              alt="High-fidelity module navigation screens from module grid to module page, lecturer contact, class forum, lecture list, and chat threads"
+              caption="Screens showing the navigation flow from the module grid to a module page, and then into lecturer contact, the class forum, the lecture list, and individual forum and chat threads."
             />
+
             <DocImage
               src={hifiProgress}
-              alt="High-fidelity Performance and Module Progress screens with weekly study graph, lectures and assignments completed, and per-module breakdown"
-              caption="Performance and Progress — built directly from my early sketch work, surfacing study hours, lectures watched, assignments completed, and per-module progress."
+              alt="High-fidelity Performance and Module Progress screens with study hours, lectures watched, assignments completed, and per-module progress"
+              caption="Performance and Progress built directly from my early sketch work, surfacing study hours, lectures watched, assignments completed, and per-module progress."
             />
+
             <DocImage
               src={hifiEducationVideos}
-              alt="High-fidelity Education Videos screens — module list, topic list for CS4082, and an HTML video lesson with Help and Progress shortcuts"
-              caption="Education Videos — also carried forward from my sketches: students browse modules, drill into topics, and watch lessons with Help and Progress always one tap away."
+              alt="High-fidelity Education Videos screens showing modules, topics, and lesson screens with Help and Progress shortcuts"
+              caption="Education Videos also carried forward from my sketches: students browse modules, drill into topics, and watch lessons with Help and Progress always one tap away."
             />
+
             <DocImage
               src={hifiPeopleMessages}
-              alt="High-fidelity People, Messages, and class forum chat screens with lecturer, teaching assistant, and class list contacts"
-              caption="People, Messages, and class forum — making it easier for students to reach lecturers, TAs, and peers without switching apps."
+              alt="High-fidelity People, Messages, and class forum screens"
+              caption="People, Messages, and class forum making it easier for students to reach lecturers, TAs, and peers without switching apps."
             />
+
             <DocImage
               src={hifiAiChat}
-              alt="High-fidelity Ask Me Anything AI chat screen with example questions, plus lecturer and class forum conversation screens"
-              caption="Ask Me Anything — an AI study assistant for quick definitional questions, sitting alongside the lecturer and class forum chats."
+              alt="High-fidelity Ask Me Anything AI chat screen alongside lecturer and class forum chats"
+              caption="Ask Me Anything is an AI study assistant for quick definitional questions, sitting alongside the lecturer and class forum chats."
             />
+
             <DocImage
               src={hifiStudyLive}
-              alt="High-fidelity Study Live screens — live group study room landing page and a list of public and private study rooms to join"
-              caption="Study Live — live group study rooms designed to recreate the social structure of in-person study and reduce the isolation of remote learning."
+              alt="High-fidelity Study Live screens showing group study rooms"
+              caption="Study Live showcases live group study rooms designed to recreate the social structure of in-person study and reduce the isolation of remote learning."
             />
+
             <DocImage
               src={hifiEntertainment}
-              alt="High-fidelity Entertainment screen — recommended study music, new songs and albums, and a song list with a music player"
-              caption="Entertainment — focus and study music to support concentration during longer remote study sessions."
+              alt="High-fidelity Entertainment screen showing recommended study music"
+              caption="Entertainment section showcases focus and study music to support concentration during longer remote study sessions."
             />
+
             <DocImage
               src={hifiFocus}
-              alt="High-fidelity Focus Mode screens — set app limits for SnapCharlie, YouTube, and Netflix, schedule a focus window, and a confirmation state"
-              caption="Focus Mode — students set app limits and a study schedule to block distractions, with a slide-to-activate control and a clear confirmation state."
+              alt="High-fidelity Focus Mode screens showing app limits, study schedule, activation control, and confirmation state"
+              caption="Focus Mode section shows how students set limits and a study schedule to block distractions, with a slide-to-activate control and a clear confirmation state."
             />
+
             <DocImage
               src={hifiHelpCenter}
-              alt="High-fidelity Help Center screens — search, popular articles, topic categories, and Help & Support links"
-              caption="Help Center — searchable support with popular articles, account and privacy topics, troubleshooting, safety, and community guidelines."
+              alt="High-fidelity Help Center screens showing searchable support, popular articles, account and privacy topics, troubleshooting, safety, and community guidelines"
+              caption="Help Center showing searchable support with popular articles, account and privacy topics, troubleshooting, safety, and community guidelines."
             />
           </CaseStudySection>
 
@@ -512,38 +573,32 @@ const ProjectThree = () => {
               LearnBetter was valuable because it showed how a broad student
               problem can be shaped into a more structured product through
               collaborative design. The project started with a common
-              frustration — students struggling with remote learning — but
-              became much stronger once the team defined more precisely what
-              that meant: distraction, weak boundaries, difficulty tracking
+              frustration, which is students struggling with remote learning,
+              but became much stronger once our group defined more precisely
+              what that meant: distraction, weak boundaries, difficulty tracking
               work, and difficulty staying motivated.
             </p>
             <p>
               For me, one of the strongest lessons was the importance of the
-              early concept stage. A lot of the most useful design work happened
-              before the polished prototype existed: identifying the right
-              problem, writing HMW questions that opened up better directions,
-              building personas that reflected realistic student pressures, and
-              sketching features that solved specific issues rather than just
-              filling out an app. That stage taught me that strong UX work is
-              often decided much earlier than the final UI.
+              early concept stage. A lot of the most useful design work happened{" "}
+              <em>before</em> the polished prototype existed. This included
+              identifying the right problem, writing HMW questions that helped
+              open up stronger design directions, building personas that
+              reflected realistic student pressures, and creating features with
+              a clear purpose, based on identified user needs, rather than
+              adding screens without a strong reason. This therefore taught me
+              that <em>strong</em> UX work is often <em>decided</em> much
+              earlier than the final UI.
             </p>
             <p>
-              The project also reinforced how important structure is in
-              educational UX. Students do not only need content. They need help
-              staying on top of work, understanding their progress, knowing
-              where to get support, and maintaining momentum in environments
-              where distractions are everywhere. My own contributions to
-              progress tracking, educational support, and study structure came
-              directly out of that way of thinking, and that remains one of the
-              clearest takeaways I would carry into future projects.
-            </p>
-            <p>
-              Finally, this project was a good reminder of how to present group
-              work honestly. The final prototype was shared work, but the
-              process still included clear individual contributions that shaped
-              its direction. For portfolio purposes, that matters: the work
-              should be represented accurately — not understated, but not
-              overclaimed either.
+              The project also reinforced how important <em>structure</em> is
+              in educational UX. Students require more than access to learning
+              materials. They also require support to manage their work,
+              understand their progress, get help when needed, and stay focused
+              while studying remotely. My contributions around progress
+              tracking, educational support, and study structure grew directly
+              from that way of thinking, and it remains one of the clearest
+              lessons I would carry into future projects.
             </p>
           </CaseStudySection>
 
@@ -569,10 +624,16 @@ const ProjectThree = () => {
           </CaseStudySection>
 
           <div className="section-divider mt-10 pt-6 flex justify-between text-sm">
-            <Link to="/projects/mould-man" className="font-medium hover:text-accent transition-colors">
+            <Link
+              to="/projects/mould-man"
+              className="font-medium hover:text-accent transition-colors"
+            >
               ← Previous: MouldMan
             </Link>
-            <Link to="/projects" className="font-medium hover:text-accent transition-colors">
+            <Link
+              to="/projects"
+              className="font-medium hover:text-accent transition-colors"
+            >
               All projects →
             </Link>
           </div>
