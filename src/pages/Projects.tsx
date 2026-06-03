@@ -7,19 +7,13 @@ import learnbetterHero from "@/assets/learnbetter-hero.png";
 const projects = [
   {
     title: "MindSpark",
-    type: "",
-    discipline: "UX Research · Interaction · Multimodal",
-    year: "2025–26",
     description:
-      "An interactive cognitive testing system. Redesigning the digital Go/No-Go test as an interaction problem — usability, accessibility, and context as core design variables.",
+      "An interactive cognitive testing system. Redesigning the digital Go/No-Go test as an interaction problem with usability, accessibility, and context as central design variables.",
     image: mindsparkHero,
     path: "/projects/mindspark",
   },
   {
     title: "MouldMan",
-    type: "",
-    discipline: "UX Research · IA · Visual Design",
-    year: "2025",
     description:
       "A research-led website for an Irish mould-remediation service. Built around three evidence-based personas with an IA designed to convert health anxiety into trust.",
     image: mouldmanHero,
@@ -27,9 +21,6 @@ const projects = [
   },
   {
     title: "LearnBetter",
-    type: "",
-    discipline: "UX Research · Concept · Sketching",
-    year: "2022",
     description:
       "A student e-learning companion designed to support focus, organisation, and connection in remote learning. My contribution focused on problem framing, personas, HMW, and the sketches that became the Progress and Education Video features.",
     image: learnbetterHero,
@@ -41,8 +32,8 @@ const Projects = () => {
   return (
     <Layout>
       <div className="px-6 md:px-12 lg:px-16 py-16 md:py-24">
-        <div className="container-content mb-12">
-          <p className="project-tag mb-4">Work</p>
+        <div className="container-content mb-14">
+          <p className="project-tag mb-4">My Work</p>
           <h1 className="mb-4">Projects</h1>
           <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
             A selection of UX and interaction design projects, each documented
@@ -53,7 +44,7 @@ const Projects = () => {
         <div className="space-y-16">
           {projects.map((project) => (
             <Link key={project.path} to={project.path} className="group block">
-              <article className="grid md:grid-cols-2 gap-6 md:gap-10 items-start">
+              <article className="grid md:grid-cols-[1.15fr_0.85fr] gap-6 md:gap-10 items-start">
                 <div className="image-frame aspect-[4/3]">
                   <img
                     src={project.image}
@@ -64,19 +55,18 @@ const Projects = () => {
                     height={900}
                   />
                 </div>
-                <div className="py-2">
-                  <p className="project-tag mb-3">
-                    {project.discipline} · {project.year}
-                  </p>
-                  <h2 className="text-2xl font-semibold mb-1 group-hover:text-accent transition-colors">
+
+                <div className="md:pt-4">
+                  <h2 className="text-2xl font-semibold mb-2 group-hover:text-accent transition-colors">
                     {project.title}
                   </h2>
-                  {project.type && <p className="text-sm text-muted-foreground mb-3">{project.type}</p>}
-                  <p className="text-base text-muted-foreground leading-relaxed">
+
+                  <p className="text-base text-muted-foreground leading-relaxed max-w-3xl">
                     {project.description}
                   </p>
+
                   <span className="inline-block mt-4 text-sm font-medium hover:text-accent transition-colors">
-                    Read case study →
+                    Read about project →
                   </span>
                 </div>
               </article>
