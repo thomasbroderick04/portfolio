@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-// icons removed
 import Layout from "@/components/Layout";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 
 import heroDevices from "@/assets/mindspark-hero-devices.png";
 import existingTools from "@/assets/mindspark-existing-tools.png";
@@ -13,7 +11,6 @@ import hifiFlow from "@/assets/mindspark-hifi-flow.png";
 import testResults from "@/assets/mindspark-test-results.png";
 import progressHifi from "@/assets/mindspark-progress-hifi.png";
 import progressMidfi from "@/assets/mindspark-progress-midfi.png";
-import iterationBoard from "@/assets/mindspark-iteration-board.png";
 import hardwareConcept from "@/assets/mindspark-hardware-concept.png";
 import systemOverview from "@/assets/mindspark-system-overview.png";
 import hifiPages from "@/assets/mindspark-hifi-pages.png";
@@ -55,12 +52,11 @@ const MindSpark = () => {
         <article className="container-content">
           <Link
             to="/projects"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-8 inline-block"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-16 inline-block"
           >
             ← Back to projects
           </Link>
 
-          <p className="project-tag mb-3">Final Year Project · UX Research · Interaction Design</p>
           <h1 className="mb-5">MindSpark</h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
             Designing an interactive cognitive testing system — exploring how
@@ -70,7 +66,7 @@ const MindSpark = () => {
 
           <ProjectMeta
             items={[
-              { label: "Role", value: "Sole Designer, Researcher & Developer" },
+              { label: "Role", value: "Sole UX Designer, Researcher & Developer" },
               { label: "Duration", value: "Sept 2025 – April 2026" },
               { label: "Tools", value: "Figma · HTML/CSS/JS · Arduino · FreeCAD" },
             ]}
@@ -92,26 +88,32 @@ const MindSpark = () => {
           {/* Overview */}
           <CaseStudySection title="Overview">
             <p>
-              MindSpark is my final year project. It is a research-led redesign
-              of the digital Go/No-Go test, a widely used cognitive test that
-              measures attention and the ability for an individual to control
-              their responses. Rather than treating the test as a fixed
-              screen-based interaction, I approached it as a full user
-              experience problem. This project explored how usability,
-              accessibility, and context can shape how self-administered
-              cognitive testing is understood, completed, and interpreted.
+              MindSpark is my final year project, undertaken in my final year of
+              college. It is a research-led redesign of the digital Go/No-Go
+              test, a widely used cognitive test that assesses attention and
+              inhibitory control. In the test, the user is presented with a
+              sequence of stimuli and must respond as quickly as possible to
+              designated “Go” signals while withholding their response to
+              “No-Go” signals. This allows the test to measure sustained
+              attention, reaction accuracy, and the ability to suppress an
+              automatic response. Rather than focusing only on the Go/No-Go test
+              itself, I also focused on all of the design factors that affect
+              how a person completes the test. The project explored how
+              usability, accessibility, and context can shape how
+              self-administered cognitive testing is understood, completed, and
+              interpreted.
             </p>
             <p>
-              I redesigned the full experience around the test, including how
-              it is introduced, how the user prepares for it, how they
-              practise it, how they complete it, and how their results are
-              shown afterwards. I also explored an alternative
-              verbal-response pathway so that the test was not limited to
-              touch input only. Across low-, medium-, and high-fidelity
-              iterations, I used user research and usability testing to
-              refine the system step by step. The final outcome was a
-              prototype that made the test feel clearer, more supportive, and
-              easier to understand as a full user experience.
+              I redesigned the full experience around the test, including how it
+              is introduced, how the user prepares for it, how they practice it,
+              how they complete it, and how their results are shown afterwards.
+              I also explored an alternative verbal-response pathway so that the
+              test was not limited to touch input only. Across low-fidelity,
+              medium-fidelity, and high-fidelity iterations, I used user
+              research and usability testing to refine the system step by step.
+              The final outcome was a prototype that made the test feel clearer,
+              more supportive, and easier to understand as a full user
+              experience.
             </p>
           </CaseStudySection>
 
@@ -121,28 +123,32 @@ const MindSpark = () => {
               As cognitive assessments increasingly move into self-administered
               web and mobile formats, users are expected to complete them
               independently, without guidance from a clinician or facilitator.
-              That raises a design problem: if the interface is unclear,
-              visually demanding, hard to navigate, or physically awkward to
-              use, the system may begin to measure interface friction as much
-              as cognition.
+              This creates an important design problem: if the interface is
+              unclear, visually demanding, difficult to navigate, or physically
+              awkward to use, the results may be influenced by the design of the
+              system as well as the user’s cognitive performance.
             </p>
             <p>
-              This mattered particularly for the Go/No-Go test, which depends
-              on users quickly perceiving stimuli, understanding the rule
-              structure, responding under time pressure, and withholding
-              responses at the correct moment. Poor instructions, weak
-              feedback, small touch targets, or confusing interaction design
-              can distort performance independently of cognitive ability.
+              This mattered particularly for the Go/No-Go test, which depends on
+              users quickly perceiving stimuli, understanding the rule structure,
+              responding under time pressure, and withholding responses at the
+              correct moment. Poor instructions, weak feedback, small touch
+              targets, or confusing interaction design can distort performance
+              independently of cognitive ability.
             </p>
             <div className="space-y-3 mt-4">
               <p>
-                <strong>RQ1:</strong> How do current cognitive assessment tools function in evaluating cognitive abilities, and what design limitations do they exhibit?
+                <strong>RQ1:</strong> How do current cognitive assessment tools
+                function in evaluating cognitive abilities, and what design
+                limitations do they exhibit?
               </p>
               <p>
-                <strong>RQ2:</strong> What design considerations can enhance the accessibility and usability of cognitive assessment tools?
+                <strong>RQ2:</strong> What design considerations can enhance the
+                accessibility and usability of cognitive assessment tools?
               </p>
               <p>
-                <strong>RQ3:</strong> How can different modes of interaction be combined to create effective cognitive assessment experiences?
+                <strong>RQ3:</strong> How can different modes of interaction be
+                combined to create effective cognitive assessment experiences?
               </p>
             </div>
           </CaseStudySection>
@@ -150,21 +156,22 @@ const MindSpark = () => {
           {/* Role */}
           <CaseStudySection title="My Role">
             <p>
-              MindSpark was a solo project. I was responsible for the work
-              end-to-end: literature review and research synthesis, analysis
-              of existing cognitive testing tools, UX strategy and interaction
+              MindSpark was a solo project. With the guidance of my final year
+              project supervisor, I was responsible for the work end-to-end. This
+              included a literature review and research synthesis, analysis of
+              existing cognitive testing tools, UX strategy and interaction
               design, information architecture and user flows, sketching and
-              wireframing, three Figma prototypes, coding the Go/No-Go
-              pathway in HTML/CSS/JavaScript, building a multimodal
-              verbal-response prototype with Arduino, designing the physical
-              enclosure in FreeCAD, and planning, conducting and synthesising
-              iterative user testing.
+              wireframing, three Figma prototypes, coding the Go/No-Go pathway
+              in HTML/CSS/JavaScript, building a multimodal verbal-response
+              prototype with Arduino, designing the physical enclosure in
+              FreeCAD, and planning, conducting and synthesising iterative user
+              testing.
             </p>
             <p>
-              Owning both the design and prototype implementation gave me a
-              much stronger understanding of how interface decisions affect
-              technical feasibility — especially around timing, response
-              handling, feedback states, and hardware-supported interaction.
+              Owning both the design and prototype implementation gave me a much
+              stronger understanding of how interface decisions affect technical
+              feasibility, especially around timing, response handling, feedback
+              states, and hardware-supported interaction.
             </p>
           </CaseStudySection>
 
@@ -172,22 +179,39 @@ const MindSpark = () => {
           <CaseStudySection title="Design Approach">
             <p>
               The project followed an iterative, human-centred design process
-              grounded in research, prototyping, and user feedback. The
-              Go/No-Go test itself was treated as a fixed and established
-              test, while the surrounding interaction was redesigned to
-              improve usability, accessibility, and contextual interpretation.
+              grounded in research, prototyping, and user feedback. The Go/No-Go
+              test itself was treated as a fixed and established test, while the
+              surrounding interaction was redesigned to improve usability,
+              accessibility, and contextual interpretation.
             </p>
 
             <div className="mt-6 divide-y divide-border border-y border-border">
               {[
-                ["1. Research and framing", "Reviewed literature on usability in digital cognitive testing, accessibility barriers, contextual influences on performance, privacy, and multimodal interaction. Analysed existing cognitive testing applications to identify recurring interface issues."],
-                ["2. Early concept development", "Translated research into hand-drawn sketches, flow concepts, early wireframes, and hardware sketches — focusing on structure and where design could reduce confusion."],
-                ["3. Iterative prototyping & testing", "Developed and refined the system through low-, medium-, and high-fidelity Figma prototypes, supported by user testing with adults across a broad age range."],
-                ["4. Final system & multimodal prototype", "Built a working verbal-response pathway with Arduino and a FreeCAD-designed enclosure to explore accessibility beyond touchscreen interaction alone."],
+                [
+                  "1. Research and framing",
+                  "Reviewed literature on usability in digital cognitive testing, accessibility barriers, contextual influences on performance, privacy, and multimodal interaction. Analysed existing cognitive testing applications to identify recurring interface issues.",
+                ],
+                [
+                  "2. Early concept development",
+                  "Translated research into hand-drawn sketches, flow concepts, early wireframes, and hardware sketches, focusing on structure and where design could reduce confusion.",
+                ],
+                [
+                  "3. Iterative prototyping & testing",
+                  "Developed and refined the system through low-, medium-, and high-fidelity Figma prototypes, also supported by user testing with adults across a broad age range of 19 to 73.",
+                ],
+                [
+                  "4. Final system & multimodal prototype",
+                  "Built a working verbal-response pathway with Arduino and a FreeCAD-designed enclosure to explore accessibility beyond touchscreen interaction alone.",
+                ],
               ].map(([t, d]) => (
-                <div key={t} className="grid md:grid-cols-[260px_1fr] gap-2 md:gap-8 py-4">
+                <div
+                  key={t}
+                  className="grid md:grid-cols-[260px_1fr] gap-2 md:gap-8 py-4"
+                >
                   <p className="text-sm font-semibold text-foreground">{t}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{d}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {d}
+                  </p>
                 </div>
               ))}
             </div>
@@ -196,57 +220,74 @@ const MindSpark = () => {
           {/* Research and Key Insight */}
           <CaseStudySection title="Research &amp; Key Insight">
             <p>
-              The strongest insight from the research was that digital
-              cognitive test performance cannot always be separated cleanly
-              from the interface used to complete it. Recurring barriers
-              included dense instructions, uncertainty about how to interact,
-              small touch targets, cluttered layouts, weak feedback, and
-              anxiety caused by self-administered use.
+              The strongest insight from my research was that digital cognitive
+              test performance cannot always be understood independently of the
+              interface used to complete a test. Recurring barriers included
+              dense instructions, uncertainty about how to interact, small touch
+              targets, cluttered layouts, weak feedback, and anxiety caused by
+              self-administered use.
             </p>
             <p>
-              Performance also should not be interpreted in isolation from
-              context. Factors such as fatigue, alertness, and broader
-              situational conditions can affect how users engage with a test.
-              That led me to treat context not as background information, but
-              as part of the design problem itself.
+              Performance should also not be understood without considering the
+              conditions in which the test is taken. Factors such as fatigue,
+              alertness, and the wider testing situation can influence how a
+              user engages with the test and therefore affect the result. This
+              led me to treat context as a design consideration, not just
+              background information.
             </p>
             <p>
               A third insight came from multimodal interaction research.
-              Touchscreen-only interaction can introduce motor demands that
-              are unrelated to the cognitive purpose of a test. Because the
-              Go/No-Go test uses a binary response structure, it offered a
-              strong opportunity to explore alternative input methods without
-              changing the core logic of the test.
+              Touchscreen-only interaction can introduce motor demands that are
+              unrelated to the cognitive purpose of a test. Because the Go/No-Go
+              test uses a binary response structure, it offered a strong
+              opportunity to explore alternative input methods without changing
+              the central logic of the test.
             </p>
             <ul className="space-y-2 mt-4">
-              <li>• Reduce unnecessary interaction burden</li>
-              <li>• Make setup and instructions easier to understand</li>
-              <li>• Support confidence through practice and feedback</li>
-              <li>• Interpret results in relation to context</li>
-              <li>• Explore a multimodal response pathway without changing test structure</li>
+              <li>
+                • <strong>Design Implication 1:</strong> Reduce unnecessary
+                interaction burden
+              </li>
+              <li>
+                • <strong>Design Implication 2:</strong> Make setup and
+                instructions easier to understand
+              </li>
+              <li>
+                • <strong>Design Implication 3:</strong> Support confidence
+                through practice and feedback
+              </li>
+              <li>
+                • <strong>Design Implication 4:</strong> Interpret results in
+                relation to context
+              </li>
+              <li>
+                • <strong>Design Implication 5:</strong> Explore a multimodal
+                response pathway without changing test structure
+              </li>
             </ul>
           </CaseStudySection>
 
           {/* Auditing Existing Tools */}
           <CaseStudySection title="Auditing Existing Tools">
             <p>
-              I analysed a range of existing digital cognitive testing
-              products, including applications using Go/No-Go-like tests
-              directly and others that revealed broader patterns in
-              self-administered cognitive assessment design. The audit showed
-              that the way a test is introduced often matters just as much as
-              the test itself. Tools with better onboarding, demonstration,
-              and structured practice made expectations clearer, while
-              fragmented or overly text-based instruction screens led to
-              uncertainty.
+              I analysed a range of existing digital cognitive testing products,
+              including applications using Go/No-Go-like tests directly and
+              others that revealed broader patterns in self-administered
+              cognitive assessment design. The audit showed that the way a test
+              is introduced often matters just as much as the test itself. Tools
+              with better onboarding, demonstration, and structured practice
+              made expectations clearer, while fragmented or overly text-based
+              instruction screens led to uncertainty.
             </p>
             <p>
-              All of the systems reviewed relied entirely on touchscreen
-              input, with varying levels of motor precision required.
-              Feedback was inconsistent — some tools offered clear
-              progression cues, others were ambiguous or absent entirely.
-              Accessibility support, context awareness, and privacy
-              transparency varied widely.
+              All of the systems reviewed relied entirely on touchscreen input,
+              but they differed in how much motor precision they required. Some
+              made interaction straightforward, while others placed greater
+              physical demands on the user. Feedback was also inconsistent: some
+              tools clearly communicated progress and system status, while
+              others offered little guidance or unclear responses. Accessibility
+              support, consideration of testing context, and privacy
+              transparency also varied widely across the systems reviewed.
             </p>
 
             <DocImage
@@ -257,12 +298,30 @@ const MindSpark = () => {
 
             <p>This helped define what MindSpark should do differently:</p>
             <ul className="space-y-2 mt-2">
-              <li>• Introduce the test more clearly</li>
-              <li>• Support users before official scoring begins</li>
-              <li>• Reduce the sense of uncertainty during interaction</li>
-              <li>• Make feedback more interpretable</li>
-              <li>• Treat results as something to understand, not just display</li>
-              <li>• Explore alternatives to touchscreen-only response input</li>
+              <li>
+                • <strong>Design Implication 1:</strong> Introduce the test more
+                clearly
+              </li>
+              <li>
+                • <strong>Design Implication 2:</strong> Support users before
+                official scoring begins
+              </li>
+              <li>
+                • <strong>Design Implication 3:</strong> Reduce the sense of
+                uncertainty during interaction
+              </li>
+              <li>
+                • <strong>Design Implication 4:</strong> Make feedback more
+                interpretable
+              </li>
+              <li>
+                • <strong>Design Implication 5:</strong> Treat results as
+                something to understand, not just display
+              </li>
+              <li>
+                • <strong>Design Implication 6:</strong> Explore alternatives to
+                touchscreen-only response input
+              </li>
             </ul>
           </CaseStudySection>
 
@@ -270,20 +329,19 @@ const MindSpark = () => {
           <CaseStudySection title="Early Concepts &amp; Wireframing">
             <p>
               My earliest design work focused on structure before styling. I
-              began with hand-drawn sketches and low-fidelity wireframes to
-              map the broader system around the Go/No-Go test rather than
-              treating it as an isolated single-screen activity. This included
-              onboarding, access to test categories, setup, alertness
-              questions, practice, live testing, results, and longer-term
-              progress tracking.
+              began with hand-drawn sketches and low-fidelity wireframes to map
+              the broader system around the Go/No-Go test rather than treating
+              it as an isolated single-screen activity. This included
+              onboarding, access to test categories, setup, alertness questions,
+              practice, live testing, results, and longer-term progress
+              tracking.
             </p>
             <p>
               At this stage I also explored the hardware side conceptually.
-              Early sketches tested how a microphone-based pathway might work
-              as an alternative response method, and how a simple physical
-              device could connect to the digital system without requiring
-              users to hold or directly manipulate extra hardware during the
-              test.
+              Early sketches tested how a microphone-based pathway might work as
+              an alternative response method, and how a simple physical device
+              could connect to the digital system without requiring users to
+              hold or directly manipulate extra hardware during the test.
             </p>
 
             <DocImage
@@ -295,7 +353,7 @@ const MindSpark = () => {
             <DocImage
               src={earlyWireframes}
               alt="Mid-fidelity black and white wireframes showing the Go/No-Go test options, alertness questions, and practice screens"
-              caption="Early structured wireframes — Go/No-Go test options, alertness questions, and practice flow."
+              caption="Early structured wireframes showing Go/No-Go test options, alertness questions, and practice flow."
             />
 
             <DocImage
@@ -305,36 +363,37 @@ const MindSpark = () => {
             />
 
             <p>
-              The value of this stage was system thinking rather than visual
-              polish. It allowed me to define the test as a sequence of
-              interactions: <em>understand → prepare → practise → respond →
-              interpret</em>. That became a critical foundation for everything
-              that followed.
+              This stage was most valuable for developing the structure and logic
+              of the system, rather than refining its visual appearance. It
+              allowed me to define the test as a sequence of interactions:{" "}
+              <em>understand → prepare → practise → respond → interpret</em>.
+              That became a critical foundation for everything that followed.
             </p>
           </CaseStudySection>
 
           {/* Designing the Core Experience */}
           <CaseStudySection title="Designing the Core Experience">
             <p>
-              The central interaction design challenge was to make the
-              Go/No-Go pathway clearer and more supportive without altering
-              the underlying logic of the test itself. I designed the
-              experience as a structured flow rather than a direct jump into
-              live stimuli — introduction, setup, alertness check, guided
-              practice, simplified live test, and a result screen that
-              connected performance to context and longer-term progress.
+              The central interaction design challenge was to make the Go/No-Go
+              pathway clearer and more supportive without changing the core
+              logic of the test. Instead of sending users directly into the live
+              test, I designed the experience as a structured sequence with
+              distinct stages: introduction, setup, alertness check, guided
+              practice, a simplified live test, and a results screen that helped
+              place performance in the context of the testing situation and the
+              user’s longer-term progress.
             </p>
 
             <DocImage
               src={hifiFlow}
               alt="High-fidelity Figma screens showing the full Go/No-Go pathway: introduction, test options, alertness questions, and practice"
-              caption="Final high-fidelity flow — onboarding, setup, alertness check, and guided practice."
+              caption="Final high-fidelity flow showing onboarding, setup, alertness check, and guided practice."
             />
 
             <DocImage
               src={hifiPages}
               alt="High-fidelity MindSpark home, test categories, settings, and notifications pages"
-              caption="Core supporting pages — home, test categories, settings, and notifications — designed around clarity, hierarchy, and contextual cues."
+              caption="Core supporting pages showing home, test categories, settings, and notifications; designed around clarity, hierarchy, and contextual cues."
             />
           </CaseStudySection>
 
@@ -347,10 +406,11 @@ const MindSpark = () => {
                 </h3>
                 <p>
                   A short alertness check before the test, inspired by the
-                  Karolinska Sleepiness Scale, framed performance alongside
-                  context rather than shown as a detached score. In the final
-                  results screen, users were invited to interpret their
-                  performance in relation to how alert they felt at the time.
+                  Karolinska Sleepiness Scale, was included to place performance
+                  in context rather than present it as an isolated score. In the
+                  final results screen, users were encouraged to consider their
+                  performance alongside how alert they felt at the time of
+                  testing.
                 </p>
               </div>
 
@@ -359,11 +419,12 @@ const MindSpark = () => {
                   2. Practice before official scoring
                 </h3>
                 <p>
-                  A dedicated practice stage allowed users to experience the
-                  rule structure safely before entering the official test.
-                  User feedback shaped the practice sequence to reflect true
-                  Go/No-Go logic and to make corrective feedback supportive
-                  rather than punitive.
+                  A dedicated practice stage gave users a chance to understand
+                  the rules and experience how the test worked before beginning
+                  the actual assessment. User feedback helped refine this
+                  practice sequence so that it reflected the real Go/No-Go test
+                  more accurately, while also making corrective feedback feel
+                  supportive rather than discouraging.
                 </p>
               </div>
 
@@ -373,9 +434,9 @@ const MindSpark = () => {
                 </h3>
                 <p>
                   The live test screen focused only on what was necessary:
-                  stimulus, progress, response area, and a stop option. The
-                  goal was to reduce visual noise and make the interaction as
-                  legible as possible under time pressure.
+                  stimulus, progress, response area, and a stop option. The goal
+                  was to reduce visual noise and make the interaction as legible
+                  as possible under time pressure.
                 </p>
               </div>
 
@@ -385,10 +446,10 @@ const MindSpark = () => {
                 </h3>
                 <p>
                   An optional verbal-response pathway used a microphone sensor
-                  connected through Arduino. This explored whether some of
-                  the physical effort and precision demands of touchscreen
-                  interaction could be reduced without changing the binary
-                  logic of the test.
+                  connected through Arduino. This explored whether some of the
+                  physical effort and precision demands of touchscreen
+                  interaction could be reduced without changing the binary logic
+                  of the test.
                 </p>
               </div>
             </div>
@@ -396,26 +457,40 @@ const MindSpark = () => {
             <DocImage
               src={testResults}
               alt="Final high-fidelity Go/No-Go live test screens and results screen showing score, response breakdown, classification, and alertness level"
-              caption="Final live test trials and results screen — performance contextualised by alertness level."
+              caption="Final live test trials and results screen showing performance contextualised by alertness level."
             />
           </CaseStudySection>
 
           {/* Iteration */}
           <CaseStudySection title="Iteration: Low to High Fidelity">
             <p>
-              Each prototype stage uncovered different issues, and those
-              issues directly shaped the next iteration.
+              Each prototype stage uncovered different issues, and those issues
+              directly shaped the next iteration.
             </p>
 
             <div className="mt-6 divide-y divide-border border-y border-border">
               {[
-                ["Low fidelity — structure first", "Established the application's structure and broader user journey. Testing showed text needed to be larger, navigation needed to align with mobile conventions, colour needed to be more purposeful, and the main response button was not clear enough."],
-                ["Medium fidelity — clarity & feedback", "Introduced a stronger visual identity, clearer button states, overlays for on-demand explanation, refined setup options, improved practice logic, and a developed physical microphone enclosure."],
-                ["High fidelity — polish & coherence", "Replaced grey areas with a softer green-toned background, enhanced the header and iconography, introduced a demonstration video, improved overlay scannability, and refined results presentation."],
+                [
+                  "Low fidelity — structure first",
+                  "Established the application's structure and broader user journey. Testing showed text needed to be larger, navigation needed to align with mobile conventions, colour needed to be more purposeful, and the main response button was not clear enough.",
+                ],
+                [
+                  "Medium fidelity — clarity & feedback",
+                  "Introduced a stronger visual identity, clearer button states, overlays for on-demand explanation, refined setup options, improved practice logic, and a developed physical microphone enclosure.",
+                ],
+                [
+                  "High fidelity — polish & coherence",
+                  "Replaced grey areas with a softer green-toned background, enhanced the header and iconography, introduced a demonstration video, improved overlay scannability, and refined the presentation of results.",
+                ],
               ].map(([t, d]) => (
-                <div key={t} className="grid md:grid-cols-[260px_1fr] gap-2 md:gap-8 py-4">
+                <div
+                  key={t}
+                  className="grid md:grid-cols-[260px_1fr] gap-2 md:gap-8 py-4"
+                >
                   <p className="text-sm font-semibold text-foreground">{t}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{d}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {d}
+                  </p>
                 </div>
               ))}
             </div>
@@ -423,41 +498,61 @@ const MindSpark = () => {
             <DocImage
               src={systemOverview}
               alt="Full system overview of every MindSpark screen — splash, sign-up, home, settings, notifications, test categories, progress, and both touch and verbal Go/No-Go pathways with components"
-              caption="Full system overview — every screen of the MindSpark prototype, from splash and sign-up through home, settings, test categories, progress, both Go/No-Go pathways, and the component library."
+              caption="Full system overview of every screen of the MindSpark prototype, from splash and sign-up through home, settings, test categories, progress, both Go/No-Go pathways, and the component library."
             />
 
             <DocImage
               src={progressMidfi}
               alt="Medium-fidelity wireframes of the MindSpark progress and results section across five pages"
-              caption="Medium-fidelity progress &amp; results screens — early treatment of rewards, performance categories, alertness effects and test classification."
+              caption="Low-fidelity progress & results screens showing of rewards, performance categories, alertness effects and test classification."
             />
 
             <DocImage
               src={progressHifi}
               alt="High-fidelity progress and results screens of the MindSpark application showing rewards, weekly performance, attention progress, alertness effect, and Go/No-Go test score"
-              caption="High-fidelity progress &amp; results section — visual, contextual interpretation of performance over time."
+              caption="High-fidelity progress & results section showing visual, contextual interpretation of performance over time."
             />
           </CaseStudySection>
 
           {/* User Testing */}
           <CaseStudySection title="User Testing &amp; What Changed">
             <p>
-              I tested MindSpark across all three fidelities with adults from
-              a broad age range. Rather than using testing to validate a
-              finished solution, I used it to identify recurring usability
-              and accessibility issues, then refine the design between each
-              round.
+              I tested MindSpark across all three fidelities with adults from a
+              broad age range. Rather than using testing to validate a finished
+              solution, I used it to identify recurring usability and
+              accessibility issues, then refine the design between each round.
             </p>
 
             <ul className="space-y-3 mt-4">
               {[
-                ["Readability required improvement", "Users wanted larger text, better spacing, and clearer hierarchy on instruction-heavy screens."],
-                ["Navigation needed to feel familiar", "Users expected clearer back arrows and standard mobile patterns."],
-                ["The main test interaction needed stronger affordance", "Later iterations improved button styling, states, and clarity."],
-                ["Practice and demonstration reduced uncertainty", "Users responded better when the test was demonstrated clearly before official scoring."],
-                ["Feedback needed to stay calm and supportive", "Harsh error cues created pressure — corrective feedback was softened."],
-                ["Microphone use needed clearer onboarding", "This led directly to the enclosure and stand system."],
-                ["Results worked best when visual and contextual", "Graphs, response breakdowns, and alertness-linked interpretation were easier to understand than isolated scores."],
+                [
+                  "Readability required improvement",
+                  "Users wanted larger text, better spacing, and clearer hierarchy on instruction-heavy screens.",
+                ],
+                [
+                  "Navigation needed to feel familiar",
+                  "Users expected clearer back arrows and standard mobile patterns.",
+                ],
+                [
+                  "The main test interaction needed stronger affordance",
+                  "Later iterations improved button styling, states, and clarity.",
+                ],
+                [
+                  "Practice and demonstration reduced uncertainty",
+                  "Users responded better when the test was demonstrated clearly before official scoring.",
+                ],
+                [
+                  "Feedback needed to stay calm and supportive",
+                  "Harsh error cues created pressure, and so corrective feedback was softened.",
+                ],
+                [
+                  "Microphone use needed clearer onboarding",
+                  "This led directly to the microphone enclosure and stand system.",
+                ],
+                [
+                  "Results worked best when visual and contextual",
+                  "Users found graphs, response breakdowns, and performance shown alongside alertness easier to understand than a score presented on its own.",
+                ],
               ].map(([t, d]) => (
                 <li key={t}>
                   <p className="font-medium text-foreground">{t}</p>
@@ -474,68 +569,67 @@ const MindSpark = () => {
               verbal-response pathway to test how MindSpark could support an
               alternative method of interaction. Although the overall concept
               was designed as a mobile, self-administered experience, the
-              multimodal prototype was built and tested on a laptop as a
-              proof of concept. This allowed me to reliably connect the
-              browser-based Go/No-Go system to external Arduino hardware and
-              test how sound input could trigger responses in real time.
+              multimodal prototype was built and tested on a laptop as a proof
+              of concept. This allowed me to reliably connect the browser-based
+              Go/No-Go system to external Arduino hardware and test how sound
+              input could trigger responses in real time.
             </p>
             <p>
-              The technical setup used an Arduino Uno with a microphone
-              sensor connected to the laptop. A Node.js bridge then passed
-              serial data from the Arduino to the browser using WebSockets,
-              allowing the Go/No-Go prototype to respond to sound input
-              during the test. The code development was carried out on the
-              laptop and managed through GitHub, which I used as the primary
-              code repository. This meant I could track code versions
-              carefully as the prototype developed and return to earlier
-              versions when needed.
+              The technical setup used an Arduino Uno with a microphone sensor
+              connected to the laptop. A Node.js bridge then passed serial data
+              from the Arduino to the browser using WebSockets and allowed the
+              Go/No-Go prototype to respond to sound input during the test. The
+              code development was carried out on the laptop and managed through
+              GitHub, which I used as the primary code repository. This meant I
+              could track code versions carefully as the prototype developed and
+              return to earlier versions when needed.
             </p>
             <p>
               This part of the project helped me move beyond theoretical
               accessibility ideas and understand how interaction design
               decisions can directly affect technical implementation. Small
-              choices around timing, feedback, response detection, and
-              screen states all had technical consequences. Developing the
-              prototype gave me a better understanding of these constraints
-              and showed me the value of considering technical feasibility
-              earlier in the design process.
+              choices around timing, feedback, response detection, and screen
+              states all had technical consequences. Developing the prototype
+              gave me a better understanding of these constraints and showed me
+              the value of considering technical feasibility earlier in the
+              design process.
             </p>
             <p>
               To support the physical setup, I also designed an enclosure in
-              FreeCAD and iterated it through 3D printing. The final
-              hardware used a stable box enclosure and adjustable stand
-              system, which positioned the microphone more comfortably for
-              different users during testing.
+              FreeCAD and iterated it through 3D printing. The final hardware
+              used a stable box enclosure and adjustable stand system, which
+              positioned the microphone more comfortably for different users
+              during testing.
             </p>
 
             <DocImage
               src={verbalTest}
               alt="High-fidelity Go/No-Go verbal-response test screens showing countdown, stimulus prompts, microphone button, and feedback states"
-              caption="Verbal-response Go/No-Go pathway — countdown, stimulus, microphone input, and supportive feedback states."
+              caption="Verbal-response Go/No-Go pathway showing countdown, stimulus, microphone input, and supportive feedback states."
             />
 
             <DocImage
               src={jsCode}
               alt="VS Code editor showing the MindSpark Go/No-Go app.js JavaScript file controlling stimulus timing, response handling, scoring, and audio playback"
-              caption="JavaScript implementation — app.js controls stimulus timing, response handling, scoring, audio playback, and trial flow for the coded Go/No-Go pathway."
+              caption="JavaScript implementation; app.js controls stimulus timing, response handling, scoring, audio playback, and trial flow for the coded Go/No-Go pathway."
             />
 
             <DocImage
               src={arduinoMic}
-              alt="Arduino Uno R3 board next to a microphone sound sensor module wired with jumper cables"
-              caption="Hardware setup — Arduino Uno R3 paired with a microphone sound sensor for verbal-response detection."
+              alt="Arduino Uno board next to a microphone sound sensor module wired with jumper cables"
+              caption="Hardware setup showing the Arduino Uno paired with a microphone sound sensor for verbal-response detection."
             />
 
             <DocImage
               src={arduinoLive}
               alt="Live verbal-response Go/No-Go test running in the browser with the Arduino microphone setup detecting voice input"
-              caption="Live verbal-response prototype — the Arduino microphone bridges to the browser-based Go/No-Go test in near real time."
+              caption="Live verbal-response prototype showing how the Arduino microphone bridges to the browser-based Go/No-Go test in near real time."
             />
 
             <DocImage
               src={freecadModel}
               alt="FreeCAD 3D model of the MindSpark microphone enclosure showing Arduino supports, microphone access pocket, and wire access cutout"
-              caption="FreeCAD model of the enclosure — designed around Arduino mounting, microphone access, and wire routing."
+              caption="FreeCAD model of the enclosure; designed around Arduino mounting, microphone access, and wire routing."
             />
 
             <DocImage
@@ -547,19 +641,19 @@ const MindSpark = () => {
             <DocImage
               src={enclosureAssembled}
               alt="Assembled MindSpark 3D-printed enclosure and microphone stand in front of a laptop running the Go/No-Go test"
-              caption="Final assembled prototype — physical enclosure and stand alongside the live Go/No-Go interface."
+              caption="Final assembled prototype showing the physical enclosure and stand alongside the live Go/No-Go interface."
             />
           </CaseStudySection>
 
           {/* Final Outcome */}
           <CaseStudySection title="Final Outcome">
             <p>
-              The final version of MindSpark became a clearer, more
-              supportive, and more context-aware cognitive testing concept.
-              It did not try to reinvent the Go/No-Go test itself. Instead,
-              it redesigned the surrounding experience so that users could
-              engage with it more confidently and interpret it more
-              meaningfully.
+              The final version of MindSpark became a clearer, more supportive,
+              and more context-aware cognitive testing concept. It did not try
+              to reinvent the Go/No-Go test itself. Instead, it redesigned the
+              surrounding experience so that users could engage with it more
+              confidently and interpret it more meaningfully. Final outcomes
+              included:
             </p>
             <ul className="space-y-2 mt-2">
               <li>• A clearer self-administered test setup flow</li>
@@ -568,47 +662,48 @@ const MindSpark = () => {
               <li>• Support for both touch and verbal response</li>
               <li>• Visual and contextual result interpretation</li>
               <li>• Longer-term progress tracking</li>
-              <li>• A physical multimodal prototype that supported accessibility beyond touchscreen-only input</li>
+              <li>
+                • A physical multimodal prototype that supported accessibility
+                beyond touchscreen-only input
+              </li>
             </ul>
             <p className="mt-4">
-              Most importantly, the final project showed that interaction
-              design has real consequences in cognitive testing contexts. If
+              Most importantly, the final project showed that interaction design
+              has real consequences in cognitive testing contexts. If
               instructions, feedback, pacing, or response methods are poorly
               designed, they can shape the testing experience in ways that
-              matter. MindSpark was my attempt to design more responsibly
-              around that fact.
+              matter. MindSpark was my attempt to design more responsibly around
+              that fact.
             </p>
           </CaseStudySection>
 
           {/* Reflection */}
           <CaseStudySection title="Reflection">
             <p>
-              MindSpark changed how I think about design. It was the first
-              time I fully understood how interface design can influence
-              something as sensitive as interpretation, confidence, and
-              perceived performance. The project pushed me to think much
-              more seriously about how a system feels to use, what demands
-              it places on people, and what unintended effects design
-              decisions can create.
+              MindSpark changed how I think about design. It was the first time
+              I fully understood how interface design can influence something as
+              sensitive as interpretation, confidence, and perceived performance.
+              The project pushed me to think much more seriously about how a
+              system feels to use, what demands it places on people, and what
+              unintended effects design decisions can create.
             </p>
             <p>
-              It also reinforced that accessibility is not a layer added at
-              the end. Many of the most important design decisions began as
-              accessibility questions, and the answers improved the
-              experience more broadly rather than only addressing the needs
-              of a narrow user group.
+              It also reinforced that accessibility is not a layer added at the
+              end. Many of the most important design decisions began as
+              accessibility questions, and the answers improved the experience
+              more broadly rather than only addressing the needs of a narrow user
+              group.
             </p>
             <p>
-              Finally, building the coded pathway and hardware prototype
-              gave me a much better understanding of how design decisions
-              can shape technical implementation. It showed me that even
-              small interaction choices can create technical constraints,
-              dependencies, and trade-offs. That experience made me more
-              aware of feasibility earlier in the process and gave me more
-              confidence in communicating with technical teams, asking
-              better questions, and bringing their input into the design
-              process sooner so that the final outcome takes all relevant
-              factors into account.
+              Finally, building the coded pathway and hardware prototype gave me
+              a much better understanding of how design decisions can shape
+              technical implementation. It showed me that even small interaction
+              choices can create technical constraints, dependencies, and
+              trade-offs. That experience made me more aware of feasibility
+              earlier in the process and gave me more confidence in
+              communicating with technical teams, asking better questions, and
+              bringing their input into the design process sooner so that the
+              final outcome takes all relevant factors into account.
             </p>
           </CaseStudySection>
 
@@ -644,10 +739,16 @@ const MindSpark = () => {
 
           {/* Footer nav */}
           <div className="section-divider mt-10 pt-6 flex justify-between text-sm">
-            <Link to="/projects" className="font-medium hover:text-accent transition-colors">
+            <Link
+              to="/projects"
+              className="font-medium hover:text-accent transition-colors"
+            >
               ← All projects
             </Link>
-            <Link to="/projects/mould-man" className="font-medium hover:text-accent transition-colors">
+            <Link
+              to="/projects/mould-man"
+              className="font-medium hover:text-accent transition-colors"
+            >
               Next: MouldMan →
             </Link>
           </div>
