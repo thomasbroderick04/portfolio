@@ -78,16 +78,6 @@ const About = () => {
             </p>
 
             <p>
-              That became especially clear through my college projects. Through
-              moderated usability testing, prototyping, and iterative design, I
-              saw that hesitation, low confidence, and misunderstood instructions
-              were not simply user errors. In many cases, they were signals of
-              poor design. That experience strengthened my belief that usability
-              research is not just a phase of a project, but the foundation it
-              should stand on.
-            </p>
-
-            <p>
               Through research, testing, and iterative design, I seek to
               understand the barriers people encounter when engaging with digital
               systems. I am particularly interested in how seemingly small
