@@ -10,7 +10,7 @@ const featuredProjects = [
     title: "MindSpark",
     type: "",
     description:
-      "An interactive cognitive testing system. Redesigning the digital Go/No-Go test as an interaction problem, with usability, accessibility, and context as central design variables.",
+      "Designing an interactive cognitive testing system — exploring how interaction design can reduce exclusion in self-administered cognitive testing.",
     image: mindsparkHero,
     path: "/projects/mindspark",
   },
