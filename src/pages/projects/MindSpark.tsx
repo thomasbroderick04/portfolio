@@ -669,8 +669,8 @@ const MindSpark = () => {
 
             <ul className="space-y-5 mt-4">
               <li>
-                <p className="font-medium text-foreground">
-                  Readability required improvement
+                <p className="font-bold text-foreground">
+                  1. Readability required improvement
                 </p>
                 <p className="text-sm">
                   Users wanted larger text, better spacing, and clearer hierarchy
@@ -688,8 +688,8 @@ const MindSpark = () => {
                 </div>
               </li>
               <li>
-                <p className="font-medium text-foreground">
-                  Navigation needed to feel familiar
+                <p className="font-bold text-foreground">
+                  2. Navigation needed to feel familiar
                 </p>
                 <p className="text-sm">
                   Users expected clearer back arrows and standard mobile patterns.
@@ -706,8 +706,8 @@ const MindSpark = () => {
                 </div>
               </li>
               <li>
-                <p className="font-medium text-foreground">
-                  The main test interaction needed stronger affordance
+                <p className="font-bold text-foreground">
+                  3. The main test interaction needed stronger affordance
                 </p>
                 <p className="text-sm">
                   Users wished for the primary ‘Go’ button used to take the test
@@ -724,8 +724,8 @@ const MindSpark = () => {
                 </div>
               </li>
               <li>
-                <p className="font-medium text-foreground">
-                  Practice and demonstration reduced uncertainty
+                <p className="font-bold text-foreground">
+                  4. Practice and demonstration reduced uncertainty
                 </p>
                 <p className="text-sm">
                   Users responded better when the test was demonstrated clearly
@@ -743,8 +743,8 @@ const MindSpark = () => {
                 </div>
               </li>
               <li>
-                <p className="font-medium text-foreground">
-                  Feedback needed to stay calm and supportive
+                <p className="font-bold text-foreground">
+                  5. Feedback needed to stay calm and supportive
                 </p>
                 <p className="text-sm">
                   Harsh error cues created pressure, and so corrective feedback
@@ -762,8 +762,8 @@ const MindSpark = () => {
                 </div>
               </li>
               <li>
-                <p className="font-medium text-foreground">
-                  Microphone use needed clearer onboarding
+                <p className="font-bold text-foreground">
+                  6. Microphone use needed clearer onboarding
                 </p>
                 <p className="text-sm">
                   This led directly to the microphone enclosure and stand system.
@@ -780,8 +780,8 @@ const MindSpark = () => {
                 </div>
               </li>
               <li>
-                <p className="font-medium text-foreground">
-                  Results worked best when visual and contextual
+                <p className="font-bold text-foreground">
+                  7. Results worked best when visual and contextual
                 </p>
                 <p className="text-sm">
                   Users found graphs, response breakdowns, and performance shown
