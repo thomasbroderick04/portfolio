@@ -676,12 +676,12 @@ const MindSpark = () => {
                   Users wanted larger text, better spacing, and clearer hierarchy
                   on instruction-heavy screens.
                 </p>
-                <div className="mt-3 rounded-md border border-border bg-secondary/30 px-4 py-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-1">
-                    My design response -
+                <div className="mt-3 pl-1">
+                  <p className="text-sm leading-none text-foreground mb-2" aria-hidden="true">
+                    ↓
                   </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Increased text clarity,
+                  <p className="text-sm text-foreground leading-relaxed">
+                    <strong>My design response -</strong> Increased text clarity,
                     improved spacing, strengthened hierarchy, and broke the testing
                     experience into clearer stages.
                   </p>
@@ -694,12 +694,12 @@ const MindSpark = () => {
                 <p className="text-sm">
                   Users expected clearer back arrows and standard mobile patterns.
                 </p>
-                <div className="mt-3 rounded-md border border-border bg-secondary/30 px-4 py-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-1">
-                    My design response -
+                <div className="mt-3 pl-1">
+                  <p className="text-sm leading-none text-foreground mb-2" aria-hidden="true">
+                    ↓
                   </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Aligned the interface more
+                  <p className="text-sm text-foreground leading-relaxed">
+                    <strong>My design response -</strong> Aligned the interface more
                     closely with best-practice mobile conventions so users did not
                     have to relearn how to move through the system.
                   </p>
@@ -713,12 +713,12 @@ const MindSpark = () => {
                   Users wished for the primary ‘Go’ button used to take the test
                   to be more clearly distinctive as a button
                 </p>
-                <div className="mt-3 rounded-md border border-border bg-secondary/30 px-4 py-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-1">
-                    My design response -
+                <div className="mt-3 pl-1">
+                  <p className="text-sm leading-none text-foreground mb-2" aria-hidden="true">
+                    ↓
                   </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Ensured successive
+                  <p className="text-sm text-foreground leading-relaxed">
+                    <strong>My design response -</strong> Ensured successive
                     iterations improved button styling, states, and clarity.
                   </p>
                 </div>
@@ -731,12 +731,12 @@ const MindSpark = () => {
                   Users responded better when the test was demonstrated clearly
                   before official scoring.
                 </p>
-                <div className="mt-3 rounded-md border border-border bg-secondary/30 px-4 py-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-1">
-                    My design response -
+                <div className="mt-3 pl-1">
+                  <p className="text-sm leading-none text-foreground mb-2" aria-hidden="true">
+                    ↓
                   </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Strengthened the
+                  <p className="text-sm text-foreground leading-relaxed">
+                    <strong>My design response -</strong> Strengthened the
                     demonstration and practice stages so users could understand the
                     rules before the official assessment started.
                   </p>
@@ -750,12 +750,12 @@ const MindSpark = () => {
                   Harsh error cues created pressure, and so corrective feedback
                   was softened.
                 </p>
-                <div className="mt-3 rounded-md border border-border bg-secondary/30 px-4 py-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-1">
-                    My design response -
+                <div className="mt-3 pl-1">
+                  <p className="text-sm leading-none text-foreground mb-2" aria-hidden="true">
+                    ↓
                   </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Softened corrective
+                  <p className="text-sm text-foreground leading-relaxed">
+                    <strong>My design response -</strong> Softened corrective
                     feedback so errors felt informative rather than discouraging
                     during practice and testing.
                   </p>
@@ -768,12 +768,12 @@ const MindSpark = () => {
                 <p className="text-sm">
                   This led directly to the microphone enclosure and stand system.
                 </p>
-                <div className="mt-3 rounded-md border border-border bg-secondary/30 px-4 py-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-1">
-                    My design response -
+                <div className="mt-3 pl-1">
+                  <p className="text-sm leading-none text-foreground mb-2" aria-hidden="true">
+                    ↓
                   </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Developed the microphone
+                  <p className="text-sm text-foreground leading-relaxed">
+                    <strong>My design response -</strong> Developed the microphone
                     enclosure and stand system so the verbal pathway could be
                     tested as a more deliberate and comfortable interaction setup.
                   </p>
@@ -788,12 +788,12 @@ const MindSpark = () => {
                   alongside alertness easier to understand than a score presented
                   on its own.
                 </p>
-                <div className="mt-3 rounded-md border border-border bg-secondary/30 px-4 py-3">
-                  <p className="text-xs font-semibold uppercase tracking-[0.08em] text-muted-foreground mb-1">
-                    My design response -
+                <div className="mt-3 pl-1">
+                  <p className="text-sm leading-none text-foreground mb-2" aria-hidden="true">
+                    ↓
                   </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Refined the results screens
+                  <p className="text-sm text-foreground leading-relaxed">
+                    <strong>My design response -</strong> Refined the results screens
                     so users could understand their score through response
                     breakdowns, alertness information, progress views, and
                     performance classification.
