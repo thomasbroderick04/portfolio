@@ -72,7 +72,7 @@ const Layout = ({ children }: LayoutProps) => {
           </nav>
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="https://www.linkedin.com/in/thomas-b-532674367/"
+              href="https://www.linkedin.com/in/thomas-broderick-532674367/"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="LinkedIn profile"
