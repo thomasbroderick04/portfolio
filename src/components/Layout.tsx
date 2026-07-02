@@ -138,7 +138,7 @@ const Layout = ({ children }: LayoutProps) => {
             </div>
             <div className="mt-4 pt-4 border-t border-border flex gap-4">
               <a
-                href="https://www.linkedin.com/in/thomas-b-532674367/"
+                href="https://www.linkedin.com/in/thomas-broderick-532674367/"
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="LinkedIn"
