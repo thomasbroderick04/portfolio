@@ -26,7 +26,7 @@ const featuredProjects = [
     title: "LearnBetter",
     type: "",
     description:
-      "A student e-learning companion designed to support focus, organisation, and connection in remote learning. My contribution focused on problem framing, personas, HMW, and the sketches that became the Progress and Education Video features.",
+      "A student e-learning companion designed to support focus, organisation, and connection in remote learning. My contribution focused on problem framing, personas, HMW, and sketches that became the Progress and Education Video features.",
     image: learnbetterHero,
     path: "/projects/project-three",
   },
