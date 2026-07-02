@@ -27,13 +27,23 @@ const Layout = ({ children }: LayoutProps) => {
 
   useEffect(() => {
     const onScroll = () => setShowTop(window.scrollY > 600);
+
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   const isActive = (path: string) => {
-    if (path === "/") return location.pathname === "/";
-    if (path === "/projects") return location.pathname === "/projects";
+    if (path === "/") {
+      return location.pathname === "/";
+    }
+
+    if (path === "/projects") {
+      return location.pathname === "/projects";
+    }
+
     return location.pathname.startsWith(path);
   };
 
@@ -41,13 +51,13 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="min-h-screen bg-background">
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-primary focus:text-primary-foreground focus:px-3 focus:py-2 focus:rounded text-sm"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-primary focus:px-3 focus:py-2 focus:text-sm focus:text-primary-foreground focus:rounded"
       >
         Skip to content
       </a>
 
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-        <div className="flex items-center justify-between px-6 md:px-12 lg:px-16 py-4">
+      <header className="fixed top-0 right-0 left-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
+        <div className="flex items-center justify-between px-6 py-4 md:px-12 lg:px-16">
           <Link
             to="/"
             className="text-base font-semibold tracking-tight"
@@ -55,14 +65,18 @@ const Layout = ({ children }: LayoutProps) => {
           >
             Thomas Broderick
           </Link>
-          <nav className="hidden lg:flex items-center gap-7" aria-label="Main navigation">
+
+          <nav
+            className="hidden items-center gap-7 lg:flex"
+            aria-label="Main navigation"
+          >
             {primaryNav.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
                 className={`text-sm transition-colors ${
                   isActive(item.path)
-                    ? "text-foreground font-medium"
+                    ? "font-medium text-foreground"
                     : "text-muted-foreground hover:text-foreground"
                 }`}
               >
@@ -70,35 +84,42 @@ const Layout = ({ children }: LayoutProps) => {
               </Link>
             ))}
           </nav>
-          <div className="hidden lg:flex items-center gap-4">
+
+          <div className="hidden items-center gap-4 lg:flex">
             <a
-              href="https://www.linkedin.com/in/thomas-broderick-532674367/"
+              href="https://www.linkedin.com/in/thomas-b-532674367/"
               target="_blank"
               rel="noreferrer noopener"
               aria-label="LinkedIn profile"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground transition-colors hover:text-foreground"
             >
               <LinkedInIcon size={17} />
             </a>
+
             <a
               href="mailto:tommybroderick@outlook.com"
               aria-label="Email"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-muted-foreground transition-colors hover:text-foreground"
             >
               <Mail size={17} />
             </a>
           </div>
+
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 -mr-2 text-foreground"
+            className="-mr-2 p-2 text-foreground lg:hidden"
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
+
         {mobileOpen && (
-          <nav className="px-6 pb-6 border-b border-border" aria-label="Main navigation">
+          <nav
+            className="border-b border-border px-6 pb-6"
+            aria-label="Mobile navigation"
+          >
             <ul className="space-y-1">
               {primaryNav.map((item) => (
                 <li key={item.path}>
@@ -107,7 +128,7 @@ const Layout = ({ children }: LayoutProps) => {
                     onClick={() => setMobileOpen(false)}
                     className={`block py-2 text-sm transition-colors ${
                       isActive(item.path)
-                        ? "text-foreground font-medium"
+                        ? "font-medium text-foreground"
                         : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
@@ -116,8 +137,12 @@ const Layout = ({ children }: LayoutProps) => {
                 </li>
               ))}
             </ul>
-            <div className="mt-4 pt-4 border-t border-border">
-              <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2">Projects</p>
+
+            <div className="mt-4 border-t border-border pt-4">
+              <p className="mb-2 text-xs uppercase tracking-wider text-muted-foreground">
+                Projects
+              </p>
+
               <ul className="space-y-1">
                 {projectItems.map((item) => (
                   <li key={item.path}>
@@ -126,7 +151,7 @@ const Layout = ({ children }: LayoutProps) => {
                       onClick={() => setMobileOpen(false)}
                       className={`block py-1.5 text-sm transition-colors ${
                         location.pathname === item.path
-                          ? "text-foreground font-medium"
+                          ? "font-medium text-foreground"
                           : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
@@ -136,20 +161,22 @@ const Layout = ({ children }: LayoutProps) => {
                 ))}
               </ul>
             </div>
-            <div className="mt-4 pt-4 border-t border-border flex gap-4">
+
+            <div className="mt-4 flex gap-4 border-t border-border pt-4">
               <a
-                href="https://www.linkedin.com/in/thomas-broderick-532674367/"
+                href="https://www.linkedin.com/in/thomas-b-532674367/"
                 target="_blank"
                 rel="noreferrer noopener"
                 aria-label="LinkedIn"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground transition-colors hover:text-foreground"
               >
                 <LinkedInIcon size={18} />
               </a>
+
               <a
                 href="mailto:tommybroderick@outlook.com"
                 aria-label="Email"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Mail size={18} />
               </a>
@@ -158,18 +185,19 @@ const Layout = ({ children }: LayoutProps) => {
         )}
       </header>
 
-      <main
-        className="min-h-screen pt-16"
-        id="main-content"
-        role="main"
-      >
+      <main className="min-h-screen pt-16" id="main-content" role="main">
         {children}
       </main>
 
       {showTop && (
         <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-6 right-6 z-50 p-3 bg-primary text-primary-foreground rounded-full shadow-md hover:opacity-90 transition-opacity"
+          onClick={() =>
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            })
+          }
+          className="fixed right-6 bottom-6 z-50 rounded-full bg-primary p-3 text-primary-foreground shadow-md transition-opacity hover:opacity-90"
           aria-label="Scroll to top"
         >
           <ArrowUp size={16} />
