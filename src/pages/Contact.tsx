@@ -46,7 +46,7 @@ const Contact = () => {
               <LinkedInIcon size={20} className="text-[#0A66C2] shrink-0" />
               <div>
                 <p className="text-xs text-muted-foreground">LinkedIn</p>
-                <p className="text-sm font-medium">in/thomas-b-532674367</p>
+                <p className="text-sm font-medium">in/thomas-broderick-532674367</p>
               </div>
             </a>
           </div>
