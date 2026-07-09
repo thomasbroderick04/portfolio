@@ -38,7 +38,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/thomas-broderick-532674367/
+              href="https://www.linkedin.com/in/thomas-broderick-532674367/"
               target="_blank"
               rel="noreferrer noopener"
               className="flex items-center gap-4 px-5 py-4 bg-secondary rounded-md hover:bg-border/60 transition-colors"
