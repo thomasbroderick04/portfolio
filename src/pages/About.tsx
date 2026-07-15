@@ -56,7 +56,7 @@ const About = () => {
           <section className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed mb-16 max-w-4xl">
             <p>
               My name is Thomas Broderick, and I am a B.Sc. Digital
-              Media Design (1:!) graduate of the University of Limerick. My practice
+              Media Design (1:1) graduate of the University of Limerick. My practice
               sits at the intersection of interaction design, accessibility, and
               user experience research. I am interested in how interfaces shape
               participation and how design decisions can expand or restrict the
