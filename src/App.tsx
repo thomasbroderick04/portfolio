@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import MindSpark from "./pages/projects/MindSpark";
 import MouldMan from "./pages/projects/MouldMan";
 import ProjectThree from "./pages/projects/ProjectThree";
+import GuitarLooper from "./pages/projects/GuitarLooper";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/projects/mindspark" element={<MindSpark />} />
           <Route path="/projects/mould-man" element={<MouldMan />} />
           <Route path="/projects/project-three" element={<ProjectThree />} />
+          <Route path="/projects/guitar-looper" element={<GuitarLooper />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

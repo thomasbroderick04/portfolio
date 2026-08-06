@@ -14,6 +14,7 @@ const projectItems = [
   { label: "MindSpark", path: "/projects/mindspark" },
   { label: "MouldMan", path: "/projects/mould-man" },
   { label: "Project Three", path: "/projects/project-three" },
+  { label: "Motion-Controlled Guitar Looper", path: "/projects/guitar-looper" },
 ];
 
 interface LayoutProps {
