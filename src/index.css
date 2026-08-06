@@ -54,9 +54,18 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
+    min-width: 320px;
     font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  img, video {
+    max-width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -90,12 +99,16 @@
     @apply border-t border-border;
   }
 
+  .page-shell {
+    @apply w-full px-5 sm:px-6 md:px-10 lg:px-12 xl:px-16;
+  }
+
   .container-content {
-    @apply max-w-4xl;
+    @apply mx-auto w-full max-w-4xl;
   }
 
   .container-wide {
-    @apply max-w-4xl;
+    @apply mx-auto w-full max-w-7xl;
   }
 
   .case-study-section {

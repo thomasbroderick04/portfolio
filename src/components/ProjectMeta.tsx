@@ -5,11 +5,13 @@ interface MetaItem {
 
 const ProjectMeta = ({ items }: { items: MetaItem[] }) => {
   return (
-    <dl className="grid grid-cols-2 sm:grid-cols-4 gap-6 my-10 py-6 border-y border-border">
+    <dl className="my-10 grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-x-6 gap-y-5 border-y border-border py-6">
       {items.map((item) => (
-        <div key={item.label}>
+        <div key={item.label} className="min-w-0">
           <dt className="project-tag mb-1">{item.label}</dt>
-          <dd className="text-sm font-medium leading-snug text-foreground">{item.value}</dd>
+          <dd className="break-words text-sm font-medium leading-snug text-foreground">
+            {item.value}
+          </dd>
         </div>
       ))}
     </dl>

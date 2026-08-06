@@ -44,7 +44,7 @@ const skillGroups = [
 const About = () => {
   return (
     <Layout>
-      <div className="px-6 md:px-12 lg:px-16 py-16 md:py-24">
+      <div className="page-shell py-12 md:py-20">
         <article className="container-content">
           <p className="project-tag mb-4">About</p>
           <h1 className="mb-8">

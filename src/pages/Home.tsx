@@ -1,120 +1,64 @@
-import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
-import mindsparkHero from "@/assets/mindspark-hero-devices.png";
-import mouldmanHero from "@/assets/mouldman-hero-devices.png";
-import learnbetterHero from "@/assets/learnbetter-hero.png";
+import ProjectCard from "@/components/projects/ProjectCard";
+import { portfolioProjects } from "@/data/projects";
 
-const featuredProjects = [
-  {
-    title: "MindSpark",
-    type: "",
-    description:
-      "Designing an interactive cognitive testing system — exploring how interaction design can reduce exclusion in self-administered cognitive testing.",
-    image: mindsparkHero,
-    path: "/projects/mindspark",
-  },
-  {
-    title: "MouldMan",
-    type: "",
-    description:
-      "A research-led website for an Irish mould-remediation service. Built around three evidence-based personas with an IA designed to convert health anxiety into trust.",
-    image: mouldmanHero,
-    path: "/projects/mould-man",
-  },
-  {
-    title: "LearnBetter",
-    type: "",
-    description:
-      "A student e-learning companion designed to support focus, organisation, and connection in remote learning. My contribution focused on problem framing, personas, HMW, and sketches that became the Progress and Education Video features.",
-    image: learnbetterHero,
-    path: "/projects/project-three",
-  },
-];
+const featuredProjects = portfolioProjects.filter((project) => project.featured);
 
 const Home = () => {
   return (
     <Layout>
-      <div className="px-6 md:px-12 lg:px-16 py-16 md:py-24">
-        {/* Hero */}
-        <section className="container-content mb-20">
-          <p className="project-tag mb-4">UX &amp; Interaction Designer</p>
-          <h1 className="mb-6">
-            Hi, I&rsquo;m Thomas Broderick — a UX designer focused on usability,
-            accessibility, and human-centred design.
-          </h1>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8 max-w-6xl">
-            I am a BSc (Hons) Digital Media Design graduate of the University of
-            Limerick, specialising in user research, interaction design, and
-            accessible interface design. My work focuses on designing digital
-            products that are clear, usable, and responsive to the people using
-            them, rather than expecting users to adapt to the limitations of the
-            interface.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link
-              to="/projects"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
-            >
-              View Projects <ArrowRight size={15} />
-            </Link>
-            <Link
-              to="/about"
-              className="inline-flex items-center px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-md hover:bg-secondary transition-colors"
-            >
-              About me
-            </Link>
-          </div>
-        </section>
-
-        {/* Selected work */}
-        <section>
-          <div className="flex items-baseline justify-between mb-8 pb-3 border-b border-border">
-            <h2 className="text-xl font-semibold">My Projects</h2>
-            <Link
-              to="/projects"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              All projects →
-            </Link>
-          </div>
-
-          <div className="space-y-12">
-            {featuredProjects.map((project) => (
+      <div className="page-shell py-12 md:py-20">
+        <div className="container-wide">
+          <section className="max-w-5xl" aria-labelledby="home-heading">
+            <p className="project-tag mb-4">UX &amp; Interaction Designer</p>
+            <h1 id="home-heading">
+              Hi, I&rsquo;m Thomas Broderick — a UX designer focused on usability,
+              accessibility and human-centred design.
+            </h1>
+            <p className="mt-6 max-w-4xl text-lg leading-relaxed text-muted-foreground">
+              I am a BSc (Hons) Digital Media Design graduate of the University of
+              Limerick, specialising in user research, interaction design and
+              accessible interface design. My broader work also includes physical
+              computing, 3D modelling, graphic design and animation.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                key={project.path}
-                to={project.path}
-                className="group block"
+                to="/projects"
+                className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
-                <div className="image-frame aspect-[16/9] mb-4">
-                  <img
-                    src={project.image}
-                    alt={`${project.title} project preview`}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                    loading="lazy"
-                    width={1600}
-                    height={900}
-                  />
-                </div>
-                <div className="flex items-baseline justify-between gap-4">
-                  <div>
-                    <h3 className="text-lg font-semibold group-hover:text-accent transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mt-1 max-w-xl">
-                      {project.description}
-                    </p>
-                  </div>
-                  {project.type && (
-                    <span className="project-tag shrink-0 text-right">
-                      {project.type}
-                    </span>
-                  )}
-                </div>
+                Explore projects <ArrowRight size={15} aria-hidden="true" />
               </Link>
-            ))}
-          </div>
-        </section>
+              <Link
+                to="/about"
+                className="inline-flex items-center rounded-md border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+              >
+                About me
+              </Link>
+            </div>
+          </section>
+
+          <section className="mt-20 md:mt-28" aria-labelledby="featured-heading">
+            <div className="mb-7 flex items-baseline justify-between gap-4 border-b border-border pb-4">
+              <h2 id="featured-heading" className="text-xl font-semibold">
+                Selected projects
+              </h2>
+              <Link
+                to="/projects"
+                className="shrink-0 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
+                Browse all →
+              </Link>
+            </div>
+
+            <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+              {featuredProjects.map((project) => (
+                <ProjectCard key={project.path} project={project} compact />
+              ))}
+            </div>
+          </section>
+        </div>
       </div>
     </Layout>
   );

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import ProjectBreadcrumbs from "@/components/projects/ProjectBreadcrumbs";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
 
@@ -68,14 +69,9 @@ const SmallDocImage = ({ src, alt, caption }: DocImageProps) => (
 const ProjectThree = () => {
   return (
     <Layout>
-      <div className="px-6 md:px-12 lg:px-16 py-16 md:py-24">
+      <div className="page-shell py-12 md:py-20">
         <article className="container-content">
-          <Link
-            to="/projects"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-16 inline-block"
-          >
-            ← Back to projects
-          </Link>
+          <ProjectBreadcrumbs category="ui-ux-design" projectTitle="LearnBetter" />
 
           <h1 className="mb-5">LearnBetter</h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
@@ -623,7 +619,7 @@ const ProjectThree = () => {
             </div>
           </CaseStudySection>
 
-          <div className="section-divider mt-10 pt-6 flex justify-between text-sm">
+          <div className="section-divider mt-10 pt-6 flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
             <Link
               to="/projects/mould-man"
               className="font-medium hover:text-accent transition-colors"
@@ -631,10 +627,10 @@ const ProjectThree = () => {
               ← Previous: MouldMan
             </Link>
             <Link
-              to="/projects"
+              to="/projects/ui-ux-design"
               className="font-medium hover:text-accent transition-colors"
             >
-              All projects →
+              UI/UX Design →
             </Link>
           </div>
         </article>

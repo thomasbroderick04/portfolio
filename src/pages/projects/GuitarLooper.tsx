@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import ProjectBreadcrumbs from "@/components/projects/ProjectBreadcrumbs";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
-import walkthroughVideo from "@/assets/guitar-looper-walkthrough.mp4.asset.json";
-import projectReport from "@/assets/guitar-looper-report.pdf.asset.json";
+
+const publicAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+
+const walkthroughVideo = publicAsset("media/CS4174MaxPatchWalkthroughBroderick.mp4");
+const walkthroughPoster = publicAsset("media/guitar-looper-poster.jpg");
+const projectReport = publicAsset("project-files/CS4174WrittenReportBroderick.pdf");
+const arduinoCode = publicAsset("project-files/CS4174Arduino_Broderick.ino");
+const receiverPatch = publicAsset("project-files/CS4174Receiver_Max_Broderick.maxpat");
 
 const linkButtonPrimary =
   "inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:opacity-90 transition-opacity";
@@ -75,14 +82,9 @@ const FlowColumn = ({
 const GuitarLooper = () => {
   return (
     <Layout>
-      <div className="px-6 md:px-12 lg:px-16 py-16 md:py-24">
+      <div className="page-shell py-12 md:py-20">
         <article className="container-content">
-          <Link
-            to="/projects"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-16 inline-block"
-          >
-            ← Back to projects
-          </Link>
+          <ProjectBreadcrumbs category="physical-computing" projectTitle="Motion-Controlled Guitar Looper" />
 
           <h1 className="mb-5">Motion-Controlled Guitar Looper</h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
@@ -146,17 +148,17 @@ const GuitarLooper = () => {
           <section className="pb-4">
             <h2 className="case-study-heading">Project Links</h2>
             <div className="flex flex-wrap gap-3">
-              <a href="#receiver-patch" className={linkButtonSecondary}>
-                View Max Receiver Patch
+              <a href={receiverPatch} download className={linkButtonSecondary}>
+                Download Max Receiver Patch
               </a>
-              <a href="#arduino-code" className={linkButtonSecondary}>
-                View Arduino Code
+              <a href={arduinoCode} download className={linkButtonSecondary}>
+                Download Arduino Code
               </a>
               <a href="#patch-walkthrough" className={linkButtonSecondary}>
                 Watch Patch Walkthrough
               </a>
               <a
-                href={projectReport.url}
+                href={projectReport}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={linkButtonPrimary}
@@ -427,7 +429,8 @@ const GuitarLooper = () => {
             <figure className="my-8 not-prose">
               <div className="rounded-md overflow-hidden border border-border bg-secondary/40">
                 <video
-                  src={walkthroughVideo.url}
+                  src={walkthroughVideo}
+                  poster={walkthroughPoster}
                   controls
                   preload="metadata"
                   className="w-full h-auto"
@@ -786,7 +789,7 @@ const GuitarLooper = () => {
             </dl>
           </CaseStudySection>
 
-          <div className="section-divider mt-10 pt-6 flex justify-between text-sm">
+          <div className="section-divider mt-10 pt-6 flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
             <Link
               to="/projects/project-three"
               className="font-medium hover:text-accent transition-colors"
@@ -794,10 +797,10 @@ const GuitarLooper = () => {
               ← Previous: LearnBetter
             </Link>
             <Link
-              to="/projects"
+              to="/projects/physical-computing"
               className="font-medium hover:text-accent transition-colors"
             >
-              All projects →
+              Physical Computing →
             </Link>
           </div>
         </article>

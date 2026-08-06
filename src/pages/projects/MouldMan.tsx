@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import ProjectBreadcrumbs from "@/components/projects/ProjectBreadcrumbs";
 import CaseStudySection from "@/components/CaseStudySection";
 import ProjectMeta from "@/components/ProjectMeta";
 
@@ -42,14 +43,9 @@ const DocImage = ({ src, alt, caption }: DocImageProps) => (
 const MouldMan = () => {
   return (
     <Layout>
-      <div className="px-6 md:px-12 lg:px-16 py-16 md:py-24">
+      <div className="page-shell py-12 md:py-20">
         <article className="container-content">
-          <Link
-            to="/projects"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-16 inline-block"
-          >
-            ← Back to projects
-          </Link>
+          <ProjectBreadcrumbs category="ui-ux-design" projectTitle="MouldMan" />
 
           <h1 className="mb-5">MouldMan</h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
@@ -716,7 +712,7 @@ const MouldMan = () => {
             </div>
           </CaseStudySection>
 
-          <div className="section-divider mt-10 pt-6 flex justify-between text-sm">
+          <div className="section-divider mt-10 pt-6 flex flex-col gap-3 text-sm sm:flex-row sm:items-center sm:justify-between">
             <Link
               to="/projects/mindspark"
               className="font-medium hover:text-accent transition-colors"

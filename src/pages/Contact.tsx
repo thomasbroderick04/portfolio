@@ -5,7 +5,7 @@ import Layout from "@/components/Layout";
 const Contact = () => {
   return (
     <Layout>
-      <div className="px-6 md:px-12 lg:px-16 py-16 md:py-24">
+      <div className="page-shell py-12 md:py-20">
         <article className="container-content">
           <p className="project-tag mb-4">Contact</p>
           <h1 className="mb-6">Contact Information</h1>
