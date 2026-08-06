@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import MindSpark from "./pages/projects/MindSpark";
 import MouldMan from "./pages/projects/MouldMan";
 import ProjectThree from "./pages/projects/ProjectThree";
+import GuitarLooper from "./pages/projects/GuitarLooper";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
