@@ -126,38 +126,102 @@ const MindSpark = () => {
 
           {/* Design Problem */}
           <CaseStudySection title="The Design Problem">
-            <p>
-              Most digital cognitive assessments assume a narrow model of
-              interaction: users are expected to read lengthy instructions,
-              understand abstract rules, respond under time pressure, and
-              interact through precise touchscreen input. These assumptions risk
-              excluding people whose abilities, contexts, or circumstances
-              differ from those expectations. As cognitive testing moves into
-              self-administered formats, accessibility becomes central to the
-              validity of the assessment itself.
-            </p>
-            <p>
-              This mattered particularly for the Go/No-Go test, which depends on
-              users quickly perceiving stimuli, understanding the rule structure,
-              responding under time pressure, and withholding responses at the
-              correct moment. Poor instructions, weak feedback, small touch
-              targets, or confusing interaction design can distort performance
-              independently of cognitive ability.
-            </p>
-            <div className="space-y-3 mt-4">
-              <p>
-                <strong>RQ1:</strong> How do current cognitive assessment tools
-                function in evaluating cognitive abilities, and what design
-                limitations do they exhibit?
+            <div className="max-w-3xl">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                Traditionally, cognitive assessments were administered in controlled
+                environments by trained professionals who could explain the task,
+                confirm understanding, and observe difficulties. As these assessments
+                move onto mobile and web-based platforms, they are increasingly
+                completed independently. Without a professional present, the digital
+                interface must itself provide that guidance — clearly, calmly, and for
+                people with a wide range of needs and abilities.
               </p>
-              <p>
-                <strong>RQ2:</strong> What design considerations can enhance the
-                accessibility and usability of cognitive assessment tools?
+            </div>
+
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {[
+                {
+                  number: "01",
+                  title: "Organising and explaining the complete experience",
+                  description:
+                    "MindSpark brings together multiple assessments, cognitive categories, instructions, settings and results. Without a clear information structure, users may struggle to understand which assessment is relevant, how to prepare, or what to do next.",
+                },
+                {
+                  number: "02",
+                  title: "Preventing the interface from affecting test performance",
+                  description:
+                    "The Go/No-Go test measures response time, missed signals and incorrect actions. Misunderstood instructions, unclear signals, awkward touch targets or uncertain feedback can introduce delay or error that reflects the interface rather than cognitive ability.",
+                },
+                {
+                  number: "03",
+                  title: "Making results understandable within their wider context",
+                  description:
+                    "A single score does not explain the response patterns or circumstances that produced it. Repeated testing creates multiple levels of information — individual attempts, category performance, and long-term change — which must be connected without overwhelming the user.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.number}
+                  className="rounded-lg border border-border bg-card p-5"
+                >
+                  <p className="text-xs font-semibold tracking-widest text-muted-foreground mb-3">
+                    {item.number}
+                  </p>
+                  <h3 className="text-base font-semibold text-foreground mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 max-w-3xl">
+              <p className="text-base text-muted-foreground leading-relaxed">
+                These three challenges shaped the project&apos;s research focus:
+                understanding how existing tools work and where their design creates
+                difficulties; identifying how the wider assessment experience could
+                better support independent use; and exploring whether touch and
+                verbal input could provide different ways of completing the same task.
               </p>
-              <p>
-                <strong>RQ3:</strong> How can different modes of interaction be
-                combined to create effective cognitive assessment experiences?
-              </p>
+            </div>
+
+            <div className="mt-6 grid gap-3 md:grid-cols-3">
+              {[
+                {
+                  label: "RQ1",
+                  title: "Understanding existing tools",
+                  question:
+                    "How do current cognitive assessment tools function in evaluating cognitive abilities, and what design limitations do they exhibit?",
+                },
+                {
+                  label: "RQ2",
+                  title: "Designing for usability and accessibility",
+                  question:
+                    "What design considerations can enhance the accessibility and usability of cognitive assessment tools?",
+                },
+                {
+                  label: "RQ3",
+                  title: "Exploring different methods of interaction",
+                  question:
+                    "How can different modes of interaction be combined to create effective cognitive assessment experiences?",
+                },
+              ].map((rq) => (
+                <div
+                  key={rq.label}
+                  className="rounded-lg border border-border bg-secondary/40 p-5"
+                >
+                  <p className="text-xs font-semibold tracking-widest text-foreground mb-1">
+                    {rq.label}
+                  </p>
+                  <p className="text-sm font-medium text-foreground mb-2">
+                    {rq.title}
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {rq.question}
+                  </p>
+                </div>
+              ))}
             </div>
           </CaseStudySection>
 
