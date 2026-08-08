@@ -129,12 +129,15 @@ const MindSpark = () => {
             <div className="max-w-3xl">
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 Traditionally, cognitive assessments were administered in controlled
-                environments by trained professionals who could explain the task,
-                confirm understanding, and observe difficulties. As these assessments
-                move onto mobile and web-based platforms, they are increasingly
-                completed independently. Without a professional present, the digital
-                interface must itself provide that guidance — clearly, calmly, and for
-                people with a wide range of needs and abilities.
+                environments by trained professionals who could explain the assessment
+                to the user, confirm that the person understood the assessment, and
+                observe any difficulties during testing. However, as these assessments
+                increasingly move onto mobile and web-based platforms, they are also
+                being completed independently and outside of clinical settings. In
+                this context, without a professional present, a digital version of
+                an assessment must clearly explain what to do, make its screens, buttons
+                and controls easy to navigate and use for people with different needs
+                and abilities, and guide them through each stage of the testing process.
               </p>
             </div>
 
@@ -144,19 +147,19 @@ const MindSpark = () => {
                   number: "01",
                   title: "Organising and explaining the complete experience",
                   description:
-                    "MindSpark brings together multiple assessments, cognitive categories, instructions, settings and results. Without a clear information structure, users may struggle to understand which assessment is relevant, how to prepare, or what to do next.",
+                    "MindSpark brings together multiple assessments, cognitive categories, instructions, test settings and results. Without a clear information structure, users may struggle to understand which assessment is relevant, what it examines, how to prepare, or what to do next. The application therefore had to provide the guidance normally offered by a trained professional without overwhelming the user with information.",
                 },
                 {
                   number: "02",
                   title: "Preventing the interface from affecting test performance",
                   description:
-                    "The Go/No-Go test measures response time, missed signals and incorrect actions. Misunderstood instructions, unclear signals, awkward touch targets or uncertain feedback can introduce delay or error that reflects the interface rather than cognitive ability.",
+                    "The Go/No-Go test measures response time, missed signals and actions made at the wrong time. If a user misunderstands the instructions, cannot clearly identify a signal, struggles to operate the touchscreen or is unsure whether their action was recorded, the resulting delay or mistake may reflect the interface rather than the cognitive ability being examined. Depending on a single input method could also disadvantage users who cannot respond comfortably or quickly through touchscreen controls.",
                 },
                 {
                   number: "03",
                   title: "Making results understandable within their wider context",
                   description:
-                    "A single score does not explain the response patterns or circumstances that produced it. Repeated testing creates multiple levels of information — individual attempts, category performance, and long-term change — which must be connected without overwhelming the user.",
+                    "A single score does not explain the response times and mistakes that produced it or the circumstances in which the test was completed, such as how alert the user felt. Repeated testing also creates several levels of information: the result of one attempt, performance within a cognitive category and changes across weeks, months and years. These levels needed to be clearly connected without presenting users with an overwhelming amount of data.",
                 },
               ].map((item) => (
                 <div
@@ -178,11 +181,12 @@ const MindSpark = () => {
 
             <div className="mt-8 max-w-3xl">
               <p className="text-base text-muted-foreground leading-relaxed">
-                These three challenges shaped the project&apos;s research focus:
-                understanding how existing tools work and where their design creates
-                difficulties; identifying how the wider assessment experience could
-                better support independent use; and exploring whether touch and
-                verbal input could provide different ways of completing the same task.
+                To investigate this design challenge, I divided the project into three
+                areas: understanding how existing cognitive assessment tools work and
+                where their design creates difficulties; identifying how the wider
+                assessment experience could better support independent use; and exploring
+                whether touch and verbal input could provide different ways of completing
+                the same cognitive task. These areas formed the following research questions:
               </p>
             </div>
 
