@@ -127,7 +127,7 @@ const MindSpark = () => {
           {/* Design Problem */}
           <CaseStudySection title="The Design Problem">
             <div className="max-w-3xl">
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 Traditionally, cognitive assessments were administered in controlled
                 environments by trained professionals who could explain the assessment
                 to the user, confirm that the person understood the assessment, and

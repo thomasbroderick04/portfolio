@@ -80,6 +80,30 @@
     @apply leading-relaxed;
   }
 
+  table {
+    @apply w-full border-collapse border border-border rounded-md overflow-hidden text-base bg-card;
+  }
+
+  thead {
+    @apply border-b border-border bg-secondary/60;
+  }
+
+  th {
+    @apply px-4 py-3 text-left font-semibold text-foreground;
+  }
+
+  td {
+    @apply px-4 py-3 border-b border-border text-muted-foreground;
+  }
+
+  tbody tr:last-child td {
+    @apply border-b-0;
+  }
+
+  caption {
+    @apply mt-3 text-xs text-muted-foreground text-center;
+  }
+
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-ring rounded-sm;
   }
