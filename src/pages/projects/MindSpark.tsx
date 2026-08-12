@@ -199,65 +199,165 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
 
       {/* Research and Key Insights */}
       <CaseStudySection title="Research &amp; Key Insights">
-        <p>
-          The strongest insight from my research was that digital cognitive
-          test performance cannot always be understood independently of the
-          interface used to complete a test. Dense instructions, uncertainty
-          about how to interact, small touch targets, cluttered layouts, weak
-          feedback, and anxiety caused by self-administered use can affect
-          who completes the assessment confidently and how their performance
-          is interpreted. This made accessibility central to the validity of
-          the experience.
+        <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
+          My research produced three clear findings that shaped the direction
+          of MindSpark.
         </p>
-        <p>
-          I therefore used accessibility as a design method to question who
-          the interaction was designed around, what it required from users,
-          and where those requirements could create exclusion. The goal was
-          not simply to improve usability, but to support wider participation
-          across different abilities, contexts, and ways of interacting.
-        </p>
-        <p>
-          Performance must also be understood in relation to the conditions
-          in which the test is taken. Factors such as fatigue, alertness, and
-          the wider testing situation can influence how users engage with the
-          test and affect the result. This led me to treat context as a design
-          consideration rather than background information.
-        </p>
-        <p>
-          A third insight came from multimodal interaction research.
-          Touchscreen-only testing can introduce motor demands that are
-          unrelated to the cognitive ability being assessed. Because the
-          Go/No-Go test uses a binary response structure, it offered a strong
-          opportunity to explore verbal responses as an alternative input
-          method without changing the central logic of the test.
-        </p>
-        <ul className="space-y-2 mt-4">
-          <li>
-            • <strong>Design Implication 1:</strong>{" "}
-            Simplify the interface and reduce the need for small, precise, or
-            repeated touchscreen actions during the test.
-          </li>
-          <li>
-            • <strong>Design Implication 2:</strong>{" "}
-            Use clear onboarding, concise instructions, and simplified
-            screens to help users understand the test rules.
-          </li>
-          <li>
-            • <strong>Design Implication 3:</strong>{" "}
-            Provide guided practice and supportive feedback so users can
-            become familiar with the test before official scoring begins.
-          </li>
-          <li>
-            • <strong>Design Implication 4:</strong>{" "}
-            Use alertness checks and contextual result explanations so
-            performance is not presented as an isolated score.
-          </li>
-          <li>
-            • <strong>Design Implication 5:</strong>{" "}
-            Allow users to respond through either touch or verbal input
-            without changing the central structure or logic of the test.
-          </li>
-        </ul>
+
+        <div className="mt-8 divide-y divide-border border-y border-border">
+          <article className="grid md:grid-cols-[72px_1fr] gap-4 md:gap-8 py-8">
+            <p className="text-sm font-semibold text-muted-foreground">
+              01
+            </p>
+            <div className="max-w-3xl">
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                The design of a test can affect the result
+              </h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  A cognitive assessment is intended to measure a person’s
+                  ability to remember information, concentrate, react quickly
+                  or control their responses. However, the result may not
+                  accurately reflect that ability if the person has difficulty
+                  using the test itself.
+                </p>
+                <p>
+                  For example, unclear instructions may cause someone to
+                  respond incorrectly, a small button may make it difficult to
+                  respond quickly, and weak feedback may leave them unsure
+                  whether their response has been recorded. In these cases, a
+                  delay or mistake may have been caused by the interface rather
+                  than the cognitive ability being examined.
+                </p>
+                <p>
+                  Accessibility was therefore essential to the design of
+                  MindSpark. I reviewed each stage of the experience by
+                  considering whether users could understand the information,
+                  navigate the application and respond during the test without
+                  avoidable difficulty.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article className="grid md:grid-cols-[72px_1fr] gap-4 md:gap-8 py-8">
+            <p className="text-sm font-semibold text-muted-foreground">
+              02
+            </p>
+            <div className="max-w-3xl">
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                A test result should not be presented without context
+              </h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  How someone performs can be affected by how alert or tired
+                  they feel when taking the test. Presenting only a score does
+                  not give the user any information about the conditions in
+                  which that result was recorded.
+                </p>
+                <p>
+                  MindSpark therefore asks users to rate how alert they feel
+                  before beginning the test. This information is displayed
+                  alongside the result, allowing users to consider their
+                  performance in relation to how they felt at the time.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article className="grid md:grid-cols-[72px_1fr] gap-4 md:gap-8 py-8">
+            <p className="text-sm font-semibold text-muted-foreground">
+              03
+            </p>
+            <div className="max-w-3xl">
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Touchscreen input may not suit every user
+              </h3>
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  A touchscreen test requires the user to see a signal, move
+                  their hand and press a button accurately and quickly.
+                  Difficulty completing any of these physical actions could
+                  affect the result, even when the person understands the
+                  test.
+                </p>
+                <p>
+                  The Go/No-Go test requires a user to make a simple response
+                  when a particular visual signal appears. This made it
+                  possible to explore two ways of responding: pressing an
+                  on-screen button or saying “Go” aloud. Both methods allow the
+                  user to complete the same test without changing what the test
+                  is intended to measure.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div className="mt-12">
+          <div className="max-w-3xl mb-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground mb-2">
+              From research to action
+            </p>
+            <h3 className="text-xl font-semibold text-foreground">
+              What these findings meant for the design
+            </h3>
+          </div>
+
+          <ol className="grid md:grid-cols-2 gap-px overflow-hidden rounded-md border border-border bg-border">
+            {[
+              {
+                category: "Interface clarity",
+                text: "Keep each screen focused and remove unnecessary information during the test.",
+              },
+              {
+                category: "Interface clarity",
+                text: "Use large controls and reduce the need for small, precise or repeated touchscreen actions.",
+              },
+              {
+                category: "Instructions",
+                text: "Break the instructions into short, clearly ordered steps.",
+              },
+              {
+                category: "Preparation",
+                text: "Provide a demonstration and practice round before the scored test begins.",
+              },
+              {
+                category: "Feedback",
+                text: "Give clear feedback so users know when their response has been recorded.",
+              },
+              {
+                category: "Result context",
+                text: "Record the user’s level of alertness and display it alongside their result.",
+              },
+              {
+                category: "Flexible input",
+                text: "Allow users to respond using either touchscreen or verbal input.",
+              },
+            ].map(({ category, text }, index) => (
+              <li
+                key={text}
+                className={`bg-background p-5 md:p-6 ${
+                  index === 6 ? "md:col-span-2" : ""
+                }`}
+              >
+                <div className="flex items-start gap-4">
+                  <span className="text-sm font-semibold text-muted-foreground tabular-nums">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground mb-2">
+                      {category}
+                    </p>
+                    <p className="text-sm text-foreground leading-relaxed">
+                      {text}
+                    </p>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
       </CaseStudySection>
 
       {/* Auditing Existing Tools */}
