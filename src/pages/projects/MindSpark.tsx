@@ -57,192 +57,78 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
       {/* Overview */}
       <CaseStudySection title="Overview">
         <p>
-          MindSpark is a prototype mobile application that is designed to
-          support the complete experience of independently taking cognitive
-          assessments. Cognitive assessments are structured tasks used to
-          examine how well a person can remember information, concentrate,
-          solve problems, react quickly and control impulsive reactions. The
-          results from these assessments can help professionals identify
-          signs of cognitive impairment and monitor changes over time.
-          Inside MindSpark, cognitive assessments are grouped according to
-          the ability they examine, such as working memory or attention.
-          Selecting an assessment opens an information page explaining what
-          it measures, how the assessment works, and what the user will be
-          asked to do.
+          MindSpark is my final year project. It is a research-led redesign
+          of the digital Go/No-Go test, a widely used cognitive test that
+          measures attention and the ability for an individual to control
+          their responses. Rather than treating the test as a fixed
+          screen-based interaction, I approached it as a full user
+          experience problem. This project explored how usability,
+          accessibility, and context can shape how self-administered
+          cognitive testing is understood, completed, and interpreted.
         </p>
-
-        <h3 className="text-lg md:text-xl font-semibold text-foreground pt-4">
-          Project Scope: The Go/No-Go Test
-        </h3>
         <p>
-          Although MindSpark was designed to contain several cognitive
-          assessments, building every assessment was not within the scope of
-          this project. I therefore selected one assessment called the
-          Go/No-Go test, and designed the complete experience, from learning
-          about and practising the test to completing it and reviewing
-          results. During the Go/No-Go test, visual signals appear on the
-          screen one at a time. During the test, users respond to visual
-          stimuli using either touchscreen or verbal input, allowing their
-          reaction times and accuracy of their responses to be measured. The
-          test records how quickly the user acts on "Go" signals, how many
-          "Go" signals they miss, and how often they incorrectly act on
-          "No-Go" signals.
+          The project began with a central accessibility question: what
+          happens when cognitive testing systems assume that every user can
+          read dense instructions, understand abstract rules quickly,
+          respond under time pressure, use precise touchscreen input, and
+          complete the test under ideal conditions? These assumptions can
+          exclude users whose abilities, circumstances, or preferred ways
+          of interacting do not match the narrow user model built into the
+          system. They can also introduce confusion, hesitation, or
+          interaction difficulty that may affect performance independently
+          of the cognitive ability being assessed.
         </p>
-
-        <h3 className="text-lg md:text-xl font-semibold text-foreground pt-4">
-          The User Experience
-        </h3>
         <p>
-          Before taking the Go/No-Go test, users choose a difficulty level
-          and decide whether they want to press an on-screen button or say
-          “Go” aloud during the test. They then rate how alert they feel,
-          watch a demonstration and complete a practice round so that they
-          can learn the rules before the scored test begins. After
-          completing the test, users see a breakdown of their average
-          response time and the accuracy of their responses to the visual
-          stimuli. The result also shows how alert the user said they felt
-          before starting the test, allowing them to view their performance
-          alongside how they were feeling at the time of taking test. If
-          they take the test again, each new result is saved. They can then
-          compare their scores across weekly, monthly and yearly views to
-          see how their performance changes over time.
-        </p>
-
-        <h3 className="text-lg md:text-xl font-semibold text-foreground pt-4">
-          Development and Final Outcome
-        </h3>
-        <p>
-          I first designed the user interface as simple wireframes before
-          developing them into a detailed interactive Figma prototype. I
-          tested each stage with users and revised the instructions,
-          navigation, test feedback, results and verbal-input setup based on
-          the difficulties they experienced. The final project consisted of
-          the interactive MindSpark mobile prototype, a working
-          browser-based Go/No-Go test built with HTML, CSS and JavaScript.
-          To test whether the Go/No-Go test could be completed without
-          touchscreen input, I built a proof-of-concept verbal response
-          system using an Arduino and microphone sensor. The system
-          converted a spoken voice command into an input that the browser
-          could record and allowed me to test how microphone placement
-          affected detection. I therefore designed and 3D-printed an
-          adjustable enclosure to hold the microphone during testing. In a
-          finished mobile application, the same interaction could use the
-          device’s built-in microphone.
+          I redesigned the full experience around the test, including how it
+          is introduced, how the user prepares for it, how they practise it,
+          how they complete it, and how their results are shown afterwards.
+          I also developed and tested an alternative verbal-response pathway
+          using Arduino and a microphone sensor to explore how cognitive
+          assessments might support users who cannot comfortably rely on
+          touchscreen interaction alone. Across low-, medium-, and
+          high-fidelity iterations, I used user research and usability
+          testing to refine the system step by step. The final outcome was a
+          prototype that made the test feel clearer, more supportive, and
+          easier to understand as a full user experience.
         </p>
       </CaseStudySection>
 
       {/* Design Problem */}
       <CaseStudySection title="The Design Problem">
-        <div className="max-w-3xl">
-          <p className="text-base text-muted-foreground leading-relaxed">
-            Traditionally, cognitive assessments were administered in controlled
-            environments by trained professionals who could explain the assessment
-            to the user, confirm that the person understood the assessment, and
-            observe any difficulties during testing. However, as these assessments
-            increasingly move onto mobile and web-based platforms, they are also
-            being completed independently and outside of clinical settings. In
-            this context, without a professional present, a digital version of an
-            assessment must clearly explain what users need to do, provide an
-            intuitive and customisable interface that is easy to navigate, and
-            allow users to track how their performance changes over time.
+        <p>
+          Most digital cognitive assessments assume a narrow model of
+          interaction: users are expected to read lengthy instructions,
+          understand abstract rules, respond under time pressure, and
+          interact through precise touchscreen input. These assumptions risk
+          excluding people whose abilities, contexts, or circumstances
+          differ from those expectations. As cognitive testing moves into
+          self-administered formats, accessibility becomes central to the
+          validity of the assessment itself.
+        </p>
+        <p>
+          This mattered particularly for the Go/No-Go test, which depends on
+          users quickly perceiving stimuli, understanding the rule structure,
+          responding under time pressure, and withholding responses at the
+          correct moment. Poor instructions, weak feedback, small touch
+          targets, or confusing interaction design can distort performance
+          independently of cognitive ability.
+        </p>
+        <div className="space-y-3 mt-4">
+          <p>
+            <strong>RQ1:</strong> How do current cognitive assessment tools
+            function in evaluating cognitive abilities, and what design
+            limitations do they exhibit?
           </p>
-        </div>
-
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
-          {[
-            {
-              number: "01",
-              title: "Organising and explaining the complete experience",
-              description:
-                "This application had to provide the guidance normally offered by a trained professional without overwhelming the user with information. Because MindSpark brings together multiple cognitive categories, assessments, instructions, test settings and results, this information needed to be organised into a clear and logical sequence. Otherwise, users could struggle to identify the relevant assessment, understand what it examines, prepare for it correctly or know what to do next.",
-            },
-            {
-              number: "02",
-              title: "Preventing the interface from affecting test performance",
-              description:
-                "Within digital cognitive testing in general, it is important that cognitive testing applications capture user inputs at the appropriate times and clearly signal when the user is expected to respond during the test. If a user misunderstands the instructions, cannot clearly identify a signal, struggles to operate the touchscreen, or is unsure whether their action was recorded, the resulting delay or mistake may reflect the interface rather than the cognitive ability being examined. Depending on a single input method or on the speed of the test itself could also disadvantage users who cannot respond comfortably or quickly through touchscreen controls.",
-            },
-            {
-              number: "03",
-              title:
-                "Presenting results in a clear manner and providing intuitive feedback about the results",
-              description:
-                "Many existing applications only provide users with a numerical score, without explaining which parts of their performance contributed to it or providing any context about the circumstances in which the test was taken. The application therefore needed to present a clear breakdown of the user’s average response time and their correct and incorrect responses to the visual stimuli, rather than reducing their performance to a single score. User-reported factors, such as how alert they felt before taking the test, also needed to be shown alongside the result so that performance could be understood in the context of how the user was feeling at the time. When several tests had been completed, the results needed to show how each part of the user’s performance had changed across weekly, monthly and yearly periods. However, because users could interpret slower response times or a greater number of mistakes as a negative judgement of their cognitive ability, the feedback also needed to explain the result in neutral language without labelling the user’s performance as simply “good” or “bad.”",
-            },
-          ].map((item) => (
-            <div
-              key={item.number}
-              className="rounded-lg border border-border bg-card p-5"
-            >
-              <p className="text-xs font-semibold tracking-widest text-muted-foreground mb-3">
-                {item.number}
-              </p>
-              <h3 className="text-base font-semibold text-foreground mb-2">
-                {item.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-8 max-w-3xl">
-          <p className="text-base text-muted-foreground leading-relaxed">
-            To investigate this design challenge, I divided the project into three
-            areas: understanding how existing cognitive assessment tools work and
-            where their design creates difficulties; identifying how the wider
-            assessment experience could better support independent use; and exploring
-            whether touch and verbal input could provide different ways of completing
-            the same cognitive task. These areas formed the following research questions:
+          <p>
+            <strong>RQ2:</strong> What design considerations can enhance the
+            accessibility and usability of cognitive assessment tools?
           </p>
-        </div>
-
-        <div className="mt-6 grid gap-3 md:grid-cols-2">
-          {[
-            {
-              label: "RQ1",
-              title: "Understanding existing tools",
-              question:
-                "How do current cognitive assessment tools function in evaluating cognitive abilities, and what design limitations do they exhibit?",
-            },
-            {
-              label: "RQ2",
-              title: "Designing for usability and accessibility",
-              question:
-                "What design considerations can enhance the accessibility and usability of cognitive assessment tools?",
-            },
-            {
-              label: "RQ3",
-              title: "Exploring different methods of interaction",
-              question:
-                "How can different modes of interaction be combined to create effective cognitive assessment experiences?",
-            },
-            {
-              label: "RQ4",
-              title: "Tracking performance over time",
-              question:
-                "How can cognitive assessment results be presented to help users understand and track changes in their performance over time?",
-            },
-          ].map((rq) => (
-            <div
-              key={rq.label}
-              className="rounded-lg border border-border bg-secondary/40 p-5"
-            >
-              <p className="text-xs font-semibold tracking-widest text-foreground mb-1">
-                {rq.label}
-              </p>
-              <p className="text-sm font-medium text-foreground mb-2">
-                {rq.title}
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {rq.question}
-              </p>
-            </div>
-          ))}
+          <p>
+            <strong>RQ3:</strong> How can different modes of interaction be
+            combined to create effective cognitive assessment experiences?
+          </p>
         </div>
       </CaseStudySection>
-
 
       {/* Role */}
       <CaseStudySection title="My Role">
