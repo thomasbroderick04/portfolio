@@ -204,16 +204,13 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           of MindSpark.
         </p>
 
-        <div className="mt-8 divide-y divide-border border-y border-border">
-          <article className="grid md:grid-cols-[72px_1fr] gap-4 md:gap-8 py-8">
-            <p className="text-sm font-semibold text-muted-foreground">
-              01
-            </p>
-            <div className="max-w-3xl">
-              <h3 className="text-xl font-semibold text-foreground mb-4">
+        <div className="mt-8 grid gap-4 rounded-lg bg-secondary/30 p-4 md:grid-cols-2 md:p-6">
+          <article className="rounded-lg border border-border bg-background p-5 md:row-span-2 md:p-6">
+            <div>
+              <h3 className="text-base font-semibold leading-snug text-foreground mb-3">
                 The design of a test can affect the result
               </h3>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
                   A cognitive assessment is intended to measure a person’s
                   ability to remember information, concentrate, react quickly
@@ -240,15 +237,12 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </div>
           </article>
 
-          <article className="grid md:grid-cols-[72px_1fr] gap-4 md:gap-8 py-8">
-            <p className="text-sm font-semibold text-muted-foreground">
-              02
-            </p>
-            <div className="max-w-3xl">
-              <h3 className="text-xl font-semibold text-foreground mb-4">
+          <article className="rounded-lg border border-border bg-background p-5 md:p-6">
+            <div>
+              <h3 className="text-base font-semibold leading-snug text-foreground mb-3">
                 A test result should not be presented without context
               </h3>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
                   How someone performs can be affected by how alert or tired
                   they feel when taking the test. Presenting only a score does
@@ -265,15 +259,12 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </div>
           </article>
 
-          <article className="grid md:grid-cols-[72px_1fr] gap-4 md:gap-8 py-8">
-            <p className="text-sm font-semibold text-muted-foreground">
-              03
-            </p>
-            <div className="max-w-3xl">
-              <h3 className="text-xl font-semibold text-foreground mb-4">
+          <article className="rounded-lg border border-border bg-background p-5 md:p-6">
+            <div>
+              <h3 className="text-base font-semibold leading-snug text-foreground mb-3">
                 Touchscreen input may not suit every user
               </h3>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
                   A touchscreen test requires the user to see a signal, move
                   their hand and press a button accurately and quickly.
@@ -304,7 +295,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </h3>
           </div>
 
-          <ol className="grid md:grid-cols-2 gap-px overflow-hidden rounded-md border border-border bg-border">
+          <ol className="grid gap-4 rounded-lg bg-secondary/30 p-4 md:grid-cols-2 md:p-6">
             {[
               {
                 category: "Interface clarity",
@@ -337,7 +328,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             ].map(({ category, text }, index) => (
               <li
                 key={text}
-                className={`bg-background p-5 md:p-6 ${
+                className={`rounded-lg border border-border bg-background p-5 md:p-6 ${
                   index === 6 ? "md:col-span-2" : ""
                 }`}
               >
@@ -1027,4 +1018,3 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
 );};
 
 export default MindSpark;
-
