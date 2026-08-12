@@ -200,96 +200,112 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
       {/* Research and Key Insights */}
       <CaseStudySection title="Research &amp; Key Insights">
         <p>
-          The strongest insight from my research was that digital cognitive
-          test performance cannot always be understood independently of the
-          interface used to complete a test. Dense instructions, uncertainty
-          about how to interact, small touch targets, cluttered layouts, weak
-          feedback, and anxiety caused by self-administered use can affect
-          who completes the assessment confidently and how their performance
-          is interpreted. This made accessibility central to the validity of
-          the experience.
+          Before designing MindSpark, I completed two stages of initial research. I first reviewed existing research to understand how usability, accessibility, testing conditions and methods of interaction can affect digital cognitive assessments. I then audited four existing cognitive testing applications to see how these issues were handled in products already available to users.
         </p>
         <p>
-          I therefore used accessibility as a design method to question who
-          the interaction was designed around, what it required from users,
-          and where those requirements could create exclusion. The goal was
-          not simply to improve usability, but to support wider participation
-          across different abilities, contexts, and ways of interacting.
+          Together, these two stages helped me identify the problems that MindSpark needed to address during prototyping.
         </p>
-        <p>
-          Performance must also be understood in relation to the conditions
-          in which the test is taken. Factors such as fatigue, alertness, and
-          the wider testing situation can influence how users engage with the
-          test and affect the result. This led me to treat context as a design
-          consideration rather than background information.
-        </p>
-        <p>
-          A third insight came from multimodal interaction research.
-          Touchscreen-only testing can introduce motor demands that are
-          unrelated to the cognitive ability being assessed. Because the
-          Go/No-Go test uses a binary response structure, it offered a strong
-          opportunity to explore verbal responses as an alternative input
-          method without changing the central logic of the test.
-        </p>
-        <ul className="space-y-2 mt-4">
-          <li>
-            • <strong>Design Implication 1:</strong>{" "}
-            Simplify the interface and reduce the need for small, precise, or
-            repeated touchscreen actions during the test.
-          </li>
-          <li>
-            • <strong>Design Implication 2:</strong>{" "}
-            Use clear onboarding, concise instructions, and simplified
-            screens to help users understand the test rules.
-          </li>
-          <li>
-            • <strong>Design Implication 3:</strong>{" "}
-            Provide guided practice and supportive feedback so users can
-            become familiar with the test before official scoring begins.
-          </li>
-          <li>
-            • <strong>Design Implication 4:</strong>{" "}
-            Use alertness checks and contextual result explanations so
-            performance is not presented as an isolated score.
-          </li>
-          <li>
-            • <strong>Design Implication 5:</strong>{" "}
-            Allow users to respond through either touch or verbal input
-            without changing the central structure or logic of the test.
-          </li>
-        </ul>
-      </CaseStudySection>
 
-      {/* Auditing Existing Tools */}
-      <CaseStudySection title="Auditing Existing Tools">
+        <div className="grid md:grid-cols-2 gap-4 my-8">
+          <div className="rounded-lg border border-border bg-card p-6">
+            <h3 className="text-base font-semibold text-foreground mb-2">Literature Review</h3>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              Understanding the wider issues surrounding digital cognitive testing.
+            </p>
+          </div>
+          <div className="rounded-lg border border-border bg-card p-6">
+            <h3 className="text-base font-semibold text-foreground mb-2">Application Audit</h3>
+            <p className="text-base text-muted-foreground leading-relaxed">
+              Examining how existing products introduce, deliver and explain their assessments.
+            </p>
+          </div>
+        </div>
+
+        <h3 className="text-base font-semibold text-foreground mt-10 mb-4">Literature Review Findings</h3>
+
+        <div className="space-y-8">
+          <div>
+            <p className="font-semibold text-foreground mb-2">1. The interface can affect the result</p>
+            <p>
+              A cognitive assessment is intended to measure abilities such as attention, memory and response control. However, the literature showed that a user’s performance can also be affected by the interface through which the assessment is completed.
+            </p>
+            <p>
+              Unclear instructions, dense text, small touch targets, unfamiliar icons and a lack of feedback can make users hesitate or respond incorrectly. In a test that measures the speed and accuracy of a response, these difficulties could affect the result even when they are unrelated to the cognitive ability being examined.
+            </p>
+            <p>
+              This meant that accessibility was not only a matter of making MindSpark easier to use. The interface also needed to reduce avoidable difficulties that could interfere with the assessment itself.
+            </p>
+            <div className="mt-3 rounded-md border border-border bg-secondary/40 p-4">
+              <p className="text-base text-muted-foreground leading-relaxed">
+                <strong>Key takeaway:</strong> The assessment should be clearly explained and should not require unnecessary effort to understand or operate.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <p className="font-semibold text-foreground mb-2">2. Results need to be understood in context</p>
+            <p>
+              The literature also showed that cognitive performance can be affected by the conditions in which an assessment is taken. For example, a person may perform differently depending on how tired or alert they feel at the time.
+            </p>
+            <p>
+              When a result is presented without this information, users may assume that it provides a complete and fixed measure of their ability. This is especially important when users complete assessments independently and do not have a trained professional present to help them understand the result.
+            </p>
+            <p>
+              The Karolinska Sleepiness Scale, which allows people to report how alert they feel, provided an example of how this information could be recorded alongside test performance.
+            </p>
+            <div className="mt-3 rounded-md border border-border bg-secondary/40 p-4">
+              <p className="text-base text-muted-foreground leading-relaxed">
+                <strong>Key takeaway:</strong> Results should not be presented as isolated scores. The application should help users consider how they were feeling when the assessment was taken.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <p className="font-semibold text-foreground mb-2">3. Touchscreen interaction can introduce physical difficulty</p>
+            <p>
+              Digital cognitive assessments commonly require users to respond through a touchscreen. However, touchscreen interaction also requires users to see the control, reach it accurately and press it at the correct time.
+            </p>
+            <p>
+              For an assessment that measures reaction time, part of the recorded delay could therefore come from the physical action required to use the interface. This could particularly affect users who find quick or precise touchscreen interaction difficult.
+            </p>
+            <p>
+              Research into different methods of interaction suggested that verbal input could provide another way of responding. At this stage, the research did not establish that verbal input would be better than touch. Instead, it showed that offering and testing different response methods could help determine whether the assessment could support a wider range of users.
+            </p>
+            <div className="mt-3 rounded-md border border-border bg-secondary/40 p-4">
+              <p className="text-base text-muted-foreground leading-relaxed">
+                <strong>Key takeaway:</strong> The project should explore whether users can respond through either touch or speech while keeping the purpose and structure of the assessment consistent.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="my-10 rounded-lg border border-border bg-card p-6 md:p-8">
+          <p className="text-sm text-muted-foreground text-center mb-6">Recorded performance can be influenced by three factors:</p>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="rounded-md border border-border bg-secondary/60 p-4 text-center">
+              <p className="font-semibold text-foreground">Cognitive ability</p>
+            </div>
+            <div className="rounded-md border border-border bg-secondary/60 p-4 text-center">
+              <p className="font-semibold text-foreground">Interface demands</p>
+            </div>
+            <div className="rounded-md border border-border bg-secondary/60 p-4 text-center">
+              <p className="font-semibold text-foreground">User’s condition at the time of testing</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 className="text-base font-semibold text-foreground mt-10 mb-4">Auditing Existing Cognitive Testing Applications</h3>
         <p>
-          I analysed a range of digital cognitive testing products,
-          including tools using Go/No-Go-like tests and broader
-          self-administered cognitive assessments. Rather than focusing only
-          on visual design, I examined whether each system assumed users
-          could read and remember lengthy instructions, understand the test
-          rules without guidance, use precise touchscreen input, and complete
-          the assessment with little feedback or support.
+          To understand how these research findings appeared in existing products, I audited four digital cognitive testing applications:
         </p>
+        <ul className="space-y-1 mt-2 mb-6">
+          <li>CogniFit Stop-Signal</li>
+          <li>Carleton University Go/No-Go</li>
+          <li>MindPal One-Line</li>
+          <li>Lumosity Follow That Frog</li>
+        </ul>
         <p>
-          The audit showed that clear onboarding, visual demonstrations, and
-          guided practice helped users understand the test rules, know how to
-          respond, and prepare before the official test began. In contrast,
-          fragmented or text-heavy instructions often created uncertainty.
-          All the systems reviewed relied on touchscreen input, although the
-          level of motor precision required varied considerably. Feedback
-          was also inconsistent: some tools clearly showed users where they
-          were in the test, whether their response had been recorded, and
-          what would happen next, while others gave little guidance or
-          unclear feedback.
-        </p>
-        <p>
-          Accessibility support, consideration of testing context, result
-          explanations, and privacy transparency also varied widely. Overall,
-          it was found that many of the systems placed the responsibility on
-          users to adapt to the interface, rather than considering how the
-          interface could support different abilities, circumstances, and
-          ways of interacting.
+          I examined how each application introduced its assessment, explained what users needed to do, prepared them for the test, recorded their responses, provided feedback and presented their results. I also considered whether the applications supported different ways of responding and whether they acknowledged the conditions in which the assessment was taken.
         </p>
 
         <DocImage
@@ -298,40 +314,97 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           caption="Heuristic comparison of four existing cognitive testing tools across instructional support and organisational clarity."
         />
 
-        <p>This helped define what MindSpark needed to do differently:</p>
-        <ul className="space-y-2 mt-2">
-          <li>
-            • <strong>Design Implication 1:</strong>{" "}
-            Introduce the test gradually rather than relying on dense
-            instructions.
-          </li>
-          <li>
-            • <strong>Design Implication 2:</strong>{" "}
-            Use demonstration and practice so users can understand the task
-            before their performance is recorded.
-          </li>
-          <li>
-            • <strong>Design Implication 3:</strong>{" "}
-            Use large touch targets and a simplified testing interface to
-            make touchscreen interaction easier.
-          </li>
-          <li>
-            • <strong>Design Implication 4:</strong>{" "}
-            Provide feedback that guides users clearly without making
-            mistakes feel stressful or punitive.
-          </li>
-          <li>
-            • <strong>Design Implication 5:</strong>{" "}
-            Present scores with a breakdown of the user’s responses, how
-            alert they felt before taking the test, and how the result
-            compares with their previous attempts.
-          </li>
-          <li>
-            • <strong>Design Implication 6:</strong>{" "}
-            Explore how touch and verbal interaction could exist within the
-            same testing system.
-          </li>
-        </ul>
+        <div className="space-y-8 mt-8">
+          <div>
+            <p className="font-semibold text-foreground mb-2">1. Preparation was inconsistent</p>
+            <p>
+              The applications introduced their assessments in different ways. Some provided demonstrations or practice activities before the scored assessment, while others relied mainly on written instructions.
+            </p>
+            <p>
+              Demonstrations and practice made the required response more visible before testing began. In contrast, fragmented or text-heavy instructions required users to understand and remember more information without first experiencing the task.
+            </p>
+            <div className="mt-3 rounded-md border border-border bg-secondary/40 p-4">
+              <p className="text-base text-muted-foreground leading-relaxed">
+                <strong>Key takeaway:</strong> Users should be introduced to an assessment gradually and given an opportunity to practise before their performance is recorded.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <p className="font-semibold text-foreground mb-2">2. All four applications relied on touchscreen input</p>
+            <p>
+              Every application required users to respond through a touchscreen, although the size and placement of the controls varied. None of the applications provided an alternative response method for users who might find quick or precise touchscreen actions difficult.
+            </p>
+            <p>
+              This showed that the physical requirements of touchscreen interaction were largely treated as a fixed part of the assessment.
+            </p>
+            <div className="mt-3 rounded-md border border-border bg-secondary/40 p-4">
+              <p className="text-base text-muted-foreground leading-relaxed">
+                <strong>Key takeaway:</strong> MindSpark should investigate whether the same assessment can support more than one method of interaction.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <p className="font-semibold text-foreground mb-2">3. Feedback and result explanations varied</p>
+            <p>
+              The amount of feedback provided during and after the assessments was inconsistent. Some applications clearly showed users where they were in the process, whether an action had been recorded and what would happen next. Others provided limited confirmation or left parts of the experience unclear.
+            </p>
+            <p>
+              The presentation of results also varied. Some applications provided a detailed breakdown, while others presented a score with little explanation. Information about the user’s condition when taking the assessment was generally not included.
+            </p>
+            <div className="mt-3 rounded-md border border-border bg-secondary/40 p-4">
+              <p className="text-base text-muted-foreground leading-relaxed">
+                <strong>Key takeaway:</strong> The application should clearly confirm user actions and explain results in a way that is understandable without professional guidance.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <p className="font-semibold text-foreground mb-2">4. No single application supported the complete independent experience</p>
+            <p>
+              Each application contained useful features. These included organised cognitive categories, demonstrations, practice activities, progress tracking and detailed performance information. However, no single application brought all of these elements together into one clearly guided experience.
+            </p>
+            <p>
+              This revealed an opportunity for MindSpark to support the complete process of independently taking a cognitive assessment: learning what it measures, understanding the instructions, preparing for the test, completing it and reviewing performance over time.
+            </p>
+            <div className="mt-3 rounded-md border border-border bg-secondary/40 p-4">
+              <p className="text-base text-muted-foreground leading-relaxed">
+                <strong>Key takeaway:</strong> The experience should be designed as one connected journey rather than a collection of separate test screens.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h3 className="text-base font-semibold text-foreground mt-10 mb-4">Requirements Taken into Prototyping</h3>
+        <p>
+          The literature review and application audit did not determine the final design of MindSpark. Instead, they established the initial requirements that I carried into sketching and wireframing:
+        </p>
+
+        <div className="grid md:grid-cols-2 gap-4 my-6">
+          {[
+            "Explain each assessment clearly — Users should be able to understand what the assessment examines, how it works and what they will be asked to do.",
+            "Prepare users before scoring begins — The experience should use demonstration and practice to help users learn the task before their performance is recorded.",
+            "Reduce unnecessary interaction difficulty — The testing interface should be simple and should avoid requiring small, precise or complicated actions.",
+            "Provide clear feedback — Users should be able to tell when the application is ready for a response, whether their response has been recorded and what will happen next.",
+            "Present results with explanation and context — Results should explain the user’s performance, include how alert they felt before the assessment and allow comparison with previous attempts.",
+            "Explore different methods of interaction — The project should investigate how touch and verbal input could be supported without changing what the assessment is intended to measure.",
+          ].map((req, i) => (
+            <div key={i} className="rounded-lg border border-border bg-card p-5">
+              <p className="text-base text-foreground leading-relaxed">
+                <strong>{i + 1}.</strong>{" "}
+                {req.split(" — ")[0]}
+              </p>
+              <p className="text-base text-muted-foreground leading-relaxed mt-1">
+                {req.split(" — ")[1]}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <p>
+          These findings established the problems that I needed to investigate through design. I next translated the requirements into sketches and early wireframes, where I began exploring how the complete MindSpark experience could be organised before testing those ideas with users.
+        </p>
       </CaseStudySection>
 
       {/* Early Concepts and Wireframing */}
