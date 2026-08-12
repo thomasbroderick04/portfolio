@@ -204,83 +204,75 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           of MindSpark.
         </p>
 
-        <div className="mt-8 grid gap-4 rounded-lg bg-secondary/30 p-4 md:grid-cols-2 md:p-6">
-          <article className="rounded-lg border border-border bg-background p-5 md:row-span-2 md:p-6">
-            <div>
-              <h3 className="text-base font-semibold leading-snug text-foreground mb-3">
-                The design of a test can affect the result
-              </h3>
-              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-                <p>
-                  A cognitive assessment is intended to measure a person’s
-                  ability to remember information, concentrate, react quickly
-                  or control their responses. However, the result may not
-                  accurately reflect that ability if the person has difficulty
-                  using the test itself.
-                </p>
-                <p>
-                  For example, unclear instructions may cause someone to
-                  respond incorrectly, a small button may make it difficult to
-                  respond quickly, and weak feedback may leave them unsure
-                  whether their response has been recorded. In these cases, a
-                  delay or mistake may have been caused by the interface rather
-                  than the cognitive ability being examined.
-                </p>
-                <p>
-                  Accessibility was therefore essential to the design of
-                  MindSpark. I reviewed each stage of the experience by
-                  considering whether users could understand the information,
-                  navigate the application and respond during the test without
-                  avoidable difficulty.
-                </p>
-              </div>
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          <article className="rounded-md border border-border bg-background p-5 md:col-span-2 md:p-6">
+            <h3 className="text-base font-semibold leading-snug text-foreground mb-4">
+              The design of a test can affect the result
+            </h3>
+            <div className="grid gap-4 text-sm text-muted-foreground leading-relaxed md:grid-cols-3 md:gap-6">
+              <p>
+                A cognitive assessment is intended to measure a person’s
+                ability to remember information, concentrate, react quickly or
+                control their responses. However, the result may not accurately
+                reflect that ability if the person has difficulty using the
+                test itself.
+              </p>
+              <p>
+                For example, unclear instructions may cause someone to respond
+                incorrectly, a small button may make it difficult to respond
+                quickly, and weak feedback may leave them unsure whether their
+                response has been recorded. In these cases, a delay or mistake
+                may have been caused by the interface rather than the cognitive
+                ability being examined.
+              </p>
+              <p>
+                Accessibility was therefore essential to the design of
+                MindSpark. I reviewed each stage of the experience by
+                considering whether users could understand the information,
+                navigate the application and respond during the test without
+                avoidable difficulty.
+              </p>
             </div>
           </article>
 
-          <article className="rounded-lg border border-border bg-background p-5 md:p-6">
-            <div>
-              <h3 className="text-base font-semibold leading-snug text-foreground mb-3">
-                A test result should not be presented without context
-              </h3>
-              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-                <p>
-                  How someone performs can be affected by how alert or tired
-                  they feel when taking the test. Presenting only a score does
-                  not give the user any information about the conditions in
-                  which that result was recorded.
-                </p>
-                <p>
-                  MindSpark therefore asks users to rate how alert they feel
-                  before beginning the test. This information is displayed
-                  alongside the result, allowing users to consider their
-                  performance in relation to how they felt at the time.
-                </p>
-              </div>
+          <article className="rounded-md border border-border bg-background p-5 md:p-6">
+            <h3 className="text-base font-semibold leading-snug text-foreground mb-3">
+              A test result should not be presented without context
+            </h3>
+            <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+              <p>
+                How someone performs can be affected by how alert or tired they
+                feel when taking the test. Presenting only a score does not give
+                the user any information about the conditions in which that
+                result was recorded.
+              </p>
+              <p>
+                MindSpark therefore asks users to rate how alert they feel
+                before beginning the test. This information is displayed
+                alongside the result, allowing users to consider their
+                performance in relation to how they felt at the time.
+              </p>
             </div>
           </article>
 
-          <article className="rounded-lg border border-border bg-background p-5 md:p-6">
-            <div>
-              <h3 className="text-base font-semibold leading-snug text-foreground mb-3">
-                Touchscreen input may not suit every user
-              </h3>
-              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-                <p>
-                  A touchscreen test requires the user to see a signal, move
-                  their hand and press a button accurately and quickly.
-                  Difficulty completing any of these physical actions could
-                  affect the result, even when the person understands the
-                  test.
-                </p>
-                <p>
-                  The Go/No-Go test requires a user to make a simple response
-                  when a particular visual signal appears. This made it
-                  possible to explore two ways of responding: pressing an
-                  on-screen button or saying “Go” aloud. Both methods allow the
-                  user to complete the same test without changing what the test
-                  is intended to measure.
-                </p>
-              </div>
+          <article className="rounded-md border border-border bg-background p-5 md:p-6">
+            <h3 className="text-base font-semibold leading-snug text-foreground mb-3">
+              Touchscreen input may not suit every user
+            </h3>
+            <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+              <p>
+                A touchscreen test requires the user to see a signal, move their
+                hand and press a button accurately and quickly. Difficulty
+                completing any of these physical actions could affect the
+                result, even when the person understands the test.
+              </p>
+              <p>
+                The Go/No-Go test requires a user to make a simple response when
+                a particular visual signal appears. This made it possible to
+                explore two ways of responding: pressing an on-screen button or
+                saying “Go” aloud. Both methods allow the user to complete the
+                same test without changing what the test is intended to measure.
+              </p>
             </div>
           </article>
         </div>
@@ -295,7 +287,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </h3>
           </div>
 
-          <ol className="grid gap-4 rounded-lg bg-secondary/30 p-4 md:grid-cols-2 md:p-6">
+          <ol className="grid gap-4 md:grid-cols-2">
             {[
               {
                 category: "Interface clarity",
@@ -328,9 +320,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             ].map(({ category, text }, index) => (
               <li
                 key={text}
-                className={`rounded-lg border border-border bg-background p-5 md:p-6 ${
-                  index === 6 ? "md:col-span-2" : ""
-                }`}
+                className="rounded-md border border-border bg-background p-5 md:p-6"
               >
                 <div className="flex items-start gap-4">
                   <span className="text-sm font-semibold text-muted-foreground tabular-nums">
