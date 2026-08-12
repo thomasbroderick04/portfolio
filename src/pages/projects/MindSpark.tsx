@@ -199,9 +199,9 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
 
       {/* Research and Key Insights */}
       <CaseStudySection title="Research &amp; Key Insights">
-        <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-          My research produced three clear findings that shaped the direction
-          of MindSpark.
+        <p>
+          My research from literature review produced three clear findings that
+          shaped the direction of MindSpark.
         </p>
 
         <div className="mt-8 divide-y divide-border border-y border-border">
@@ -294,55 +294,27 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         </div>
 
         <div className="mt-12">
-          <div className="max-w-3xl mb-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground mb-2">
-              From research to action
-            </p>
-            <h3 className="text-xl font-semibold text-foreground">
-              What these findings meant for the design
-            </h3>
-          </div>
+          <p>
+            These research findings directly contributed to a total of seven
+            key design implications.
+          </p>
 
-          <ol className="divide-y divide-border border-y border-border">
+          <ol className="mt-6 divide-y divide-border border-y border-border">
             {[
-              {
-                category: "Interface clarity",
-                text: "Keep each screen focused and remove unnecessary information during the test.",
-              },
-              {
-                category: "Interface clarity",
-                text: "Use large controls and reduce the need for small, precise or repeated touchscreen actions.",
-              },
-              {
-                category: "Instructions",
-                text: "Break the instructions into short, clearly ordered steps.",
-              },
-              {
-                category: "Preparation",
-                text: "Provide a demonstration and practice round before the scored test begins.",
-              },
-              {
-                category: "Feedback",
-                text: "Give clear feedback so users know when their response has been recorded.",
-              },
-              {
-                category: "Result context",
-                text: "Record the user’s level of alertness and display it alongside their result.",
-              },
-              {
-                category: "Flexible input",
-                text: "Allow users to respond using either touchscreen or verbal input.",
-              },
-            ].map(({ category, text }, index) => (
+              "Keep each screen focused and remove unnecessary information during the test.",
+              "Use large controls and reduce the need for small, precise or repeated touchscreen actions.",
+              "Break the instructions into short, clearly ordered steps.",
+              "Provide a demonstration and practice round before the scored test begins.",
+              "Give clear feedback so users know when their response has been recorded.",
+              "Record the user’s level of alertness and display it alongside their result.",
+              "Allow users to respond using either touchscreen or verbal input.",
+            ].map((text, index) => (
               <li
                 key={text}
-                className="grid gap-2 py-4 md:grid-cols-[64px_180px_minmax(0,1fr)] md:items-start md:gap-6 md:py-5"
+                className="grid gap-2 py-4 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-8 md:py-5"
               >
-                <span className="text-sm font-semibold text-muted-foreground tabular-nums">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground md:pt-0.5">
-                  {category}
+                <p className="text-sm font-semibold text-foreground">
+                  Design Implication {index + 1}
                 </p>
                 <p className="text-sm text-foreground leading-relaxed">
                   {text}
