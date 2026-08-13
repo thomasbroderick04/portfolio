@@ -715,19 +715,18 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         />
       </CaseStudySection>
 
-           {/* Iterative Prototyping */}
+               {/* Iterative Prototyping */}
       <CaseStudySection title="Iteration: Low to High Fidelity">
         <p>
-          Following the early wireframes, I developed MindSpark through three
-          progressively detailed prototypes. Each stage had a different purpose:
-          the low-fidelity prototype established the complete application and
-          identified usability problems, the medium-fidelity prototype responded
-          directly to those problems, and the high-fidelity prototype refined and
-          validated the final experience.
+          The feedback from my early wireframes gave me a clearer direction for
+          the first complete prototype. From this point, MindSpark progressed
+          through three stages of prototyping. Each version was tested with
+          users, and the main findings from that testing directly informed what
+          I developed next.
         </p>
 
-        {/* Low Fidelity */}
-        <div className="mt-10">
+        {/* LOW FIDELITY */}
+        <div className="mt-12">
           <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
             <p className="text-lg font-semibold text-muted-foreground tabular-nums">
               01
@@ -737,72 +736,65 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               <p className="text-sm font-semibold text-muted-foreground mb-2">
                 Low Fidelity
               </p>
+
               <h3 className="text-xl font-semibold text-foreground mb-4">
-                Establishing the complete experience
+                Turning the wireframes into a complete prototype
               </h3>
 
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  The low-fidelity prototype expanded the early wireframes into a
-                  complete application structure. At this stage, I designed how
-                  users would move between the home screen, cognitive test
-                  categories, the Go/No-Go test, results, and longer-term
-                  progress.
+                  I expanded the early wireframes into the first complete
+                  low-fidelity version of MindSpark. This allowed me to test how
+                  the different parts of the application worked together rather
+                  than reviewing individual screens in isolation.
                 </p>
 
                 <p>
-                  I also developed the Go/No-Go test as a complete journey rather
-                  than a single test screen. This included learning about the
-                  test, choosing how to respond, recording alertness, practising,
-                  completing the test, and then reviewing the result.
+                  At this stage, I established the main application structure,
+                  including the home screen, cognitive test categories, the
+                  complete Go/No-Go test journey, progress tracking and detailed
+                  results. The Go/No-Go pathway now took users through learning
+                  about the test, choosing how to respond, recording their
+                  alertness, practising, completing the test and reviewing their
+                  result.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* SCREENSHOT: Full low-fidelity prototype */}
-          <div className="my-8">
-            <div className="rounded-md border border-dashed border-border bg-secondary/30 px-6 py-12 text-center">
-              <p className="text-sm font-semibold text-foreground">
-                Screenshot — Full low-fidelity prototype
-              </p>
-              <p className="mt-2 text-xs text-muted-foreground max-w-xl mx-auto">
-                Add the full Figma overview showing all low-fidelity application
-                screens. This should show how the early wireframes developed into
-                a complete application.
-              </p>
-            </div>
-          </div>
-
           <div className="mt-10">
             <h3 className="text-lg font-semibold text-foreground mb-3">
-              Designing how users could explore their results
+              Developing the progress and results structure
             </h3>
 
             <p className="text-sm text-muted-foreground leading-relaxed max-w-3xl">
-              Rather than presenting one score and ending the experience, I
-              designed the results section so users could start with a broad view
-              of their performance and move into more detailed information. The
-              structure moved from overall progress, into a cognitive area, and
-              then into the result of an individual test. At the most detailed
-              level, users could review their response breakdown, alertness at the
-              time of testing, and how performance changed across previous
-              attempts.
+              I also developed how users could review their performance after
+              taking tests. Rather than presenting one score and ending the
+              experience, the prototype used a drill-down structure. Users
+              could begin with an overall view of their progress, move into a
+              particular cognitive area, and then open the detailed result of
+              an individual test.
             </p>
 
             <div className="mt-5 flex flex-wrap items-center gap-2 text-sm font-medium text-foreground">
               <span className="rounded-md border border-border px-3 py-2">
                 Overall progress
               </span>
+
               <span className="text-muted-foreground">→</span>
+
               <span className="rounded-md border border-border px-3 py-2">
                 Cognitive area
               </span>
+
               <span className="text-muted-foreground">→</span>
+
               <span className="rounded-md border border-border px-3 py-2">
                 Individual test
               </span>
+
               <span className="text-muted-foreground">→</span>
+
               <span className="rounded-md border border-border px-3 py-2">
                 Detailed result
               </span>
@@ -811,68 +803,72 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
 
           <DocImage
             src={progressMidfi}
-            alt="Low-fidelity MindSpark progress and results screens showing overall progress, cognitive categories, individual test results and alertness-related context"
-            caption="Low-fidelity progress and results screens showing the drill-down from overall progress to more detailed test performance and contextual information."
+            alt="Low-fidelity MindSpark progress and results screens showing overall progress, cognitive area results and detailed Go/No-Go performance"
+            caption="Low-fidelity progress and results screens showing the drill-down from overall progress to detailed test performance."
           />
 
-          {/* SCREENSHOT: Low-fidelity Go/No-Go journey */}
+          {/* ADD IMAGE HERE:
+              One image containing these LOW-FIDELITY screens in order:
+              1. Go/No-Go overview
+              2. Test options / response method
+              3. Alertness question
+              4. Practice
+              5. Live test
+              6. Results
+          */}
           <div className="my-8">
             <div className="rounded-md border border-dashed border-border bg-secondary/30 px-6 py-12 text-center">
               <p className="text-sm font-semibold text-foreground">
-                Screenshot — Low-fidelity Go/No-Go journey
+                Add low-fidelity Go/No-Go journey screenshot here
               </p>
-              <p className="mt-2 text-xs text-muted-foreground max-w-xl mx-auto">
-                Add low-fidelity screens showing: test overview → response method
-                → alertness questions → practice → live test → result.
+              <p className="mt-2 text-xs text-muted-foreground">
+                Overview → Test Options → Alertness → Practice → Live Test →
+                Results
               </p>
             </div>
           </div>
 
           <div className="mt-10">
-            <p className="text-sm font-semibold text-foreground mb-5">
-              What testing revealed
+            <h3 className="text-lg font-semibold text-foreground mb-2">
+              What I learned from low-fidelity testing
+            </h3>
+
+            <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
+              Testing the first complete prototype identified several problems
+              that needed to be addressed before increasing the visual detail of
+              the application.
             </p>
 
             <div className="divide-y divide-border border-y border-border">
               {[
                 {
                   feedback: [
-                    "User Feedback 01 — Some parts of the interface were difficult to read and recognise",
-                    "Although users generally understood the structure of the application, testing showed that some text needed to be larger, navigation needed to feel more familiar, and interactive elements needed to look more obviously clickable.",
+                    "User Feedback 01 — Some parts of the interface were not clear enough",
+                    "Users generally understood how the application worked, but some text was too small, navigation was not always obvious, and some buttons did not clearly look interactive.",
                   ],
                   implication: [
-                    "Design Implication 01 — Make the interface easier to read and navigate",
-                    "Increase text size and spacing, use familiar mobile navigation patterns, and make important controls easier to recognise.",
+                    "Design Implication 01 — Improve readability and interaction clarity",
+                    "Increase text size and spacing, use more familiar mobile navigation, and make important buttons and actions easier to recognise.",
                   ],
                 },
                 {
                   feedback: [
-                    "User Feedback 02 — The main test interaction needed to be clearer",
-                    "Some users were unsure about the main response button and felt that feedback during practice could be clearer and less harsh.",
+                    "User Feedback 02 — Practice and feedback needed refinement",
+                    "Users understood the value of practising before the test, but some feedback felt too harsh and the main response interaction needed to be clearer.",
                   ],
                   implication: [
-                    "Design Implication 02 — Strengthen actions and feedback",
-                    "Make the main response button more obvious, introduce clearer interaction states, and make practice feedback more supportive.",
+                    "Design Implication 02 — Make practice clearer and more supportive",
+                    "Strengthen the main response button and use calmer, clearer feedback while users learn how the test works.",
                   ],
                 },
                 {
                   feedback: [
-                    "User Feedback 03 — Users found detailed results more useful than a single score",
-                    "Users responded positively to graphs, response breakdowns and being able to explore their performance in more detail.",
-                  ],
-                  implication: [
-                    "Design Implication 03 — Continue developing the results drill-down",
-                    "Keep the layered progress structure while making individual results easier to recognise and understand.",
-                  ],
-                },
-                {
-                  feedback: [
-                    "User Feedback 04 — Voice input was useful but needed a clearer physical setup",
+                    "User Feedback 03 — Voice input was useful, but the setup needed more guidance",
                     "Users responded positively to verbal interaction, but it was not always obvious how the microphone should be positioned or used.",
                   ],
                   implication: [
-                    "Design Implication 04 — Develop the verbal pathway as a complete interaction",
-                    "Improve the guidance around microphone use and develop a physical setup that positions the microphone clearly and comfortably.",
+                    "Design Implication 03 — Develop the physical microphone setup",
+                    "Continue the verbal-response pathway and create a clearer physical setup around the microphone.",
                   ],
                 },
               ].map(({ feedback, implication }) => (
@@ -921,9 +917,14 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               ))}
             </div>
           </div>
+
+          <p className="mt-8 text-sm font-medium text-foreground">
+            These findings became the main priorities for the medium-fidelity
+            prototype.
+          </p>
         </div>
 
-        {/* Medium Fidelity */}
+        {/* MEDIUM FIDELITY */}
         <div className="mt-16 pt-10 border-t border-border">
           <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
             <p className="text-lg font-semibold text-muted-foreground tabular-nums">
@@ -934,6 +935,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               <p className="text-sm font-semibold text-muted-foreground mb-2">
                 Medium Fidelity
               </p>
+
               <h3 className="text-xl font-semibold text-foreground mb-4">
                 Responding to the first round of testing
               </h3>
@@ -941,59 +943,77 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
                   The medium-fidelity prototype directly responded to the
-                  usability and accessibility issues found during low-fidelity
-                  testing. The overall structure remained, but the way users
-                  interacted with it became much clearer.
+                  problems identified during low-fidelity testing. The overall
+                  application structure remained largely the same, but I focused
+                  on making individual screens easier to read, navigate and
+                  interact with.
                 </p>
 
                 <p>
                   Text and spacing were improved, navigation was brought closer
                   to familiar mobile conventions, and important controls were
-                  given clearer selected and pressed states. I also introduced
-                  information pop-ups so users could access explanations when
-                  they needed them without permanently filling the interface
-                  with text.
+                  redesigned with clearer normal, selected and pressed states.
+                  I also introduced information pop-ups so additional
+                  explanations could be accessed when needed without permanently
+                  filling the main screens with text.
                 </p>
 
                 <p>
-                  The Go/No-Go setup and practice sequence were also refined,
-                  while the verbal-response concept developed into a more
-                  deliberate physical interaction through the microphone
-                  enclosure and adjustable stand.
+                  The Go/No-Go practice sequence was refined with clearer and
+                  more supportive feedback. At the same time, the verbal
+                  response concept developed beyond the early microphone idea
+                  into a physical enclosure and adjustable stand that gave the
+                  microphone a clear position during use.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* SCREENSHOT: Medium-fidelity Go/No-Go screens */}
+          {/* ADD IMAGE HERE:
+              One image containing these MEDIUM-FIDELITY screens:
+              1. Test setup
+              2. Practice screen
+              3. Main Go response screen
+              4. Practice feedback
+          */}
           <div className="my-8">
             <div className="rounded-md border border-dashed border-border bg-secondary/30 px-6 py-12 text-center">
               <p className="text-sm font-semibold text-foreground">
-                Screenshot — Medium-fidelity Go/No-Go screens
+                Add medium-fidelity Go/No-Go screens here
               </p>
-              <p className="mt-2 text-xs text-muted-foreground max-w-xl mx-auto">
-                Add 4 medium-fidelity screens together: test setup, practice,
-                main Go response screen, and feedback screen.
+              <p className="mt-2 text-xs text-muted-foreground">
+                Test Setup → Practice → Go Response → Feedback
               </p>
             </div>
           </div>
 
-          {/* SCREENSHOT: Buttons and information pop-ups */}
+          {/* ADD IMAGE HERE:
+              A close-up image showing:
+              - normal button
+              - selected button
+              - pressed button
+              - one information pop-up
+          */}
           <div className="my-8">
             <div className="rounded-md border border-dashed border-border bg-secondary/30 px-6 py-12 text-center">
               <p className="text-sm font-semibold text-foreground">
-                Screenshot — Buttons and information pop-ups
+                Add medium-fidelity interaction details here
               </p>
-              <p className="mt-2 text-xs text-muted-foreground max-w-xl mx-auto">
-                Show examples of a normal button, selected button, pressed button
-                and one informational pop-up from the medium-fidelity prototype.
+              <p className="mt-2 text-xs text-muted-foreground">
+                Button States + Information Pop-up
               </p>
             </div>
           </div>
 
           <div className="mt-10">
-            <p className="text-sm font-semibold text-foreground mb-5">
-              What testing revealed
+            <h3 className="text-lg font-semibold text-foreground mb-2">
+              What I learned from medium-fidelity testing
+            </h3>
+
+            <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
+              Testing showed that the main interaction problems identified in
+              the previous prototype had improved. Feedback at this stage was
+              therefore more focused on refinement than restructuring.
             </p>
 
             <div className="divide-y divide-border border-y border-border">
@@ -1001,41 +1021,31 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                 {
                   feedback: [
                     "User Feedback 01 — The clearer controls resolved much of the earlier uncertainty",
-                    "Users could more easily recognise buttons, understand which options they had selected, and move through the application.",
+                    "Users found buttons, selected options and navigation easier to recognise and understand.",
                   ],
                   implication: [
-                    "Design Implication 01 — Keep the interaction structure and refine it",
-                    "The main controls and navigation were working, so the next stage could focus on consistency and smaller improvements rather than major restructuring.",
+                    "Design Implication 01 — Keep the interaction structure",
+                    "The main interaction approach was working, so the next version could focus on consistency and refinement rather than major structural changes.",
                   ],
                 },
                 {
                   feedback: [
-                    "User Feedback 02 — Extra information worked best when it was optional",
-                    "Users liked being able to open explanations when they needed them without having large amounts of text permanently displayed on each screen.",
+                    "User Feedback 02 — Results needed stronger visual emphasis",
+                    "Users understood the graphs, response breakdowns and alertness information, but some of the most important information did not stand out enough.",
                   ],
                   implication: [
-                    "Design Implication 02 — Keep on-demand explanations",
-                    "Retain the information pop-ups but make their content quicker and easier to scan.",
+                    "Design Implication 02 — Refine how results are presented",
+                    "Use clearer icons, meaningful colour and stronger visual hierarchy to make important result information easier to understand.",
                   ],
                 },
                 {
                   feedback: [
-                    "User Feedback 03 — Results were understandable but important information needed more emphasis",
-                    "Users understood the graphs and response breakdowns, but some information such as alertness and performance classifications needed to stand out more clearly.",
+                    "User Feedback 03 — The microphone enclosure made verbal interaction clearer",
+                    "Users understood where the microphone should be positioned and appreciated being able to use it without needing to hold it.",
                   ],
                   implication: [
-                    "Design Implication 03 — Strengthen the visual hierarchy of results",
-                    "Use clearer icons, meaningful colour and stronger emphasis on the information that helps users interpret their result.",
-                  ],
-                },
-                {
-                  feedback: [
-                    "User Feedback 04 — The microphone enclosure made verbal interaction much clearer",
-                    "Users understood where the microphone should be placed and appreciated that the stand allowed them to use it without holding the device.",
-                  ],
-                  implication: [
-                    "Design Implication 04 — Carry the physical setup into the final prototype",
-                    "Retain the enclosure and adjustable stand while continuing to test the reliability of voice detection.",
+                    "Design Implication 03 — Retain the physical setup",
+                    "Carry the enclosure and adjustable stand into the final prototype while continuing to test the reliability of voice detection.",
                   ],
                 },
               ].map(({ feedback, implication }) => (
@@ -1085,21 +1095,13 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </div>
           </div>
 
-          {/* SCREENSHOT: Microphone enclosure development */}
-          <div className="my-8">
-            <div className="rounded-md border border-dashed border-border bg-secondary/30 px-6 py-12 text-center">
-              <p className="text-sm font-semibold text-foreground">
-                Screenshot — Microphone enclosure development
-              </p>
-              <p className="mt-2 text-xs text-muted-foreground max-w-xl mx-auto">
-                Show the FreeCAD enclosure model beside the first 3D-printed
-                enclosure and adjustable microphone stand.
-              </p>
-            </div>
-          </div>
+          <p className="mt-8 text-sm font-medium text-foreground">
+            With the main interaction problems resolved, the high-fidelity stage
+            focused on completing and refining the experience.
+          </p>
         </div>
 
-        {/* High Fidelity */}
+        {/* HIGH FIDELITY */}
         <div className="mt-16 pt-10 border-t border-border">
           <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
             <p className="text-lg font-semibold text-muted-foreground tabular-nums">
@@ -1110,71 +1112,66 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               <p className="text-sm font-semibold text-muted-foreground mb-2">
                 High Fidelity
               </p>
+
               <h3 className="text-xl font-semibold text-foreground mb-4">
-                Refining and validating the final experience
+                Completing the final experience
               </h3>
 
               <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p>
-                  By the high-fidelity stage, the main structure and interaction
-                  model had already been established. The focus therefore shifted
-                  away from major redesign and towards consistency, clarity and
-                  making the complete system feel like one coherent application.
+                  By the high-fidelity stage, the application structure and main
+                  interactions had already been established through the previous
+                  two prototypes. This final stage therefore focused on
+                  consistency, visual clarity and making MindSpark feel like one
+                  complete application.
                 </p>
 
                 <p>
                   Remaining grey areas were replaced with the softer green-toned
-                  background, the header and iconography were refined, and icons
-                  were introduced where they could make actions or results easier
-                  to recognise. Information pop-ups were made easier to scan and
-                  the demonstration placeholder was replaced with an actual
-                  demonstration video.
+                  visual system, the header and iconography were refined, and
+                  icons were added where they helped users recognise actions or
+                  information more quickly.
                 </p>
 
                 <p>
-                  The results screens received final refinements through clearer
+                  The demonstration placeholder was replaced with an actual
+                  demonstration video, information pop-ups were made easier to
+                  scan, and the results screens were refined with clearer
                   response icons, meaningful classification colours and greater
-                  emphasis on alertness, while retaining the progress structure
-                  established in the earlier prototypes.
+                  emphasis on alertness.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* SCREENSHOT: Final Go/No-Go journey */}
-          <div className="my-8">
-            <div className="rounded-md border border-dashed border-border bg-secondary/30 px-6 py-12 text-center">
-              <p className="text-sm font-semibold text-foreground">
-                Screenshot — Final Go/No-Go journey
-              </p>
-              <p className="mt-2 text-xs text-muted-foreground max-w-xl mx-auto">
-                Add final high-fidelity screens showing: test information →
-                demonstration video → setup → practice → live test → results.
-              </p>
-            </div>
-          </div>
+          <DocImage
+            src={hifiFlow}
+            alt="Final high-fidelity Go/No-Go journey showing the test introduction, setup, alertness questions and practice sequence"
+            caption="Final Go/No-Go journey showing how users are introduced to the test, prepare for it and practise before beginning the assessment."
+          />
 
           <DocImage
             src={progressHifi}
-            alt="High-fidelity MindSpark progress and results screens showing overall progress, detailed test performance, response breakdown and alertness-related context"
-            caption="Final progress and results section showing how the original drill-down structure developed into a clearer visual and contextual interpretation of performance over time."
+            alt="Final high-fidelity MindSpark progress and results screens"
+            caption="Final progress and results screens showing the refined drill-down from overall performance to detailed and contextual test results."
           />
 
           <div className="mt-10">
-            <p className="text-sm font-semibold text-foreground mb-5">
+            <h3 className="text-lg font-semibold text-foreground mb-2">
               What final testing showed
-            </p>
+            </h3>
 
             <div className="grid gap-6 py-7 border-y border-border md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8">
               <div>
                 <p className="text-sm font-semibold text-foreground mb-2">
-                  User Feedback — The application now felt cohesive and easy to
-                  follow
+                  Final Testing — The main usability issues had been resolved
                 </p>
+
                 <p className="text-sm text-foreground leading-relaxed">
-                  Users responded positively to the final visual system, clearer
-                  icons, demonstration support, refined practice sequence,
-                  results presentation and physical microphone setup.
+                  Users found the final prototype clearer, calmer, easier to
+                  follow and more visually cohesive. The refined practice,
+                  results presentation and verbal-response setup were also
+                  received positively.
                 </p>
               </div>
 
@@ -1200,13 +1197,14 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
 
               <div>
                 <p className="text-sm font-semibold text-foreground mb-2">
-                  Outcome — No major structural redesign was required
+                  Outcome — No major redesign was required
                 </p>
+
                 <p className="text-sm text-foreground leading-relaxed">
-                  The main problems identified in the earlier prototypes had
-                  been addressed. Remaining suggestions focused mainly on future
+                  The main problems identified during the earlier iterations had
+                  been addressed. Remaining feedback related mainly to future
                   development rather than fundamental problems with the
-                  interaction.
+                  experience.
                 </p>
               </div>
             </div>
@@ -1214,8 +1212,8 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
 
           <DocImage
             src={systemOverview}
-            alt="Full system overview of the final MindSpark prototype including onboarding, home, settings, cognitive test categories, progress, results and both Go/No-Go response pathways"
-            caption="Final MindSpark system showing how the early wireframes developed into a complete application spanning onboarding, cognitive test categories, progress tracking, test preparation, touch and verbal Go/No-Go pathways, results and supporting interface components."
+            alt="Full final MindSpark system showing all major application screens and both Go/No-Go interaction pathways"
+            caption="Final MindSpark system showing how the early wireframes developed into a complete application across onboarding, navigation, cognitive test categories, progress and results, and the touch and verbal Go/No-Go pathways."
           />
         </div>
       </CaseStudySection>
