@@ -529,6 +529,140 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         </div>
       </CaseStudySection>
 
+      {/* Iteration: Low to High Fidelity */}
+      <CaseStudySection title="Iteration: Low to High Fidelity">
+        <p>
+          Each prototype stage uncovered different issues, and those issues
+          directly shaped the next iteration. Low fidelity established the
+          structure, medium fidelity reduced the interaction demands placed on
+          the user, and high fidelity resolved the visual and communicative
+          detail of the system.
+        </p>
+
+        {/* Low fidelity */}
+        <div className="mt-10">
+          <p className="project-tag mb-2">Stage 01</p>
+          <h3 className="text-lg font-semibold text-foreground mb-3">
+            Low fidelity — establishing structure and identifying barriers
+          </h3>
+          <p className="text-base text-muted-foreground leading-relaxed">
+            Established the application's structure and broader user journey,
+            and exposed early accessibility issues. Testing showed text needed
+            to be larger, navigation needed to align with mobile conventions,
+            colour needed to be more purposeful, and the main response button
+            was not clear enough.
+          </p>
+          <p className="text-base text-muted-foreground leading-relaxed mt-4">
+            The low-fidelity progress and results screens were where I first
+            worked out the drill-down approach: the user begins with a single
+            overall view of their performance, then moves progressively deeper
+            into rewards, weekly performance categories, the effect of
+            alertness on their score, and finally the classification of an
+            individual Go/No-Go test. Structuring results this way meant a user
+            could stop at the level of detail they were comfortable with rather
+            than being presented with everything at once.
+          </p>
+
+          <DocImage
+            src={progressMidfi}
+            alt="Low-fidelity wireframes of the MindSpark progress and results section across five pages"
+            caption="Low-fidelity progress & results screens showing the drill-down from rewards, into performance categories, alertness effects and test classification."
+          />
+
+          <ImagePlaceholder
+            label="Low-fidelity test flow screens"
+            description="Wireframe screens of the test itself at low fidelity — introduction, setup, alertness questions, practice and the live Go/No-Go screen — to show the structure the later prototypes were built on."
+          />
+
+          <div className="mt-6 rounded-md border border-border bg-secondary/40 p-5">
+            <p className="project-tag mb-2">Takeaway</p>
+            <p className="text-base text-foreground leading-relaxed">
+              The structure of the journey worked, but the interface itself was
+              creating difficulty: type was too small, the response target was
+              ambiguous, and navigation did not behave the way users expected on
+              mobile.
+            </p>
+          </div>
+        </div>
+
+        {/* Medium fidelity */}
+        <div className="mt-12">
+          <p className="project-tag mb-2">Stage 02</p>
+          <h3 className="text-lg font-semibold text-foreground mb-3">
+            Medium fidelity — strengthening clarity and reducing interaction
+            demands
+          </h3>
+          <p className="text-base text-muted-foreground leading-relaxed">
+            Introduced a stronger visual identity, improved visual hierarchy,
+            enlarged and clarified key actions including button states, refined
+            setup options, added more supportive feedback through overlays, and
+            developed the microphone enclosure concept as an alternative
+            interaction pathway.
+          </p>
+
+          <ImagePlaceholder
+            label="Medium-fidelity screens: response button & button states"
+            description="Before/after of the main Go/No-Go response control at medium fidelity, showing the enlarged target and its default, pressed and disabled states."
+          />
+
+          <ImagePlaceholder
+            label="Medium-fidelity setup and overlay feedback"
+            description="Setup/configuration screens and the supportive overlays introduced at this stage to explain what to do before and during the test."
+          />
+
+          <div className="mt-6 rounded-md border border-border bg-secondary/40 p-5">
+            <p className="project-tag mb-2">Takeaway</p>
+            <p className="text-base text-foreground leading-relaxed">
+              Making actions larger, more visible and more clearly stateful
+              lowered the precision the test demanded of the user, and the
+              microphone pathway proved worth building as a genuine alternative
+              rather than a concept.
+            </p>
+          </div>
+        </div>
+
+        {/* High fidelity */}
+        <div className="mt-12">
+          <p className="project-tag mb-2">Stage 03</p>
+          <h3 className="text-lg font-semibold text-foreground mb-3">
+            High fidelity — final polish & ensuring coherence
+          </h3>
+          <p className="text-base text-muted-foreground leading-relaxed">
+            Replaced grey areas with a softer green-toned background, enhanced
+            the header and iconography, introduced a demonstration video,
+            improved overlay scannability, and refined the presentation of
+            results.
+          </p>
+
+          <DocImage
+            src={progressHifi}
+            alt="High-fidelity progress and results screens of the MindSpark application showing rewards, weekly performance, attention progress, alertness effect, and Go/No-Go test score"
+            caption="High-fidelity progress & results section showing visual, contextual interpretation of performance over time."
+          />
+
+          <DocImage
+            src={systemOverview}
+            alt="Full system overview of every MindSpark screen — splash, sign-up, home, settings, notifications, test categories, progress, and both touch and verbal Go/No-Go pathways with components"
+            caption="Full system overview of every screen of the MindSpark prototype, from splash and sign-up through home, settings, test categories, progress, both Go/No-Go pathways, and the component library."
+          />
+
+          <ImagePlaceholder
+            label="High-fidelity demonstration video & overlays"
+            description="Frames from the in-app demonstration video and the refined instruction overlays, showing how the final prototype explains the test before the user begins."
+          />
+
+          <div className="mt-6 rounded-md border border-border bg-secondary/40 p-5">
+            <p className="project-tag mb-2">Takeaway</p>
+            <p className="text-base text-foreground leading-relaxed">
+              At this stage the work was about coherence: a consistent visual
+              language across every screen, results that could be interpreted at
+              a glance, and instruction that could be watched as well as read.
+            </p>
+          </div>
+        </div>
+      </CaseStudySection>
+
+
       {/* Designing the Core Experience */}
       <CaseStudySection title="Designing the Core Experience">
         <p>
