@@ -444,12 +444,48 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         />
 
         <p>
-          This stage was most valuable for developing the structure and logic
-          of the system, rather than refining its visual appearance. It
-          allowed me to define the test as a sequence of interactions:{" "}
-          <em>understand → prepare → practise → respond → interpret</em>.
-          That became a critical foundation for everything that followed.
+          After completing the earliest wireframes and initial concept sketches
+          for the application, I conducted informal user testing with a small
+          group of participants. From here, I gained valuable feedback that I
+          would carry over into my subsequent prototypes.
         </p>
+
+        <ol className="mt-6 divide-y divide-border border-y border-border">
+          {[
+            [
+              "User Feedback 01 — Progress needed to be easier to access",
+              "Users wanted a clearer way to see how they had performed across previous tests and how their results were changing over time.",
+            ],
+            [
+              "Design Implication 01 — Make progress a clear part of the experience",
+              "Create a dedicated area where users can quickly review previous results and track changes over time.",
+            ],
+            [
+              "User Feedback 02 — Users wanted clear guidance before starting the test",
+              "Users found the test explanation and practice useful because they helped them understand what to do before taking the real test.",
+            ],
+            [
+              "Design Implication 02 — Guide users through the test step by step",
+              "The next design would clearly explain the test, show users how it works, and let them practise before starting.",
+            ],
+            [
+              "User Feedback 03 — Users liked having more than one way to respond",
+              "Users responded positively to both touch and voice input, with the voice option seen as useful for people who may find touchscreen interaction difficult.",
+            ],
+            [
+              "Design Implication 03 — Continue developing both touch and voice input",
+              "The next prototype would include both response methods so users were not limited to touchscreen interaction.",
+            ],
+          ].map(([label, text]) => (
+            <li
+              key={label}
+              className="grid gap-2 py-4 md:grid-cols-[280px_minmax(0,1fr)] md:items-start md:gap-8 md:py-5"
+            >
+              <p className="text-sm font-semibold text-foreground">{label}</p>
+              <p className="text-sm text-foreground leading-relaxed">{text}</p>
+            </li>
+          ))}
+        </ol>
       </CaseStudySection>
 
       {/* Designing the Core Experience */}
