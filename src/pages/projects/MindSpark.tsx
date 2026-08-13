@@ -450,42 +450,83 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           would carry over into my subsequent prototypes.
         </p>
 
-        <ol className="mt-6 divide-y divide-border border-y border-border">
+        <div className="mt-6 divide-y divide-border border-y border-border">
           {[
-            [
-              "User Feedback 01 — Progress needed to be easier to access",
-              "Users wanted a clearer way to see how they had performed across previous tests and how their results were changing over time.",
-            ],
-            [
-              "Design Implication 01 — Make progress a clear part of the experience",
-              "Create a dedicated area where users can quickly review previous results and track changes over time.",
-            ],
-            [
-              "User Feedback 02 — Users wanted clear guidance before starting the test",
-              "Users found the test explanation and practice useful because they helped them understand what to do before taking the real test.",
-            ],
-            [
-              "Design Implication 02 — Guide users through the test step by step",
-              "The next design would clearly explain the test, show users how it works, and let them practise before starting.",
-            ],
-            [
-              "User Feedback 03 — Users liked having more than one way to respond",
-              "Users responded positively to both touch and voice input, with the voice option seen as useful for people who may find touchscreen interaction difficult.",
-            ],
-            [
-              "Design Implication 03 — Continue developing both touch and voice input",
-              "The next prototype would include both response methods so users were not limited to touchscreen interaction.",
-            ],
-          ].map(([label, text]) => (
-            <li
-              key={label}
-              className="grid gap-2 py-4 md:grid-cols-[280px_minmax(0,1fr)] md:items-start md:gap-8 md:py-5"
+            {
+              feedback: [
+                "User Feedback 01 — Progress needed to be easier to access",
+                "Users wanted a clearer way to see how they had performed across previous tests and how their results were changing over time.",
+              ],
+              implication: [
+                "Design Implication 01 — Make progress a clear part of the experience",
+                "Create a dedicated area where users can quickly review previous results and track changes over time.",
+              ],
+            },
+            {
+              feedback: [
+                "User Feedback 02 — Users wanted clear guidance before starting the test",
+                "Users found the test explanation and practice useful because they helped them understand what to do before taking the real test.",
+              ],
+              implication: [
+                "Design Implication 02 — Guide users through the test step by step",
+                "The next design would clearly explain the test, show users how it works, and let them practise before starting.",
+              ],
+            },
+            {
+              feedback: [
+                "User Feedback 03 — Users liked having more than one way to respond",
+                "Users responded positively to both touch and voice input, with the voice option seen as useful for people who may find touchscreen interaction difficult.",
+              ],
+              implication: [
+                "Design Implication 03 — Continue developing both touch and voice input",
+                "The next prototype would include both response methods so users were not limited to touchscreen interaction.",
+              ],
+            },
+          ].map(({ feedback, implication }) => (
+            <div
+              key={feedback[0]}
+              className="grid gap-6 py-6 md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8 md:py-8"
             >
-              <p className="text-sm font-semibold text-foreground">{label}</p>
-              <p className="text-sm text-foreground leading-relaxed">{text}</p>
-            </li>
+              <div>
+                <p className="text-sm font-semibold text-foreground mb-2">
+                  {feedback[0]}
+                </p>
+                <p className="text-sm text-foreground leading-relaxed">
+                  {feedback[1]}
+                </p>
+              </div>
+
+              <div
+                className="hidden md:flex items-center justify-center text-muted-foreground"
+                aria-hidden="true"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold text-foreground mb-2">
+                  {implication[0]}
+                </p>
+                <p className="text-sm text-foreground leading-relaxed">
+                  {implication[1]}
+                </p>
+              </div>
+            </div>
           ))}
-        </ol>
+        </div>
       </CaseStudySection>
 
       {/* Designing the Core Experience */}
