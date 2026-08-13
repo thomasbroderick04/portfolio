@@ -715,58 +715,6 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         />
       </CaseStudySection>
 
-      {/* Iteration */}
-      <CaseStudySection title="Iteration: Low to High Fidelity">
-        <p>
-          Each prototype stage uncovered different issues, and those issues
-          directly shaped the next iteration.
-        </p>
-
-        <div className="mt-6 divide-y divide-border border-y border-border">
-          {[
-            [
-              "Low fidelity - establishing structure and identifying barriers",
-              "Established the application's structure and broader user journey, and exposed early accessibility issues. Testing showed text needed to be larger, navigation needed to align with mobile conventions, colour needed to be more purposeful, and the main response button was not clear enough.",
-            ],
-            [
-              "Medium fidelity – strengthening clarity and reducing interaction demands",
-              "Introduced a stronger visual identity, improved visual hierarchy, enlarged and clarified key actions including button states, refined setup options, added more supportive feedback through overlays, and developed the microphone enclosure concept as an alternative interaction pathway.",
-            ],
-            [
-              "High fidelity — final polish & ensuring coherence",
-              "Replaced grey areas with a softer green-toned background, enhanced the header and iconography, introduced a demonstration video, improved overlay scannability, and refined the presentation of results.",
-            ],
-          ].map(([t, d]) => (
-            <div
-              key={t}
-              className="grid md:grid-cols-[260px_1fr] gap-2 md:gap-8 py-4"
-            >
-              <p className="text-sm font-semibold text-foreground">{t}</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {d}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <DocImage
-          src={systemOverview}
-          alt="Full system overview of every MindSpark screen — splash, sign-up, home, settings, notifications, test categories, progress, and both touch and verbal Go/No-Go pathways with components"
-          caption="Full system overview of every screen of the MindSpark prototype, from splash and sign-up through home, settings, test categories, progress, both Go/No-Go pathways, and the component library."
-        />
-
-        <DocImage
-          src={progressMidfi}
-          alt="Medium-fidelity wireframes of the MindSpark progress and results section across five pages"
-          caption="Low-fidelity progress & results screens showing of rewards, performance categories, alertness effects and test classification."
-        />
-
-        <DocImage
-          src={progressHifi}
-          alt="High-fidelity progress and results screens of the MindSpark application showing rewards, weekly performance, attention progress, alertness effect, and Go/No-Go test score"
-          caption="High-fidelity progress & results section showing visual, contextual interpretation of performance over time."
-        />
-      </CaseStudySection>
 
       {/* User Testing */}
       <CaseStudySection title="User Testing &amp; What Changed">
