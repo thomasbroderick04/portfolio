@@ -529,186 +529,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         </div>
       </CaseStudySection>
 
-           {/* Final Experience */}
-      <CaseStudySection title="Final Experience">
-        <p>
-          After progressing through low-, medium-, and high-fidelity
-          prototyping, the final MindSpark design brought the wider application
-          and the complete Go/No-Go test experience together as one system.
-          Users can access different cognitive assessments, review previous
-          performance, track changes over time, and complete the full process
-          of preparing for, taking, and reviewing a cognitive test.
-        </p>
-
-        <DocImage
-          src={hifiPages}
-          alt="High-fidelity MindSpark home, cognitive test categories, settings, and notifications screens"
-          caption="Final supporting interface showing the home screen, cognitive test categories, settings, and notifications."
-        />
-
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
-          Taking the Go/No-Go test
-        </h3>
-
-        <p>
-          Selecting the Go/No-Go test begins a guided sequence designed to
-          prepare the user before their performance is measured. Users are
-          introduced to what the test measures, choose how they want to
-          respond, select their test options, record how alert they feel, view
-          a demonstration, and complete a practice round before beginning the
-          actual test.
-        </p>
-
-        <DocImage
-          src={hifiFlow}
-          alt="High-fidelity Figma screens showing the final Go/No-Go preparation pathway including introduction, test options, alertness questions, demonstration, and practice"
-          caption="Final Go/No-Go preparation journey showing the stages users complete before beginning the scored test."
-        />
-
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
-          Completing the test and understanding the result
-        </h3>
-
-        <p>
-          During the test, the interface is reduced to the information needed
-          to recognise each stimulus and respond. After completion, the result
-          is explained through an overall score and a breakdown of correct
-          responses, missed responses, and incorrect responses. The user's
-          alertness at the time of testing is shown alongside the result so
-          performance is not presented as an isolated score.
-        </p>
-
-        <DocImage
-          src={testResults}
-          alt="Final high-fidelity Go/No-Go live test and results screens showing stimulus interaction, score, response breakdown, classification, and alertness"
-          caption="Final testing and results experience showing the live interaction, response breakdown, performance classification, and alertness context."
-        />
-
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
-          Reviewing progress over time
-        </h3>
-
-        <p>
-          Results also feed into the wider progress section, where users can
-          move from an overall view of their performance into individual
-          cognitive areas and specific test results. This allows previous
-          performance, response patterns, and alertness-related context to be
-          revisited over time rather than disappearing once a test has been
-          completed.
-        </p>
-
-        <DocImage
-          src={progressHifi}
-          alt="High-fidelity MindSpark progress and results screens showing overall performance, cognitive area progress, alertness context, and detailed Go/No-Go results"
-          caption="Final progress and results system showing the drill-down from overall performance to detailed and contextual test results."
-        />
-      </CaseStudySection>
-
-            {/* Verbal-Response Prototype */}
-      <CaseStudySection title="Developing the Verbal-Response Prototype">
-        <p>
-          Alongside the touchscreen version of the Go/No-Go test, I developed
-          the verbal-response pathway into a functional prototype. This allowed
-          users to complete the same test by saying “Go” aloud rather than
-          pressing the on-screen response button.
-        </p>
-
-        <DocImage
-          src={verbalTest}
-          alt="High-fidelity Go/No-Go verbal-response test screens showing countdown, stimulus prompts, microphone input, and feedback states"
-          caption="Final verbal-response pathway showing the countdown, live test, microphone input, and feedback states."
-        />
-
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
-          Turning verbal response into a working interaction
-        </h3>
-
-        <p>
-          To make the verbal pathway functional, I connected an Arduino Uno to
-          a microphone sound sensor that could detect when the user spoke during
-          the test. A Node.js bridge passed the Arduino's serial data to the
-          browser through WebSockets, allowing the browser-based Go/No-Go test
-          to recognise sound input in near real time.
-        </p>
-
-        <p>
-          The JavaScript test logic controlled the stimulus sequence, timing,
-          response detection, scoring, and feedback. This meant the touchscreen
-          and verbal versions could follow the same underlying Go/No-Go test
-          structure while using different methods of response.
-        </p>
-
-        <DocImage
-          src={arduinoMic}
-          alt="Arduino Uno board connected to a microphone sound sensor using jumper cables"
-          caption="Initial hardware setup using an Arduino Uno and microphone sensor to detect verbal responses."
-        />
-
-        <DocImage
-          src={jsCode}
-          alt="VS Code editor showing the JavaScript used to control the MindSpark Go/No-Go test"
-          caption="JavaScript controlling stimulus timing, response handling, scoring, feedback, and progression through the Go/No-Go test."
-        />
-
-        <DocImage
-          src={arduinoLive}
-          alt="Live browser-based Go/No-Go test running alongside the Arduino microphone setup"
-          caption="Working prototype with microphone input passed from the Arduino to the browser-based Go/No-Go test."
-        />
-
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
-          Developing the physical microphone setup
-        </h3>
-
-        <p>
-          Once the verbal interaction was working technically, I needed to
-          consider how the microphone and Arduino would actually be positioned
-          during use. Earlier concepts did not provide a sufficiently stable or
-          predictable setup, so I designed a dedicated enclosure in FreeCAD to
-          securely house the components.
-        </p>
-
-        <p>
-          I also developed an adjustable stand so the microphone could be
-          positioned at different heights without requiring the user to hold or
-          reach for it. The enclosure was then produced through 3D printing and
-          assembled with the working electronics.
-        </p>
-
-        <DocImage
-          src={freecadModel}
-          alt="FreeCAD model of the MindSpark microphone enclosure showing the internal Arduino supports, microphone opening, and cable access"
-          caption="FreeCAD development of the enclosure designed to securely house the Arduino and microphone sensor."
-        />
-
-        <DocImage
-          src={enclosureParts}
-          alt="3D-printed MindSpark enclosure and adjustable microphone stand shown as separate components"
-          caption="3D-printed enclosure and adjustable stand before final assembly."
-        />
-
-        <DocImage
-          src={enclosureAssembled}
-          alt="Completed MindSpark microphone enclosure and adjustable stand positioned beside the live Go/No-Go test"
-          caption="Final assembled verbal-response prototype combining the physical enclosure, adjustable microphone stand, and live Go/No-Go interface."
-        />
-
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
-          What this prototype demonstrated
-        </h3>
-
-        <p>
-          Developing the verbal-response prototype took the project beyond a
-          Figma interaction concept and demonstrated that an alternative method
-          of completing the Go/No-Go test could be implemented technically. It
-          also showed how decisions around response detection, timing, feedback,
-          hardware positioning, and physical comfort all needed to work
-          together for the interaction to function as a complete system.
-        </p>
-      </CaseStudySection>
-
-
-               {/* Iterative Prototyping */}
+   {/* Iterative Prototyping */}
       <CaseStudySection title="Iteration: Low to High Fidelity">
         <p>
           The feedback from my early wireframes gave me a clearer direction for
@@ -1210,6 +1031,185 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           />
         </div>
       </CaseStudySection>
+
+           {/* Final Experience */}
+      <CaseStudySection title="Final Experience">
+        <p>
+          After progressing through low-, medium-, and high-fidelity
+          prototyping, the final MindSpark design brought the wider application
+          and the complete Go/No-Go test experience together as one system.
+          Users can access different cognitive assessments, review previous
+          performance, track changes over time, and complete the full process
+          of preparing for, taking, and reviewing a cognitive test.
+        </p>
+
+        <DocImage
+          src={hifiPages}
+          alt="High-fidelity MindSpark home, cognitive test categories, settings, and notifications screens"
+          caption="Final supporting interface showing the home screen, cognitive test categories, settings, and notifications."
+        />
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          Taking the Go/No-Go test
+        </h3>
+
+        <p>
+          Selecting the Go/No-Go test begins a guided sequence designed to
+          prepare the user before their performance is measured. Users are
+          introduced to what the test measures, choose how they want to
+          respond, select their test options, record how alert they feel, view
+          a demonstration, and complete a practice round before beginning the
+          actual test.
+        </p>
+
+        <DocImage
+          src={hifiFlow}
+          alt="High-fidelity Figma screens showing the final Go/No-Go preparation pathway including introduction, test options, alertness questions, demonstration, and practice"
+          caption="Final Go/No-Go preparation journey showing the stages users complete before beginning the scored test."
+        />
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          Completing the test and understanding the result
+        </h3>
+
+        <p>
+          During the test, the interface is reduced to the information needed
+          to recognise each stimulus and respond. After completion, the result
+          is explained through an overall score and a breakdown of correct
+          responses, missed responses, and incorrect responses. The user's
+          alertness at the time of testing is shown alongside the result so
+          performance is not presented as an isolated score.
+        </p>
+
+        <DocImage
+          src={testResults}
+          alt="Final high-fidelity Go/No-Go live test and results screens showing stimulus interaction, score, response breakdown, classification, and alertness"
+          caption="Final testing and results experience showing the live interaction, response breakdown, performance classification, and alertness context."
+        />
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          Reviewing progress over time
+        </h3>
+
+        <p>
+          Results also feed into the wider progress section, where users can
+          move from an overall view of their performance into individual
+          cognitive areas and specific test results. This allows previous
+          performance, response patterns, and alertness-related context to be
+          revisited over time rather than disappearing once a test has been
+          completed.
+        </p>
+
+        <DocImage
+          src={progressHifi}
+          alt="High-fidelity MindSpark progress and results screens showing overall performance, cognitive area progress, alertness context, and detailed Go/No-Go results"
+          caption="Final progress and results system showing the drill-down from overall performance to detailed and contextual test results."
+        />
+      </CaseStudySection>
+
+            {/* Verbal-Response Prototype */}
+      <CaseStudySection title="Developing the Verbal-Response Prototype">
+        <p>
+          Alongside the touchscreen version of the Go/No-Go test, I developed
+          the verbal-response pathway into a functional prototype. This allowed
+          users to complete the same test by saying “Go” aloud rather than
+          pressing the on-screen response button.
+        </p>
+
+        <DocImage
+          src={verbalTest}
+          alt="High-fidelity Go/No-Go verbal-response test screens showing countdown, stimulus prompts, microphone input, and feedback states"
+          caption="Final verbal-response pathway showing the countdown, live test, microphone input, and feedback states."
+        />
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          Turning verbal response into a working interaction
+        </h3>
+
+        <p>
+          To make the verbal pathway functional, I connected an Arduino Uno to
+          a microphone sound sensor that could detect when the user spoke during
+          the test. A Node.js bridge passed the Arduino's serial data to the
+          browser through WebSockets, allowing the browser-based Go/No-Go test
+          to recognise sound input in near real time.
+        </p>
+
+        <p>
+          The JavaScript test logic controlled the stimulus sequence, timing,
+          response detection, scoring, and feedback. This meant the touchscreen
+          and verbal versions could follow the same underlying Go/No-Go test
+          structure while using different methods of response.
+        </p>
+
+        <DocImage
+          src={arduinoMic}
+          alt="Arduino Uno board connected to a microphone sound sensor using jumper cables"
+          caption="Initial hardware setup using an Arduino Uno and microphone sensor to detect verbal responses."
+        />
+
+        <DocImage
+          src={jsCode}
+          alt="VS Code editor showing the JavaScript used to control the MindSpark Go/No-Go test"
+          caption="JavaScript controlling stimulus timing, response handling, scoring, feedback, and progression through the Go/No-Go test."
+        />
+
+        <DocImage
+          src={arduinoLive}
+          alt="Live browser-based Go/No-Go test running alongside the Arduino microphone setup"
+          caption="Working prototype with microphone input passed from the Arduino to the browser-based Go/No-Go test."
+        />
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          Developing the physical microphone setup
+        </h3>
+
+        <p>
+          Once the verbal interaction was working technically, I needed to
+          consider how the microphone and Arduino would actually be positioned
+          during use. Earlier concepts did not provide a sufficiently stable or
+          predictable setup, so I designed a dedicated enclosure in FreeCAD to
+          securely house the components.
+        </p>
+
+        <p>
+          I also developed an adjustable stand so the microphone could be
+          positioned at different heights without requiring the user to hold or
+          reach for it. The enclosure was then produced through 3D printing and
+          assembled with the working electronics.
+        </p>
+
+        <DocImage
+          src={freecadModel}
+          alt="FreeCAD model of the MindSpark microphone enclosure showing the internal Arduino supports, microphone opening, and cable access"
+          caption="FreeCAD development of the enclosure designed to securely house the Arduino and microphone sensor."
+        />
+
+        <DocImage
+          src={enclosureParts}
+          alt="3D-printed MindSpark enclosure and adjustable microphone stand shown as separate components"
+          caption="3D-printed enclosure and adjustable stand before final assembly."
+        />
+
+        <DocImage
+          src={enclosureAssembled}
+          alt="Completed MindSpark microphone enclosure and adjustable stand positioned beside the live Go/No-Go test"
+          caption="Final assembled verbal-response prototype combining the physical enclosure, adjustable microphone stand, and live Go/No-Go interface."
+        />
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          What this prototype demonstrated
+        </h3>
+
+        <p>
+          Developing the verbal-response prototype took the project beyond a
+          Figma interaction concept and demonstrated that an alternative method
+          of completing the Go/No-Go test could be implemented technically. It
+          also showed how decisions around response detection, timing, feedback,
+          hardware positioning, and physical comfort all needed to work
+          together for the interaction to function as a complete system.
+        </p>
+      </CaseStudySection>
+
 
       {/* Final Outcome */}
       <CaseStudySection title="Final Outcome">
