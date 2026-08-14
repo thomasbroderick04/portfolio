@@ -707,69 +707,6 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         </p>
       </CaseStudySection>
 
-      {/* Key Design Decisions */}
-      <CaseStudySection title="Key Design Decisions">
-        <div className="space-y-8">
-          <div>
-            <h3 className="text-base font-semibold text-foreground mb-2">
-              1. Alertness check before each test
-            </h3>
-            <p>
-              A short alertness check before the test, inspired by the
-              Karolinska Sleepiness Scale, was included to place performance
-              in context rather than present it as an isolated score. In the
-              final results screen, users were encouraged to consider their
-              performance alongside how alert they felt at the time of
-              testing.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-base font-semibold text-foreground mb-2">
-              2. Practice before official scoring
-            </h3>
-            <p>
-              A dedicated practice stage gave users a chance to understand
-              the rules and experience how the test worked before beginning
-              the actual assessment. User feedback helped refine this
-              practice sequence so that it reflected the real Go/No-Go test
-              more accurately, while also making corrective feedback feel
-              supportive rather than discouraging.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-base font-semibold text-foreground mb-2">
-              3. Minimal live test surface
-            </h3>
-            <p>
-              The live test screen focused only on what was necessary:
-              stimulus, progress, response area, and a stop option. The goal
-              was to reduce visual noise and make the interaction as legible
-              as possible under time pressure.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-base font-semibold text-foreground mb-2">
-              4. Multimodal verbal-response pathway
-            </h3>
-            <p>
-              An optional verbal-response pathway used a microphone sensor
-              connected through Arduino. This explored whether some of the
-              physical effort and precision demands of touchscreen
-              interaction could be reduced without changing the binary logic
-              of the test.
-            </p>
-          </div>
-        </div>
-
-        <DocImage
-          src={testResults}
-          alt="Final high-fidelity Go/No-Go live test screens and results screen showing score, response breakdown, classification, and alertness level"
-          caption="Final live test trials and results screen showing performance contextualised by alertness level."
-        />
-      </CaseStudySection>
 
                {/* Iterative Prototyping */}
       <CaseStudySection title="Iteration: Low to High Fidelity">
