@@ -214,24 +214,8 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </h3>
 
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Many existing applications only provide users with a numerical
-              score, without explaining which parts of their performance
-              contributed to it or providing any context about the circumstances
-              in which the test was taken. The application therefore needed to
-              present a clear breakdown of the user’s average response time and
-              their correct and incorrect responses to the visual stimuli,
-              rather than reducing their performance to a single score.
-              User-reported factors, such as how alert they felt before taking
-              the test, also needed to be shown alongside the result so that
-              performance could be understood in the context of how the user was
-              feeling at the time. When several tests had been completed, the
-              results needed to show how each part of the user’s performance had
-              changed across weekly, monthly and yearly periods. However,
-              because users could interpret slower response times or a greater
-              number of mistakes as a negative judgement of their cognitive
-              ability, the feedback also needed to explain the result in neutral
-              language without labelling the user’s performance as simply
-              “good” or “bad.”
+           Many existing applications provide only a numerical score, without showing what contributed to it or the context in which the test was taken. The application therefore needed to break results down into average response time and correct and incorrect responses, while also showing user-reported factors such as alertness. Across repeated tests, users also needed to see how each aspect of performance changed over weekly, monthly and yearly periods. Because slower responses or more mistakes could be interpreted negatively, results also needed to be explained in neutral language rather than labelled simply as “good” or “bad.”
+
             </p>
           </div>
         </div>
