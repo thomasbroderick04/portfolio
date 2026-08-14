@@ -66,42 +66,79 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         </div>
       </figure>
 
-      {/* Overview */}
+            {/* Overview */}
       <CaseStudySection title="Overview">
         <p>
-          MindSpark is my final year project. It is a research-led redesign
-          of the digital Go/No-Go test, a widely used cognitive test that
-          measures attention and the ability for an individual to control
-          their responses. Rather than treating the test as a fixed
-          screen-based interaction, I approached it as a full user
-          experience problem. This project explored how usability,
-          accessibility, and context can shape how self-administered
-          cognitive testing is understood, completed, and interpreted.
+          MindSpark is a prototype mobile application that is designed to
+          support the complete experience of independently taking cognitive
+          assessments. Cognitive assessments are structured tasks used to
+          examine how well a person can remember information, concentrate,
+          solve problems, react quickly and control impulsive reactions. The
+          results from these assessments can help professionals identify signs
+          of cognitive impairment and monitor changes over time. Inside
+          MindSpark, cognitive assessments are grouped according to the ability
+          they examine, such as working memory or attention. Selecting an
+          assessment opens an information page explaining what it measures, how
+          the assessment works, and what the user will be asked to do.
         </p>
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          Project Scope: The Go/No-Go Test
+        </h3>
+
         <p>
-          The project began with a central accessibility question: what
-          happens when cognitive testing systems assume that every user can
-          read dense instructions, understand abstract rules quickly,
-          respond under time pressure, use precise touchscreen input, and
-          complete the test under ideal conditions? These assumptions can
-          exclude users whose abilities, circumstances, or preferred ways
-          of interacting do not match the narrow user model built into the
-          system. They can also introduce confusion, hesitation, or
-          interaction difficulty that may affect performance independently
-          of the cognitive ability being assessed.
+          Although MindSpark was designed to contain several cognitive
+          assessments, building every assessment was not within the scope of
+          this project. I therefore selected one assessment called the Go/No-Go
+          test, and designed the complete experience, from learning about and
+          practising the test to completing it and reviewing results. During the
+          Go/No-Go test, visual signals appear on the screen one at a time.
+          During the test, users respond to visual stimuli using either
+          touchscreen or verbal input, allowing their reaction times and
+          accuracy of their responses to be measured. The test records how
+          quickly the user acts on "Go" signals, how many "Go" signals they
+          miss, and how often they incorrectly act on "No-Go" signals.
         </p>
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          The User Experience
+        </h3>
+
         <p>
-          I redesigned the full experience around the test, including how it
-          is introduced, how the user prepares for it, how they practise it,
-          how they complete it, and how their results are shown afterwards.
-          I also developed and tested an alternative verbal-response pathway
-          using Arduino and a microphone sensor to explore how cognitive
-          assessments might support users who cannot comfortably rely on
-          touchscreen interaction alone. Across low-, medium-, and
-          high-fidelity iterations, I used user research and usability
-          testing to refine the system step by step. The final outcome was a
-          prototype that made the test feel clearer, more supportive, and
-          easier to understand as a full user experience.
+          Before taking the Go/No-Go test, users choose a difficulty level and
+          decide whether they want to press an on-screen button or say "Go"
+          aloud during the test. They then rate how alert they feel, watch a
+          demonstration and complete a practice round so that they can learn
+          the rules before the scored test begins. After completing the test,
+          users see a breakdown of their average response time and the accuracy
+          of their responses to the visual stimuli. The result also shows how
+          alert the user said they felt before starting the test, allowing them
+          to view their performance alongside how they were feeling at the time
+          of taking test. If they take the test again, each new result is saved.
+          They can then compare their scores across weekly, monthly and yearly
+          views to see how their performance changes over time.
+        </p>
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          Development and Final Outcome
+        </h3>
+
+        <p>
+          I first designed the user interface as simple wireframes before
+          developing them into a detailed interactive Figma prototype. I tested
+          each stage with users and revised the instructions, navigation, test
+          feedback, results and verbal-input setup based on the difficulties
+          they experienced. The final project consisted of the interactive
+          MindSpark mobile prototype, a working browser-based Go/No-Go test
+          built with HTML, CSS and JavaScript. To test whether the Go/No-Go test
+          could be completed without touchscreen input, I built a
+          proof-of-concept verbal response system using an Arduino and
+          microphone sensor. The system converted a spoken voice command into
+          an input that the browser could record and allowed me to test how
+          microphone placement affected detection. I therefore designed and
+          3D-printed an adjustable enclosure to hold the microphone during
+          testing. In a finished mobile application, the same interaction could
+          use the device's built-in microphone.
         </p>
       </CaseStudySection>
 
