@@ -7,6 +7,12 @@ import hifiCorePages from "@/assets/mindspark-hifi-core-pages.png";
 import hifiGoNoGoTestResults from "@/assets/mindspark-hifi-gonogo-test-results.png";
 import heroDevices from "@/assets/mindspark-hero-devices.png";import existingTools from "@/assets/mindspark-existing-tools.png";import earlySketches from "@/assets/mindspark-early-sketches.png";import earlyWireframes from "@/assets/mindspark-early-wireframes.png";import hifiFlow from "@/assets/mindspark-hifi-flow.png";import testResults from "@/assets/mindspark-test-results.png";import progressHifi from "@/assets/mindspark-progress-hifi.png";import progressMidfi from "@/assets/mindspark-progress-midfi.png";import hardwareConcept from "@/assets/mindspark-hardware-concept.png";import systemOverview from "@/assets/mindspark-system-overview.png";import hifiPages from "@/assets/mindspark-hifi-pages.png";import verbalTest from "@/assets/mindspark-verbal-test.png";import arduinoMic from "@/assets/mindspark-arduino-mic.jpg";import arduinoLive from "@/assets/mindspark-arduino-live.jpg";import enclosureParts from "@/assets/mindspark-enclosure-parts.jpg";import enclosureAssembled from "@/assets/mindspark-enclosure-assembled.jpg";import freecadModel from "@/assets/mindspark-freecad.png";import jsCode from "@/assets/mindspark-javascript-code.png";
 
+import midfiCorePages from "@/assets/mindspark-midfi-core-pages.png";
+import midfiTouchFlow from "@/assets/mindspark-midfi-touch-flow.png";
+import midfiVerbalSetup from "@/assets/mindspark-midfi-verbal-setup.png";
+import midfiVerbalPractice from "@/assets/mindspark-midfi-verbal-practice.png";
+import midfiComponents from "@/assets/mindspark-midfi-components.png";
+
 interface DocImageProps {src: string;alt: string;caption: string;}
 
 /** Document/screenshot figure — uses object-contain so nothing gets cropped. */const DocImage = ({ src, alt, caption }: DocImageProps) => (
@@ -733,7 +739,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           </p>
         </div>
 
-        {/* MEDIUM FIDELITY */}
+                {/* MEDIUM FIDELITY */}
         <div className="mt-16 pt-10 border-t border-border">
           <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
             <p className="text-lg font-semibold text-muted-foreground tabular-nums">
@@ -753,89 +759,119 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                 <p>
                   The medium-fidelity prototype directly responded to the
                   problems identified during low-fidelity testing. The overall
-                  application structure remained largely the same, but I focused
-                  on making individual screens easier to read, navigate and
-                  interact with.
+                  structure of MindSpark had already been established, so this
+                  stage focused on improving visual clarity, interaction
+                  behaviour and the detail of the Go/No-Go experience.
                 </p>
 
                 <p>
-                  Text and spacing were improved, navigation was brought closer
-                  to familiar mobile conventions, and important controls were
-                  redesigned with clearer normal, selected and pressed states.
-                  I also introduced information pop-ups so additional
-                  explanations could be accessed when needed without permanently
-                  filling the main screens with text.
-                </p>
-
-                <p>
-                  The Go/No-Go setup and practice sequence were developed
-                  further through clearer test options, larger visual elements,
-                  improved feedback and a more obvious separation between
-                  practice and the actual test. The verbal-response pathway was
-                  also given dedicated setup screens so users could understand
-                  how to prepare and position the microphone before beginning.
-                </p>
-
-                <p>
-                  Alongside the interface, the earlier microphone concept was
-                  developed into a physical enclosure and adjustable stand,
-                  giving the hardware a more stable and deliberate position
-                  during use.
+                  A consistent visual identity was introduced through teal
+                  branding, card-based layouts, clearer hierarchy, larger
+                  interaction targets and more purposeful use of colour.
+                  Navigation was also brought closer to familiar mobile
+                  conventions so users could move through the application more
+                  confidently.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* ADD IMAGE HERE:
-              One image containing these MEDIUM-FIDELITY screens:
-              1. Test setup
-              2. Practice screen
-              3. Main Go response screen
-              4. Practice feedback
-          */}
-          <div className="my-8">
-            <div className="rounded-md border border-dashed border-border bg-secondary/30 px-6 py-12 text-center">
-              <p className="text-sm font-semibold text-foreground">
-                Add medium-fidelity Go/No-Go screens here
-              </p>
-              <p className="mt-2 text-xs text-muted-foreground">
-                Test Setup → Practice → Go Response → Feedback
-              </p>
-            </div>
+          <DocImage
+            src={midfiCorePages}
+            alt="Medium-fidelity MindSpark home screen and cognitive test categories screen showing the new teal visual identity, card layouts and navigation"
+            caption="Medium-fidelity home and test-category screens showing the introduction of MindSpark’s visual identity, clearer hierarchy, category colour coding and more familiar navigation."
+          />
+
+          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+            <p>
+              I also developed a reusable interaction system so the interface
+              communicated more clearly when users selected or pressed
+              something. Buttons, navigation items and other controls were
+              given distinct normal, selected and pressed states so users could
+              see that their actions had been registered.
+            </p>
+
+            <p>
+              Informational overlays were introduced at the same stage. These
+              allowed users to open short explanations beside more complex
+              information when they needed help, rather than permanently
+              displaying additional text on the main screen.
+            </p>
           </div>
 
-          {/* ADD IMAGE HERE:
-              A close-up image showing:
-              - normal button
-              - selected button
-              - pressed button
-              - one information pop-up
-          */}
-          <div className="my-8">
-            <div className="rounded-md border border-dashed border-border bg-secondary/30 px-6 py-12 text-center">
-              <p className="text-sm font-semibold text-foreground">
-                Add medium-fidelity interaction details here
-              </p>
-              <p className="mt-2 text-xs text-muted-foreground">
-                Button States + Information Pop-up
-              </p>
-            </div>
+          <DocImage
+            src={midfiComponents}
+            alt="Medium-fidelity MindSpark Figma component system showing button states, navigation states and informational overlays"
+            caption="Reusable components, interaction states and informational overlays developed to make actions, selections and additional guidance clearer throughout the application."
+          />
+
+          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+            <p>
+              These changes were then carried into the Go/No-Go pathway.
+              The test overview was made easier to scan, response options were
+              presented more clearly, and users could choose additional test
+              settings before continuing to the alertness check.
+            </p>
+
+            <p>
+              The practice experience was also redesigned with larger visual
+              stimuli, a clearer primary response button and more supportive
+              feedback. This helped users learn the Go/No-Go rule before the
+              scored test began without making mistakes feel overly punitive.
+            </p>
           </div>
 
-          {/* ADD IMAGE HERE:
-              Show the verbal-response setup screens together with the
-              FreeCAD enclosure / physical microphone concept.
-          */}
-          <div className="my-8">
-            <div className="rounded-md border border-dashed border-border bg-secondary/30 px-6 py-12 text-center">
-              <p className="text-sm font-semibold text-foreground">
-                Add verbal-response and microphone development here
-              </p>
-              <p className="mt-2 text-xs text-muted-foreground">
-                Verbal Setup Screens + Microphone Enclosure / Stand
-              </p>
-            </div>
+          <DocImage
+            src={midfiTouchFlow}
+            alt="Medium-fidelity touchscreen Go/No-Go journey showing the test overview, response options, alertness question, practice and positive feedback"
+            caption="Medium-fidelity touchscreen pathway showing the refined test overview, response selection, alertness check and redesigned practice experience."
+          />
+
+          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+            <p>
+              Low-fidelity testing had also shown that the verbal-response
+              option needed much clearer guidance. In response, I introduced a
+              dedicated verbal setup sequence before the test. Users were guided
+              through finding a quiet environment, positioning the microphone
+              correctly and confirming microphone access before continuing.
+            </p>
+
+            <p>
+              Once the microphone was prepared, the verbal pathway returned to
+              the same alertness and practice structure as the touchscreen
+              version. The main difference was the interaction itself: instead
+              of pressing the Go button, users practised responding by saying
+              “Go” aloud.
+            </p>
           </div>
+
+          <DocImage
+            src={midfiVerbalSetup}
+            alt="Medium-fidelity verbal-response Go/No-Go screens showing quiet-space guidance, microphone placement, microphone testing, alertness and verbal practice"
+            caption="Verbal-response setup introducing dedicated guidance for the testing environment, microphone positioning and microphone access before beginning practice."
+          />
+
+          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+            <p>
+              The verbal practice sequence was developed further so users could
+              experience both sides of the Go/No-Go rule. They were shown when
+              to say “Go”, when to withhold a response, and were given clear
+              feedback after each practice trial.
+            </p>
+
+            <p>
+              A dedicated Practice Complete screen was also introduced to mark
+              the end of the learning stage. Instead of moving users directly
+              into the scored test, they could either begin the official test
+              when ready or repeat the practice sequence first.
+            </p>
+          </div>
+
+          <DocImage
+            src={midfiVerbalPractice}
+            alt="Medium-fidelity verbal Go/No-Go practice screens showing Go and No-Go trials, supportive feedback and the Practice Complete screen"
+            caption="Medium-fidelity verbal practice showing Go and No-Go trials, supportive feedback and a clearer transition from practice into the official assessment."
+          />
 
           <div className="mt-10">
             <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -843,8 +879,8 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </h3>
 
             <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-              Testing showed that the main interaction problems identified in
-              the previous prototype had improved. Feedback at this stage was
+              Testing showed that the main interaction problems identified
+              during low fidelity had improved. Feedback at this stage was
               therefore more focused on refinement than restructuring.
             </p>
 
@@ -856,28 +892,38 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                     "Users found buttons, selected options and navigation easier to recognise and understand.",
                   ],
                   implication: [
-                    "Design Implication 01 — Keep the interaction structure",
-                    "The main interaction approach was working, so the next version could focus on consistency and refinement rather than major structural changes.",
+                    "Design Implication 01 — Keep the established interaction structure",
+                    "The main navigation and control system was working, so the final iteration could refine it rather than introducing another major structural change.",
                   ],
                 },
                 {
                   feedback: [
-                    "User Feedback 02 — Results needed stronger visual emphasis",
+                    "User Feedback 02 — On-demand explanations worked well",
+                    "Users responded positively to having additional information available through overlays without permanently adding more text to each screen.",
+                  ],
+                  implication: [
+                    "Design Implication 02 — Retain the overlays but improve their hierarchy",
+                    "Keep contextual help available on demand while making the content quicker to scan and the help controls more visually consistent.",
+                  ],
+                },
+                {
+                  feedback: [
+                    "User Feedback 03 — Results were understandable but needed stronger visual emphasis",
                     "Users understood the graphs, response breakdowns and alertness information, but some of the most important information did not stand out enough.",
                   ],
                   implication: [
-                    "Design Implication 02 — Refine how results are presented",
+                    "Design Implication 03 — Refine how results are presented",
                     "Use clearer icons, meaningful colour and stronger visual hierarchy to make important result information easier to understand.",
                   ],
                 },
                 {
                   feedback: [
-                    "User Feedback 03 — The microphone enclosure made verbal interaction clearer",
-                    "Users understood where the microphone should be positioned and appreciated being able to use it without needing to hold it.",
+                    "User Feedback 04 — The verbal-response setup was much clearer",
+                    "The additional setup guidance made the verbal pathway easier to understand, while the physical microphone setup allowed users to interact without needing to hold the device.",
                   ],
                   implication: [
-                    "Design Implication 03 — Retain the physical setup",
-                    "Carry the enclosure and adjustable stand into the final prototype while continuing to test the reliability of voice detection.",
+                    "Design Implication 04 — Retain the verbal pathway and physical setup",
+                    "Carry the verbal onboarding, microphone enclosure and adjustable stand into the final prototype while continuing to refine the reliability of voice detection.",
                   ],
                 },
               ].map(({ feedback, implication }) => (
@@ -928,8 +974,9 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           </div>
 
           <p className="mt-8 text-sm font-medium text-foreground">
-            With the main interaction problems resolved, the high-fidelity stage
-            focused on completing and refining the experience.
+            With the main structure and interaction model now working well, the
+            high-fidelity stage focused on refinement, consistency and
+            completing the final experience.
           </p>
         </div>
 
