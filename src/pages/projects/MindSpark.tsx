@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";import Layout from "@/components/Layout";import CaseStudySection from "@/components/CaseStudySection";import ProjectMeta from "@/components/ProjectMeta";
 
+import lowfiCorePages from "@/assets/mindspark-lowfi-core-pages.png";
+import lowfiGoNoGoSetup from "@/assets/mindspark-lowfi-gonogo-setup.png";
+import lowfiGoNoGoTestResults from "@/assets/mindspark-lowfi-gonogo-test-results.png";
+import hifiCorePages from "@/assets/mindspark-hifi-core-pages.png";
+import hifiGoNoGoTestResults from "@/assets/mindspark-hifi-gonogo-test-results.png";
 import heroDevices from "@/assets/mindspark-hero-devices.png";import existingTools from "@/assets/mindspark-existing-tools.png";import earlySketches from "@/assets/mindspark-early-sketches.png";import earlyWireframes from "@/assets/mindspark-early-wireframes.png";import hifiFlow from "@/assets/mindspark-hifi-flow.png";import testResults from "@/assets/mindspark-test-results.png";import progressHifi from "@/assets/mindspark-progress-hifi.png";import progressMidfi from "@/assets/mindspark-progress-midfi.png";import hardwareConcept from "@/assets/mindspark-hardware-concept.png";import systemOverview from "@/assets/mindspark-system-overview.png";import hifiPages from "@/assets/mindspark-hifi-pages.png";import verbalTest from "@/assets/mindspark-verbal-test.png";import arduinoMic from "@/assets/mindspark-arduino-mic.jpg";import arduinoLive from "@/assets/mindspark-arduino-live.jpg";import enclosureParts from "@/assets/mindspark-enclosure-parts.jpg";import enclosureAssembled from "@/assets/mindspark-enclosure-assembled.jpg";import freecadModel from "@/assets/mindspark-freecad.png";import jsCode from "@/assets/mindspark-javascript-code.png";
 
 interface DocImageProps {src: string;alt: string;caption: string;}
@@ -539,7 +544,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           I developed next.
         </p>
 
-        {/* LOW FIDELITY */}
+               {/* LOW FIDELITY */}
         <div className="mt-12">
           <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
             <p className="text-lg font-semibold text-muted-foreground tabular-nums">
@@ -571,52 +576,66 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                   journey. This allowed me to test MindSpark as one connected
                   experience rather than as a collection of individual screens.
                 </p>
-
-                <p>
-                  The progress and results section was developed so users could
-                  move from an overall view of their performance into a
-                  particular cognitive area and then into the detailed result of
-                  an individual test. This created a drill-down structure that
-                  kept broader progress easy to understand while still allowing
-                  users to explore more detailed results when needed.
-                </p>
-
-                <p>
-                  For the Go/No-Go test itself, I developed the full sequence
-                  from learning about the test and choosing a response method,
-                  through the alertness check and practice stage, to completing
-                  the live test and reviewing the result afterwards.
-                </p>
               </div>
             </div>
           </div>
 
           <DocImage
-            src={progressMidfi}
-            alt="Low-fidelity MindSpark progress and results screens showing overall progress, cognitive area results and detailed Go/No-Go performance"
-            caption="Low-fidelity progress and results screens showing how users could move from an overall performance view into cognitive areas and detailed individual test results."
+            src={lowfiCorePages}
+            alt="Low-fidelity MindSpark home screen and cognitive test category screens"
+            caption="Low-fidelity application structure showing the home screen and cognitive test categories, establishing how users could access tests and review their wider activity."
           />
 
-          {/* ADD IMAGE HERE:
-              One image containing these LOW-FIDELITY screens in order:
-              1. Go/No-Go overview
-              2. Test options / response method
-              3. Alertness question
-              4. Practice
-              5. Live test
-              6. Results
-          */}
-          <div className="my-8">
-            <div className="rounded-md border border-dashed border-border bg-secondary/30 px-6 py-12 text-center">
-              <p className="text-sm font-semibold text-foreground">
-                Add low-fidelity Go/No-Go journey screenshot here
-              </p>
-              <p className="mt-2 text-xs text-muted-foreground">
-                Overview → Test Options → Alertness → Practice → Live Test →
-                Results
-              </p>
-            </div>
+          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+            <p>
+              Progress and results were also developed as part of this wider
+              structure. Rather than presenting one score and ending the
+              experience, users could move from an overall view of their
+              performance into a particular cognitive area and then into the
+              detailed result of an individual test. This created a drill-down
+              structure that kept broader progress understandable while still
+              allowing more detailed information to be explored when needed.
+            </p>
           </div>
+
+          <DocImage
+            src={progressMidfi}
+            alt="Low-fidelity MindSpark progress and results screens showing overall progress, cognitive area results and detailed Go/No-Go performance"
+            caption="Low-fidelity progress and results screens showing the drill-down from overall performance to cognitive areas and detailed individual test results."
+          />
+
+          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+            <p>
+              For the Go/No-Go test itself, I developed the complete journey
+              around taking the assessment. Before entering the live test,
+              users could learn what the test measured, choose how they wanted
+              to respond, record how alert they felt and complete a practice
+              round so they understood the interaction before their performance
+              was recorded.
+            </p>
+          </div>
+
+          <DocImage
+            src={lowfiGoNoGoSetup}
+            alt="Low-fidelity Go/No-Go test screens showing the test overview, response options, alertness questions and practice sequence"
+            caption="Low-fidelity Go/No-Go preparation flow showing the test overview, response method selection, alertness check and practice before the official test."
+          />
+
+          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+            <p>
+              The pathway then continued into the live Go/No-Go test and the
+              immediate result. The testing interface centred on the stimulus
+              and primary response button, while the result screen expanded the
+              outcome beyond a single score through a response breakdown,
+              performance rating and the user's recorded alertness.
+            </p>
+          </div>
+
+          <DocImage
+            src={lowfiGoNoGoTestResults}
+            alt="Low-fidelity Go/No-Go live test screens and result screen showing stimuli, response feedback, score breakdown and alertness"
+            caption="Low-fidelity live test and results experience showing the response interaction, feedback states and contextual presentation of the final result."
+          />
 
           <div className="mt-10">
             <h3 className="text-lg font-semibold text-foreground mb-2">
@@ -624,9 +643,9 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </h3>
 
             <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-              Testing the first complete prototype identified several problems
-              that needed to be addressed before increasing the visual detail of
-              the application.
+              Testing the first complete prototype showed that the overall
+              structure worked, but identified several interface and interaction
+              problems that needed to be addressed in the next iteration.
             </p>
 
             <div className="divide-y divide-border border-y border-border">
@@ -657,8 +676,8 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                     "Users responded positively to verbal interaction, but it was not always obvious how the microphone should be positioned or used.",
                   ],
                   implication: [
-                    "Design Implication 03 — Develop the physical microphone setup",
-                    "Continue the verbal-response pathway and create a clearer physical setup around the microphone.",
+                    "Design Implication 03 — Develop the verbal-response setup",
+                    "Continue developing verbal input while providing clearer guidance around preparing and positioning the microphone.",
                   ],
                 },
               ].map(({ feedback, implication }) => (
@@ -914,7 +933,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           </p>
         </div>
 
-        {/* HIGH FIDELITY */}
+                {/* HIGH FIDELITY */}
         <div className="mt-16 pt-10 border-t border-border">
           <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
             <p className="text-lg font-semibold text-muted-foreground tabular-nums">
@@ -940,40 +959,70 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                 </p>
 
                 <p>
-                  Remaining grey areas were replaced with the softer green-toned
-                  visual system, the header and iconography were refined, and
-                  icons were added where they helped users recognise actions or
-                  information more quickly.
-                </p>
-
-                <p>
-                  The Go/No-Go experience also received its final refinements.
-                  The demonstration placeholder was replaced with an actual
-                  demonstration video, option descriptions were made clearer,
-                  the practice sequence was made more consistent, and subtle
-                  feedback was added between practice trials.
-                </p>
-
-                <p>
-                  Results and progress were refined through clearer response
-                  icons, meaningful classification colours and greater emphasis
-                  on alertness, while retaining the same drill-down structure
-                  established during the low-fidelity stage.
+                  The wider interface was refined through the softer green-toned
+                  visual system, a more consistent header and navigation,
+                  stronger iconography and clearer visual separation between
+                  different cognitive test categories and areas of the
+                  application.
                 </p>
               </div>
             </div>
           </div>
 
           <DocImage
-            src={hifiFlow}
-            alt="Final high-fidelity Go/No-Go journey showing the test introduction, setup, alertness questions and practice sequence"
-            caption="Final Go/No-Go journey showing how users are introduced to the test, prepare for it and practise before beginning the assessment."
+            src={hifiCorePages}
+            alt="Final high-fidelity MindSpark home, test categories, settings and notifications screens"
+            caption="Final supporting interface showing the home screen, cognitive test categories, settings and notifications after the visual system and navigation had been refined."
           />
+
+          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+            <p>
+              The Go/No-Go preparation journey also received its final
+              refinements. The demonstration placeholder was replaced with an
+              actual demonstration video, option descriptions were made clearer,
+              the alertness check was given greater visual emphasis, and the
+              practice sequence was made more consistent before users entered
+              the official test.
+            </p>
+          </div>
+
+          <DocImage
+            src={hifiFlow}
+            alt="Final high-fidelity Go/No-Go journey showing test introduction, response options, alertness questions and practice"
+            caption="Final Go/No-Go preparation journey showing the refined introduction, setup, alertness check, demonstration and practice stages."
+          />
+
+          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+            <p>
+              The live test was also visually simplified and refined. The
+              stimulus and primary response remained the focus of each trial,
+              while feedback between trials became clearer and less punitive.
+              Once the test was completed, the result was presented through a
+              stronger hierarchy of score, response breakdown, performance
+              classification and alertness context.
+            </p>
+          </div>
+
+          <DocImage
+            src={hifiGoNoGoTestResults}
+            alt="Final high-fidelity Go/No-Go live test and result screens showing stimuli, response states, score, response breakdown, classification and alertness"
+            caption="Final live test and immediate results experience showing the refined interaction, supportive feedback and contextual breakdown of performance."
+          />
+
+          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+            <p>
+              The wider progress system retained the drill-down structure first
+              established during low fidelity, but the information was made
+              easier to scan through clearer icons, semantic colour, stronger
+              hierarchy and greater emphasis on the relationship between
+              alertness and performance.
+            </p>
+          </div>
 
           <DocImage
             src={progressHifi}
             alt="Final high-fidelity MindSpark progress and results screens"
-            caption="Final progress and results screens showing how the original low-fidelity structure developed into a clearer and more contextual presentation of performance."
+            caption="Final progress and results screens showing how the original low-fidelity structure developed into a clearer visual and contextual interpretation of performance."
           />
 
           <div className="mt-10">
@@ -1033,7 +1082,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           <DocImage
             src={systemOverview}
             alt="Full final MindSpark system showing all major application screens and both Go/No-Go interaction pathways"
-            caption="Final MindSpark system showing how the early wireframes developed into a complete application across onboarding, navigation, cognitive test categories, progress and results, and the touch and verbal Go/No-Go pathways."
+            caption="Complete high-fidelity MindSpark system showing how the application developed across the wider interface, progress and results, and the touch and verbal Go/No-Go pathways."
           />
         </div>
       </CaseStudySection>
