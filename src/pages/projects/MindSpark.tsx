@@ -1134,82 +1134,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         </div>
       </CaseStudySection>
 
-           {/* Final Experience */}
-      <CaseStudySection title="Final Experience">
-        <p>
-          After progressing through low-, medium-, and high-fidelity
-          prototyping, the final MindSpark design brought the wider application
-          and the complete Go/No-Go test experience together as one system.
-          Users can access different cognitive assessments, review previous
-          performance, track changes over time, and complete the full process
-          of preparing for, taking, and reviewing a cognitive test.
-        </p>
-
-        <DocImage
-          src={hifiPages}
-          alt="High-fidelity MindSpark home, cognitive test categories, settings, and notifications screens"
-          caption="Final supporting interface showing the home screen, cognitive test categories, settings, and notifications."
-        />
-
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
-          Taking the Go/No-Go test
-        </h3>
-
-        <p>
-          Selecting the Go/No-Go test begins a guided sequence designed to
-          prepare the user before their performance is measured. Users are
-          introduced to what the test measures, choose how they want to
-          respond, select their test options, record how alert they feel, view
-          a demonstration, and complete a practice round before beginning the
-          actual test.
-        </p>
-
-        <DocImage
-          src={hifiFlow}
-          alt="High-fidelity Figma screens showing the final Go/No-Go preparation pathway including introduction, test options, alertness questions, demonstration, and practice"
-          caption="Final Go/No-Go preparation journey showing the stages users complete before beginning the scored test."
-        />
-
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
-          Completing the test and understanding the result
-        </h3>
-
-        <p>
-          During the test, the interface is reduced to the information needed
-          to recognise each stimulus and respond. After completion, the result
-          is explained through an overall score and a breakdown of correct
-          responses, missed responses, and incorrect responses. The user's
-          alertness at the time of testing is shown alongside the result so
-          performance is not presented as an isolated score.
-        </p>
-
-        <DocImage
-          src={testResults}
-          alt="Final high-fidelity Go/No-Go live test and results screens showing stimulus interaction, score, response breakdown, classification, and alertness"
-          caption="Final testing and results experience showing the live interaction, response breakdown, performance classification, and alertness context."
-        />
-
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
-          Reviewing progress over time
-        </h3>
-
-        <p>
-          Results also feed into the wider progress section, where users can
-          move from an overall view of their performance into individual
-          cognitive areas and specific test results. This allows previous
-          performance, response patterns, and alertness-related context to be
-          revisited over time rather than disappearing once a test has been
-          completed.
-        </p>
-
-        <DocImage
-          src={progressHifi}
-          alt="High-fidelity MindSpark progress and results screens showing overall performance, cognitive area progress, alertness context, and detailed Go/No-Go results"
-          caption="Final progress and results system showing the drill-down from overall performance to detailed and contextual test results."
-        />
-      </CaseStudySection>
-
-            {/* Verbal-Response Prototype */}
+    {/* Verbal-Response Prototype */}
       <CaseStudySection title="Developing the Verbal-Response Prototype">
         <p>
           Alongside the touchscreen version of the Go/No-Go test, I developed
@@ -1311,6 +1236,83 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           together for the interaction to function as a complete system.
         </p>
       </CaseStudySection>
+  
+           {/* Final Experience */}
+      <CaseStudySection title="Final Experience">
+        <p>
+          After progressing through low-, medium-, and high-fidelity
+          prototyping, the final MindSpark design brought the wider application
+          and the complete Go/No-Go test experience together as one system.
+          Users can access different cognitive assessments, review previous
+          performance, track changes over time, and complete the full process
+          of preparing for, taking, and reviewing a cognitive test.
+        </p>
+
+        <DocImage
+          src={hifiPages}
+          alt="High-fidelity MindSpark home, cognitive test categories, settings, and notifications screens"
+          caption="Final supporting interface showing the home screen, cognitive test categories, settings, and notifications."
+        />
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          Taking the Go/No-Go test
+        </h3>
+
+        <p>
+          Selecting the Go/No-Go test begins a guided sequence designed to
+          prepare the user before their performance is measured. Users are
+          introduced to what the test measures, choose how they want to
+          respond, select their test options, record how alert they feel, view
+          a demonstration, and complete a practice round before beginning the
+          actual test.
+        </p>
+
+        <DocImage
+          src={hifiFlow}
+          alt="High-fidelity Figma screens showing the final Go/No-Go preparation pathway including introduction, test options, alertness questions, demonstration, and practice"
+          caption="Final Go/No-Go preparation journey showing the stages users complete before beginning the scored test."
+        />
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          Completing the test and understanding the result
+        </h3>
+
+        <p>
+          During the test, the interface is reduced to the information needed
+          to recognise each stimulus and respond. After completion, the result
+          is explained through an overall score and a breakdown of correct
+          responses, missed responses, and incorrect responses. The user's
+          alertness at the time of testing is shown alongside the result so
+          performance is not presented as an isolated score.
+        </p>
+
+        <DocImage
+          src={testResults}
+          alt="Final high-fidelity Go/No-Go live test and results screens showing stimulus interaction, score, response breakdown, classification, and alertness"
+          caption="Final testing and results experience showing the live interaction, response breakdown, performance classification, and alertness context."
+        />
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          Reviewing progress over time
+        </h3>
+
+        <p>
+          Results also feed into the wider progress section, where users can
+          move from an overall view of their performance into individual
+          cognitive areas and specific test results. This allows previous
+          performance, response patterns, and alertness-related context to be
+          revisited over time rather than disappearing once a test has been
+          completed.
+        </p>
+
+        <DocImage
+          src={progressHifi}
+          alt="High-fidelity MindSpark progress and results screens showing overall performance, cognitive area progress, alertness context, and detailed Go/No-Go results"
+          caption="Final progress and results system showing the drill-down from overall performance to detailed and contextual test results."
+        />
+      </CaseStudySection>
+
+        
 
 
       {/* Final Outcome */}
