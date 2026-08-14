@@ -12,6 +12,7 @@ import midfiTouchFlow from "@/assets/mindspark-midfi-touch-flow.png";
 import midfiVerbalSetup from "@/assets/mindspark-midfi-verbal-setup.png";
 import midfiVerbalPractice from "@/assets/mindspark-midfi-verbal-practice.png";
 import midfiComponents from "@/assets/mindspark-midfi-components.png";
+import finalResponseMethods from "@/assets/mindspark-final-response-methods.png";
 
 interface DocImageProps {src: string;alt: string;caption: string;}
 
@@ -1237,81 +1238,135 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         </p>
       </CaseStudySection>
   
-           {/* Final Experience */}
+                {/* Final Experience */}
       <CaseStudySection title="Final Experience">
         <p>
-          After progressing through low-, medium-, and high-fidelity
-          prototyping, the final MindSpark design brought the wider application
-          and the complete Go/No-Go test experience together as one system.
-          Users can access different cognitive assessments, review previous
-          performance, track changes over time, and complete the full process
-          of preparing for, taking, and reviewing a cognitive test.
+          After progressing through the interface design and developing the
+          verbal-response prototype, the final MindSpark design brought both
+          strands together as one complete cognitive testing system. Users can
+          access different cognitive assessments, choose how they want to
+          interact with the Go/No-Go test, prepare through demonstration and
+          practice, complete the assessment, and review their performance in
+          the context of both alertness and previous results.
         </p>
 
         <DocImage
-          src={hifiPages}
-          alt="High-fidelity MindSpark home, cognitive test categories, settings, and notifications screens"
-          caption="Final supporting interface showing the home screen, cognitive test categories, settings, and notifications."
+          src={systemOverview}
+          alt="Complete high-fidelity MindSpark system showing the wider application, progress and results, and both touchscreen and verbal Go/No-Go pathways"
+          caption="Complete MindSpark system bringing together the wider cognitive testing application, progress and results, and both touchscreen and verbal Go/No-Go pathways."
         />
 
         <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
-          Taking the Go/No-Go test
+          Finding and preparing for a cognitive assessment
         </h3>
 
         <p>
-          Selecting the Go/No-Go test begins a guided sequence designed to
-          prepare the user before their performance is measured. Users are
-          introduced to what the test measures, choose how they want to
-          respond, select their test options, record how alert they feel, view
-          a demonstration, and complete a practice round before beginning the
-          actual test.
+          MindSpark was designed as a wider cognitive testing application rather
+          than as a single Go/No-Go test. From the home screen, users can access
+          assessments grouped across different cognitive areas, review previous
+          performance and return to their progress over time.
+        </p>
+
+        <p>
+          Selecting the Go/No-Go test begins a guided preparation sequence.
+          Users are introduced to what the test measures, choose whether they
+          want to respond using touchscreen or verbal input, configure the test,
+          record how alert they feel, view a demonstration and complete a
+          practice round before the scored assessment begins.
         </p>
 
         <DocImage
           src={hifiFlow}
-          alt="High-fidelity Figma screens showing the final Go/No-Go preparation pathway including introduction, test options, alertness questions, demonstration, and practice"
-          caption="Final Go/No-Go preparation journey showing the stages users complete before beginning the scored test."
+          alt="Final Go/No-Go preparation pathway showing test introduction, response method selection, test options, alertness questions, demonstration and practice"
+          caption="Final Go/No-Go preparation journey showing how users learn about the test, choose a response method, record alertness and practise before the scored assessment."
         />
 
         <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
-          Completing the test and understanding the result
+          Completing the test through touch or verbal input
         </h3>
 
         <p>
-          During the test, the interface is reduced to the information needed
-          to recognise each stimulus and respond. After completion, the result
-          is explained through an overall score and a breakdown of correct
-          responses, missed responses, and incorrect responses. The user's
-          alertness at the time of testing is shown alongside the result so
-          performance is not presented as an isolated score.
+          Both response pathways follow the same underlying Go/No-Go rules while
+          allowing the user to interact in different ways. In the touchscreen
+          pathway, users respond by pressing the main Go button. In the verbal
+          pathway, the same response can be made by saying “Go” aloud using the
+          microphone setup developed during the project.
+        </p>
+
+        <p>
+          This meant the assessment did not depend on one method of physical
+          interaction. Regardless of the response method selected, users move
+          through the same preparation, practice and testing structure before
+          reaching their result.
+        </p>
+
+        {/* ADD NEW IMAGE:
+            Create one compact image showing:
+            1. Response method selection
+            2. Touchscreen live-test screen
+            3. Verbal live-test screen
+
+            Save as:
+            mindspark-final-response-methods.png
+        */}
+        <DocImage
+          src={finalResponseMethods}
+          alt="Final MindSpark response methods showing the choice between touchscreen and verbal input and the corresponding live-test interactions"
+          caption="The final Go/No-Go test supports the same assessment through two interaction pathways: pressing the on-screen Go button or responding verbally."
+        />
+
+        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+          Understanding the result
+        </h3>
+
+        <p>
+          After the test is completed, performance is presented through more
+          than a single score. Users can review their overall result, correct
+          responses, No-Go errors and missed responses, alongside a performance
+          classification and the alertness level they recorded before taking
+          the test.
+        </p>
+
+        <p>
+          Presenting these elements together gives users more context for
+          understanding how the result was produced rather than treating one
+          number as a complete description of their performance.
         </p>
 
         <DocImage
           src={testResults}
-          alt="Final high-fidelity Go/No-Go live test and results screens showing stimulus interaction, score, response breakdown, classification, and alertness"
-          caption="Final testing and results experience showing the live interaction, response breakdown, performance classification, and alertness context."
+          alt="Final MindSpark Go/No-Go result showing overall score, response breakdown, performance classification and alertness"
+          caption="Final result presentation combining the overall score with response breakdown, performance classification and the user’s recorded alertness."
         />
 
         <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
-          Reviewing progress over time
+          Reviewing performance over time
         </h3>
 
         <p>
-          Results also feed into the wider progress section, where users can
-          move from an overall view of their performance into individual
-          cognitive areas and specific test results. This allows previous
-          performance, response patterns, and alertness-related context to be
-          revisited over time rather than disappearing once a test has been
-          completed.
+          Individual results also feed into the wider progress system. Users can
+          begin with an overall view of their performance, move into a specific
+          cognitive area and then inspect the result of an individual test.
+          Previous performance, response patterns and alertness-related context
+          can therefore be revisited across repeated assessments rather than
+          disappearing once a test has been completed.
         </p>
 
         <DocImage
           src={progressHifi}
-          alt="High-fidelity MindSpark progress and results screens showing overall performance, cognitive area progress, alertness context, and detailed Go/No-Go results"
-          caption="Final progress and results system showing the drill-down from overall performance to detailed and contextual test results."
+          alt="Final MindSpark progress and results screens showing overall performance, cognitive-area progress, alertness context and detailed Go/No-Go results"
+          caption="Final progress system showing the drill-down from overall performance to cognitive-area progress and detailed individual test results."
         />
-      </CaseStudySection>
 
+        <p className="mt-8">
+          Together, these elements allow MindSpark to support the complete
+          experience around independently taking a cognitive assessment rather
+          than treating the test as an isolated interaction. The final concept
+          considers how users find and understand assessments, prepare for them,
+          choose how they want to interact, complete the test, interpret the
+          result and return to their performance over time.
+        </p>
+      </CaseStudySection>
         
 
 
