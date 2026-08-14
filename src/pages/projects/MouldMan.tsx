@@ -277,12 +277,6 @@ const MouldMan = () => {
                 </p>
               </div>
             </div>
-
-            <DocImage
-              src={personaRachel}
-              alt="Persona sheet for Rachel O’Connor — the Health-Conscious Renter"
-              caption="Example persona sheet — Rachel O'Connor (representative of the format used for all three personas)."
-            />
           </CaseStudySection>
 
           <CaseStudySection title="Customer Journey Maps &amp; Storyboards">
