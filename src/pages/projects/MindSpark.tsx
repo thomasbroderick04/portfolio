@@ -315,27 +315,6 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         </p>
       </CaseStudySection>
 
-      {/* Role */}
-      <CaseStudySection title="My Role">
-        <p>
-          MindSpark was a solo project. With the guidance of my final year
-          project supervisor, I was responsible for the work end-to-end. This
-          included literature review, research synthesis, accessibility
-          analysis, competitor auditing, UX strategy, information
-          architecture, user flows, sketching, wireframing, iterative Figma
-          prototyping, usability testing, and final interaction design.
-        </p>
-        <p>
-          I also built the coded Go/No-Go pathway in HTML, CSS, and
-          JavaScript, developed a functional Arduino microphone prototype,
-          designed the physical enclosure in FreeCAD, and tested how a
-          verbal-response pathway could operate alongside the touch-based
-          version. Owning both the design and prototype implementation gave
-          me a much stronger understanding of how interface decisions affect
-          technical feasibility, especially around timing, response
-          handling, feedback states, and hardware-supported interaction.
-        </p>
-      </CaseStudySection>
 
       {/* Design Approach */}
       <CaseStudySection title="Design Approach">
