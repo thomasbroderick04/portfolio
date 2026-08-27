@@ -742,28 +742,36 @@ const MindSpark = () => {
         </p>
 
                {/* LOW FIDELITY */}
-       <div>
-          <SubsectionHeading>
-            Low Fidelity: Turning the wireframes into a complete prototype
-          </SubsectionHeading>
+      <div className="mt-12">
+  <div className="grid gap-3 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
+    <p className="text-lg font-semibold tabular-nums text-muted-foreground">
+      01
+    </p>
 
-          <div className="max-w-3xl space-y-4">
-            <p>
-              I expanded the early wireframes into the first complete
-              low-fidelity version of MindSpark. At this stage, the focus
-              was on establishing how the different parts of the application
-              would work together before developing the visual design in
-              greater detail.
-            </p>
+    <div className="max-w-3xl">
+      <h3 className="mb-6 text-lg font-semibold leading-snug text-foreground">
+        Low Fidelity: Turning the wireframes into a complete prototype
+      </h3>
 
-            <p>
-              The prototype established the wider application structure,
-              including the home screen, cognitive test categories, progress
-              tracking and results, as well as the complete Go/No-Go test
-              journey. This allowed me to test MindSpark as one connected
-              experience rather than as a collection of individual screens.
-            </p>
-          </div>
+      <div className="space-y-4">
+        <p>
+          I expanded the early wireframes into the first complete
+          low-fidelity version of MindSpark. At this stage, the focus
+          was on establishing how the different parts of the application
+          would work together before developing the visual design in
+          greater detail.
+        </p>
+
+        <p>
+          The prototype established the wider application structure,
+          including the home screen, cognitive test categories, progress
+          tracking and results, as well as the complete Go/No-Go test
+          journey. This allowed me to test MindSpark as one connected
+          experience rather than as a collection of individual screens.
+        </p>
+      </div>
+    </div>
+  </div>
 
           <ProjectFigure
             src={lowfiCorePages}
@@ -914,41 +922,35 @@ const MindSpark = () => {
         </div>
 
                 {/* MEDIUM FIDELITY */}
-        <div className="mt-6 pt-10 border-t border-border">
-          <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
-            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
-              02
-            </p>
+        <div className="mt-16 pt-10 border-t border-border">
+  <div className="max-w-3xl">
+    <p className="mb-2 text-sm font-semibold tabular-nums text-muted-foreground">
+      02
+    </p>
 
-            <div className="max-w-3xl">
-              <p className="text-sm font-semibold text-muted-foreground mb-2">
-                Medium Fidelity
-              </p>
+    <SubsectionHeading>
+      Medium Fidelity: Responding to the first round of testing
+    </SubsectionHeading>
 
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Responding to the first round of testing
-              </h3>
+    <div className="space-y-4">
+      <p>
+        The medium-fidelity prototype directly responded to the
+        problems identified during low-fidelity testing. The overall
+        structure of MindSpark had already been established, so this
+        stage focused on improving visual clarity, interaction
+        behaviour and the detail of the Go/No-Go experience.
+      </p>
 
-              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
-                <p>
-                  The medium-fidelity prototype directly responded to the
-                  problems identified during low-fidelity testing. The overall
-                  structure of MindSpark had already been established, so this
-                  stage focused on improving visual clarity, interaction
-                  behaviour and the detail of the Go/No-Go experience.
-                </p>
-
-                <p>
-                  A consistent visual identity was introduced through teal
-                  branding, card-based layouts, clearer hierarchy, larger
-                  interaction targets and more purposeful use of colour.
-                  Navigation was also brought closer to familiar mobile
-                  conventions so users could move through the application more
-                  confidently.
-                </p>
-              </div>
-            </div>
-          </div>
+      <p>
+        A consistent visual identity was introduced through teal
+        branding, card-based layouts, clearer hierarchy, larger
+        interaction targets and more purposeful use of colour.
+        Navigation was also brought closer to familiar mobile
+        conventions so users could move through the application more
+        confidently.
+      </p>
+    </div>
+  </div>
 
           <ProjectFigure
             src={midfiCorePages}
@@ -1149,40 +1151,34 @@ const MindSpark = () => {
         </div>
 
                 {/* HIGH FIDELITY */}
-        <div className="mt-6 pt-10 border-t border-border">
-          <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
-            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
-              03
-            </p>
+        <div className="mt-16 pt-10 border-t border-border">
+  <div className="max-w-3xl">
+    <p className="mb-2 text-sm font-semibold tabular-nums text-muted-foreground">
+      03
+    </p>
 
-            <div className="max-w-3xl">
-              <p className="text-sm font-semibold text-muted-foreground mb-2">
-                High Fidelity
-              </p>
+    <SubsectionHeading>
+      High Fidelity: Completing the final experience
+    </SubsectionHeading>
 
-              <h3 className="text-xl font-semibold text-foreground mb-4">
-                Completing the final experience
-              </h3>
+    <div className="space-y-4">
+      <p>
+        By the high-fidelity stage, the application structure and main
+        interactions had already been established through the previous
+        two prototypes. This final stage therefore focused on
+        consistency, visual clarity and making MindSpark feel like one
+        complete application.
+      </p>
 
-              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
-                <p>
-                  By the high-fidelity stage, the application structure and main
-                  interactions had already been established through the previous
-                  two prototypes. This final stage therefore focused on
-                  consistency, visual clarity and making MindSpark feel like one
-                  complete application.
-                </p>
-
-                <p>
-                  The wider interface was refined through the softer green-toned
-                  visual system, a more consistent header and navigation,
-                  stronger iconography and clearer visual separation between
-                  different cognitive test categories and areas of the
-                  application.
-                </p>
-              </div>
-            </div>
-          </div>
+      <p>
+        The wider interface was refined through the softer green-toned
+        visual system, a more consistent header and navigation,
+        stronger iconography and clearer visual separation between
+        different cognitive test categories and areas of the
+        application.
+      </p>
+    </div>
+  </div>
 
           <ProjectFigure
             src={hifiCorePages}
