@@ -77,7 +77,7 @@ const ProjectFigure = ({
 };
 
 const SubsectionHeading = ({ children }: { children: ReactNode }) => (
-  <h3 className="mb-3 mt-10 text-lg font-semibold text-foreground">
+  <h3 className="!mt-12 !mb-6 text-lg font-semibold leading-snug text-foreground">
     {children}
   </h3>
 );
