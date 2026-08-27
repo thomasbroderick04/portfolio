@@ -742,21 +742,39 @@ const MindSpark = () => {
         </p>
 
                {/* LOW FIDELITY */}
-      <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
-  <p className="text-lg font-semibold tabular-nums text-muted-foreground">
-    01
-  </p>
+        <div className="mt-12">
+          <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
+              01
+            </p>
 
-  <div className="max-w-3xl">
-    <p className="text-sm font-semibold text-muted-foreground mb-2">
-      Low Fidelity
-    </p>
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold text-muted-foreground mb-2">
+                Low Fidelity
+              </p>
 
-    <h3 className="text-xl font-semibold text-foreground mb-4">
-      Turning the wireframes into a complete prototype
-    </h3>
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Turning the wireframes into a complete prototype
+              </h3>
 
-    <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  I expanded the early wireframes into the first complete
+                  low-fidelity version of MindSpark. At this stage, the focus
+                  was on establishing how the different parts of the application
+                  would work together before developing the visual design in
+                  greater detail.
+                </p>
+
+                <p>
+                  The prototype established the wider application structure,
+                  including the home screen, cognitive test categories, progress
+                  tracking and results, as well as the complete Go/No-Go test
+                  journey. This allowed me to test MindSpark as one connected
+                  experience rather than as a collection of individual screens.
+                </p>
+              </div>
+            </div>
           </div>
 
           <ProjectFigure
