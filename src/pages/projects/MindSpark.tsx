@@ -834,12 +834,12 @@ const MindSpark = () => {
             caption="Low-fidelity live test and results experience showing the response interaction, feedback states and contextual presentation of the final result."
           />
 
-          <div className="mt-10">
-            <h3 className="text-lg font-semibold text-foreground mb-2">
-              What I learned from low-fidelity testing
-            </h3>
+          <div>
+  <SubsectionHeading>
+    What I learned from low-fidelity testing
+  </SubsectionHeading>
 
-            <p className="text-sm leading-relaxed text-muted-foreground mb-6 max-w-3xl">
+  <p className="text-sm leading-relaxed text-muted-foreground mb-6 max-w-3xl">
               Testing the first complete prototype showed that the overall
               structure worked, but identified several interface and interaction
               problems that needed to be addressed in the next iteration.
@@ -1066,12 +1066,12 @@ const MindSpark = () => {
             caption="Medium-fidelity verbal practice showing Go and No-Go trials, supportive feedback and a clearer transition from practice into the official assessment."
           />
 
-          <div className="mt-10">
-            <h3 className="text-lg font-semibold text-foreground mb-2">
-              What I learned from medium-fidelity testing
-            </h3>
+          <div>
+  <SubsectionHeading>
+    What I learned from medium-fidelity testing
+  </SubsectionHeading>
 
-            <p className="text-sm leading-relaxed text-muted-foreground mb-6 max-w-3xl">
+  <p className="text-sm leading-relaxed text-muted-foreground mb-6 max-w-3xl">
               Testing showed that the main interaction problems identified
               during low fidelity had improved. Feedback at this stage was
               therefore more focused on refinement than restructuring.
@@ -1267,12 +1267,12 @@ const MindSpark = () => {
             caption="Final progress and results screens showing how the original low-fidelity structure developed into a clearer visual and contextual interpretation of performance."
           />
 
-          <div className="mt-10">
-            <h3 className="text-lg font-semibold text-foreground mb-2">
-              What final testing showed
-            </h3>
+         <div>
+  <SubsectionHeading>
+    What final testing showed
+  </SubsectionHeading>
 
-            <div className="grid gap-6 py-7 border-y border-border md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8">
+  <div className="grid gap-6 py-7 border-y border-border md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8">
               <div>
                 <p className="mb-2 text-sm font-semibold text-foreground">
                   Final Testing — The main usability issues had been resolved
