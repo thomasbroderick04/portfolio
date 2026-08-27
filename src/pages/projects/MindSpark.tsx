@@ -77,134 +77,15 @@ const ProjectFigure = ({
 };
 
 const SubsectionHeading = ({ children }: { children: ReactNode }) => (
-  <h3 className="mb-3 mt-10 text-lg font-semibold leading-snug text-foreground">
+  <h3 className="mb-3 mt-10 text-lg font-semibold text-foreground">
     {children}
   </h3>
-);
-
-interface StructuredRow {
-  label: string;
-  title?: string;
-  content: ReactNode;
-}
-
-const StructuredRows = ({ rows }: { rows: StructuredRow[] }) => (
-  <div className="mt-8 divide-y divide-border border-y border-border">
-    {rows.map((row) => (
-      <div
-        key={`${row.label}-${row.title ?? ""}`}
-        className="grid gap-3 py-5 md:grid-cols-[180px_minmax(0,1fr)] md:gap-8 md:py-6"
-      >
-        <p className="text-sm font-semibold text-foreground">{row.label}</p>
-
-        <div className="max-w-3xl">
-          {row.title ? (
-            <h3 className="mb-3 text-base font-semibold leading-snug text-foreground">
-              {row.title}
-            </h3>
-          ) : null}
-
-          <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
-            {row.content}
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-);
-
-interface EvidenceResponseItem {
-  evidenceTitle: string;
-  evidenceBody: string;
-  responseTitle: string;
-  responseBody: string;
-}
-
-const EvidenceResponseRows = ({
-  items,
-}: {
-  items: EvidenceResponseItem[];
-}) => (
-  <div className="mt-8 divide-y divide-border border-y border-border">
-    {items.map((item) => (
-      <div
-        key={item.evidenceTitle}
-        className="grid gap-6 py-7 md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8"
-      >
-        <div>
-          <p className="mb-2 text-sm font-semibold leading-snug text-foreground">
-            {item.evidenceTitle}
-          </p>
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            {item.evidenceBody}
-          </p>
-        </div>
-
-        <div
-          className="hidden items-center justify-center text-muted-foreground md:flex"
-          aria-hidden="true"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-          </svg>
-        </div>
-
-        <div>
-          <p className="mb-2 text-sm font-semibold leading-snug text-foreground">
-            {item.responseTitle}
-          </p>
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            {item.responseBody}
-          </p>
-        </div>
-      </div>
-    ))}
-  </div>
-);
-
-interface StageHeaderProps {
-  number: string;
-  label: string;
-  title: string;
-  children: ReactNode;
-}
-
-const StageHeader = ({
-  number,
-  label,
-  title,
-  children,
-}: StageHeaderProps) => (
-  <div className="max-w-3xl">
-    <p className="mb-2 text-sm font-semibold text-muted-foreground">
-      {number} · {label}
-    </p>
-
-    <h3 className="mb-4 text-xl font-semibold leading-snug text-foreground">
-      {title}
-    </h3>
-
-    <div className="space-y-4 text-base leading-relaxed text-muted-foreground">
-      {children}
-    </div>
-  </div>
 );
 
 const MindSpark = () => {
   return (
     <Layout>
-      <div className="px-6 py-16 md:px-12 lg:px-16 md:py-24">
+      <div className="px-6 py-16 md:px-12 md:py-24 lg:px-16">
         <article className="container-content">
           <Link
             to="/projects"
@@ -214,7 +95,7 @@ const MindSpark = () => {
           </Link>
 
       <h1 className="mb-5">MindSpark</h1>
-      <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl">
+      <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
         Designing an interactive cognitive testing system — exploring how
         interaction design can reduce exclusion in self-administered
         cognitive testing.
@@ -326,7 +207,7 @@ const MindSpark = () => {
           allow users to track how their performance changes over time.
         </p>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 mt-6 md:grid-cols-3">
           <div className="rounded-md border border-border bg-background p-5">
             <p className="text-sm font-medium text-muted-foreground mb-3">
               01
@@ -383,21 +264,13 @@ const MindSpark = () => {
             </h3>
 
             <p className="text-sm leading-relaxed text-muted-foreground">
-              Many existing applications provide only a numerical score, without
-              showing what contributed to it or the context in which the test was
-              taken. The application therefore needed to break results down into
-              average response time and correct and incorrect responses, while
-              also showing user-reported factors such as alertness. Across
-              repeated tests, users also needed to see how each aspect of
-              performance changed over weekly, monthly and yearly periods. Because
-              slower responses or more mistakes could be interpreted negatively,
-              results also needed to be explained in neutral language rather than
-              labelled simply as “good” or “bad.”
+           Many existing applications provide only a numerical score, without showing what contributed to it or the context in which the test was taken. The application therefore needed to break results down into average response time and correct and incorrect responses, while also showing user-reported factors such as alertness. Across repeated tests, users also needed to see how each aspect of performance changed over weekly, monthly and yearly periods. Because slower responses or more mistakes could be interpreted negatively, results also needed to be explained in neutral language rather than labelled simply as “good” or “bad.”
+
             </p>
           </div>
         </div>
 
-        <p className="mt-8">
+        <p className="mt-6">
           To investigate this design challenge, I divided the project into three
           areas: understanding how existing cognitive assessment tools work and
           where their design creates difficulties; identifying how the wider
@@ -407,7 +280,7 @@ const MindSpark = () => {
           following research questions:
         </p>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 mt-5 md:grid-cols-2">
           <div className="rounded-md border border-border bg-background p-5">
             <p className="text-sm font-medium text-muted-foreground mb-3">
               RQ1
@@ -506,34 +379,36 @@ const MindSpark = () => {
           the end.
         </p>
 
-        <StructuredRows
-          rows={[
-            {
-              label: "01",
-              title: "Research and accessibility framing",
-              content:
-                "Reviewed literature on digital cognitive testing, usability, accessibility barriers, contextual influences on performance, privacy, and multimodal interaction. This helped establish how the design of self-administered cognitive tests can create barriers for users, influence their performance, and affect their interpretation of results.",
-            },
-            {
-              label: "02",
-              title: "Examining assumptions in existing tools",
-              content:
-                "Analysed existing cognitive testing applications to identify assumptions about users’ ability to understand instructions, use touchscreen input accurately, perform under pressure, and complete tests independently without guidance or support.",
-            },
-            {
-              label: "03",
-              title: "Designing to reduce interaction barriers",
-              content:
-                "Translated research into sketches, user flows, early wireframes, and low-, medium-, and high-fidelity Figma prototypes, focusing on structure and where design could reduce confusion. These were tested and refined with adults aged 19 to 73 to improve clarity, reduce interaction barriers, and help users become familiar with the rules before the official test began.",
-            },
-            {
-              label: "04",
-              title: "Multimodal prototyping and implementation",
-              content:
-                "Built a working verbal-response pathway using an Arduino-connected microphone, allowing users to respond through speech rather than touchscreen input. I also designed a FreeCAD enclosure to integrate the hardware into a complete and usable prototype. This extended the project’s accessibility focus for users who may find precise touch input difficult or unsuitable.",
-            },
-          ]}
-        />
+        <div className="mt-6 divide-y divide-border border-y border-border">
+          {[
+            [
+              "01 — Research and accessibility framing",
+              "Reviewed literature on digital cognitive testing, usability, accessibility barriers, contextual influences on performance, privacy, and multimodal interaction. This helped establish how the design of self-administered cognitive tests can create barriers for users, influence their performance, and affect their interpretation of results.",
+            ],
+            [
+              "02 — Examining assumptions in existing tools",
+              "Analysed existing cognitive testing applications to identify assumptions about users’ ability to understand instructions, use touchscreen input accurately, perform under pressure, and complete tests independently without guidance or support.",
+            ],
+            [
+              "03 — Designing to reduce interaction barriers",
+              "Translated research into sketches, user flows, early wireframes, and low-, medium-, and high-fidelity Figma prototypes, focusing on structure and where design could reduce confusion. These were tested and refined with adults aged 19 to 73 to improve clarity, reduce interaction barriers, and help users become familiar with the rules before the official test began.",
+            ],
+            [
+              "04 — Multimodal prototyping and implementation",
+              "Built a working verbal-response pathway using an Arduino-connected microphone, allowing users to respond through speech rather than touchscreen input. I also designed a FreeCAD enclosure to integrate the hardware into a complete and usable prototype. This extended the project’s accessibility focus for users who may find precise touch input difficult or unsuitable.",
+            ],
+          ].map(([t, d]) => (
+            <div
+              key={t}
+              className="grid gap-3 py-5 md:grid-cols-[180px_minmax(0,1fr)] md:gap-8"
+            >
+              <p className="text-sm font-semibold text-foreground">{t}</p>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {d}
+              </p>
+            </div>
+          ))}
+        </div>
       </CaseStudySection>
 
       {/* Research and Key Insights */}
@@ -543,82 +418,94 @@ const MindSpark = () => {
           shaped the direction of MindSpark.
         </p>
 
-        <StructuredRows
-          rows={[
-            {
-              label: "01",
-              title: "The design of a test can affect the result",
-              content: (
-                <>
-                  <p>
-                    A cognitive assessment is intended to measure a person’s
-                    ability to remember information, concentrate, react quickly
-                    or control their responses. However, the result may not
-                    accurately reflect that ability if the person has difficulty
-                    using the test itself.
-                  </p>
-                  <p>
-                    For example, unclear instructions may cause someone to
-                    respond incorrectly, a small button may make it difficult to
-                    respond quickly, and weak feedback may leave them unsure
-                    whether their response has been recorded. In these cases, a
-                    delay or mistake may have been caused by the interface rather
-                    than the cognitive ability being examined.
-                  </p>
-                  <p>
-                    Accessibility was therefore essential to the design of
-                    MindSpark. I reviewed each stage of the experience by
-                    considering whether users could understand the information,
-                    navigate the application and respond during the test without
-                    avoidable difficulty.
-                  </p>
-                </>
-              ),
-            },
-            {
-              label: "02",
-              title: "A test result should not be presented without context",
-              content: (
-                <>
-                  <p>
-                    How someone performs can be affected by how alert or tired
-                    they feel when taking the test. Presenting only a score does
-                    not give the user any information about the conditions in
-                    which that result was recorded.
-                  </p>
-                  <p>
-                    MindSpark therefore asks users to rate how alert they feel
-                    before beginning the test. This information is displayed
-                    alongside the result, allowing users to consider their
-                    performance in relation to how they felt at the time.
-                  </p>
-                </>
-              ),
-            },
-            {
-              label: "03",
-              title: "Touchscreen input may not suit every user",
-              content: (
-                <>
-                  <p>
-                    A touchscreen test requires the user to see a signal, move
-                    their hand and press a button accurately and quickly.
-                    Difficulty completing any of these physical actions could
-                    affect the result, even when the person understands the test.
-                  </p>
-                  <p>
-                    The Go/No-Go test requires a user to make a simple response
-                    when a particular visual signal appears. This made it
-                    possible to explore two ways of responding: pressing an
-                    on-screen button or saying “Go” aloud. Both methods allow the
-                    user to complete the same test without changing what the test
-                    is intended to measure.
-                  </p>
-                </>
-              ),
-            },
-          ]}
-        />
+        <div className="mt-8 divide-y divide-border border-y border-border">
+          <article className="grid gap-3 py-7 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8 md:py-8">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
+              01
+            </p>
+            <div className="max-w-3xl">
+              <h3 className="mb-4 text-lg font-semibold leading-snug text-foreground">
+                The design of a test can affect the result
+              </h3>
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  A cognitive assessment is intended to measure a person’s
+                  ability to remember information, concentrate, react quickly
+                  or control their responses. However, the result may not
+                  accurately reflect that ability if the person has difficulty
+                  using the test itself.
+                </p>
+                <p>
+                  For example, unclear instructions may cause someone to
+                  respond incorrectly, a small button may make it difficult to
+                  respond quickly, and weak feedback may leave them unsure
+                  whether their response has been recorded. In these cases, a
+                  delay or mistake may have been caused by the interface rather
+                  than the cognitive ability being examined.
+                </p>
+                <p>
+                  Accessibility was therefore essential to the design of
+                  MindSpark. I reviewed each stage of the experience by
+                  considering whether users could understand the information,
+                  navigate the application and respond during the test without
+                  avoidable difficulty.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article className="grid gap-3 py-7 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8 md:py-8">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
+              02
+            </p>
+            <div className="max-w-3xl">
+              <h3 className="mb-4 text-lg font-semibold leading-snug text-foreground">
+                A test result should not be presented without context
+              </h3>
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  How someone performs can be affected by how alert or tired
+                  they feel when taking the test. Presenting only a score does
+                  not give the user any information about the conditions in
+                  which that result was recorded.
+                </p>
+                <p>
+                  MindSpark therefore asks users to rate how alert they feel
+                  before beginning the test. This information is displayed
+                  alongside the result, allowing users to consider their
+                  performance in relation to how they felt at the time.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article className="grid gap-3 py-7 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8 md:py-8">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
+              03
+            </p>
+            <div className="max-w-3xl">
+              <h3 className="mb-4 text-lg font-semibold leading-snug text-foreground">
+                Touchscreen input may not suit every user
+              </h3>
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  A touchscreen test requires the user to see a signal, move
+                  their hand and press a button accurately and quickly.
+                  Difficulty completing any of these physical actions could
+                  affect the result, even when the person understands the test.
+                </p>
+                <p>
+                  The Go/No-Go test requires a user to make a simple response
+                  when a particular visual signal appears. This made it
+                  possible to explore two ways of responding: pressing an
+                  on-screen button or saying “Go” aloud. Both methods allow the
+                  user to complete the same test without changing what the test
+                  is intended to measure.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
 
         <div className="mt-12">
           <p>
@@ -626,8 +513,8 @@ const MindSpark = () => {
             key design implications.
           </p>
 
-          <StructuredRows
-            rows={[
+          <ol className="mt-6 divide-y divide-border border-y border-border">
+            {[
               "Keep each screen focused and remove unnecessary information during the test.",
               "Use large controls and reduce the need for small, precise or repeated touchscreen actions.",
               "Break the instructions into short, clearly ordered steps.",
@@ -635,11 +522,20 @@ const MindSpark = () => {
               "Give clear feedback so users know when their response has been recorded.",
               "Record the user’s level of alertness and display it alongside their result.",
               "Allow users to respond using either touchscreen or verbal input.",
-            ].map((content, index) => ({
-              label: `Design Implication ${String(index + 1).padStart(2, "0")}`,
-              content,
-            }))}
-          />
+            ].map((text, index) => (
+              <li
+                key={text}
+                className="grid gap-2 py-4 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-8 md:py-5"
+              >
+                <p className="text-sm font-semibold text-foreground">
+                  Design Implication {String(index + 1).padStart(2, "0")}
+                </p>
+                <p className="text-sm leading-relaxed text-foreground">
+                  {text}
+                </p>
+              </li>
+            ))}
+          </ol>
         </div>
       </CaseStudySection>
 
@@ -683,19 +579,26 @@ const MindSpark = () => {
 
         <p>This helped define what MindSpark needed to do differently:</p>
 
-        <StructuredRows
-          rows={[
+        <ol className="mt-6 divide-y divide-border border-y border-border">
+          {[
             "Introduce the test gradually rather than relying on dense instructions.",
             "Use demonstration and practice so users can understand the task before their performance is recorded.",
             "Use large touch targets and a simplified testing interface to make touchscreen interaction easier.",
             "Provide feedback that guides users clearly without making mistakes feel stressful or punitive.",
             "Present scores with a breakdown of the user’s responses, how alert they felt before taking the test, and how the result compares with their previous attempts.",
             "Explore how touch and verbal interaction could exist within the same testing system.",
-          ].map((content, index) => ({
-            label: `Design Implication ${String(index + 1).padStart(2, "0")}`,
-            content,
-          }))}
-        />
+          ].map((text, index) => (
+            <li
+              key={text}
+              className="grid gap-2 py-4 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-8 md:py-5"
+            >
+              <p className="text-sm font-semibold text-foreground">
+                Design Implication {String(index + 1).padStart(2, "0")}
+              </p>
+              <p className="text-sm leading-relaxed text-foreground">{text}</p>
+            </li>
+          ))}
+        </ol>
       </CaseStudySection>
 
       {/* Early Concepts and Wireframing */}
@@ -749,40 +652,83 @@ const MindSpark = () => {
           would carry over into my subsequent prototypes.
         </p>
 
-        <EvidenceResponseRows
-          items={[
+        <div className="mt-6 divide-y divide-border border-y border-border">
+          {[
             {
-              evidenceTitle:
+              feedback: [
                 "User Feedback 01 — Progress needed to be easier to access",
-              evidenceBody:
                 "Users wanted a clearer way to see how they had performed across previous tests and how their results were changing over time.",
-              responseTitle:
+              ],
+              implication: [
                 "Design Implication 01 — Make progress a clear part of the experience",
-              responseBody:
                 "Create a dedicated area where users can quickly review previous results and track changes over time.",
+              ],
             },
             {
-              evidenceTitle:
+              feedback: [
                 "User Feedback 02 — Users wanted clear guidance before starting the test",
-              evidenceBody:
                 "Users found the test explanation and practice useful because they helped them understand what to do before taking the real test.",
-              responseTitle:
+              ],
+              implication: [
                 "Design Implication 02 — Guide users through the test step by step",
-              responseBody:
                 "The next design would clearly explain the test, show users how it works, and let them practise before starting.",
+              ],
             },
             {
-              evidenceTitle:
+              feedback: [
                 "User Feedback 03 — Users liked having more than one way to respond",
-              evidenceBody:
                 "Users responded positively to both touch and voice input, with the voice option seen as useful for people who may find touchscreen interaction difficult.",
-              responseTitle:
+              ],
+              implication: [
                 "Design Implication 03 — Continue developing both touch and voice input",
-              responseBody:
                 "The next prototype would include both response methods so users were not limited to touchscreen interaction.",
+              ],
             },
-          ]}
-        />
+          ].map(({ feedback, implication }) => (
+            <div
+              key={feedback[0]}
+              className="grid gap-6 py-6 md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8 md:py-8"
+            >
+              <div>
+                <p className="mb-2 text-sm font-semibold text-foreground">
+                  {feedback[0]}
+                </p>
+                <p className="text-sm leading-relaxed text-foreground">
+                  {feedback[1]}
+                </p>
+              </div>
+
+              <div
+                className="hidden md:flex items-center justify-center text-muted-foreground"
+                aria-hidden="true"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+
+              <div>
+                <p className="mb-2 text-sm font-semibold text-foreground">
+                  {implication[0]}
+                </p>
+                <p className="text-sm leading-relaxed text-foreground">
+                  {implication[1]}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </CaseStudySection>
 
         {/* Iterative Prototyping */}
@@ -797,26 +743,39 @@ const MindSpark = () => {
 
                {/* LOW FIDELITY */}
         <div className="mt-12">
-          <StageHeader
-            number="01"
-            label="Low Fidelity"
-            title="Turning the wireframes into a complete prototype"
-          >
-            <p>
-              I expanded the early wireframes into the first complete
-              low-fidelity version of MindSpark. At this stage, the focus was on
-              establishing how the different parts of the application would work
-              together before developing the visual design in greater detail.
+          <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
+              01
             </p>
 
-            <p>
-              The prototype established the wider application structure,
-              including the home screen, cognitive test categories, progress
-              tracking and results, as well as the complete Go/No-Go test journey.
-              This allowed me to test MindSpark as one connected experience rather
-              than as a collection of individual screens.
-            </p>
-          </StageHeader>
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold text-muted-foreground mb-2">
+                Low Fidelity
+              </p>
+
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Turning the wireframes into a complete prototype
+              </h3>
+
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  I expanded the early wireframes into the first complete
+                  low-fidelity version of MindSpark. At this stage, the focus
+                  was on establishing how the different parts of the application
+                  would work together before developing the visual design in
+                  greater detail.
+                </p>
+
+                <p>
+                  The prototype established the wider application structure,
+                  including the home screen, cognitive test categories, progress
+                  tracking and results, as well as the complete Go/No-Go test
+                  journey. This allowed me to test MindSpark as one connected
+                  experience rather than as a collection of individual screens.
+                </p>
+              </div>
+            </div>
+          </div>
 
           <ProjectFigure
             src={lowfiCorePages}
@@ -824,7 +783,7 @@ const MindSpark = () => {
             caption="Low-fidelity application structure showing the home screen and cognitive test categories, establishing how users could access tests and review their wider activity."
           />
 
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               Progress and results were also developed as part of this wider
               structure. Rather than presenting one score and ending the
@@ -842,7 +801,7 @@ const MindSpark = () => {
             caption="Low-fidelity progress and results screens showing the drill-down from overall performance to cognitive areas and detailed individual test results."
           />
 
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               For the Go/No-Go test itself, I developed the complete journey
               around taking the assessment. Before entering the live test,
@@ -859,7 +818,7 @@ const MindSpark = () => {
             caption="Low-fidelity Go/No-Go preparation flow showing the test overview, response method selection, alertness check and practice before the official test."
           />
 
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               The pathway then continued into the live Go/No-Go test and the
               immediate result. The testing interface centred on the stimulus
@@ -875,82 +834,138 @@ const MindSpark = () => {
             caption="Low-fidelity live test and results experience showing the response interaction, feedback states and contextual presentation of the final result."
           />
 
-          <div>
-            <SubsectionHeading>
+          <div className="mt-10">
+            <h3 className="text-lg font-semibold text-foreground mb-2">
               What I learned from low-fidelity testing
-            </SubsectionHeading>
+            </h3>
 
-            <p className="mb-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
+            <p className="text-sm leading-relaxed text-muted-foreground mb-6 max-w-3xl">
               Testing the first complete prototype showed that the overall
               structure worked, but identified several interface and interaction
               problems that needed to be addressed in the next iteration.
             </p>
 
-            <EvidenceResponseRows
-              items={[
+            <div className="divide-y divide-border border-y border-border">
+              {[
                 {
-                  evidenceTitle:
+                  feedback: [
                     "User Feedback 01 — Some parts of the interface were not clear enough",
-                  evidenceBody:
                     "Users generally understood how the application worked, but some text was too small, navigation was not always obvious, and some buttons did not clearly look interactive.",
-                  responseTitle:
+                  ],
+                  implication: [
                     "Design Implication 01 — Improve readability and interaction clarity",
-                  responseBody:
                     "Increase text size and spacing, use more familiar mobile navigation, and make important buttons and actions easier to recognise.",
+                  ],
                 },
                 {
-                  evidenceTitle:
+                  feedback: [
                     "User Feedback 02 — Practice and feedback needed refinement",
-                  evidenceBody:
                     "Users understood the value of practising before the test, but some feedback felt too harsh and the main response interaction needed to be clearer.",
-                  responseTitle:
+                  ],
+                  implication: [
                     "Design Implication 02 — Make practice clearer and more supportive",
-                  responseBody:
                     "Strengthen the main response button and use calmer, clearer feedback while users learn how the test works.",
+                  ],
                 },
                 {
-                  evidenceTitle:
+                  feedback: [
                     "User Feedback 03 — Voice input was useful, but the setup needed more guidance",
-                  evidenceBody:
                     "Users responded positively to verbal interaction, but it was not always obvious how the microphone should be positioned or used.",
-                  responseTitle:
+                  ],
+                  implication: [
                     "Design Implication 03 — Develop the verbal-response setup",
-                  responseBody:
                     "Continue developing verbal input while providing clearer guidance around preparing and positioning the microphone.",
+                  ],
                 },
-              ]}
-            />
+              ].map(({ feedback, implication }) => (
+                <div
+                  key={feedback[0]}
+                  className="grid gap-6 py-6 md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8 md:py-8"
+                >
+                  <div>
+                    <p className="mb-2 text-sm font-semibold text-foreground">
+                      {feedback[0]}
+                    </p>
+                    <p className="text-sm leading-relaxed text-foreground">
+                      {feedback[1]}
+                    </p>
+                  </div>
+
+                  <div
+                    className="hidden md:flex items-center justify-center text-muted-foreground"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <p className="mb-2 text-sm font-semibold text-foreground">
+                      {implication[0]}
+                    </p>
+                    <p className="text-sm leading-relaxed text-foreground">
+                      {implication[1]}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <p className="mt-8 max-w-3xl text-base font-medium leading-relaxed text-foreground">
+          <p className="mt-8 text-sm font-medium text-foreground">
             These findings became the main priorities for the medium-fidelity
             prototype.
           </p>
         </div>
 
                 {/* MEDIUM FIDELITY */}
-        <div className="mt-16 border-t border-border pt-12">
-          <StageHeader
-            number="02"
-            label="Medium Fidelity"
-            title="Responding to the first round of testing"
-          >
-            <p>
-              The medium-fidelity prototype directly responded to the problems
-              identified during low-fidelity testing. The overall structure of
-              MindSpark had already been established, so this stage focused on
-              improving visual clarity, interaction behaviour and the detail of
-              the Go/No-Go experience.
+        <div className="mt-16 pt-10 border-t border-border">
+          <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
+              02
             </p>
 
-            <p>
-              A consistent visual identity was introduced through teal branding,
-              card-based layouts, clearer hierarchy, larger interaction targets
-              and more purposeful use of colour. Navigation was also brought
-              closer to familiar mobile conventions so users could move through
-              the application more confidently.
-            </p>
-          </StageHeader>
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold text-muted-foreground mb-2">
+                Medium Fidelity
+              </p>
+
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Responding to the first round of testing
+              </h3>
+
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  The medium-fidelity prototype directly responded to the
+                  problems identified during low-fidelity testing. The overall
+                  structure of MindSpark had already been established, so this
+                  stage focused on improving visual clarity, interaction
+                  behaviour and the detail of the Go/No-Go experience.
+                </p>
+
+                <p>
+                  A consistent visual identity was introduced through teal
+                  branding, card-based layouts, clearer hierarchy, larger
+                  interaction targets and more purposeful use of colour.
+                  Navigation was also brought closer to familiar mobile
+                  conventions so users could move through the application more
+                  confidently.
+                </p>
+              </div>
+            </div>
+          </div>
 
           <ProjectFigure
             src={midfiCorePages}
@@ -958,7 +973,7 @@ const MindSpark = () => {
             caption="Medium-fidelity home and test-category screens showing the introduction of MindSpark’s visual identity, clearer hierarchy, category colour coding and more familiar navigation."
           />
 
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               I also developed a reusable interaction system so the interface
               communicated more clearly when users selected or pressed
@@ -981,7 +996,7 @@ const MindSpark = () => {
             caption="Reusable components, interaction states and informational overlays developed to make actions, selections and additional guidance clearer throughout the application."
           />
 
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               These changes were then carried into the Go/No-Go pathway.
               The test overview was made easier to scan, response options were
@@ -1003,7 +1018,7 @@ const MindSpark = () => {
             caption="Medium-fidelity touchscreen pathway showing the refined test overview, response selection, alertness check and redesigned practice experience."
           />
 
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               Low-fidelity testing had also shown that the verbal-response
               option needed much clearer guidance. In response, I introduced a
@@ -1027,7 +1042,7 @@ const MindSpark = () => {
             caption="Verbal-response setup introducing dedicated guidance for the testing environment, microphone positioning and microphone access before beginning practice."
           />
 
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               The verbal practice sequence was developed further so users could
               experience both sides of the Go/No-Go rule. They were shown when
@@ -1049,64 +1064,107 @@ const MindSpark = () => {
             caption="Medium-fidelity verbal practice showing Go and No-Go trials, supportive feedback and a clearer transition from practice into the official assessment."
           />
 
-          <div>
-            <SubsectionHeading>
+          <div className="mt-10">
+            <h3 className="text-lg font-semibold text-foreground mb-2">
               What I learned from medium-fidelity testing
-            </SubsectionHeading>
+            </h3>
 
-            <p className="mb-6 max-w-3xl text-base leading-relaxed text-muted-foreground">
+            <p className="text-sm leading-relaxed text-muted-foreground mb-6 max-w-3xl">
               Testing showed that the main interaction problems identified
               during low fidelity had improved. Feedback at this stage was
               therefore more focused on refinement than restructuring.
             </p>
 
-            <EvidenceResponseRows
-              items={[
+            <div className="divide-y divide-border border-y border-border">
+              {[
                 {
-                  evidenceTitle:
+                  feedback: [
                     "User Feedback 01 — The clearer controls resolved much of the earlier uncertainty",
-                  evidenceBody:
                     "Users found buttons, selected options and navigation easier to recognise and understand.",
-                  responseTitle:
+                  ],
+                  implication: [
                     "Design Implication 01 — Keep the established interaction structure",
-                  responseBody:
                     "The main navigation and control system was working, so the final iteration could refine it rather than introducing another major structural change.",
+                  ],
                 },
                 {
-                  evidenceTitle:
+                  feedback: [
                     "User Feedback 02 — On-demand explanations worked well",
-                  evidenceBody:
                     "Users responded positively to having additional information available through overlays without permanently adding more text to each screen.",
-                  responseTitle:
+                  ],
+                  implication: [
                     "Design Implication 02 — Retain the overlays but improve their hierarchy",
-                  responseBody:
                     "Keep contextual help available on demand while making the content quicker to scan and the help controls more visually consistent.",
+                  ],
                 },
                 {
-                  evidenceTitle:
+                  feedback: [
                     "User Feedback 03 — Results were understandable but needed stronger visual emphasis",
-                  evidenceBody:
                     "Users understood the graphs, response breakdowns and alertness information, but some of the most important information did not stand out enough.",
-                  responseTitle:
+                  ],
+                  implication: [
                     "Design Implication 03 — Refine how results are presented",
-                  responseBody:
                     "Use clearer icons, meaningful colour and stronger visual hierarchy to make important result information easier to understand.",
+                  ],
                 },
                 {
-                  evidenceTitle:
+                  feedback: [
                     "User Feedback 04 — The verbal-response setup was much clearer",
-                  evidenceBody:
                     "The additional setup guidance made the verbal pathway easier to understand, while the physical microphone setup allowed users to interact without needing to hold the device.",
-                  responseTitle:
+                  ],
+                  implication: [
                     "Design Implication 04 — Retain the verbal pathway and physical setup",
-                  responseBody:
                     "Carry the verbal onboarding, microphone enclosure and adjustable stand into the final prototype while continuing to refine the reliability of voice detection.",
+                  ],
                 },
-              ]}
-            />
+              ].map(({ feedback, implication }) => (
+                <div
+                  key={feedback[0]}
+                  className="grid gap-6 py-6 md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8 md:py-8"
+                >
+                  <div>
+                    <p className="mb-2 text-sm font-semibold text-foreground">
+                      {feedback[0]}
+                    </p>
+                    <p className="text-sm leading-relaxed text-foreground">
+                      {feedback[1]}
+                    </p>
+                  </div>
+
+                  <div
+                    className="hidden md:flex items-center justify-center text-muted-foreground"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </div>
+
+                  <div>
+                    <p className="mb-2 text-sm font-semibold text-foreground">
+                      {implication[0]}
+                    </p>
+                    <p className="text-sm leading-relaxed text-foreground">
+                      {implication[1]}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <p className="mt-8 max-w-3xl text-base font-medium leading-relaxed text-foreground">
+          <p className="mt-8 text-sm font-medium text-foreground">
             With the main structure and interaction model now working well, the
             high-fidelity stage focused on refinement, consistency and
             completing the final experience.
@@ -1114,27 +1172,40 @@ const MindSpark = () => {
         </div>
 
                 {/* HIGH FIDELITY */}
-        <div className="mt-16 border-t border-border pt-12">
-          <StageHeader
-            number="03"
-            label="High Fidelity"
-            title="Completing the final experience"
-          >
-            <p>
-              By the high-fidelity stage, the application structure and main
-              interactions had already been established through the previous two
-              prototypes. This final stage therefore focused on consistency,
-              visual clarity and making MindSpark feel like one complete
-              application.
+        <div className="mt-16 pt-10 border-t border-border">
+          <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
+              03
             </p>
 
-            <p>
-              The wider interface was refined through the softer green-toned
-              visual system, a more consistent header and navigation, stronger
-              iconography and clearer visual separation between different
-              cognitive test categories and areas of the application.
-            </p>
-          </StageHeader>
+            <div className="max-w-3xl">
+              <p className="text-sm font-semibold text-muted-foreground mb-2">
+                High Fidelity
+              </p>
+
+              <h3 className="text-xl font-semibold text-foreground mb-4">
+                Completing the final experience
+              </h3>
+
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+                <p>
+                  By the high-fidelity stage, the application structure and main
+                  interactions had already been established through the previous
+                  two prototypes. This final stage therefore focused on
+                  consistency, visual clarity and making MindSpark feel like one
+                  complete application.
+                </p>
+
+                <p>
+                  The wider interface was refined through the softer green-toned
+                  visual system, a more consistent header and navigation,
+                  stronger iconography and clearer visual separation between
+                  different cognitive test categories and areas of the
+                  application.
+                </p>
+              </div>
+            </div>
+          </div>
 
           <ProjectFigure
             src={hifiCorePages}
@@ -1142,7 +1213,7 @@ const MindSpark = () => {
             caption="Final supporting interface showing the home screen, cognitive test categories, settings and notifications after the visual system and navigation had been refined."
           />
 
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               The Go/No-Go preparation journey also received its final
               refinements. The demonstration placeholder was replaced with an
@@ -1159,7 +1230,7 @@ const MindSpark = () => {
             caption="Final Go/No-Go preparation journey showing the refined introduction, setup, alertness check, demonstration and practice stages."
           />
 
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               The live test was also visually simplified and refined. The
               stimulus and primary response remained the focus of each trial,
@@ -1176,7 +1247,7 @@ const MindSpark = () => {
             caption="Final live test and immediate results experience showing the refined interaction, supportive feedback and contextual breakdown of performance."
           />
 
-          <div className="max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               The wider progress system retained the drill-down structure first
               established during low fidelity, but the information was made
@@ -1192,23 +1263,58 @@ const MindSpark = () => {
             caption="Final progress and results screens showing how the original low-fidelity structure developed into a clearer visual and contextual interpretation of performance."
           />
 
-          <div>
-            <SubsectionHeading>What final testing showed</SubsectionHeading>
+          <div className="mt-10">
+            <h3 className="text-lg font-semibold text-foreground mb-2">
+              What final testing showed
+            </h3>
 
-            <EvidenceResponseRows
-              items={[
-                {
-                  evidenceTitle:
-                    "Final Testing — The main usability issues had been resolved",
-                  evidenceBody:
-                    "Users found the final prototype clearer, calmer, easier to follow and more visually cohesive. The refined practice, results presentation and verbal-response setup were also received positively.",
-                  responseTitle:
-                    "Outcome — No major redesign was required",
-                  responseBody:
-                    "The main problems identified during the earlier iterations had been addressed. Remaining feedback related mainly to future development rather than fundamental problems with the experience.",
-                },
-              ]}
-            />
+            <div className="grid gap-6 py-7 border-y border-border md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8">
+              <div>
+                <p className="mb-2 text-sm font-semibold text-foreground">
+                  Final Testing — The main usability issues had been resolved
+                </p>
+
+                <p className="text-sm leading-relaxed text-foreground">
+                  Users found the final prototype clearer, calmer, easier to
+                  follow and more visually cohesive. The refined practice,
+                  results presentation and verbal-response setup were also
+                  received positively.
+                </p>
+              </div>
+
+              <div
+                className="hidden md:flex items-center justify-center text-muted-foreground"
+                aria-hidden="true"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </div>
+
+              <div>
+                <p className="mb-2 text-sm font-semibold text-foreground">
+                  Outcome — No major redesign was required
+                </p>
+
+                <p className="text-sm leading-relaxed text-foreground">
+                  The main problems identified during the earlier iterations had
+                  been addressed. Remaining feedback related mainly to future
+                  development rather than fundamental problems with the
+                  experience.
+                </p>
+              </div>
+            </div>
           </div>
 
           <ProjectFigure
@@ -1442,7 +1548,7 @@ const MindSpark = () => {
           caption="Final progress system showing the drill-down from overall performance to cognitive-area progress and detailed individual test results."
         />
 
-        <p className="mt-8 max-w-3xl">
+        <p className="mt-8">
           Together, these elements allow MindSpark to support the complete
           experience around independently taking a cognitive assessment rather
           than treating the test as an isolated interaction. The final concept
@@ -1466,7 +1572,7 @@ const MindSpark = () => {
           understandable, and context-aware.
         </p>
         <p>Final outcomes included:</p>
-        <ul className="mt-4 list-disc space-y-2 pl-5 text-base leading-relaxed marker:text-muted-foreground">
+        <ul className="mt-3 list-disc space-y-2 pl-5 marker:text-muted-foreground">
           <li>A clearer self-administered test setup flow</li>
           <li>Onboarding and demonstrative support before official scoring</li>
           <li>Guided practice to reduce uncertainty and cognitive pressure</li>
@@ -1564,7 +1670,7 @@ const MindSpark = () => {
             href="https://drive.google.com/file/d/1BEWxv461Gl1tzZD5GrNmQImSpTAdbcsZ/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:opacity-90 transition-opacity"
           >
             Official Report
           </a>
@@ -1572,7 +1678,7 @@ const MindSpark = () => {
             href="https://www.figma.com/design/2IiUGF681jgSsJCI0N8fL2/MindSpark---FYP---22071253?t=c5A4NlZ1q6mbWld4-0"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+            className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-md hover:bg-secondary transition-colors"
           >
             Figma
           </a>
@@ -1580,7 +1686,7 @@ const MindSpark = () => {
             href="https://github.com/thomasbroderick04/22071253_MindSpark_FYP/tree/main"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-md border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+            className="inline-flex items-center gap-2 px-5 py-2.5 border border-border text-foreground text-sm font-medium rounded-md hover:bg-secondary transition-colors"
           >
             GitHub Repository
           </a>
