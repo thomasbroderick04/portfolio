@@ -742,15 +742,17 @@ const MindSpark = () => {
         </p>
 
                {/* LOW FIDELITY */}
-     <div className="mt-12">
+    <div className="mt-12">
   <div className="max-w-3xl">
-    <p className="mb-2 text-sm font-semibold tabular-nums text-muted-foreground">
-      01
-    </p>
+    <div className="mb-6 flex items-baseline gap-6">
+      <p className="text-sm font-semibold tabular-nums text-muted-foreground">
+        01
+      </p>
 
-    <SubsectionHeading>
-      Low Fidelity: Turning the wireframes into a complete prototype
-    </SubsectionHeading>
+      <h3 className="text-lg font-semibold leading-snug text-foreground">
+        Low Fidelity: Turning the wireframes into a complete prototype
+      </h3>
+    </div>
 
     <div className="space-y-4">
       <p>
