@@ -1,12 +1,31 @@
-import { Link } from "react-router-dom";import Layout from "@/components/Layout";import CaseStudySection from "@/components/CaseStudySection";import ProjectMeta from "@/components/ProjectMeta";
+import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
+import Layout from "@/components/Layout";
+import CaseStudySection from "@/components/CaseStudySection";
+import ProjectMeta from "@/components/ProjectMeta";
 
 import lowfiCorePages from "@/assets/mindspark-lowfi-core-pages.png";
 import lowfiGoNoGoSetup from "@/assets/mindspark-lowfi-gonogo-setup.png";
 import lowfiGoNoGoTestResults from "@/assets/mindspark-lowfi-gonogo-test-results.png";
 import hifiCorePages from "@/assets/mindspark-hifi-core-pages.png";
 import hifiGoNoGoTestResults from "@/assets/mindspark-hifi-gonogo-test-results.png";
-import heroDevices from "@/assets/mindspark-hero-devices.png";import existingTools from "@/assets/mindspark-existing-tools.png";import earlySketches from "@/assets/mindspark-early-sketches.png";import earlyWireframes from "@/assets/mindspark-early-wireframes.png";import hifiFlow from "@/assets/mindspark-hifi-flow.png";import testResults from "@/assets/mindspark-test-results.png";import progressHifi from "@/assets/mindspark-progress-hifi.png";import progressMidfi from "@/assets/mindspark-progress-midfi.png";import hardwareConcept from "@/assets/mindspark-hardware-concept.png";import systemOverview from "@/assets/mindspark-system-overview.png";import hifiPages from "@/assets/mindspark-hifi-pages.png";import verbalTest from "@/assets/mindspark-verbal-test.png";import arduinoMic from "@/assets/mindspark-arduino-mic.jpg";import arduinoLive from "@/assets/mindspark-arduino-live.jpg";import enclosureParts from "@/assets/mindspark-enclosure-parts.jpg";import enclosureAssembled from "@/assets/mindspark-enclosure-assembled.jpg";import freecadModel from "@/assets/mindspark-freecad.png";import jsCode from "@/assets/mindspark-javascript-code.png";
-
+import heroDevices from "@/assets/mindspark-hero-devices.png";
+import existingTools from "@/assets/mindspark-existing-tools.png";
+import earlySketches from "@/assets/mindspark-early-sketches.png";
+import earlyWireframes from "@/assets/mindspark-early-wireframes.png";
+import hifiFlow from "@/assets/mindspark-hifi-flow.png";
+import testResults from "@/assets/mindspark-test-results.png";
+import progressHifi from "@/assets/mindspark-progress-hifi.png";
+import progressMidfi from "@/assets/mindspark-progress-midfi.png";
+import hardwareConcept from "@/assets/mindspark-hardware-concept.png";
+import systemOverview from "@/assets/mindspark-system-overview.png";
+import verbalTest from "@/assets/mindspark-verbal-test.png";
+import arduinoMic from "@/assets/mindspark-arduino-mic.jpg";
+import arduinoLive from "@/assets/mindspark-arduino-live.jpg";
+import enclosureParts from "@/assets/mindspark-enclosure-parts.jpg";
+import enclosureAssembled from "@/assets/mindspark-enclosure-assembled.jpg";
+import freecadModel from "@/assets/mindspark-freecad.png";
+import jsCode from "@/assets/mindspark-javascript-code.png";
 import midfiCorePages from "@/assets/mindspark-midfi-core-pages.png";
 import midfiTouchFlow from "@/assets/mindspark-midfi-touch-flow.png";
 import midfiVerbalSetup from "@/assets/mindspark-midfi-verbal-setup.png";
@@ -14,29 +33,66 @@ import midfiVerbalPractice from "@/assets/mindspark-midfi-verbal-practice.png";
 import midfiComponents from "@/assets/mindspark-midfi-components.png";
 import finalResponseMethods from "@/assets/mindspark-final-response-methods.png";
 
-interface DocImageProps {src: string;alt: string;caption: string;}
+interface ProjectFigureProps {
+  src: string;
+  alt: string;
+  caption?: string;
+  variant?: "hero" | "content";
+}
 
-/** Document/screenshot figure — uses object-contain so nothing gets cropped. */const DocImage = ({ src, alt, caption }: DocImageProps) => (
+const ProjectFigure = ({
+  src,
+  alt,
+  caption,
+  variant = "content",
+}: ProjectFigureProps) => {
+  const isHero = variant === "hero";
 
-  <figure className="my-8">
-    <div className="rounded-md border border-border bg-secondary/40 p-3 md:p-4">
-      <img
-        src={src}
-        alt={alt}
-        loading="lazy"
-        className="w-full h-auto max-h-[80vh] object-contain mx-auto"
-      />
-    </div>
-    <figcaption className="mt-3 text-xs text-muted-foreground text-center">
-      {caption}
-    </figcaption>
-  </figure>
+  return (
+    <figure className="my-8">
+      <div
+        className={[
+          "overflow-hidden rounded-md border border-border bg-secondary/40",
+          isHero ? "" : "p-3 md:p-4",
+        ].join(" ")}
+      >
+        <img
+          src={src}
+          alt={alt}
+          loading={isHero ? "eager" : "lazy"}
+          className={[
+            "mx-auto h-auto w-full object-contain",
+            isHero ? "" : "max-h-[80vh]",
+          ].join(" ")}
+        />
+      </div>
+
+      {caption ? (
+        <figcaption className="mt-3 text-center text-xs text-muted-foreground">
+          {caption}
+        </figcaption>
+      ) : null}
+    </figure>
+  );
+};
+
+const SubsectionHeading = ({ children }: { children: ReactNode }) => (
+  <h3 className="mb-3 mt-10 text-lg font-semibold text-foreground">
+    {children}
+  </h3>
 );
 
-const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 py-16 md:py-24"><article className="container-content"><Link
-         to="/projects"
-         className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-16 inline-block"
-       >← Back to projects</Link>
+const MindSpark = () => {
+  return (
+    <Layout>
+      <div className="px-6 py-16 md:px-12 md:py-24 lg:px-16">
+        <article className="container-content">
+          <Link
+            to="/projects"
+            className="mb-16 inline-block text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            ← Back to projects
+          </Link>
 
       <h1 className="mb-5">MindSpark</h1>
       <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl">
@@ -53,18 +109,12 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         ]}
       />
 
-      {/* Hero */}
-      <figure className="my-8">
-        <div className="rounded-md overflow-hidden border border-border bg-secondary/40">
-          <img
+          {/* Hero */}
+          <ProjectFigure
             src={heroDevices}
             alt="MindSpark — logo and three mobile prototype screens on a green background"
-            className="w-full h-auto object-contain"
-            width={1600}
-            height={900}
+            variant="hero"
           />
-        </div>
-      </figure>
 
             {/* Overview */}
       <CaseStudySection title="Overview">
@@ -82,9 +132,9 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           the assessment works, and what the user will be asked to do.
         </p>
 
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+        <SubsectionHeading>
           Project Scope: The Go/No-Go Test
-        </h3>
+        </SubsectionHeading>
 
         <p>
           Although MindSpark was designed to contain several cognitive
@@ -100,9 +150,9 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           miss, and how often they incorrectly act on "No-Go" signals.
         </p>
 
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+        <SubsectionHeading>
           The User Experience
-        </h3>
+        </SubsectionHeading>
 
         <p>
           Before taking the Go/No-Go test, users choose a difficulty level and
@@ -119,9 +169,9 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           views to see how their performance changes over time.
         </p>
 
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+        <SubsectionHeading>
           Development and Final Outcome
-        </h3>
+        </SubsectionHeading>
 
         <p>
           I first designed the user interface as simple wireframes before
@@ -163,11 +213,11 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               01
             </p>
 
-            <h3 className="text-sm font-semibold text-foreground mb-2 leading-snug">
+            <h3 className="mb-2 text-sm font-semibold text-foreground leading-snug">
               Organising and explaining the complete experience
             </h3>
 
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               This application had to provide the guidance normally offered by
               a trained professional without overwhelming the user with
               information. Because MindSpark brings together multiple cognitive
@@ -184,11 +234,11 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               02
             </p>
 
-            <h3 className="text-sm font-semibold text-foreground mb-2 leading-snug">
+            <h3 className="mb-2 text-sm font-semibold text-foreground leading-snug">
               Preventing the interface from affecting test performance
             </h3>
 
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               Within digital cognitive testing in general, it is important that
               cognitive testing applications capture user inputs at the
               appropriate times and clearly signal when the user is expected to
@@ -208,12 +258,12 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               03
             </p>
 
-            <h3 className="text-sm font-semibold text-foreground mb-2 leading-snug">
+            <h3 className="mb-2 text-sm font-semibold text-foreground leading-snug">
               Presenting results in a clear manner and providing intuitive
               feedback about the results
             </h3>
 
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm leading-relaxed text-muted-foreground">
            Many existing applications provide only a numerical score, without showing what contributed to it or the context in which the test was taken. The application therefore needed to break results down into average response time and correct and incorrect responses, while also showing user-reported factors such as alertness. Across repeated tests, users also needed to see how each aspect of performance changed over weekly, monthly and yearly periods. Because slower responses or more mistakes could be interpreted negatively, results also needed to be explained in neutral language rather than labelled simply as “good” or “bad.”
 
             </p>
@@ -231,61 +281,61 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         </p>
 
         <div className="grid gap-4 mt-5 md:grid-cols-2">
-          <div className="rounded-md border border-border bg-secondary/20 p-5">
-            <p className="text-sm font-semibold text-foreground tracking-wide mb-1">
+          <div className="rounded-md border border-border bg-background p-5">
+            <p className="text-sm font-medium text-muted-foreground mb-3">
               RQ1
             </p>
 
-            <h3 className="text-base font-semibold text-foreground mb-2">
+            <h3 className="mb-2 text-sm font-semibold text-foreground leading-snug">
               Understanding existing tools
             </h3>
 
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               How do current cognitive assessment tools function in evaluating
               cognitive abilities, and what design limitations do they exhibit?
             </p>
           </div>
 
-          <div className="rounded-md border border-border bg-secondary/20 p-5">
-            <p className="text-sm font-semibold text-foreground tracking-wide mb-1">
+          <div className="rounded-md border border-border bg-background p-5">
+            <p className="text-sm font-medium text-muted-foreground mb-3">
               RQ2
             </p>
 
-            <h3 className="text-base font-semibold text-foreground mb-2">
+            <h3 className="mb-2 text-sm font-semibold text-foreground leading-snug">
               Designing for usability and accessibility
             </h3>
 
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               What design considerations can enhance the accessibility and
               usability of cognitive assessment tools?
             </p>
           </div>
 
-          <div className="rounded-md border border-border bg-secondary/20 p-5">
-            <p className="text-sm font-semibold text-foreground tracking-wide mb-1">
+          <div className="rounded-md border border-border bg-background p-5">
+            <p className="text-sm font-medium text-muted-foreground mb-3">
               RQ3
             </p>
 
-            <h3 className="text-base font-semibold text-foreground mb-2">
+            <h3 className="mb-2 text-sm font-semibold text-foreground leading-snug">
               Exploring different methods of interaction
             </h3>
 
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               How can different modes of interaction be combined to create
               effective cognitive assessment experiences?
             </p>
           </div>
 
-          <div className="rounded-md border border-border bg-secondary/20 p-5">
-            <p className="text-sm font-semibold text-foreground tracking-wide mb-1">
+          <div className="rounded-md border border-border bg-background p-5">
+            <p className="text-sm font-medium text-muted-foreground mb-3">
               RQ4
             </p>
 
-            <h3 className="text-base font-semibold text-foreground mb-2">
+            <h3 className="mb-2 text-sm font-semibold text-foreground leading-snug">
               Tracking performance over time
             </h3>
 
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm leading-relaxed text-muted-foreground">
               How can cognitive assessment results be presented to help users
               understand and track changes in their performance over time?
             </p>
@@ -332,28 +382,28 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
         <div className="mt-6 divide-y divide-border border-y border-border">
           {[
             [
-              "1. Research and accessibility framing",
+              "01 — Research and accessibility framing",
               "Reviewed literature on digital cognitive testing, usability, accessibility barriers, contextual influences on performance, privacy, and multimodal interaction. This helped establish how the design of self-administered cognitive tests can create barriers for users, influence their performance, and affect their interpretation of results.",
             ],
             [
-              "2. Examining assumptions in existing tools",
+              "02 — Examining assumptions in existing tools",
               "Analysed existing cognitive testing applications to identify assumptions about users’ ability to understand instructions, use touchscreen input accurately, perform under pressure, and complete tests independently without guidance or support.",
             ],
             [
-              "3. Designing to reduce interaction barriers",
+              "03 — Designing to reduce interaction barriers",
               "Translated research into sketches, user flows, early wireframes, and low-, medium-, and high-fidelity Figma prototypes, focusing on structure and where design could reduce confusion. These were tested and refined with adults aged 19 to 73 to improve clarity, reduce interaction barriers, and help users become familiar with the rules before the official test began.",
             ],
             [
-              "4. Multimodal prototyping and implementation",
+              "04 — Multimodal prototyping and implementation",
               "Built a working verbal-response pathway using an Arduino-connected microphone, allowing users to respond through speech rather than touchscreen input. I also designed a FreeCAD enclosure to integrate the hardware into a complete and usable prototype. This extended the project’s accessibility focus for users who may find precise touch input difficult or unsuitable.",
             ],
           ].map(([t, d]) => (
             <div
               key={t}
-              className="grid md:grid-cols-[260px_1fr] gap-2 md:gap-8 py-4"
+              className="grid gap-3 py-5 md:grid-cols-[180px_minmax(0,1fr)] md:gap-8"
             >
               <p className="text-sm font-semibold text-foreground">{t}</p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-sm leading-relaxed text-muted-foreground">
                 {d}
               </p>
             </div>
@@ -370,14 +420,14 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
 
         <div className="mt-8 divide-y divide-border border-y border-border">
           <article className="grid gap-3 py-7 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8 md:py-8">
-            <p className="text-lg font-semibold text-muted-foreground tabular-nums">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
               01
             </p>
             <div className="max-w-3xl">
-              <h3 className="text-lg font-semibold leading-snug text-foreground mb-4">
+              <h3 className="mb-4 text-lg font-semibold leading-snug text-foreground">
                 The design of a test can affect the result
               </h3>
-              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
                   A cognitive assessment is intended to measure a person’s
                   ability to remember information, concentrate, react quickly
@@ -405,14 +455,14 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           </article>
 
           <article className="grid gap-3 py-7 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8 md:py-8">
-            <p className="text-lg font-semibold text-muted-foreground tabular-nums">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
               02
             </p>
             <div className="max-w-3xl">
-              <h3 className="text-lg font-semibold leading-snug text-foreground mb-4">
+              <h3 className="mb-4 text-lg font-semibold leading-snug text-foreground">
                 A test result should not be presented without context
               </h3>
-              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
                   How someone performs can be affected by how alert or tired
                   they feel when taking the test. Presenting only a score does
@@ -430,14 +480,14 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           </article>
 
           <article className="grid gap-3 py-7 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8 md:py-8">
-            <p className="text-lg font-semibold text-muted-foreground tabular-nums">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
               03
             </p>
             <div className="max-w-3xl">
-              <h3 className="text-lg font-semibold leading-snug text-foreground mb-4">
+              <h3 className="mb-4 text-lg font-semibold leading-snug text-foreground">
                 Touchscreen input may not suit every user
               </h3>
-              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
                   A touchscreen test requires the user to see a signal, move
                   their hand and press a button accurately and quickly.
@@ -478,9 +528,9 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                 className="grid gap-2 py-4 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-8 md:py-5"
               >
                 <p className="text-sm font-semibold text-foreground">
-                  Design Implication {index + 1}
+                  Design Implication {String(index + 1).padStart(2, "0")}
                 </p>
-                <p className="text-sm text-foreground leading-relaxed">
+                <p className="text-sm leading-relaxed text-foreground">
                   {text}
                 </p>
               </li>
@@ -521,46 +571,34 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           ways of interacting.
         </p>
 
-        <DocImage
+        <ProjectFigure
           src={existingTools}
           alt="Comparison table of CogniFit, Carleton University, MindPal, and Lumosity cognitive testing tools across instructional support and organisational clarity"
           caption="Heuristic comparison of four existing cognitive testing tools across instructional support and organisational clarity."
         />
 
         <p>This helped define what MindSpark needed to do differently:</p>
-        <ul className="space-y-2 mt-2">
-          <li>
-            • <strong>Design Implication 1:</strong>{" "}
-            Introduce the test gradually rather than relying on dense
-            instructions.
-          </li>
-          <li>
-            • <strong>Design Implication 2:</strong>{" "}
-            Use demonstration and practice so users can understand the task
-            before their performance is recorded.
-          </li>
-          <li>
-            • <strong>Design Implication 3:</strong>{" "}
-            Use large touch targets and a simplified testing interface to
-            make touchscreen interaction easier.
-          </li>
-          <li>
-            • <strong>Design Implication 4:</strong>{" "}
-            Provide feedback that guides users clearly without making
-            mistakes feel stressful or punitive.
-          </li>
-          <li>
-            • <strong>Design Implication 5:</strong>{" "}
-            Present scores with a breakdown of the user’s responses, how
-            alert they felt before taking the test, and how the result
-            compares with their previous attempts.
-          </li>
-          <li>
-            • <strong>Design Implication 6:</strong>{" "}
-            Explore how touch and verbal interaction could exist within the
-            same testing system.
-          </li>
-        </ul>
+
+        <ol className="mt-6 divide-y divide-border border-y border-border">
+          {[
+            "Introduce the test gradually rather than relying on dense instructions.",
+            "Use demonstration and practice so users can understand the task before their performance is recorded.",
+            "Use large touch targets and a simplified testing interface to make touchscreen interaction easier.",
+            "Provide feedback that guides users clearly without making mistakes feel stressful or punitive.",
+            "Present scores with a breakdown of the user’s responses, how alert they felt before taking the test, and how the result compares with their previous attempts.",
+            "Explore how touch and verbal interaction could exist within the same testing system.",
+          ].map((text, index) => (
+            <li
+              key={text}
+              className="grid gap-2 py-4 md:grid-cols-[180px_minmax(0,1fr)] md:items-start md:gap-8 md:py-5"
+            >
+              <p className="text-sm font-semibold text-foreground">
+                Design Implication {String(index + 1).padStart(2, "0")}
+              </p>
+              <p className="text-sm leading-relaxed text-foreground">{text}</p>
+            </li>
+          ))}
+        </ol>
       </CaseStudySection>
 
       {/* Early Concepts and Wireframing */}
@@ -589,19 +627,19 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           accessible to a wider range of users and abilities.
         </p>
 
-        <DocImage
+        <ProjectFigure
           src={earlySketches}
           alt="Hand-drawn low-fidelity wireframe sketches of the MindSpark app structure and Go/No-Go practice and test flow"
           caption="Early hand-drawn wireframes mapping the application structure and Go/No-Go practice/test pathway."
         />
 
-        <DocImage
+        <ProjectFigure
           src={earlyWireframes}
           alt="Mid-fidelity black and white wireframes showing the Go/No-Go test options, alertness questions, and practice screens"
           caption="Early structured wireframes showing Go/No-Go test options, alertness questions, and practice flow."
         />
 
-        <DocImage
+        <ProjectFigure
           src={hardwareConcept}
           alt="Concept illustration of the MindSpark physical microphone enclosure, Arduino Uno, wired microphone sensor, and laptop showing the Go/No-Go test"
           caption="Concept illustrations of the proposed physical microphone enclosure, Arduino connection, and the verbal-response pathway."
@@ -652,10 +690,10 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               className="grid gap-6 py-6 md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8 md:py-8"
             >
               <div>
-                <p className="text-sm font-semibold text-foreground mb-2">
+                <p className="mb-2 text-sm font-semibold text-foreground">
                   {feedback[0]}
                 </p>
-                <p className="text-sm text-foreground leading-relaxed">
+                <p className="text-sm leading-relaxed text-foreground">
                   {feedback[1]}
                 </p>
               </div>
@@ -681,10 +719,10 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-foreground mb-2">
+                <p className="mb-2 text-sm font-semibold text-foreground">
                   {implication[0]}
                 </p>
-                <p className="text-sm text-foreground leading-relaxed">
+                <p className="text-sm leading-relaxed text-foreground">
                   {implication[1]}
                 </p>
               </div>
@@ -706,7 +744,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                {/* LOW FIDELITY */}
         <div className="mt-12">
           <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
-            <p className="text-lg font-semibold text-muted-foreground tabular-nums">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
               01
             </p>
 
@@ -719,7 +757,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                 Turning the wireframes into a complete prototype
               </h3>
 
-              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
                   I expanded the early wireframes into the first complete
                   low-fidelity version of MindSpark. At this stage, the focus
@@ -739,13 +777,13 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </div>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={lowfiCorePages}
             alt="Low-fidelity MindSpark home screen and cognitive test category screens"
             caption="Low-fidelity application structure showing the home screen and cognitive test categories, establishing how users could access tests and review their wider activity."
           />
 
-          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               Progress and results were also developed as part of this wider
               structure. Rather than presenting one score and ending the
@@ -757,13 +795,13 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </p>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={progressMidfi}
             alt="Low-fidelity MindSpark progress and results screens showing overall progress, cognitive area results and detailed Go/No-Go performance"
             caption="Low-fidelity progress and results screens showing the drill-down from overall performance to cognitive areas and detailed individual test results."
           />
 
-          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               For the Go/No-Go test itself, I developed the complete journey
               around taking the assessment. Before entering the live test,
@@ -774,13 +812,13 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </p>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={lowfiGoNoGoSetup}
             alt="Low-fidelity Go/No-Go test screens showing the test overview, response options, alertness questions and practice sequence"
             caption="Low-fidelity Go/No-Go preparation flow showing the test overview, response method selection, alertness check and practice before the official test."
           />
 
-          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               The pathway then continued into the live Go/No-Go test and the
               immediate result. The testing interface centred on the stimulus
@@ -790,7 +828,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </p>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={lowfiGoNoGoTestResults}
             alt="Low-fidelity Go/No-Go live test screens and result screen showing stimuli, response feedback, score breakdown and alertness"
             caption="Low-fidelity live test and results experience showing the response interaction, feedback states and contextual presentation of the final result."
@@ -801,7 +839,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               What I learned from low-fidelity testing
             </h3>
 
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
+            <p className="text-sm leading-relaxed text-muted-foreground mb-6 max-w-3xl">
               Testing the first complete prototype showed that the overall
               structure worked, but identified several interface and interaction
               problems that needed to be addressed in the next iteration.
@@ -845,10 +883,10 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                   className="grid gap-6 py-6 md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8 md:py-8"
                 >
                   <div>
-                    <p className="text-sm font-semibold text-foreground mb-2">
+                    <p className="mb-2 text-sm font-semibold text-foreground">
                       {feedback[0]}
                     </p>
-                    <p className="text-sm text-foreground leading-relaxed">
+                    <p className="text-sm leading-relaxed text-foreground">
                       {feedback[1]}
                     </p>
                   </div>
@@ -874,10 +912,10 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                   </div>
 
                   <div>
-                    <p className="text-sm font-semibold text-foreground mb-2">
+                    <p className="mb-2 text-sm font-semibold text-foreground">
                       {implication[0]}
                     </p>
-                    <p className="text-sm text-foreground leading-relaxed">
+                    <p className="text-sm leading-relaxed text-foreground">
                       {implication[1]}
                     </p>
                   </div>
@@ -895,7 +933,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                 {/* MEDIUM FIDELITY */}
         <div className="mt-16 pt-10 border-t border-border">
           <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
-            <p className="text-lg font-semibold text-muted-foreground tabular-nums">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
               02
             </p>
 
@@ -908,7 +946,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                 Responding to the first round of testing
               </h3>
 
-              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
                   The medium-fidelity prototype directly responded to the
                   problems identified during low-fidelity testing. The overall
@@ -929,13 +967,13 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </div>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={midfiCorePages}
             alt="Medium-fidelity MindSpark home screen and cognitive test categories screen showing the new teal visual identity, card layouts and navigation"
             caption="Medium-fidelity home and test-category screens showing the introduction of MindSpark’s visual identity, clearer hierarchy, category colour coding and more familiar navigation."
           />
 
-          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               I also developed a reusable interaction system so the interface
               communicated more clearly when users selected or pressed
@@ -952,13 +990,13 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </p>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={midfiComponents}
             alt="Medium-fidelity MindSpark Figma component system showing button states, navigation states and informational overlays"
             caption="Reusable components, interaction states and informational overlays developed to make actions, selections and additional guidance clearer throughout the application."
           />
 
-          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               These changes were then carried into the Go/No-Go pathway.
               The test overview was made easier to scan, response options were
@@ -974,13 +1012,13 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </p>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={midfiTouchFlow}
             alt="Medium-fidelity touchscreen Go/No-Go journey showing the test overview, response options, alertness question, practice and positive feedback"
             caption="Medium-fidelity touchscreen pathway showing the refined test overview, response selection, alertness check and redesigned practice experience."
           />
 
-          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               Low-fidelity testing had also shown that the verbal-response
               option needed much clearer guidance. In response, I introduced a
@@ -998,13 +1036,13 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </p>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={midfiVerbalSetup}
             alt="Medium-fidelity verbal-response Go/No-Go screens showing quiet-space guidance, microphone placement, microphone testing, alertness and verbal practice"
             caption="Verbal-response setup introducing dedicated guidance for the testing environment, microphone positioning and microphone access before beginning practice."
           />
 
-          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               The verbal practice sequence was developed further so users could
               experience both sides of the Go/No-Go rule. They were shown when
@@ -1020,7 +1058,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </p>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={midfiVerbalPractice}
             alt="Medium-fidelity verbal Go/No-Go practice screens showing Go and No-Go trials, supportive feedback and the Practice Complete screen"
             caption="Medium-fidelity verbal practice showing Go and No-Go trials, supportive feedback and a clearer transition from practice into the official assessment."
@@ -1031,7 +1069,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               What I learned from medium-fidelity testing
             </h3>
 
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6 max-w-3xl">
+            <p className="text-sm leading-relaxed text-muted-foreground mb-6 max-w-3xl">
               Testing showed that the main interaction problems identified
               during low fidelity had improved. Feedback at this stage was
               therefore more focused on refinement than restructuring.
@@ -1085,10 +1123,10 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                   className="grid gap-6 py-6 md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8 md:py-8"
                 >
                   <div>
-                    <p className="text-sm font-semibold text-foreground mb-2">
+                    <p className="mb-2 text-sm font-semibold text-foreground">
                       {feedback[0]}
                     </p>
-                    <p className="text-sm text-foreground leading-relaxed">
+                    <p className="text-sm leading-relaxed text-foreground">
                       {feedback[1]}
                     </p>
                   </div>
@@ -1114,10 +1152,10 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                   </div>
 
                   <div>
-                    <p className="text-sm font-semibold text-foreground mb-2">
+                    <p className="mb-2 text-sm font-semibold text-foreground">
                       {implication[0]}
                     </p>
-                    <p className="text-sm text-foreground leading-relaxed">
+                    <p className="text-sm leading-relaxed text-foreground">
                       {implication[1]}
                     </p>
                   </div>
@@ -1136,7 +1174,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                 {/* HIGH FIDELITY */}
         <div className="mt-16 pt-10 border-t border-border">
           <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
-            <p className="text-lg font-semibold text-muted-foreground tabular-nums">
+            <p className="text-lg font-semibold tabular-nums text-muted-foreground">
               03
             </p>
 
@@ -1149,7 +1187,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
                 Completing the final experience
               </h3>
 
-              <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
                 <p>
                   By the high-fidelity stage, the application structure and main
                   interactions had already been established through the previous
@@ -1169,13 +1207,13 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </div>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={hifiCorePages}
             alt="Final high-fidelity MindSpark home, test categories, settings and notifications screens"
             caption="Final supporting interface showing the home screen, cognitive test categories, settings and notifications after the visual system and navigation had been refined."
           />
 
-          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               The Go/No-Go preparation journey also received its final
               refinements. The demonstration placeholder was replaced with an
@@ -1186,13 +1224,13 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </p>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={hifiFlow}
             alt="Final high-fidelity Go/No-Go journey showing test introduction, response options, alertness questions and practice"
             caption="Final Go/No-Go preparation journey showing the refined introduction, setup, alertness check, demonstration and practice stages."
           />
 
-          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               The live test was also visually simplified and refined. The
               stimulus and primary response remained the focus of each trial,
@@ -1203,13 +1241,13 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </p>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={hifiGoNoGoTestResults}
             alt="Final high-fidelity Go/No-Go live test and result screens showing stimuli, response states, score, response breakdown, classification and alertness"
             caption="Final live test and immediate results experience showing the refined interaction, supportive feedback and contextual breakdown of performance."
           />
 
-          <div className="max-w-3xl space-y-4 text-sm text-muted-foreground leading-relaxed">
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               The wider progress system retained the drill-down structure first
               established during low fidelity, but the information was made
@@ -1219,7 +1257,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </p>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={progressHifi}
             alt="Final high-fidelity MindSpark progress and results screens"
             caption="Final progress and results screens showing how the original low-fidelity structure developed into a clearer visual and contextual interpretation of performance."
@@ -1232,11 +1270,11 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
 
             <div className="grid gap-6 py-7 border-y border-border md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-8">
               <div>
-                <p className="text-sm font-semibold text-foreground mb-2">
+                <p className="mb-2 text-sm font-semibold text-foreground">
                   Final Testing — The main usability issues had been resolved
                 </p>
 
-                <p className="text-sm text-foreground leading-relaxed">
+                <p className="text-sm leading-relaxed text-foreground">
                   Users found the final prototype clearer, calmer, easier to
                   follow and more visually cohesive. The refined practice,
                   results presentation and verbal-response setup were also
@@ -1265,11 +1303,11 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-foreground mb-2">
+                <p className="mb-2 text-sm font-semibold text-foreground">
                   Outcome — No major redesign was required
                 </p>
 
-                <p className="text-sm text-foreground leading-relaxed">
+                <p className="text-sm leading-relaxed text-foreground">
                   The main problems identified during the earlier iterations had
                   been addressed. Remaining feedback related mainly to future
                   development rather than fundamental problems with the
@@ -1279,7 +1317,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             </div>
           </div>
 
-          <DocImage
+          <ProjectFigure
             src={systemOverview}
             alt="Full final MindSpark system showing all major application screens and both Go/No-Go interaction pathways"
             caption="Complete high-fidelity MindSpark system showing how the application developed across the wider interface, progress and results, and the touch and verbal Go/No-Go pathways."
@@ -1296,15 +1334,15 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           pressing the on-screen response button.
         </p>
 
-        <DocImage
+        <ProjectFigure
           src={verbalTest}
           alt="High-fidelity Go/No-Go verbal-response test screens showing countdown, stimulus prompts, microphone input, and feedback states"
           caption="Final verbal-response pathway showing the countdown, live test, microphone input, and feedback states."
         />
 
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+        <SubsectionHeading>
           Turning verbal response into a working interaction
-        </h3>
+        </SubsectionHeading>
 
         <p>
           To make the verbal pathway functional, I connected an Arduino Uno to
@@ -1321,27 +1359,27 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           structure while using different methods of response.
         </p>
 
-        <DocImage
+        <ProjectFigure
           src={arduinoMic}
           alt="Arduino Uno board connected to a microphone sound sensor using jumper cables"
           caption="Initial hardware setup using an Arduino Uno and microphone sensor to detect verbal responses."
         />
 
-        <DocImage
+        <ProjectFigure
           src={jsCode}
           alt="VS Code editor showing the JavaScript used to control the MindSpark Go/No-Go test"
           caption="JavaScript controlling stimulus timing, response handling, scoring, feedback, and progression through the Go/No-Go test."
         />
 
-        <DocImage
+        <ProjectFigure
           src={arduinoLive}
           alt="Live browser-based Go/No-Go test running alongside the Arduino microphone setup"
           caption="Working prototype with microphone input passed from the Arduino to the browser-based Go/No-Go test."
         />
 
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+        <SubsectionHeading>
           Developing the physical microphone setup
-        </h3>
+        </SubsectionHeading>
 
         <p>
           Once the verbal interaction was working technically, I needed to
@@ -1358,27 +1396,27 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           assembled with the working electronics.
         </p>
 
-        <DocImage
+        <ProjectFigure
           src={freecadModel}
           alt="FreeCAD model of the MindSpark microphone enclosure showing the internal Arduino supports, microphone opening, and cable access"
           caption="FreeCAD development of the enclosure designed to securely house the Arduino and microphone sensor."
         />
 
-        <DocImage
+        <ProjectFigure
           src={enclosureParts}
           alt="3D-printed MindSpark enclosure and adjustable microphone stand shown as separate components"
           caption="3D-printed enclosure and adjustable stand before final assembly."
         />
 
-        <DocImage
+        <ProjectFigure
           src={enclosureAssembled}
           alt="Completed MindSpark microphone enclosure and adjustable stand positioned beside the live Go/No-Go test"
           caption="Final assembled verbal-response prototype combining the physical enclosure, adjustable microphone stand, and live Go/No-Go interface."
         />
 
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+        <SubsectionHeading>
           What this prototype demonstrated
-        </h3>
+        </SubsectionHeading>
 
         <p>
           Developing the verbal-response prototype took the project beyond a
@@ -1402,15 +1440,15 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           the context of both alertness and previous results.
         </p>
 
-        <DocImage
+        <ProjectFigure
           src={systemOverview}
           alt="Complete high-fidelity MindSpark system showing the wider application, progress and results, and both touchscreen and verbal Go/No-Go pathways"
           caption="Complete MindSpark system bringing together the wider cognitive testing application, progress and results, and both touchscreen and verbal Go/No-Go pathways."
         />
 
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+        <SubsectionHeading>
           Finding and preparing for a cognitive assessment
-        </h3>
+        </SubsectionHeading>
 
         <p>
           MindSpark was designed as a wider cognitive testing application rather
@@ -1427,15 +1465,15 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           practice round before the scored assessment begins.
         </p>
 
-        <DocImage
+        <ProjectFigure
           src={hifiFlow}
           alt="Final Go/No-Go preparation pathway showing test introduction, response method selection, test options, alertness questions, demonstration and practice"
           caption="Final Go/No-Go preparation journey showing how users learn about the test, choose a response method, record alertness and practise before the scored assessment."
         />
 
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+        <SubsectionHeading>
           Completing the test through touch or verbal input
-        </h3>
+        </SubsectionHeading>
 
         <p>
           Both response pathways follow the same underlying Go/No-Go rules while
@@ -1461,15 +1499,15 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
             Save as:
             mindspark-final-response-methods.png
         */}
-        <DocImage
+        <ProjectFigure
           src={finalResponseMethods}
           alt="Final MindSpark response methods showing the choice between touchscreen and verbal input and the corresponding live-test interactions"
           caption="The final Go/No-Go test supports the same assessment through two interaction pathways: pressing the on-screen Go button or responding verbally."
         />
 
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+        <SubsectionHeading>
           Understanding the result
-        </h3>
+        </SubsectionHeading>
 
         <p>
           After the test is completed, performance is presented through more
@@ -1485,15 +1523,15 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           number as a complete description of their performance.
         </p>
 
-        <DocImage
+        <ProjectFigure
           src={testResults}
           alt="Final MindSpark Go/No-Go result showing overall score, response breakdown, performance classification and alertness"
           caption="Final result presentation combining the overall score with response breakdown, performance classification and the user’s recorded alertness."
         />
 
-        <h3 className="text-lg font-semibold text-foreground mt-10 mb-3">
+        <SubsectionHeading>
           Reviewing performance over time
-        </h3>
+        </SubsectionHeading>
 
         <p>
           Individual results also feed into the wider progress system. Users can
@@ -1504,7 +1542,7 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           disappearing once a test has been completed.
         </p>
 
-        <DocImage
+        <ProjectFigure
           src={progressHifi}
           alt="Final MindSpark progress and results screens showing overall performance, cognitive-area progress, alertness context and detailed Go/No-Go results"
           caption="Final progress system showing the drill-down from overall performance to cognitive-area progress and detailed individual test results."
@@ -1534,30 +1572,30 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           understandable, and context-aware.
         </p>
         <p>Final outcomes included:</p>
-        <ul className="space-y-2 mt-2">
-          <li>• A clearer self-administered test setup flow</li>
-          <li>• Onboarding and demonstrative support before official scoring</li>
-          <li>• Guided practice to reduce uncertainty and cognitive pressure</li>
+        <ul className="mt-3 list-disc space-y-2 pl-5 marker:text-muted-foreground">
+          <li>A clearer self-administered test setup flow</li>
+          <li>Onboarding and demonstrative support before official scoring</li>
+          <li>Guided practice to reduce uncertainty and cognitive pressure</li>
           <li>
-            • A simplified live testing interface with reduced visual and
+            A simplified live testing interface with reduced visual and
             navigational demands
           </li>
-          <li>• Support for both touch and verbal response pathways</li>
+          <li>Support for both touch and verbal response pathways</li>
           <li>
-            • An Arduino microphone prototype exploring an alternative to
+            An Arduino microphone prototype exploring an alternative to
             touchscreen-only input
           </li>
           <li>
-            • A physical enclosure and stand designed to support more
+            A physical enclosure and stand designed to support more
             comfortable verbal interaction
           </li>
-          <li>• Visual and contextual result interpretation</li>
+          <li>Visual and contextual result interpretation</li>
           <li>
-            • Alertness-based context to help users understand performance
+            Alertness-based context to help users understand performance
             conditions
           </li>
           <li>
-            • Longer-term progress tracking to make results more meaningful
+            Longer-term progress tracking to make results more meaningful
             over time
           </li>
         </ul>
@@ -1670,11 +1708,11 @@ const MindSpark = () => {return (<Layout><div className="px-6 md:px-12 lg:px-16 
           Next: MouldMan →
         </Link>
       </div>
-    </article>
-  </div>
-</Layout>
-
-);};
+        </article>
+      </div>
+    </Layout>
+  );
+};
 
 export default MindSpark;
 
