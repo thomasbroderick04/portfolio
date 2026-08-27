@@ -923,13 +923,6 @@ const MindSpark = () => {
               ))}
             </div>
           </div>
-
-          <div className="mt-12">
-  <p>
-    These findings became the main priorities for the medium-fidelity
-    prototype.
-  </p>
-</div>
         </div>
 
                 {/* MEDIUM FIDELITY */}
@@ -1164,14 +1157,6 @@ const MindSpark = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-         <div className="mt-12">
-            <p>
-              With the main structure and interaction model now working well, the
-              high-fidelity stage focused on refinement, consistency and
-              completing the final experience.
-            </p>
           </div>
         </div>
 
