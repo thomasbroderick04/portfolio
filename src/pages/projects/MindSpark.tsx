@@ -933,7 +933,7 @@ const MindSpark = () => {
         </div>
 
                 {/* MEDIUM FIDELITY */}
-        <div className="mt-16 pt-10 border-t border-border">
+        <div className="mt-6 pt-10 border-t border-border">
           <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
             <p className="text-lg font-semibold tabular-nums text-muted-foreground">
               02
@@ -1166,15 +1166,17 @@ const MindSpark = () => {
             </div>
           </div>
 
-          <p className="mt-8 text-sm font-medium text-foreground">
-            With the main structure and interaction model now working well, the
-            high-fidelity stage focused on refinement, consistency and
-            completing the final experience.
-          </p>
+         <div className="mt-12">
+            <p>
+              With the main structure and interaction model now working well, the
+              high-fidelity stage focused on refinement, consistency and
+              completing the final experience.
+            </p>
+          </div>
         </div>
 
                 {/* HIGH FIDELITY */}
-        <div className="mt-16 pt-10 border-t border-border">
+        <div className="mt-6 pt-10 border-t border-border">
           <div className="grid gap-4 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
             <p className="text-lg font-semibold tabular-nums text-muted-foreground">
               03
