@@ -31,7 +31,7 @@ const skillGroups = [
     ],
   },
   {
-    title: "Implementation",
+    title: "Design Implementation",
     items: [
       "HTML, CSS, JavaScript",
       "Hardware prototyping (Arduino)",
