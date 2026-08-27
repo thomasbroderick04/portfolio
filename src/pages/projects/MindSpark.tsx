@@ -745,7 +745,7 @@ const MindSpark = () => {
     <div className="mt-12">
   <div className="max-w-3xl">
     <div className="mb-6 flex items-baseline gap-6">
-      <p className="text-sm font-semibold tabular-nums text-muted-foreground">
+      <p className="text-lg font-semibold tabular-nums text-muted-foreground">
         01
       </p>
 
