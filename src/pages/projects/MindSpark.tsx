@@ -743,33 +743,33 @@ const MindSpark = () => {
 
                {/* LOW FIDELITY */}
       <div className="mt-12">
-  <div className="grid gap-3 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8">
+  <div className="grid gap-3 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8 md:items-start">
     <p className="text-lg font-semibold tabular-nums text-muted-foreground">
       01
     </p>
 
-    <div className="max-w-3xl">
-      <h3 className="mb-6 text-lg font-semibold leading-snug text-foreground">
-        Low Fidelity: Turning the wireframes into a complete prototype
-      </h3>
+    <h3 className="text-lg font-semibold leading-snug text-foreground">
+      Low Fidelity: Turning the wireframes into a complete prototype
+    </h3>
+  </div>
 
-      <div className="space-y-4">
-        <p>
-          I expanded the early wireframes into the first complete
-          low-fidelity version of MindSpark. At this stage, the focus
-          was on establishing how the different parts of the application
-          would work together before developing the visual design in
-          greater detail.
-        </p>
+  <div className="mt-6 max-w-3xl space-y-4">
+    <p>
+      I expanded the early wireframes into the first complete
+      low-fidelity version of MindSpark. At this stage, the focus
+      was on establishing how the different parts of the application
+      would work together before developing the visual design in
+      greater detail.
+    </p>
 
-        <p>
-          The prototype established the wider application structure,
-          including the home screen, cognitive test categories, progress
-          tracking and results, as well as the complete Go/No-Go test
-          journey. This allowed me to test MindSpark as one connected
-          experience rather than as a collection of individual screens.
-        </p>
-      </div>
+    <p>
+      The prototype established the wider application structure,
+      including the home screen, cognitive test categories, progress
+      tracking and results, as well as the complete Go/No-Go test
+      journey. This allowed me to test MindSpark as one connected
+      experience rather than as a collection of individual screens.
+    </p>
+  </div>
     </div>
   </div>
 
