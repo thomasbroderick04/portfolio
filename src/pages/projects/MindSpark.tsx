@@ -924,13 +924,15 @@ const MindSpark = () => {
                 {/* MEDIUM FIDELITY */}
         <div className="mt-16 pt-10 border-t border-border">
   <div className="max-w-3xl">
-    <p className="mb-2 text-sm font-semibold tabular-nums text-muted-foreground">
-      02
-    </p>
+    <div className="mb-6 flex items-baseline gap-6">
+      <p className="text-lg font-semibold tabular-nums text-muted-foreground">
+        02
+      </p>
 
-    <SubsectionHeading>
-      Medium Fidelity: Responding to the first round of testing
-    </SubsectionHeading>
+      <h3 className="text-lg font-semibold leading-snug text-foreground">
+        Medium Fidelity: Responding to the first round of testing
+      </h3>
+    </div>
 
     <div className="space-y-4">
       <p>
@@ -1151,15 +1153,17 @@ const MindSpark = () => {
         </div>
 
                 {/* HIGH FIDELITY */}
-        <div className="mt-16 pt-10 border-t border-border">
+       <div className="mt-16 pt-10 border-t border-border">
   <div className="max-w-3xl">
-    <p className="mb-2 text-sm font-semibold tabular-nums text-muted-foreground">
-      03
-    </p>
+    <div className="mb-6 flex items-baseline gap-6">
+      <p className="text-lg font-semibold tabular-nums text-muted-foreground">
+        03
+      </p>
 
-    <SubsectionHeading>
-      High Fidelity: Completing the final experience
-    </SubsectionHeading>
+      <h3 className="text-lg font-semibold leading-snug text-foreground">
+        High Fidelity: Completing the final experience
+      </h3>
+    </div>
 
     <div className="space-y-4">
       <p>
