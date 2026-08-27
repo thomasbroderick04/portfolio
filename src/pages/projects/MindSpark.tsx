@@ -742,7 +742,7 @@ const MindSpark = () => {
         </p>
 
                {/* LOW FIDELITY */}
-      <div className="mt-12">
+     <div className="mt-12">
   <div className="grid gap-3 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8 md:items-start">
     <p className="text-lg font-semibold tabular-nums text-muted-foreground">
       01
@@ -769,8 +769,6 @@ const MindSpark = () => {
       journey. This allowed me to test MindSpark as one connected
       experience rather than as a collection of individual screens.
     </p>
-  </div>
-    </div>
   </div>
 
           <ProjectFigure
