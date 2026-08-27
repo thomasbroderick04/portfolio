@@ -924,10 +924,12 @@ const MindSpark = () => {
             </div>
           </div>
 
-          <p className="mt-8 text-sm font-medium text-foreground">
-            These findings became the main priorities for the medium-fidelity
-            prototype.
-          </p>
+          <div className="mt-12">
+  <p>
+    These findings became the main priorities for the medium-fidelity
+    prototype.
+  </p>
+</div>
         </div>
 
                 {/* MEDIUM FIDELITY */}
