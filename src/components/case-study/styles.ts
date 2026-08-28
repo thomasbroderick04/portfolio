@@ -26,7 +26,7 @@ export const caseStudyStyles = {
   numberedInsightRow:
     "grid gap-3 py-7 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8 md:py-8",
 
-  firstStage: "mt-16",
+  firstStage: "mt-8 border-t border-border pt-7 md:pt-8",
   laterStage: "mt-16 border-t border-border pt-10",
   stageHeadingRow: "mb-6 flex items-baseline gap-6",
 
