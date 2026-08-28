@@ -27,7 +27,7 @@ export const caseStudyStyles = {
     "grid gap-3 py-7 md:grid-cols-[64px_minmax(0,1fr)] md:gap-8 md:py-8",
 
   firstStage: "mt-8 border-t border-border pt-7 md:pt-8",
-  laterStage: "mt-16 border-t border-border pt-10",
+  laterStage:  "mt-16 border-t border-border pt-7 md:pt-8",
   stageHeadingRow: "mb-6 flex items-baseline gap-6",
 
   structuredList: "mt-6 divide-y divide-border border-y border-border",
