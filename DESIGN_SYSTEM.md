@@ -43,7 +43,8 @@ The shared spacing vocabulary is encoded in `styles.ts`:
 - `mt-6`: intro → structured rows
 - `my-8`: figures
 - `mt-8`: intro → numbered insights
-- `mt-12`: subsection / first chronological stage
+- `mt-12`: subsection
+- 'mt-16`: first chronological stage
 - `mt-16 pt-10 border-t`: later chronological stages
 
 Do not invent intermediate spacing values in project pages.
